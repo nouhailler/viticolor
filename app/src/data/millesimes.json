@@ -1,0 +1,82 @@
+[
+  {
+    "y": 2015,
+    "note": 95,
+    "soleil": 1420,
+    "pluie": 310,
+    "garde": 20,
+    "txt": "Année solaire, tanins mûrs — grande garde."
+  },
+  {
+    "y": 2016,
+    "note": 93,
+    "soleil": 1350,
+    "pluie": 380,
+    "garde": 18,
+    "txt": "Printemps humide puis été idéal ; classique et équilibré."
+  },
+  {
+    "y": 2017,
+    "note": 88,
+    "soleil": 1380,
+    "pluie": 300,
+    "garde": 12,
+    "txt": "Gel d’avril dévastateur ; volumes faibles, jolis blancs."
+  },
+  {
+    "y": 2018,
+    "note": 94,
+    "soleil": 1500,
+    "pluie": 260,
+    "garde": 18,
+    "txt": "Été chaud et sec ; vins généreux et mûrs."
+  },
+  {
+    "y": 2019,
+    "note": 94,
+    "soleil": 1480,
+    "pluie": 240,
+    "garde": 17,
+    "txt": "Canicules maîtrisées ; grande fraîcheur aromatique."
+  },
+  {
+    "y": 2020,
+    "note": 93,
+    "soleil": 1490,
+    "pluie": 230,
+    "garde": 15,
+    "txt": "Précoce et sec ; équilibre remarquable malgré la chaleur."
+  },
+  {
+    "y": 2021,
+    "note": 86,
+    "soleil": 1250,
+    "pluie": 460,
+    "garde": 10,
+    "txt": "Gel, mildiou, été frais ; millésime de vigneron."
+  },
+  {
+    "y": 2022,
+    "note": 96,
+    "soleil": 1560,
+    "pluie": 210,
+    "garde": 20,
+    "txt": "Chaleur historique mais vins étonnants de fraîcheur."
+  },
+  {
+    "y": 2023,
+    "note": 90,
+    "soleil": 1400,
+    "pluie": 390,
+    "garde": 14,
+    "txt": "Hétérogène ; tri décisif, belles réussites en blanc."
+  },
+  {
+    "y": 2024,
+    "note": 87,
+    "soleil": 1280,
+    "pluie": 480,
+    "garde": 12,
+    "txt": "Pluies incessantes, forte pression mildiou ; volumes réduits."
+  }
+]

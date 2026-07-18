@@ -1,0 +1,458 @@
+{
+  "bordeaux": {
+    "pos": [
+      26,
+      60
+    ],
+    "hist": "Vignoble planté par les Romains, propulsé par le négoce anglais dès le mariage d’Aliénor d’Aquitaine (1152), consacré par le classement de 1855.",
+    "climat": "Océanique tempéré ; l’estuaire de la Gironde régule les excès, brumes d’automne propices au botrytis à Sauternes.",
+    "terr": "Graves günziennes de la rive gauche, argilo-calcaires de la rive droite, sables sur crasse de fer.",
+    "spec": [
+      "Grands crus classés 1855",
+      "Liquoreux de Sauternes",
+      "Assemblages cabernet-merlot"
+    ],
+    "dom": [
+      {
+        "n": "Château Pontet-Canet",
+        "c": "Bio",
+        "v": "Pauillac"
+      },
+      {
+        "n": "Château Guiraud",
+        "c": "Bio",
+        "v": "Sauternes"
+      },
+      {
+        "n": "Château Montrose",
+        "c": "HVE",
+        "v": "Saint-Estèphe"
+      }
+    ],
+    "vil": [
+      "Pauillac",
+      "Margaux",
+      "Saint-Émilion",
+      "Sauternes",
+      "Pomerol"
+    ]
+  },
+  "bourgogne": {
+    "pos": [
+      62,
+      44
+    ],
+    "hist": "Œuvre des moines de Cîteaux et de Cluny qui délimitèrent les clos dès le Moyen Âge ; ducs de Bourgogne, puis climats classés UNESCO en 2015.",
+    "climat": "Semi-continental : gelées de printemps redoutées, étés courts qui signent la finesse.",
+    "terr": "Mosaïque de calcaires et de marnes jurassiques en coteau exposé est.",
+    "spec": [
+      "Climats et lieux-dits",
+      "Monocépage pinot / chardonnay",
+      "Grands crus de la Côte d’Or"
+    ],
+    "dom": [
+      {
+        "n": "Domaine Leflaive",
+        "c": "Bio",
+        "v": "Puligny-Montrachet"
+      },
+      {
+        "n": "Domaine de la Romanée-Conti",
+        "c": "Bio",
+        "v": "Vosne-Romanée"
+      },
+      {
+        "n": "Domaine Faiveley",
+        "c": "HVE",
+        "v": "Nuits-Saint-Georges"
+      }
+    ],
+    "vil": [
+      "Beaune",
+      "Vosne-Romanée",
+      "Puligny-Montrachet",
+      "Chablis",
+      "Gevrey-Chambertin"
+    ]
+  },
+  "champagne": {
+    "pos": [
+      57,
+      20
+    ],
+    "hist": "Vins tranquilles des sacres royaux à Reims, devenus effervescents au XVIIᵉ siècle (Dom Pérignon), portés par les grandes maisons au XIXᵉ.",
+    "climat": "Le plus septentrional des grands vignobles : frais, lumineux, à la limite de maturité.",
+    "terr": "Craie campanienne profonde, drainante et thermorégulatrice.",
+    "spec": [
+      "Assemblage de crus et d’années",
+      "Blanc de blancs",
+      "Élevage prolongé sur lattes"
+    ],
+    "dom": [
+      {
+        "n": "Louis Roederer",
+        "c": "Bio",
+        "v": "Reims"
+      },
+      {
+        "n": "Egly-Ouriet",
+        "c": "HVE",
+        "v": "Ambonnay"
+      },
+      {
+        "n": "Larmandier-Bernier",
+        "c": "Bio",
+        "v": "Vertus"
+      }
+    ],
+    "vil": [
+      "Reims",
+      "Épernay",
+      "Ambonnay",
+      "Vertus",
+      "Aÿ"
+    ]
+  },
+  "loire": {
+    "pos": [
+      36,
+      41
+    ],
+    "hist": "Vignoble des rois de France le long du fleuve royal ; abbayes et châteaux de la Renaissance en firent le vin des cours d’Europe.",
+    "climat": "Océanique à l’ouest, semi-continental vers Sancerre ; le fleuve tempère tout.",
+    "terr": "Tuffeau, silex et caillottes ; schistes en Anjou.",
+    "spec": [
+      "Chenin sous toutes ses formes",
+      "Sauvignon de silex",
+      "Fines bulles de Vouvray"
+    ],
+    "dom": [
+      {
+        "n": "Domaine Huet",
+        "c": "Bio",
+        "v": "Vouvray"
+      },
+      {
+        "n": "Clos Rougeard",
+        "c": "Bio",
+        "v": "Chacé"
+      },
+      {
+        "n": "Alphonse Mellot",
+        "c": "Bio",
+        "v": "Sancerre"
+      }
+    ],
+    "vil": [
+      "Sancerre",
+      "Vouvray",
+      "Chinon",
+      "Saumur",
+      "Savennières"
+    ]
+  },
+  "rhone": {
+    "pos": [
+      61,
+      63
+    ],
+    "hist": "Vienne la romaine plantait déjà la syrah ; les papes d’Avignon consacrèrent Châteauneuf au XIVᵉ siècle.",
+    "climat": "Continental au nord, méditerranéen au sud ; mistral asséchant et protecteur.",
+    "terr": "Granits abrupts au nord, galets roulés et safres au sud.",
+    "spec": [
+      "Syrah de coteau",
+      "Assemblages G-S-M",
+      "Condrieu et vin de paille"
+    ],
+    "dom": [
+      {
+        "n": "M. Chapoutier",
+        "c": "Bio",
+        "v": "Tain-l’Hermitage"
+      },
+      {
+        "n": "Château de Beaucastel",
+        "c": "Bio",
+        "v": "Courthézon"
+      },
+      {
+        "n": "Domaine Jamet",
+        "c": "HVE",
+        "v": "Ampuis"
+      }
+    ],
+    "vil": [
+      "Ampuis",
+      "Tain-l’Hermitage",
+      "Châteauneuf-du-Pape",
+      "Cornas",
+      "Gigondas"
+    ]
+  },
+  "alsace": {
+    "pos": [
+      80,
+      26
+    ],
+    "hist": "Prospère sous le Saint-Empire, ruinée par la guerre de Trente Ans, renaissante après 1945 autour des cépages nobles.",
+    "climat": "Abrité par les Vosges : sec, ensoleillé, vendanges tardives possibles.",
+    "terr": "Mosaïque géologique unique — granits, grès, marnes et calcaires sur 51 grands crus.",
+    "spec": [
+      "Cépage revendiqué sur l’étiquette",
+      "Vendanges tardives & SGN",
+      "Crémant d’Alsace"
+    ],
+    "dom": [
+      {
+        "n": "Zind-Humbrecht",
+        "c": "Bio",
+        "v": "Turckheim"
+      },
+      {
+        "n": "Maison Trimbach",
+        "c": "HVE",
+        "v": "Ribeauvillé"
+      },
+      {
+        "n": "Domaine Weinbach",
+        "c": "Bio",
+        "v": "Kaysersberg"
+      }
+    ],
+    "vil": [
+      "Riquewihr",
+      "Ribeauvillé",
+      "Kaysersberg",
+      "Turckheim",
+      "Eguisheim"
+    ]
+  },
+  "provence": {
+    "pos": [
+      71,
+      78
+    ],
+    "hist": "Le plus ancien vignoble de France, fondé par les Phocéens à Massalia il y a 2 600 ans.",
+    "climat": "Méditerranéen franc : 2 800 heures de soleil, mistral qui assainit.",
+    "terr": "Calcaires urgoniens à l’ouest, schistes des Maures à l’est, restanques.",
+    "spec": [
+      "Rosé de gastronomie",
+      "Bandol de garde (mourvèdre)",
+      "Blancs marins de Cassis"
+    ],
+    "dom": [
+      {
+        "n": "Domaine Tempier",
+        "c": "Bio",
+        "v": "Le Plan-du-Castellet"
+      },
+      {
+        "n": "Château Simone",
+        "c": "HVE",
+        "v": "Meyreuil"
+      },
+      {
+        "n": "Clos Sainte-Magdeleine",
+        "c": "Bio",
+        "v": "Cassis"
+      }
+    ],
+    "vil": [
+      "Bandol",
+      "Cassis",
+      "Les Arcs",
+      "Palette",
+      "Correns"
+    ]
+  },
+  "languedoc": {
+    "pos": [
+      51,
+      80
+    ],
+    "hist": "Vignoble de masse au XIXᵉ grâce au chemin de fer, reconverti depuis 1980 vers la qualité et les terroirs d’altitude.",
+    "climat": "Méditerranéen chaud et sec, tramontane ; fraîcheur des contreforts.",
+    "terr": "Schistes, galets villafranchiens, calcaires de garrigue.",
+    "spec": [
+      "Vins doux naturels",
+      "Vieux carignan",
+      "Picpoul et bulles de Limoux"
+    ],
+    "dom": [
+      {
+        "n": "Grange des Pères",
+        "c": "HVE",
+        "v": "Aniane"
+      },
+      {
+        "n": "Mas Jullien",
+        "c": "Bio",
+        "v": "Jonquières"
+      },
+      {
+        "n": "Domaine Gauby",
+        "c": "Bio",
+        "v": "Calce"
+      }
+    ],
+    "vil": [
+      "Aniane",
+      "Pic Saint-Loup",
+      "Faugères",
+      "Banyuls-sur-Mer",
+      "Limoux"
+    ]
+  },
+  "beaujolais": {
+    "pos": [
+      56,
+      55
+    ],
+    "hist": "Terre du gamay banni de Bourgogne par Philippe le Hardi en 1395, devenu ici grand vin de granit.",
+    "climat": "Semi-continental adouci ; coteaux plein sud dominant la Saône.",
+    "terr": "Granit rose, arènes sableuses, diorites bleues des crus.",
+    "spec": [
+      "Dix crus du gamay",
+      "Macération semi-carbonique",
+      "Accords lyonnais"
+    ],
+    "dom": [
+      {
+        "n": "Château Thivin",
+        "c": "HVE",
+        "v": "Odenas"
+      },
+      {
+        "n": "Jean Foillard",
+        "c": "Bio",
+        "v": "Villié-Morgon"
+      },
+      {
+        "n": "Château des Jacques",
+        "c": "Bio",
+        "v": "Romanèche-Thorins"
+      }
+    ],
+    "vil": [
+      "Villié-Morgon",
+      "Fleurie",
+      "Odenas",
+      "Juliénas",
+      "Chiroubles"
+    ]
+  },
+  "jura": {
+    "pos": [
+      74,
+      40
+    ],
+    "hist": "Vignoble de Pasteur, réduit par le phylloxéra de 20 000 à 2 000 hectares, devenu culte pour ses élevages oxydatifs.",
+    "climat": "Continental frais et arrosé ; automnes brumeux propices au voile.",
+    "terr": "Marnes grises et rouges du Lias, éboulis calcaires du Revermont.",
+    "spec": [
+      "Vin jaune & clavelin",
+      "Vin de paille",
+      "Macvin du Jura"
+    ],
+    "dom": [
+      {
+        "n": "Tissot (Stéphane)",
+        "c": "Bio",
+        "v": "Arbois"
+      },
+      {
+        "n": "Berthet-Bondet",
+        "c": "Bio",
+        "v": "Château-Chalon"
+      },
+      {
+        "n": "Domaine de la Pinte",
+        "c": "Bio",
+        "v": "Arbois"
+      }
+    ],
+    "vil": [
+      "Arbois",
+      "Château-Chalon",
+      "Pupillin",
+      "L’Étoile",
+      "Poligny"
+    ]
+  },
+  "savoie": {
+    "pos": [
+      78,
+      58
+    ],
+    "hist": "Vignoble alpin morcelé par l’éboulement du mont Granier (1248), longtemps vin des stations, aujourd’hui en plein renouveau.",
+    "climat": "Montagnard : forte amplitude thermique, influence des lacs.",
+    "terr": "Éboulis calcaires, moraines glaciaires, molasse.",
+    "spec": [
+      "Jacquère cristalline",
+      "Mondeuse poivrée",
+      "Vins d’alpage"
+    ],
+    "dom": [
+      {
+        "n": "Louis Magnin",
+        "c": "Bio",
+        "v": "Arbin"
+      },
+      {
+        "n": "Domaine des Ardoisières",
+        "c": "Bio",
+        "v": "Fréterive"
+      },
+      {
+        "n": "Domaine Belluard",
+        "c": "Bio",
+        "v": "Ayse"
+      }
+    ],
+    "vil": [
+      "Apremont",
+      "Chignin",
+      "Arbin",
+      "Ayse",
+      "Jongieux"
+    ]
+  },
+  "sudouest": {
+    "pos": [
+      37,
+      77
+    ],
+    "hist": "Vignobles du « haut-pays » longtemps bridés par le privilège bordelais, conservatoire de cépages uniques au monde.",
+    "climat": "Océanique dégradé ; le foehn d’autan mûrit les vendanges tardives.",
+    "terr": "Causses calcaires, boulbènes, terrasses de galets.",
+    "spec": [
+      "Malbec de Cahors",
+      "Tannat de Madiran",
+      "Jurançon moelleux"
+    ],
+    "dom": [
+      {
+        "n": "Château Montus",
+        "c": "HVE",
+        "v": "Castelnau-Rivière-Basse"
+      },
+      {
+        "n": "Clos Triguedina",
+        "c": "HVE",
+        "v": "Puy-l’Évêque"
+      },
+      {
+        "n": "Domaine Cauhapé",
+        "c": "HVE",
+        "v": "Monein"
+      }
+    ],
+    "vil": [
+      "Cahors",
+      "Madiran",
+      "Monein",
+      "Gaillac",
+      "Fronton"
+    ]
+  }
+}

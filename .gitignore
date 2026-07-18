@@ -1,0 +1,16 @@
+# Dépendances & builds
+node_modules/
+dist/
+dist-ssr/
+
+# TypeScript
+*.tsbuildinfo
+
+# Lots de vins bruts (données de travail, non embarquées)
+app/data-batches/*.txt
+
+# OS / éditeurs
+.DS_Store
+*.local
+.vite/
+_smoke.bundle.mjs

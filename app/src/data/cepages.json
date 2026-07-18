@@ -1,0 +1,281 @@
+[
+  {
+    "nom": "Merlot",
+    "couleur": "Rouge",
+    "tint": "#6e1f2e",
+    "origine": "Libournais, Gironde",
+    "hist": "Cité dès 1784 à Libourne ; son nom vient du « petit merle », friand de ses baies précoces. Cépage le plus planté de France.",
+    "aromes": [
+      "Fruits rouges",
+      "Prune",
+      "Sous-bois"
+    ],
+    "acid": 2,
+    "sucre": 3,
+    "tanins": 2,
+    "tTxt": "souple, peu tannique",
+    "garde": "5–15 ans",
+    "reg": [
+      "Bordeaux",
+      "Sud-Ouest",
+      "Languedoc"
+    ]
+  },
+  {
+    "nom": "Pinot Noir",
+    "couleur": "Rouge",
+    "tint": "#7d2c3d",
+    "origine": "Bourgogne",
+    "hist": "Documenté dès 1375 sous Philippe le Hardi ; façonné par les moines cisterciens, il est le traducteur le plus fidèle du terroir.",
+    "aromes": [
+      "Cerise",
+      "Framboise",
+      "Sous-bois"
+    ],
+    "acid": 4,
+    "sucre": 2,
+    "tanins": 2,
+    "tTxt": "fins et soyeux",
+    "garde": "5–20 ans",
+    "reg": [
+      "Bourgogne",
+      "Champagne",
+      "Alsace",
+      "Jura"
+    ]
+  },
+  {
+    "nom": "Cabernet Sauvignon",
+    "couleur": "Rouge",
+    "tint": "#4a1520",
+    "origine": "Gironde (rive gauche)",
+    "hist": "Croisement spontané du cabernet franc et du sauvignon blanc au XVIIᵉ siècle ; roi du Médoc et des graves.",
+    "aromes": [
+      "Cassis",
+      "Cèdre",
+      "Poivron mûr"
+    ],
+    "acid": 4,
+    "sucre": 2,
+    "tanins": 5,
+    "tTxt": "puissants, structurants",
+    "garde": "10–30 ans",
+    "reg": [
+      "Bordeaux",
+      "Sud-Ouest",
+      "Languedoc"
+    ]
+  },
+  {
+    "nom": "Cabernet Franc",
+    "couleur": "Rouge",
+    "tint": "#8e2f3f",
+    "origine": "Pays basque, puis Libournais",
+    "hist": "Diffusé en Val de Loire au XVᵉ siècle — le « breton » cher à Rabelais ; père du cabernet sauvignon et du merlot.",
+    "aromes": [
+      "Framboise",
+      "Poivron",
+      "Violette"
+    ],
+    "acid": 4,
+    "sucre": 2,
+    "tanins": 3,
+    "tTxt": "frais, croquants",
+    "garde": "5–20 ans",
+    "reg": [
+      "Val de Loire",
+      "Bordeaux"
+    ]
+  },
+  {
+    "nom": "Syrah",
+    "couleur": "Rouge",
+    "tint": "#5c2430",
+    "origine": "Rhône nord",
+    "hist": "Croisement de la dureza ardéchoise et de la mondeuse blanche savoyarde ; cultivée à Vienne depuis l’époque romaine.",
+    "aromes": [
+      "Violette",
+      "Poivre",
+      "Olive noire"
+    ],
+    "acid": 3,
+    "sucre": 2,
+    "tanins": 4,
+    "tTxt": "denses, épicés",
+    "garde": "8–25 ans",
+    "reg": [
+      "Vallée du Rhône",
+      "Languedoc",
+      "Provence"
+    ]
+  },
+  {
+    "nom": "Grenache",
+    "couleur": "Rouge",
+    "tint": "#7a3626",
+    "origine": "Aragon, Espagne",
+    "hist": "Arrivé au XIVᵉ siècle avec la couronne d’Aragon ; pilier des assemblages du sud et des vins doux naturels.",
+    "aromes": [
+      "Kirsch",
+      "Garrigue",
+      "Épices douces"
+    ],
+    "acid": 2,
+    "sucre": 4,
+    "tanins": 3,
+    "tTxt": "ronds, chaleureux",
+    "garde": "5–20 ans (VDN : 50+)",
+    "reg": [
+      "Rhône sud",
+      "Languedoc-Roussillon",
+      "Provence"
+    ]
+  },
+  {
+    "nom": "Gamay",
+    "couleur": "Rouge",
+    "tint": "#8e2f4a",
+    "origine": "Village de Gamay, Bourgogne",
+    "hist": "Banni de Bourgogne par Philippe le Hardi en 1395 (« très mauvais et très déloyal plant »), il triomphe sur les granits du Beaujolais.",
+    "aromes": [
+      "Fruits rouges frais",
+      "Pivoine",
+      "Banane (semi-carbo)"
+    ],
+    "acid": 4,
+    "sucre": 2,
+    "tanins": 2,
+    "tTxt": "légers, gouleyants",
+    "garde": "2–10 ans",
+    "reg": [
+      "Beaujolais",
+      "Val de Loire",
+      "Savoie"
+    ]
+  },
+  {
+    "nom": "Chardonnay",
+    "couleur": "Blanc",
+    "tint": "#c9a44d",
+    "origine": "Village de Chardonnay, Mâconnais",
+    "hist": "Croisement du pinot noir et du gouais blanc ; du minéral chablisien au beurré meursaultien, le blanc le plus célèbre du monde.",
+    "aromes": [
+      "Pomme",
+      "Agrumes",
+      "Beurre-noisette"
+    ],
+    "acid": 4,
+    "sucre": 3,
+    "tanins": 1,
+    "tTxt": "quasi nuls",
+    "garde": "3–15 ans",
+    "reg": [
+      "Bourgogne",
+      "Champagne",
+      "Jura"
+    ]
+  },
+  {
+    "nom": "Chenin",
+    "couleur": "Blanc",
+    "tint": "#a8812f",
+    "origine": "Mont Chenin, Touraine",
+    "hist": "Cité dès le XVᵉ siècle en Anjou ; caméléon capable de tout — sec tendu, moelleux de botrytis, fines bulles.",
+    "aromes": [
+      "Coing",
+      "Miel",
+      "Tilleul"
+    ],
+    "acid": 5,
+    "sucre": 4,
+    "tanins": 1,
+    "tTxt": "aucun",
+    "garde": "10–50 ans",
+    "reg": [
+      "Val de Loire"
+    ]
+  },
+  {
+    "nom": "Sauvignon",
+    "couleur": "Blanc",
+    "tint": "#8a9a5b",
+    "origine": "Val de Loire / Bordelais",
+    "hist": "De la famille des « sauvages » ; il a conquis le monde depuis Sancerre et donne au Bordelais ses blancs secs et liquoreux d’assemblage.",
+    "aromes": [
+      "Bourgeon de cassis",
+      "Agrumes",
+      "Silex"
+    ],
+    "acid": 5,
+    "sucre": 2,
+    "tanins": 1,
+    "tTxt": "aucun",
+    "garde": "2–8 ans",
+    "reg": [
+      "Val de Loire",
+      "Bordeaux",
+      "Sud-Ouest"
+    ]
+  },
+  {
+    "nom": "Riesling",
+    "couleur": "Blanc",
+    "tint": "#8a6a24",
+    "origine": "Vallée du Rhin",
+    "hist": "Documenté en 1435 ; cépage noble par excellence, il vieillit en développant sa fameuse note pétrolée.",
+    "aromes": [
+      "Citron",
+      "Fleurs blanches",
+      "Pierre à fusil"
+    ],
+    "acid": 5,
+    "sucre": 2,
+    "tanins": 1,
+    "tTxt": "aucun",
+    "garde": "10–30 ans",
+    "reg": [
+      "Alsace"
+    ]
+  },
+  {
+    "nom": "Viognier",
+    "couleur": "Blanc",
+    "tint": "#c08b4a",
+    "origine": "Rhône nord",
+    "hist": "Quasi disparu (14 ha en 1965), sauvé par Condrieu ; aujourd’hui replanté dans tout le sud.",
+    "aromes": [
+      "Abricot",
+      "Violette",
+      "Miel"
+    ],
+    "acid": 2,
+    "sucre": 4,
+    "tanins": 1,
+    "tTxt": "aucun",
+    "garde": "3–8 ans",
+    "reg": [
+      "Vallée du Rhône",
+      "Languedoc"
+    ]
+  },
+  {
+    "nom": "Savagnin",
+    "couleur": "Blanc",
+    "tint": "#6b5a2a",
+    "origine": "Famille des traminers alpins",
+    "hist": "Trésor du Jura ; élevé sous voile il donne le vin jaune, ouillé il rivalise avec les grands blancs de garde.",
+    "aromes": [
+      "Noix",
+      "Curry",
+      "Pomme verte"
+    ],
+    "acid": 5,
+    "sucre": 1,
+    "tanins": 1,
+    "tTxt": "aucun",
+    "garde": "20–50 ans et plus",
+    "reg": [
+      "Jura"
+    ]
+  }
+]

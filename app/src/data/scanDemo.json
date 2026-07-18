@@ -1,0 +1,41 @@
+{
+  "wine": {
+    "domaine": "Domaine Jamet",
+    "appellation": "Côte-Rôtie",
+    "millesime": 2020,
+    "couleur": "rouge",
+    "note": "Lard fumé, violette et poivre ; matière dense mais fraîche, l’une des références absolues de l’appellation. 96/100 pro."
+  },
+  "fiche": [
+    {
+      "label": "Cépages",
+      "value": "Syrah 100 %"
+    },
+    {
+      "label": "Degré alcoolique",
+      "value": "13 % vol."
+    },
+    {
+      "label": "Prix moyen",
+      "value": "145 €"
+    },
+    {
+      "label": "Température de service",
+      "value": "16–18 °C"
+    },
+    {
+      "label": "Potentiel de garde",
+      "value": "2028–2045"
+    },
+    {
+      "label": "Région",
+      "value": "Vallée du Rhône nord"
+    }
+  ],
+  "accords": [
+    "Côte de bœuf grillée",
+    "Gibier à plumes",
+    "Agneau aux herbes",
+    "Fromages affinés"
+  ]
+}

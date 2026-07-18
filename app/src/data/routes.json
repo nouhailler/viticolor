@@ -1,0 +1,230 @@
+[
+  {
+    "nom": "Alsace",
+    "titre": "Route des Vins d’Alsace",
+    "sous": "La doyenne (1953), de Marlenheim à Thann",
+    "km": 170,
+    "jours": "3–4 jours",
+    "etapes": [
+      {
+        "lieu": "Marlenheim",
+        "dist": "départ",
+        "txt": "Porte nord de la route ; premières côtes de sylvaner et pinot noir du Steinklotz.",
+        "halte": "Cave du Roi Dagobert"
+      },
+      {
+        "lieu": "Barr",
+        "dist": "25 km",
+        "txt": "Capitale viticole du Bas-Rhin au pied du grand cru Kirchberg.",
+        "halte": "Dégustation chez Stoeffler"
+      },
+      {
+        "lieu": "Dambach-la-Ville",
+        "dist": "18 km",
+        "txt": "Cité fortifiée entourée du grand cru Frankstein, granit et rieslings ciselés.",
+        "halte": "Sentier viticole du Frankstein"
+      },
+      {
+        "lieu": "Ribeauvillé",
+        "dist": "14 km",
+        "txt": "Trois châteaux, trois grands crus (Geisberg, Kirchberg, Osterberg) : le cœur du riesling.",
+        "halte": "Maison Trimbach"
+      },
+      {
+        "lieu": "Riquewihr",
+        "dist": "5 km",
+        "txt": "Village-joyau intact du XVIᵉ ; Schoenenbourg et Sporen dominent les remparts.",
+        "halte": "Hugel & Fils, caves historiques"
+      },
+      {
+        "lieu": "Kaysersberg",
+        "dist": "10 km",
+        "txt": "Patrie d’Albert Schweitzer sous le grand cru Schlossberg, premier classé (1975).",
+        "halte": "Domaine Weinbach"
+      },
+      {
+        "lieu": "Eguisheim",
+        "dist": "15 km",
+        "txt": "Berceau du vignoble alsacien, ruelles concentriques ; Eichberg et Pfersigberg.",
+        "halte": "Léon Beyer · nuit étape"
+      },
+      {
+        "lieu": "Thann",
+        "dist": "35 km",
+        "txt": "Final spectaculaire sur le Rangen, grand cru volcanique le plus pentu de France.",
+        "halte": "Zind-Humbrecht, clos Saint-Urbain"
+      }
+    ]
+  },
+  {
+    "nom": "Bourgogne",
+    "titre": "Route des Grands Crus",
+    "sous": "De Dijon à Santenay, la « Champs-Élysées de la Bourgogne »",
+    "km": 60,
+    "jours": "2–3 jours",
+    "etapes": [
+      {
+        "lieu": "Dijon",
+        "dist": "départ",
+        "txt": "Cité des Ducs, porte de la Côte de Nuits ; halles et Cité de la Gastronomie.",
+        "halte": "Cité internationale du vin"
+      },
+      {
+        "lieu": "Gevrey-Chambertin",
+        "dist": "12 km",
+        "txt": "Neuf grands crus dont le Chambertin, « roi des vins » de Napoléon.",
+        "halte": "Domaine Trapet"
+      },
+      {
+        "lieu": "Vougeot",
+        "dist": "7 km",
+        "txt": "Le clos de 50 ha des moines de Cîteaux et son château du XVIᵉ.",
+        "halte": "Château du Clos de Vougeot"
+      },
+      {
+        "lieu": "Vosne-Romanée",
+        "dist": "3 km",
+        "txt": "Le village le plus précieux du monde : Romanée-Conti, La Tâche, Richebourg.",
+        "halte": "Croix de la Romanée-Conti"
+      },
+      {
+        "lieu": "Nuits-Saint-Georges",
+        "dist": "4 km",
+        "txt": "Capitale négociante de la Côte de Nuits, premiers crus charpentés.",
+        "halte": "Cassissium & maison Faiveley"
+      },
+      {
+        "lieu": "Beaune",
+        "dist": "17 km",
+        "txt": "Capitale des vins de Bourgogne ; Hospices, remparts et caves kilométriques.",
+        "halte": "Hospices de Beaune · nuit étape"
+      },
+      {
+        "lieu": "Pommard & Volnay",
+        "dist": "6 km",
+        "txt": "Rouges puissants puis dentelle de pinot : le contraste des climats.",
+        "halte": "Château de Pommard"
+      },
+      {
+        "lieu": "Puligny & Santenay",
+        "dist": "11 km",
+        "txt": "Montrachet, « le plus grand blanc sec du monde », clôt la route au sud.",
+        "halte": "Table étoilée à Puligny"
+      }
+    ]
+  },
+  {
+    "nom": "Champagne",
+    "titre": "Route touristique du Champagne",
+    "sous": "Boucle Reims – Épernay par la Montagne et la Vallée",
+    "km": 120,
+    "jours": "2–3 jours",
+    "etapes": [
+      {
+        "lieu": "Reims",
+        "dist": "départ",
+        "txt": "Cathédrale des sacres et crayères gallo-romaines classées UNESCO.",
+        "halte": "Caves Taittinger ou Ruinart"
+      },
+      {
+        "lieu": "Verzenay",
+        "dist": "18 km",
+        "txt": "Montagne de Reims, grand cru de pinot noir ; phare et moulin au milieu des vignes.",
+        "halte": "Phare de Verzenay, musée de la vigne"
+      },
+      {
+        "lieu": "Ambonnay & Bouzy",
+        "dist": "12 km",
+        "txt": "Grands crus solaires, rouges tranquilles rares et pinots vineux.",
+        "halte": "Vigneron indépendant à Ambonnay"
+      },
+      {
+        "lieu": "Aÿ-Champagne",
+        "dist": "14 km",
+        "txt": "Berceau historique ; Pressoria, centre d’interprétation sensoriel.",
+        "halte": "Maison Bollinger"
+      },
+      {
+        "lieu": "Hautvillers",
+        "dist": "6 km",
+        "txt": "Village de Dom Pérignon, abbaye et point de vue sur la vallée de la Marne.",
+        "halte": "Tombe de Dom Pérignon · nuit étape"
+      },
+      {
+        "lieu": "Épernay",
+        "dist": "7 km",
+        "txt": "L’avenue de Champagne : 110 km de caves sous une seule rue.",
+        "halte": "Moët & Chandon, Perrier-Jouët"
+      },
+      {
+        "lieu": "Cramant & Avize",
+        "dist": "10 km",
+        "txt": "Côte des Blancs, royaume du chardonnay ; grands crus crayeux.",
+        "halte": "Dégustation blanc de blancs"
+      },
+      {
+        "lieu": "Le Mesnil-sur-Oger",
+        "dist": "5 km",
+        "txt": "Clos du Mesnil de Krug et coopérative mythique ; final tout en craie.",
+        "halte": "Salon-Delamotte"
+      }
+    ]
+  },
+  {
+    "nom": "Loire",
+    "titre": "Route des vins du Val de Loire",
+    "sous": "De Sancerre à Nantes, le fleuve royal",
+    "km": 400,
+    "jours": "5–7 jours",
+    "etapes": [
+      {
+        "lieu": "Sancerre",
+        "dist": "départ",
+        "txt": "Piton calcaire au-dessus du fleuve ; sauvignons de caillottes et silex.",
+        "halte": "Maison des Sancerre"
+      },
+      {
+        "lieu": "Pouilly-sur-Loire",
+        "dist": "12 km",
+        "txt": "Rive droite, pouilly-fumé et sa pierre à fusil légendaire.",
+        "halte": "Tour du Pouilly-Fumé"
+      },
+      {
+        "lieu": "Vouvray",
+        "dist": "180 km",
+        "txt": "Chenin sous toutes ses formes, caves troglodytes dans le tuffeau.",
+        "halte": "Domaine Huet · nuit étape"
+      },
+      {
+        "lieu": "Tours & Montlouis",
+        "dist": "10 km",
+        "txt": "Face à face des deux rives du chenin ; guinguettes en bord de Loire.",
+        "halte": "Cave des Producteurs de Montlouis"
+      },
+      {
+        "lieu": "Chinon",
+        "dist": "45 km",
+        "txt": "Forteresse royale et cabernet franc sur graviers et tuffeau.",
+        "halte": "Caves Painctes de Rabelais"
+      },
+      {
+        "lieu": "Saumur",
+        "dist": "30 km",
+        "txt": "Bulles de méthode traditionnelle et rouges de Champigny.",
+        "halte": "Bouvet-Ladubay, caves cathédrales"
+      },
+      {
+        "lieu": "Savennières & Layon",
+        "dist": "55 km",
+        "txt": "Chenins secs de schiste face aux liquoreux botrytisés du Layon.",
+        "halte": "Coulée de Serrant"
+      },
+      {
+        "lieu": "Nantes & Sèvre-et-Maine",
+        "dist": "80 km",
+        "txt": "Muscadet sur lie, huîtres et embruns : la Loire rejoint l’océan.",
+        "halte": "Dégustation iodée au vignoble"
+      }
+    ]
+  }
+]

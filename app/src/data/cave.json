@@ -1,0 +1,93 @@
+[
+  {
+    "id": "b1",
+    "name": "Ch. Léoville Barton 2016",
+    "meta": "Saint-Julien · rouge",
+    "apogee": "2028–2045",
+    "from": 2028,
+    "to": 2045,
+    "prix": 98,
+    "delta": 12,
+    "color": "rouge",
+    "tint": "#6e1f2e",
+    "def": 6
+  },
+  {
+    "id": "b2",
+    "name": "Meursault « Charmes » 2020",
+    "meta": "Bourgogne · blanc",
+    "apogee": "2025–2032",
+    "from": 2025,
+    "to": 2032,
+    "prix": 85,
+    "delta": 8,
+    "color": "blanc",
+    "tint": "#c9a44d",
+    "def": 3
+  },
+  {
+    "id": "b3",
+    "name": "Champagne Egly-Ouriet Brut",
+    "meta": "Ambonnay Grand Cru · effervescent",
+    "apogee": "dès maintenant",
+    "from": 2023,
+    "to": 2029,
+    "prix": 62,
+    "delta": 15,
+    "color": "effervescent",
+    "tint": "#d8bc74",
+    "def": 4
+  },
+  {
+    "id": "b4",
+    "name": "Cornas « Reynard » 2019",
+    "meta": "Rhône nord · rouge",
+    "apogee": "2027–2040",
+    "from": 2027,
+    "to": 2040,
+    "prix": 90,
+    "delta": 22,
+    "color": "rouge",
+    "tint": "#5c2430",
+    "def": 2
+  },
+  {
+    "id": "b5",
+    "name": "Clos Rougeard « Le Bourg » 2018",
+    "meta": "Saumur-Champigny · rouge",
+    "apogee": "2026–2038",
+    "from": 2026,
+    "to": 2038,
+    "prix": 320,
+    "delta": 31,
+    "color": "rouge",
+    "tint": "#7d2c3d",
+    "def": 1
+  },
+  {
+    "id": "b6",
+    "name": "Ch. d’Yquem 2015 (37,5 cl)",
+    "meta": "Sauternes · liquoreux",
+    "apogee": "2030–2080",
+    "from": 2030,
+    "to": 2080,
+    "prix": 210,
+    "delta": 9,
+    "color": "blanc",
+    "tint": "#b08d3e",
+    "def": 2
+  },
+  {
+    "id": "b7",
+    "name": "Riesling GC Schlossberg 2021",
+    "meta": "Alsace · blanc",
+    "apogee": "2026–2036",
+    "from": 2026,
+    "to": 2036,
+    "prix": 38,
+    "delta": 5,
+    "color": "blanc",
+    "tint": "#8a6a24",
+    "def": 3
+  }
+]

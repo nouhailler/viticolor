@@ -1,0 +1,138 @@
+[
+  {
+    "nom": "Château Margaux 2015",
+    "meta": "Margaux · 1er grand cru classé",
+    "serie": [
+      580,
+      610,
+      640,
+      660,
+      620,
+      650,
+      720,
+      780,
+      760,
+      790,
+      820
+    ]
+  },
+  {
+    "nom": "Romanée-Saint-Vivant, Arnoux 2018",
+    "meta": "Bourgogne · grand cru",
+    "serie": [
+      420,
+      460,
+      520,
+      610,
+      680,
+      850,
+      1050,
+      980,
+      920,
+      960,
+      1010
+    ]
+  },
+  {
+    "nom": "Château Rayas 2010",
+    "meta": "Châteauneuf-du-Pape",
+    "serie": [
+      310,
+      350,
+      420,
+      520,
+      640,
+      780,
+      950,
+      1100,
+      1050,
+      1120,
+      1180
+    ]
+  },
+  {
+    "nom": "Clos Rougeard « Les Poyeux » 2015",
+    "meta": "Saumur-Champigny",
+    "serie": [
+      85,
+      110,
+      150,
+      190,
+      240,
+      290,
+      340,
+      330,
+      310,
+      330,
+      345
+    ]
+  },
+  {
+    "nom": "Selosse « Initial »",
+    "meta": "Champagne · blanc de blancs",
+    "serie": [
+      140,
+      160,
+      185,
+      220,
+      260,
+      310,
+      360,
+      400,
+      380,
+      400,
+      415
+    ]
+  },
+  {
+    "nom": "Chave Hermitage 2017",
+    "meta": "Rhône nord",
+    "serie": [
+      210,
+      225,
+      245,
+      265,
+      280,
+      310,
+      350,
+      380,
+      370,
+      385,
+      400
+    ]
+  },
+  {
+    "nom": "Château Chalon, Macle 2015",
+    "meta": "Jura · vin jaune",
+    "serie": [
+      45,
+      50,
+      58,
+      68,
+      80,
+      95,
+      115,
+      130,
+      125,
+      135,
+      142
+    ]
+  },
+  {
+    "nom": "Trimbach « Clos Sainte Hune » 2017",
+    "meta": "Alsace · riesling",
+    "serie": [
+      95,
+      105,
+      118,
+      130,
+      145,
+      165,
+      190,
+      210,
+      205,
+      215,
+      225
+    ]
+  }
+]

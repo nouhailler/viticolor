@@ -1,0 +1,383 @@
+[
+  {
+    "id": "bordeaux",
+    "name": "Bordeaux",
+    "tint": "#6e1f2e",
+    "aoc": 65,
+    "ha": "110 800",
+    "hl": "4,4",
+    "tagline": "Assemblages, crus classés et grands terroirs des deux rives",
+    "cepages": [
+      "Cabernet Sauvignon",
+      "Merlot",
+      "Cabernet Franc",
+      "Sémillon"
+    ],
+    "appellations": [
+      {
+        "n": "Pauillac",
+        "t": "rouge de garde"
+      },
+      {
+        "n": "Saint-Émilion Grand Cru",
+        "t": "rouge"
+      },
+      {
+        "n": "Sauternes",
+        "t": "liquoreux"
+      },
+      {
+        "n": "Pessac-Léognan",
+        "t": "rouge & blanc"
+      }
+    ],
+    "desc": "Premier vignoble AOC de France, Bordeaux s’articule autour de la Garonne et de la Dordogne. Rive gauche graveleuse dominée par le cabernet sauvignon, rive droite argilo-calcaire où règne le merlot : l’art de l’assemblage y atteint son apogée dans les crus classés de 1855."
+  },
+  {
+    "id": "bourgogne",
+    "name": "Bourgogne",
+    "tint": "#7d2c3d",
+    "aoc": 84,
+    "ha": "30 052",
+    "hl": "1,5",
+    "tagline": "Le culte du climat : un cépage, mille terroirs",
+    "cepages": [
+      "Pinot Noir",
+      "Chardonnay",
+      "Aligoté",
+      "Gamay"
+    ],
+    "appellations": [
+      {
+        "n": "Chambertin Grand Cru",
+        "t": "rouge"
+      },
+      {
+        "n": "Montrachet Grand Cru",
+        "t": "blanc"
+      },
+      {
+        "n": "Chablis 1er Cru",
+        "t": "blanc"
+      },
+      {
+        "n": "Pommard",
+        "t": "rouge"
+      }
+    ],
+    "desc": "De Chablis au Mâconnais, la Bourgogne décline pinot noir et chardonnay sur une mosaïque de 1 247 climats classés à l’UNESCO. La hiérarchie — régionale, village, premier cru, grand cru — exprime la lecture la plus fine du terroir au monde."
+  },
+  {
+    "id": "champagne",
+    "name": "Champagne",
+    "tint": "#a8812f",
+    "aoc": 3,
+    "ha": "34 300",
+    "hl": "2,3",
+    "tagline": "La méthode traditionnelle portée à son sommet",
+    "cepages": [
+      "Chardonnay",
+      "Pinot Noir",
+      "Meunier"
+    ],
+    "appellations": [
+      {
+        "n": "Champagne",
+        "t": "effervescent"
+      },
+      {
+        "n": "Coteaux Champenois",
+        "t": "tranquille"
+      },
+      {
+        "n": "Rosé des Riceys",
+        "t": "rosé"
+      }
+    ],
+    "desc": "Craie, fraîcheur septentrionale et assemblage de crus : la Champagne a fait de la seconde fermentation en bouteille un art. Blanc de blancs de la Côte des Blancs, pinots de la Montagne de Reims, meunier de la Vallée de la Marne."
+  },
+  {
+    "id": "loire",
+    "name": "Val de Loire",
+    "tint": "#4f6440",
+    "aoc": 51,
+    "ha": "57 200",
+    "hl": "2,6",
+    "tagline": "Le fleuve royal, du muscadet au sancerre",
+    "cepages": [
+      "Chenin",
+      "Sauvignon",
+      "Cabernet Franc",
+      "Melon de Bourgogne"
+    ],
+    "appellations": [
+      {
+        "n": "Sancerre",
+        "t": "blanc & rouge"
+      },
+      {
+        "n": "Vouvray",
+        "t": "blanc, tous styles"
+      },
+      {
+        "n": "Chinon",
+        "t": "rouge"
+      },
+      {
+        "n": "Savennières",
+        "t": "blanc sec"
+      }
+    ],
+    "desc": "Plus longue route des vins de France, la Loire offre une diversité inégalée : chenins secs, moelleux ou fines bulles, sauvignons de silex, cabernets francs de tuffeau. Des vins de fraîcheur, désormais recherchés des cartes du monde entier."
+  },
+  {
+    "id": "rhone",
+    "name": "Vallée du Rhône",
+    "tint": "#5c2430",
+    "aoc": 31,
+    "ha": "66 500",
+    "hl": "2,5",
+    "tagline": "Syrah de granit au nord, assemblages solaires au sud",
+    "cepages": [
+      "Syrah",
+      "Grenache",
+      "Viognier",
+      "Mourvèdre"
+    ],
+    "appellations": [
+      {
+        "n": "Côte-Rôtie",
+        "t": "rouge"
+      },
+      {
+        "n": "Hermitage",
+        "t": "rouge & blanc"
+      },
+      {
+        "n": "Châteauneuf-du-Pape",
+        "t": "rouge, 13 cépages"
+      },
+      {
+        "n": "Condrieu",
+        "t": "blanc"
+      }
+    ],
+    "desc": "Deux mondes : au nord, la syrah s’accroche aux coteaux granitiques de Côte-Rôtie et d’Hermitage ; au sud, grenache, syrah et mourvèdre composent des assemblages généreux sur galets roulés, dont Châteauneuf-du-Pape est le porte-étendard."
+  },
+  {
+    "id": "alsace",
+    "name": "Alsace",
+    "tint": "#8a6a24",
+    "aoc": 53,
+    "ha": "15 600",
+    "hl": "1,1",
+    "tagline": "Cépages nobles et grands crus de la route des vins",
+    "cepages": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Muscat"
+    ],
+    "appellations": [
+      {
+        "n": "Alsace Grand Cru",
+        "t": "51 lieux-dits"
+      },
+      {
+        "n": "Crémant d’Alsace",
+        "t": "effervescent"
+      },
+      {
+        "n": "Vendanges Tardives",
+        "t": "moelleux"
+      }
+    ],
+    "desc": "Protégée par les Vosges, l’Alsace revendique le cépage sur l’étiquette. Rieslings ciselés, gewurztraminers opulents et pinots gris fumés s’expriment sur 13 types de sols, des granits aux marnes, le long des 51 grands crus."
+  },
+  {
+    "id": "provence",
+    "name": "Provence",
+    "tint": "#b06a4a",
+    "aoc": 9,
+    "ha": "27 200",
+    "hl": "1,3",
+    "tagline": "Capitale mondiale du rosé de gastronomie",
+    "cepages": [
+      "Grenache",
+      "Cinsault",
+      "Rolle",
+      "Mourvèdre"
+    ],
+    "appellations": [
+      {
+        "n": "Bandol",
+        "t": "rouge & rosé"
+      },
+      {
+        "n": "Côtes de Provence",
+        "t": "rosé"
+      },
+      {
+        "n": "Cassis",
+        "t": "blanc"
+      }
+    ],
+    "desc": "Premier vignoble rosé du monde, la Provence cache aussi des rouges de garde à Bandol, où le mourvèdre atteint une profondeur rare, et des blancs marins confidentiels à Cassis."
+  },
+  {
+    "id": "languedoc",
+    "name": "Languedoc-Roussillon",
+    "tint": "#7a3626",
+    "aoc": 36,
+    "ha": "224 000",
+    "hl": "12,0",
+    "tagline": "Le plus vaste vignoble du monde en pleine renaissance",
+    "cepages": [
+      "Carignan",
+      "Grenache",
+      "Syrah",
+      "Piquepoul"
+    ],
+    "appellations": [
+      {
+        "n": "Pic Saint-Loup",
+        "t": "rouge"
+      },
+      {
+        "n": "Terrasses du Larzac",
+        "t": "rouge"
+      },
+      {
+        "n": "Banyuls",
+        "t": "vin doux naturel"
+      },
+      {
+        "n": "Picpoul de Pinet",
+        "t": "blanc"
+      }
+    ],
+    "desc": "Immense et contrasté, le Languedoc-Roussillon est devenu le laboratoire du vin français : vieux carignans de schistes, terroirs d’altitude, vins doux naturels de Banyuls et de Maury."
+  },
+  {
+    "id": "beaujolais",
+    "name": "Beaujolais",
+    "tint": "#8e2f4a",
+    "aoc": 12,
+    "ha": "14 500",
+    "hl": "0,8",
+    "tagline": "Le gamay des dix crus, du granit à la légèreté",
+    "cepages": [
+      "Gamay",
+      "Chardonnay"
+    ],
+    "appellations": [
+      {
+        "n": "Morgon",
+        "t": "rouge"
+      },
+      {
+        "n": "Fleurie",
+        "t": "rouge"
+      },
+      {
+        "n": "Moulin-à-Vent",
+        "t": "rouge de garde"
+      }
+    ],
+    "desc": "Longtemps réduit au primeur, le Beaujolais s’impose de nouveau par ses dix crus granitiques où le gamay, souvent en macération semi-carbonique, donne des vins de fruit éclatant et de vraie garde."
+  },
+  {
+    "id": "jura",
+    "name": "Jura",
+    "tint": "#6b5a2a",
+    "aoc": 7,
+    "ha": "2 100",
+    "hl": "0,1",
+    "tagline": "Vin jaune, savagnin et l’école de l’oxydatif",
+    "cepages": [
+      "Savagnin",
+      "Chardonnay",
+      "Poulsard",
+      "Trousseau"
+    ],
+    "appellations": [
+      {
+        "n": "Château-Chalon",
+        "t": "vin jaune"
+      },
+      {
+        "n": "Arbois",
+        "t": "tous styles"
+      },
+      {
+        "n": "L’Étoile",
+        "t": "blanc"
+      }
+    ],
+    "desc": "Minuscule et culte : le Jura élève le savagnin sous voile pendant six ans et trois mois pour son vin jaune, tandis que poulsard et trousseau signent des rouges pâles d’une buvabilité rare."
+  },
+  {
+    "id": "savoie",
+    "name": "Savoie & Bugey",
+    "tint": "#476152",
+    "aoc": 6,
+    "ha": "2 200",
+    "hl": "0,1",
+    "tagline": "Vins alpins de fraîcheur, altesse et mondeuse",
+    "cepages": [
+      "Jacquère",
+      "Altesse",
+      "Mondeuse",
+      "Roussanne"
+    ],
+    "appellations": [
+      {
+        "n": "Roussette de Savoie",
+        "t": "blanc"
+      },
+      {
+        "n": "Chignin-Bergeron",
+        "t": "blanc"
+      },
+      {
+        "n": "Arbin Mondeuse",
+        "t": "rouge"
+      }
+    ],
+    "desc": "Sur éboulis calcaires et coteaux alpins, la Savoie produit des blancs cristallins de jacquère et d’altesse, et des mondeuses poivrées qui rappellent la syrah septentrionale."
+  },
+  {
+    "id": "sudouest",
+    "name": "Sud-Ouest",
+    "tint": "#5a3a52",
+    "aoc": 42,
+    "ha": "47 000",
+    "hl": "3,2",
+    "tagline": "Cahors, Madiran, Jurançon : les cépages d’origine",
+    "cepages": [
+      "Malbec",
+      "Tannat",
+      "Petit Manseng",
+      "Négrette"
+    ],
+    "appellations": [
+      {
+        "n": "Cahors",
+        "t": "rouge, malbec"
+      },
+      {
+        "n": "Madiran",
+        "t": "rouge, tannat"
+      },
+      {
+        "n": "Jurançon",
+        "t": "moelleux"
+      },
+      {
+        "n": "Gaillac",
+        "t": "tous styles"
+      }
+    ],
+    "desc": "Conservatoire de cépages autochtones, le Sud-Ouest aligne des identités fortes : malbec de Cahors, tannat de Madiran, petit et gros manseng du Jurançon, entre Atlantique et Pyrénées."
+  }
+]

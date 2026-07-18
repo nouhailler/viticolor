@@ -1,0 +1,32 @@
+[
+  {
+    "nom": "Domaine de la Romanée-Conti",
+    "lieu": "Vosne-Romanée",
+    "txt": "Monopole mythique de 1,8 ha ; biodynamie, rendements minuscules, le pinot noir porté au rang d’absolu."
+  },
+  {
+    "nom": "Château d’Yquem",
+    "lieu": "Sauternes",
+    "txt": "Premier cru supérieur unique du classement 1855 ; un verre de vin par cep, tries botrytisées jusqu’à six passages."
+  },
+  {
+    "nom": "Domaine Jean-Louis Chave",
+    "lieu": "Hermitage",
+    "txt": "Seize générations depuis 1481 sur la colline ; l’assemblage des lieux-dits comme art familial."
+  },
+  {
+    "nom": "Domaine Zind-Humbrecht",
+    "lieu": "Turckheim",
+    "txt": "Pionnier de la biodynamie alsacienne ; grands crus Rangen et Brand, précision et indice de sucrosité inventé ici."
+  },
+  {
+    "nom": "Clos des Papes",
+    "lieu": "Châteauneuf-du-Pape",
+    "txt": "Famille Avril depuis 1896 ; treize cépages assemblés, élevage patient en foudres centenaires."
+  },
+  {
+    "nom": "Domaine Huet",
+    "lieu": "Vouvray",
+    "txt": "Référence absolue du chenin ; trois clos biodynamiques, des secs tendus aux moelleux centenaires."
+  }
+]

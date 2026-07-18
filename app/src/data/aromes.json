@@ -1,0 +1,308 @@
+[
+  {
+    "nom": "Fruités",
+    "tint": "#a03a50",
+    "origine": "Primaires",
+    "desc": "Le cœur aromatique de la jeunesse : du fruit frais croquant au fruit confit des années chaudes, jusqu’au fruit sec de l’évolution.",
+    "astuce": "Précisez toujours l’état du fruit : frais, mûr, compoté, confit ou sec — il raconte le climat du millésime et l’âge du vin.",
+    "aromes": [
+      {
+        "nom": "Cassis",
+        "repere": "fruits noirs",
+        "ou": "Cabernet sauvignon du Médoc, syrah jeune ; signature des rouges de rive gauche."
+      },
+      {
+        "nom": "Cerise griotte",
+        "repere": "fruits rouges",
+        "ou": "Pinot noir de Bourgogne, gamay des crus du Beaujolais."
+      },
+      {
+        "nom": "Abricot",
+        "repere": "fruits jaunes",
+        "ou": "Viognier de Condrieu, chenins moelleux, vendanges tardives."
+      },
+      {
+        "nom": "Agrumes (citron, pamplemousse)",
+        "repere": "frais",
+        "ou": "Sauvignon blanc, riesling jeune, muscadet ; marque une acidité vive."
+      },
+      {
+        "nom": "Fruits exotiques (litchi, mangue)",
+        "repere": "exubérants",
+        "ou": "Gewurztraminer (litchi quasi variétal), sauvignons de climats chauds."
+      },
+      {
+        "nom": "Pruneau, figue sèche",
+        "repere": "évolution",
+        "ou": "Rouges méridionaux âgés, vins doux naturels, banyuls et maury."
+      }
+    ]
+  },
+  {
+    "nom": "Floraux",
+    "tint": "#c08b4a",
+    "origine": "Primaires",
+    "desc": "Notes délicates et volatiles, perceptibles surtout au premier nez des vins jeunes ; elles s’estompent avec l’âge.",
+    "astuce": "Sentez le verre immobile avant de l’agiter : les fleurs s’envolent les premières, avant les fruits plus lourds.",
+    "aromes": [
+      {
+        "nom": "Violette",
+        "repere": "fleurs bleues",
+        "ou": "Syrah de Côte-Rôtie, malbec de Cahors ; note noble des grands rouges du nord."
+      },
+      {
+        "nom": "Rose",
+        "repere": "fleurs capiteuses",
+        "ou": "Gewurztraminer, muscats ; molécule commune au litchi (cis-rose oxide)."
+      },
+      {
+        "nom": "Aubépine, acacia",
+        "repere": "fleurs blanches",
+        "ou": "Chardonnay de Chablis, chenin sec, clairette ; jeunesse des grands blancs."
+      },
+      {
+        "nom": "Tilleul, verveine",
+        "repere": "infusion",
+        "ou": "Riesling, jurançon sec, sauvignons mûrs ; entre fleur et herbe sèche."
+      },
+      {
+        "nom": "Pivoine",
+        "repere": "fleurs fraîches",
+        "ou": "Pinot noir très jeune, gamay de Fleurie."
+      }
+    ]
+  },
+  {
+    "nom": "Végétaux",
+    "tint": "#4f6440",
+    "origine": "Primaires",
+    "desc": "Du végétal noble (garrigue, fougère) au végétal de sous-maturité (poivron vert) : famille à double tranchant.",
+    "astuce": "Poivron vert = pyrazines de raisins peu mûrs ; garrigue et thym = signature méridionale assumée. Le contexte fait le défaut ou la qualité.",
+    "aromes": [
+      {
+        "nom": "Buis, bourgeon de cassis",
+        "repere": "tonique",
+        "ou": "Sauvignon de Sancerre et Pouilly-Fumé ; varietal et vif."
+      },
+      {
+        "nom": "Poivron vert",
+        "repere": "sous-maturité",
+        "ou": "Cabernets récoltés trop tôt ; fréquent dans les millésimes froids."
+      },
+      {
+        "nom": "Garrigue (thym, laurier)",
+        "repere": "méridional",
+        "ou": "Châteauneuf-du-Pape, bandol, languedoc ; le paysage dans le verre."
+      },
+      {
+        "nom": "Fenouil, anis",
+        "repere": "frais",
+        "ou": "Blancs de Cassis et de Provence, vermentino (rolle)."
+      },
+      {
+        "nom": "Champignon, sous-bois",
+        "repere": "tertiaire",
+        "ou": "Vieux pinots et vieux bordeaux ; l’automne des grands rouges."
+      }
+    ]
+  },
+  {
+    "nom": "Épicés",
+    "tint": "#8a4a24",
+    "origine": "Primaires & élevage",
+    "desc": "Poivre du cépage ou épices douces du fût : une famille à deux origines qu’il faut apprendre à distinguer.",
+    "astuce": "Le poivre blanc de la syrah (rotundone) vient du raisin ; vanille et cannelle viennent du chêne. Un vin non boisé peut être très épicé.",
+    "aromes": [
+      {
+        "nom": "Poivre blanc/noir",
+        "repere": "variétal",
+        "ou": "Syrah du Rhône nord (Cornas, Saint-Joseph), grüner ; renforcé par les millésimes frais."
+      },
+      {
+        "nom": "Réglisse",
+        "repere": "rouges denses",
+        "ou": "Syrah, mourvèdre, cahors ; souvent dans la finale."
+      },
+      {
+        "nom": "Cannelle, muscade",
+        "repere": "épices douces",
+        "ou": "Élevages en fût, gewurztraminer, vins doux évolués."
+      },
+      {
+        "nom": "Clou de girofle",
+        "repere": "eugénol",
+        "ou": "Fûts de chêne chauffés, vins de presse ; net dans les rouges élevés neufs."
+      },
+      {
+        "nom": "Curry, fenugrec",
+        "repere": "sotolon",
+        "ou": "Vin jaune du Jura et élevages oxydatifs — l’arôme signature du voile."
+      }
+    ]
+  },
+  {
+    "nom": "Boisés",
+    "tint": "#6b4a2a",
+    "origine": "Élevage",
+    "desc": "Tout ce que le chêne donne : vanille, toast, coco, cèdre. Réussi quand il se fond, raté quand il masque le fruit.",
+    "astuce": "Un boisé de qualité se fond en 2–3 ans ; si le vin ne sent « que la planche », le fruit était trop faible pour l’élevage.",
+    "aromes": [
+      {
+        "nom": "Vanille",
+        "repere": "chêne neuf",
+        "ou": "Rouges et blancs élevés en barrique neuve ; vanilline du bois chauffé."
+      },
+      {
+        "nom": "Toast, pain grillé",
+        "repere": "chauffe",
+        "ou": "Champagnes évolués, blancs élevés ; degré de chauffe de la barrique."
+      },
+      {
+        "nom": "Noix de coco",
+        "repere": "whisky-lactones",
+        "ou": "Chêne américain surtout ; certains bordeaux modernes."
+      },
+      {
+        "nom": "Cèdre, crayon",
+        "repere": "racé",
+        "ou": "Grands médocs à maturité — le « bois de cigare » des dégustateurs anglais."
+      },
+      {
+        "nom": "Fumé",
+        "repere": "chauffe forte",
+        "ou": "Syrahs élevées, blancs de fût toastés ; à distinguer du fumé minéral."
+      }
+    ]
+  },
+  {
+    "nom": "Empyreumatiques",
+    "tint": "#3d2020",
+    "origine": "Élevage & âge",
+    "desc": "La famille du feu : café, cacao, caramel, goudron. Naît de la chauffe des fûts et de la longue évolution.",
+    "astuce": "Café et cacao dans un rouge jeune = élevage démonstratif ; dans un vieux vin, c’est l’évolution noble qui parle.",
+    "aromes": [
+      {
+        "nom": "Café, moka",
+        "repere": "torréfaction",
+        "ou": "Merlots élevés (Pomerol), chauffe forte ; net à l’agitation."
+      },
+      {
+        "nom": "Cacao",
+        "repere": "rouges mûrs",
+        "ou": "Grenaches solaires, châteauneuf, banyuls ; tanins enrobés."
+      },
+      {
+        "nom": "Caramel",
+        "repere": "évolution",
+        "ou": "Vins doux, champagnes dosés vieillis, maury rancio."
+      },
+      {
+        "nom": "Goudron",
+        "repere": "puissant",
+        "ou": "Vieilles syrahs d’Hermitage, madiran ; souvent avec la violette."
+      },
+      {
+        "nom": "Pierre à fusil",
+        "repere": "silex fumé",
+        "ou": "Pouilly-fumé, chablis ; entre minéral et empyreumatique."
+      }
+    ]
+  },
+  {
+    "nom": "Animaux",
+    "tint": "#5a3a52",
+    "origine": "Tertiaires",
+    "desc": "Cuir, gibier, fourrure : le règne animal apparaît avec l’âge des grands rouges. Noble à petite dose, défaut (brett) quand il domine.",
+    "astuce": "Si l’animal s’estompe à l’aération et laisse le fruit revenir : évolution noble. S’il envahit tout : contamination Brettanomyces.",
+    "aromes": [
+      {
+        "nom": "Cuir",
+        "repere": "évolution",
+        "ou": "Vieux rhônes, madirans, bandols après 8–10 ans."
+      },
+      {
+        "nom": "Gibier, venaison",
+        "repere": "tertiaire",
+        "ou": "Grands pinots âgés, mourvèdre évolué."
+      },
+      {
+        "nom": "Musc, fourrure",
+        "repere": "discret",
+        "ou": "Vieux bourgognes ; nuance plus que dominante."
+      },
+      {
+        "nom": "Écurie, sueur de cheval",
+        "repere": "⚠ brett",
+        "ou": "Défaut de chai (Brettanomyces) quand il masque le fruit."
+      }
+    ]
+  },
+  {
+    "nom": "Minéraux",
+    "tint": "#6f8ba0",
+    "origine": "Terroir & réduction",
+    "desc": "Craie, silex, iode, pétrole : la famille la plus débattue — mélange de sensations acides, de réduction fine et d’imaginaire du terroir.",
+    "astuce": "La « minéralité » se goûte souvent plus qu’elle ne se sent : salivation, salinité en finale, tension. Cherchez-la en bouche.",
+    "aromes": [
+      {
+        "nom": "Craie",
+        "repere": "blancs tendus",
+        "ou": "Champagne de la Côte des Blancs, chablis ; toucher crayeux en bouche."
+      },
+      {
+        "nom": "Silex, pierre à fusil",
+        "repere": "fumé",
+        "ou": "Sauvignons de Loire sur silex, rieslings ; note de pierre frottée."
+      },
+      {
+        "nom": "Iode, embruns",
+        "repere": "salin",
+        "ou": "Muscadet sur lie, blancs de Cassis ; finale salivante."
+      },
+      {
+        "nom": "Pétrole",
+        "repere": "TDN",
+        "ou": "Riesling à maturité — marqueur noble et assumé du cépage."
+      },
+      {
+        "nom": "Encre, graphite",
+        "repere": "rouges frais",
+        "ou": "Cabernets francs de Loire, grands médocs ; sensation « mine de crayon »."
+      }
+    ]
+  },
+  {
+    "nom": "Lactés & levures",
+    "tint": "#a98a7d",
+    "origine": "Secondaires",
+    "desc": "Beurre, brioche, pain frais : les arômes nés des fermentations — malolactique pour le lacté, autolyse des levures pour la boulangerie.",
+    "astuce": "Brioche + petites bulles fines = long élevage sur lies ; beurre marqué = malo complète (diacétyle), typique des chardonnays gras.",
+    "aromes": [
+      {
+        "nom": "Beurre frais",
+        "repere": "malo",
+        "ou": "Chardonnays de Meursault, blancs à malo complète."
+      },
+      {
+        "nom": "Brioche, viennoiserie",
+        "repere": "autolyse",
+        "ou": "Champagnes longuement vieillis sur lattes, crémants de garde."
+      },
+      {
+        "nom": "Pain frais, mie",
+        "repere": "lies fines",
+        "ou": "Muscadet sur lie, blancs bâtonnés."
+      },
+      {
+        "nom": "Yaourt, crème",
+        "repere": "jeune malo",
+        "ou": "Blancs juste mis en bouteille ; s’intègre en quelques mois."
+      },
+      {
+        "nom": "Banane, bonbon anglais",
+        "repere": "amylique",
+        "ou": "Beaujolais nouveau (macération carbonique), levures 71B."
+      }
+    ]
+  }
+]

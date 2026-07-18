@@ -1,0 +1,32 @@
+[
+  {
+    "vin": "Meursault « Les Charmes » 2020",
+    "score": 94,
+    "stars": 5,
+    "prix": "89",
+    "lieu": "Cave des Grands Crus, Beaune",
+    "crit": { "robe": 4, "nez": 5, "bouche": 5, "longueur": 5, "equilibre": 5, "plaisir": 5 },
+    "texte": "Nez beurré, noisette ; bouche ample, finale saline remarquable",
+    "date": "12 juillet 2026"
+  },
+  {
+    "vin": "Cornas « Reynard » 2019",
+    "score": 92,
+    "stars": 4,
+    "prix": "72",
+    "lieu": "Salon des vignerons, Tain",
+    "crit": { "robe": 5, "nez": 4, "bouche": 4, "longueur": 4, "equilibre": 4, "plaisir": 4 },
+    "texte": "Poivre blanc, olive noire, tanins fins ; à attendre encore 3 ans",
+    "date": "28 juin 2026"
+  },
+  {
+    "vin": "Vouvray demi-sec 2018",
+    "score": 88,
+    "stars": 4,
+    "prix": "24",
+    "lieu": "Direct domaine",
+    "crit": { "robe": 3, "nez": 4, "bouche": 4, "longueur": 3, "equilibre": 5, "plaisir": 4 },
+    "texte": "Coing et miel, acidité tendue, bel équilibre",
+    "date": "9 juin 2026"
+  }
+]

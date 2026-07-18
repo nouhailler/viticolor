@@ -1,0 +1,37 @@
+[
+  {
+    "plat": "Sole meunière",
+    "vin": "Meursault ou Chassagne-Montrachet",
+    "pourquoi": "Le gras du beurre noisette appelle un chardonnay ample et boisé ; l’acidité bourguignonne tranche la richesse du plat."
+  },
+  {
+    "plat": "Côte de bœuf maturée",
+    "vin": "Pauillac ou Côte-Rôtie",
+    "pourquoi": "Tanins structurés et notes fumées répondent au gras persillé et à la croûte grillée de la viande."
+  },
+  {
+    "plat": "Huîtres fines de claire",
+    "vin": "Muscadet Sèvre-et-Maine sur lie",
+    "pourquoi": "Salinité contre iode : le melon de Bourgogne élevé sur lie prolonge le goût de la mer sans l’écraser."
+  },
+  {
+    "plat": "Époisses affiné",
+    "vin": "Gewurztraminer Vendanges Tardives",
+    "pourquoi": "Face à la puissance du fromage lavé, seule l’exubérance aromatique et la douceur d’un moelleux tiennent l’équilibre."
+  },
+  {
+    "plat": "Poulet de Bresse à la crème",
+    "vin": "Vin jaune du Jura",
+    "pourquoi": "L’accord régional absolu : noix et curry du savagnin oxydatif fusionnent avec la crème et les morilles."
+  },
+  {
+    "plat": "Gigot d’agneau de sept heures",
+    "vin": "Châteauneuf-du-Pape",
+    "pourquoi": "Grenache solaire, garrigue et épices douces épousent le confit de l’agneau et le thym."
+  },
+  {
+    "plat": "Tarte Tatin",
+    "vin": "Jurançon moelleux",
+    "pourquoi": "Petit manseng confit, ananas rôti et acidité vive : la pomme caramélisée trouve son miroir."
+  }
+]

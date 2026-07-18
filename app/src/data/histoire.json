@@ -1,0 +1,86 @@
+[
+  {
+    "epoque": "Antiquité",
+    "duree": "6 min",
+    "titre": "L’influence romaine : la vigne conquiert la Gaule",
+    "chapo": "De Massalia aux coteaux de Vienne, comment Rome a planté le vignoble français.",
+    "paras": [
+      "Les Phocéens fondent Marseille vers 600 av. J.-C. et y plantent les premières vignes ; mais ce sont les Romains qui, en quatre siècles, diffusent la viticulture le long du Rhône, de la Garonne, puis jusqu’en Bourgogne et sur la Moselle.",
+      "Les légionnaires vétérans reçoivent des terres à planter ; les amphores voyagent sur les fleuves, et Vienne exporte déjà son « vin poissé » de syrah vanté par Pline l’Ancien. L’invention gauloise du tonneau de bois, plus solide que l’amphore, révolutionne le transport.",
+      "En 92 apr. J.-C., l’empereur Domitien ordonne l’arrachage de la moitié des vignes des provinces — première crise de surproduction et première réglementation viticole de l’histoire de France."
+    ],
+    "anecdote": "Le mot « vin » vient du latin vinum, mais « tonneau », « barrique » et « cervoise » sont gaulois : la France a fourni le contenant, Rome le contenu."
+  },
+  {
+    "epoque": "Moyen Âge",
+    "duree": "7 min",
+    "titre": "Les moines bâtisseurs du vignoble",
+    "chapo": "Cîteaux, Cluny et le génie cistercien : la naissance des climats et des clos.",
+    "paras": [
+      "À la chute de Rome, l’Église sauve la vigne : le vin est indispensable à la messe. Autour de chaque abbaye, chaque évêché, un vignoble s’organise. Les bénédictins de Cluny puis les cisterciens de Cîteaux en font une science.",
+      "Pendant six siècles, les moines observent, comparent, délimitent : ils goûtent la terre, notent les différences entre parcelles voisines et enclosent les meilleures de murs — le Clos de Vougeot (1336) reste le monument de cette patience. La notion de climat, aujourd’hui classée à l’UNESCO, est leur invention.",
+      "Leur réseau d’abbayes exporte aussi les cépages : le chardonnay et le pinot voyagent avec les fondations cisterciennes jusqu’en Allemagne et en Suisse."
+    ],
+    "anecdote": "La légende veut que les moines goûtaient la terre pour délimiter les climats ; les analyses modernes de sols ont largement confirmé leurs frontières tracées il y a 800 ans."
+  },
+  {
+    "epoque": "Ancien Régime",
+    "duree": "5 min",
+    "titre": "Le vin des rois, les rois du vin",
+    "chapo": "D’Aliénor d’Aquitaine au champagne des sacres : le vin comme instrument de pouvoir.",
+    "paras": [
+      "Le mariage d’Aliénor d’Aquitaine avec Henri Plantagenêt (1152) livre Bordeaux à la couronne d’Angleterre pour trois siècles : le « claret » inonde Londres, et le privilège bordelais interdit aux vins du « haut-pays » de descendre la Garonne avant Noël.",
+      "À Reims, les rois de France sont sacrés au vin de Champagne — encore tranquille. Louis XIV ne jure que par lui, son médecin Fagon par le bourgogne : la querelle des deux vins occupe la Faculté pendant trente ans.",
+      "Philippe le Hardi, duc de Bourgogne, bannit en 1395 le « déloyal gamay » de ses terres au profit du pinot : premier décret de cépage de l’histoire."
+    ],
+    "anecdote": "Fagon prescrivit le bourgogne à Louis XIV contre la goutte ; la cour suivit, et le champagne dut attendre la Régence pour prendre sa revanche — avec des bulles."
+  },
+  {
+    "epoque": "XIXᵉ siècle",
+    "duree": "6 min",
+    "titre": "1855 : le classement qui défie le temps",
+    "chapo": "Une exposition universelle, des courtiers pressés, et une hiérarchie devenue intouchable.",
+    "paras": [
+      "Pour l’Exposition universelle de Paris, Napoléon III demande une classification des vins de Bordeaux. Les courtiers de la place la dressent en quelques semaines, sur un seul critère : les prix constatés depuis un siècle.",
+      "Soixante et un crus du Médoc (et le seul Haut-Brion des Graves) sont rangés en cinq classes ; les liquoreux de Sauternes en trois, Yquem seul « premier cru supérieur ». Le classement n’a été modifié qu’une fois : Mouton Rothschild, promu premier en 1973 après quarante ans de lobbying.",
+      "Sa devise changea aussitôt : « Premier je suis, second je fus, Mouton ne change. »"
+    ],
+    "anecdote": "Le classement de 1855 fut rédigé si vite que certains châteaux y figurent avec une orthographe fautive — jamais corrigée officiellement."
+  },
+  {
+    "epoque": "1863 – 1900",
+    "duree": "6 min",
+    "titre": "Le phylloxéra : mort et résurrection du vignoble",
+    "chapo": "Un puceron américain détruit tout ; la greffe sauve tout.",
+    "paras": [
+      "Repéré à Pujaut (Gard) en 1863, le phylloxéra — puceron ravageur venu d’Amérique sur des plants importés — anéantit en quarante ans la quasi-totalité du vignoble français : 2,5 millions d’hectares touchés, des régions entières ruinées, l’exode rural massif.",
+      "On essaie tout : inondation des parcelles, sulfure de carbone injecté au pal, prières publiques. La solution vient de l’ennemi lui-même : greffer les cépages français sur des racines de vignes américaines, naturellement résistantes.",
+      "Le vignoble reconstitué change de visage : les cépages médiocres disparaissent, les hiérarchies se resserrent, et le Languedoc devient l’usine à vin de la France industrielle."
+    ],
+    "anecdote": "À Sarragachies (Gers), une parcelle plantée vers 1820 a survécu au phylloxéra dans son sol de sable ; classée monument historique, elle est la doyenne des vignes de France."
+  },
+  {
+    "epoque": "XXᵉ siècle",
+    "duree": "5 min",
+    "titre": "La naissance des AOC : le terroir devient loi",
+    "chapo": "De la révolte des vignerons de 1907 au décret de 1935, l’invention d’un modèle mondial.",
+    "paras": [
+      "Après le phylloxéra, la fraude explose : vins de raisins secs, coupages, « champagnes » de l’Aube contestés. En 1907, le Midi se soulève — 600 000 manifestants à Montpellier, l’armée tire, un régiment se mutine.",
+      "La réponse juridique met trente ans à mûrir : délimitation des aires (1919), puis création en 1935 de l’Appellation d’Origine Contrôlée et du futur INAO, sous l’impulsion du baron Le Roy, vigneron de Châteauneuf-du-Pape.",
+      "Cépages, rendements, degrés, pratiques : l’AOC codifie le lien entre un lieu et son vin. Le modèle essaimera dans le monde entier, du Chianti à la Napa Valley."
+    ],
+    "anecdote": "Châteauneuf-du-Pape interdit par décret municipal de 1954 le survol de son territoire par les « cigares volants » — l’arrêté anti-OVNI le plus célèbre de France est viticole."
+  },
+  {
+    "epoque": "Traditions",
+    "duree": "5 min",
+    "titre": "Confréries, ban des vendanges et Saint-Vincent",
+    "chapo": "Les rituels vivants du vin français, du tastevin à la paulée.",
+    "paras": [
+      "Chaque 22 janvier, la Saint-Vincent tournante réunit un village de Bourgogne différent : processions, cuvées communes, façades décorées. Le patron des vignerons — dont le nom contient « vin » — y est porté de cave en cave.",
+      "Le ban des vendanges, héritage médiéval, fixe encore officiellement l’ouverture de la récolte ; à Saint-Émilion, la Jurade le proclame du haut de la tour du Roy en robe rouge.",
+      "La Confrérie des Chevaliers du Tastevin (1934) tient chapitre au Clos de Vougeot ; la Paulée de Meursault clôt les Trois Glorieuses en novembre, où chacun apporte ses plus vieilles bouteilles à partager."
+    ],
+    "anecdote": "À la Percée du vin jaune, dans le Jura, on met en perce le premier fût du nouveau millésime après 6 ans et 3 mois d’attente — la plus longue patience du vin français se fête en février."
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "bordeaux": {
+    "sols": [
+      [
+        "Graves günziennes",
+        "argiles bleues profondes"
+      ],
+      [
+        "Argilo-calcaire",
+        "calcaire à astéries"
+      ],
+      [
+        "Sables anciens",
+        "crasse de fer"
+      ]
+    ],
+    "alt": [
+      5,
+      60
+    ],
+    "micro": [
+      "Océanique tempéré, estuaire régulateur",
+      "Brises de l’estuaire, drainage rapide"
+    ]
+  },
+  "bourgogne": {
+    "sols": [
+      [
+        "Marnes blanches",
+        "calcaire bathonien"
+      ],
+      [
+        "Éboulis calcaires",
+        "dalle calcaire fissurée"
+      ],
+      [
+        "Argiles brunes",
+        "marnes du Lias"
+      ]
+    ],
+    "alt": [
+      230,
+      410
+    ],
+    "micro": [
+      "Coteau est protégé des vents d’ouest",
+      "Combes fraîches, nuits froides"
+    ]
+  },
+  "champagne": {
+    "sols": [
+      [
+        "Rendzine crayeuse",
+        "craie campanienne"
+      ],
+      [
+        "Marnes et lignites",
+        "argiles sparnaciennes"
+      ],
+      [
+        "Sables tertiaires",
+        "craie profonde"
+      ]
+    ],
+    "alt": [
+      90,
+      300
+    ],
+    "micro": [
+      "Septentrional frais, craie thermorégulatrice"
+    ]
+  },
+  "loire": {
+    "sols": [
+      [
+        "Argiles à silex",
+        "silice du Turonien"
+      ],
+      [
+        "Tuffeau",
+        "craie du Turonien"
+      ],
+      [
+        "Caillottes",
+        "calcaire kimméridgien"
+      ]
+    ],
+    "alt": [
+      80,
+      350
+    ],
+    "micro": [
+      "Tempéré ligérien, influence du fleuve",
+      "Brumes matinales de vallée"
+    ]
+  },
+  "rhone": {
+    "sols": [
+      [
+        "Gore granitique",
+        "granit du Massif central"
+      ],
+      [
+        "Galets roulés",
+        "argiles rouges villafranchiennes"
+      ],
+      [
+        "Lœss et arzelle",
+        "micaschistes"
+      ]
+    ],
+    "alt": [
+      100,
+      320
+    ],
+    "micro": [
+      "Mistral asséchant, forte insolation"
+    ]
+  },
+  "alsace": {
+    "sols": [
+      [
+        "Arènes granitiques",
+        "granit des Vosges"
+      ],
+      [
+        "Grès rose",
+        "socle gréseux vosgien"
+      ],
+      [
+        "Marno-calcaire",
+        "marnes keupériennes"
+      ]
+    ],
+    "alt": [
+      200,
+      430
+    ],
+    "micro": [
+      "Foehn sec, pluviométrie la plus faible de France"
+    ]
+  },
+  "provence": {
+    "sols": [
+      [
+        "Restanques argilo-calcaires",
+        "calcaire urgonien"
+      ],
+      [
+        "Schistes",
+        "socle cristallin des Maures"
+      ],
+      [
+        "Sables dolomitiques",
+        "dolomies du Trias"
+      ]
+    ],
+    "alt": [
+      20,
+      400
+    ],
+    "micro": [
+      "Méditerranéen, mistral protecteur",
+      "Entrées maritimes en fin d’été"
+    ]
+  },
+  "languedoc": {
+    "sols": [
+      [
+        "Schistes",
+        "schistes primaires"
+      ],
+      [
+        "Grès et galets",
+        "terrasses villafranchiennes"
+      ],
+      [
+        "Argilo-calcaire",
+        "calcaires durs des garrigues"
+      ]
+    ],
+    "alt": [
+      10,
+      400
+    ],
+    "micro": [
+      "Méditerranéen chaud, tramontane",
+      "Altitude fraîche des contreforts"
+    ]
+  },
+  "beaujolais": {
+    "sols": [
+      [
+        "Arènes sableuses",
+        "granit rose"
+      ],
+      [
+        "Diorites",
+        "roches bleues de Brouilly"
+      ],
+      [
+        "Limons anciens",
+        "schistes granitiques"
+      ]
+    ],
+    "alt": [
+      190,
+      450
+    ],
+    "micro": [
+      "Semi-continental, coteaux plein sud"
+    ]
+  },
+  "jura": {
+    "sols": [
+      [
+        "Marnes grises",
+        "marnes du Lias"
+      ],
+      [
+        "Argiles à chailles",
+        "calcaires jurassiques"
+      ],
+      [
+        "Éboulis",
+        "calcaire bajocien"
+      ]
+    ],
+    "alt": [
+      250,
+      450
+    ],
+    "micro": [
+      "Continental frais, brouillards d’automne"
+    ]
+  },
+  "savoie": {
+    "sols": [
+      [
+        "Éboulis calcaires",
+        "abrupts du Granier"
+      ],
+      [
+        "Moraines glaciaires",
+        "molasse alpine"
+      ],
+      [
+        "Argilo-calcaire",
+        "calcaires jurassiques"
+      ]
+    ],
+    "alt": [
+      250,
+      500
+    ],
+    "micro": [
+      "Alpin, forte amplitude thermique"
+    ]
+  },
+  "sudouest": {
+    "sols": [
+      [
+        "Causses",
+        "calcaires kimméridgiens"
+      ],
+      [
+        "Boulbènes",
+        "molasse de l’Agenais"
+      ],
+      [
+        "Galets siliceux",
+        "terrasses du Lot"
+      ]
+    ],
+    "alt": [
+      80,
+      300
+    ],
+    "micro": [
+      "Océanique dégradé, effet de foehn d’autan"
+    ]
+  }
+}

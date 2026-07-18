@@ -1,0 +1,714 @@
+[
+  {
+    "terme": "Acescence",
+    "def": "Défaut : piqûre acétique donnant des notes de vinaigre ou de vernis (acidité volatile excessive)."
+  },
+  {
+    "terme": "Acidité",
+    "def": "Colonne vertébrale du vin ; apporte fraîcheur, nervosité et potentiel de garde."
+  },
+  {
+    "terme": "Aération",
+    "def": "Mise en contact du vin avec l'oxygène (carafage) pour ouvrir les arômes."
+  },
+  {
+    "terme": "Ampélographie",
+    "def": "Science de l'identification et de la description des cépages."
+  },
+  {
+    "terme": "Ample",
+    "def": "Vin qui emplit toute la bouche, large et enveloppant."
+  },
+  {
+    "terme": "Animal",
+    "def": "Famille d'arômes tertiaires : cuir, fourrure, gibier, venaison."
+  },
+  {
+    "terme": "AOC",
+    "def": "Appellation d'Origine Contrôlée : terroir délimité, cépages, rendements et pratiques encadrés."
+  },
+  {
+    "terme": "Apogée",
+    "def": "Période où le vin atteint son sommet qualitatif de maturité."
+  },
+  {
+    "terme": "Âpre",
+    "def": "Sensation rugueuse et desséchante due à des tanins agressifs."
+  },
+  {
+    "terme": "Aromatique (cépage)",
+    "def": "Cépage dont les arômes variétaux dominent (muscat, gewurztraminer, sauvignon)."
+  },
+  {
+    "terme": "Arômes primaires",
+    "def": "Arômes issus du raisin lui-même : fruits, fleurs, végétal."
+  },
+  {
+    "terme": "Arômes secondaires",
+    "def": "Arômes nés de la fermentation : levures, brioche, banane, beurre."
+  },
+  {
+    "terme": "Arômes tertiaires",
+    "def": "Bouquet développé à l'élevage et au vieillissement : sous-bois, cuir, truffe, fruits secs."
+  },
+  {
+    "terme": "Assemblage",
+    "def": "Mariage de plusieurs cépages, parcelles ou cuvées pour composer le vin final."
+  },
+  {
+    "terme": "Astringence",
+    "def": "Sensation d'assèchement du palais provoquée par les tanins."
+  },
+  {
+    "terme": "Attaque",
+    "def": "Première impression du vin en bouche."
+  },
+  {
+    "terme": "Ban des vendanges",
+    "def": "Date officielle d'ouverture de la récolte dans une appellation."
+  },
+  {
+    "terme": "Barrique",
+    "def": "Fût de chêne bordelais de 225 litres."
+  },
+  {
+    "terme": "Bâtonnage",
+    "def": "Remise en suspension des lies fines dans le fût pour nourrir le vin."
+  },
+  {
+    "terme": "Baumé",
+    "def": "Ancienne échelle mesurant la richesse en sucre du moût."
+  },
+  {
+    "terme": "Biodynamie",
+    "def": "Viticulture fondée sur les cycles lunaires et des préparations naturelles (certif. Demeter)."
+  },
+  {
+    "terme": "Blanc de blancs",
+    "def": "Effervescent issu exclusivement de raisins blancs (chardonnay en Champagne)."
+  },
+  {
+    "terme": "Blanc de noirs",
+    "def": "Blanc effervescent issu de raisins noirs à jus blanc (pinot noir, meunier)."
+  },
+  {
+    "terme": "Boisé",
+    "def": "Notes de vanille, toast, fumé ou coco apportées par l'élevage sous bois ; réussi lorsqu'il se fond au fruit."
+  },
+  {
+    "terme": "Botrytis",
+    "def": "Pourriture noble (Botrytis cinerea) qui concentre sucres et arômes des grands liquoreux."
+  },
+  {
+    "terme": "Bouche",
+    "def": "Ensemble des sensations gustatives et tactiles : attaque, milieu, finale."
+  },
+  {
+    "terme": "Bouchonné",
+    "def": "Défaut de goût de liège moisi dû au TCA."
+  },
+  {
+    "terme": "Bouquet",
+    "def": "Ensemble des arômes d'un vin évolué."
+  },
+  {
+    "terme": "Bourbes",
+    "def": "Particules solides éliminées du moût blanc avant fermentation (débourbage)."
+  },
+  {
+    "terme": "Brett",
+    "def": "Brettanomyces : levure de contamination donnant cuir, écurie, sueur de cheval."
+  },
+  {
+    "terme": "Brut",
+    "def": "Effervescent peu dosé : moins de 12 g/l de sucre."
+  },
+  {
+    "terme": "Brut nature",
+    "def": "Effervescent sans aucun dosage (moins de 3 g/l)."
+  },
+  {
+    "terme": "Capiteux",
+    "def": "Vin riche en alcool, presque entêtant."
+  },
+  {
+    "terme": "Carafage",
+    "def": "Transvasement du vin en carafe pour l'aérer (jeune) ou le séparer de son dépôt (vieux)."
+  },
+  {
+    "terme": "Cep",
+    "def": "Pied de vigne."
+  },
+  {
+    "terme": "Cépage",
+    "def": "Variété de vigne cultivée (pinot noir, chardonnay, syrah…)."
+  },
+  {
+    "terme": "Chai",
+    "def": "Bâtiment où l'on vinifie et élève le vin."
+  },
+  {
+    "terme": "Chaptalisation",
+    "def": "Ajout de sucre au moût pour augmenter le degré d'alcool (encadré par la loi)."
+  },
+  {
+    "terme": "Charnu",
+    "def": "Vin qui a de la chair, de la matière fruitée en bouche."
+  },
+  {
+    "terme": "Charpenté",
+    "def": "Vin de forte constitution tannique, bâti pour la garde."
+  },
+  {
+    "terme": "Clavelin",
+    "def": "Bouteille de 62 cl réservée au vin jaune du Jura."
+  },
+  {
+    "terme": "Climat",
+    "def": "En Bourgogne, parcelle de vigne délimitée et nommée depuis des siècles (UNESCO 2015)."
+  },
+  {
+    "terme": "Clone",
+    "def": "Descendance d'un cep unique sélectionné pour ses qualités."
+  },
+  {
+    "terme": "Clos",
+    "def": "Parcelle historiquement close de murs (Clos de Vougeot…)."
+  },
+  {
+    "terme": "Collage",
+    "def": "Clarification du vin par ajout d'une protéine qui entraîne les particules."
+  },
+  {
+    "terme": "Complexité",
+    "def": "Richesse et diversité des arômes et saveurs ; marque des grands vins."
+  },
+  {
+    "terme": "Concentration",
+    "def": "Densité de matière (fruit, extrait sec) en bouche."
+  },
+  {
+    "terme": "Corsé",
+    "def": "Vin puissant, riche en alcool et en matière."
+  },
+  {
+    "terme": "Coulure",
+    "def": "Accident de floraison : les fleurs non fécondées tombent, réduisant la récolte."
+  },
+  {
+    "terme": "Court",
+    "def": "Vin dont les arômes disparaissent vite après la déglutition."
+  },
+  {
+    "terme": "Crémant",
+    "def": "Effervescent de méthode traditionnelle hors Champagne (Alsace, Loire, Bourgogne…)."
+  },
+  {
+    "terme": "Cru",
+    "def": "Terroir ou domaine reconnu pour sa qualité ; hiérarchisé dans plusieurs régions."
+  },
+  {
+    "terme": "Cuvaison",
+    "def": "Durée de macération du jus avec les parties solides du raisin."
+  },
+  {
+    "terme": "Cuvée",
+    "def": "Vin issu d'une sélection particulière (cuve, parcelle, assemblage)."
+  },
+  {
+    "terme": "Débourbage",
+    "def": "Clarification du moût blanc avant fermentation."
+  },
+  {
+    "terme": "Débourrement",
+    "def": "Éclosion des bourgeons de la vigne au printemps."
+  },
+  {
+    "terme": "Décuvage",
+    "def": "Séparation du vin de goutte et du marc après cuvaison."
+  },
+  {
+    "terme": "Dégorgement",
+    "def": "Expulsion du dépôt de levures d'une bouteille d'effervescent après remuage."
+  },
+  {
+    "terme": "Demi-sec",
+    "def": "Vin légèrement sucré (effervescents : 32–50 g/l ; tranquilles : 4–12 g/l ou plus selon AOC)."
+  },
+  {
+    "terme": "Dépôt",
+    "def": "Particules solides (tanins, pigments, tartre) au fond des vieilles bouteilles."
+  },
+  {
+    "terme": "Dosage",
+    "def": "Liqueur d'expédition ajoutée après dégorgement, déterminant le style (brut, sec, demi-sec)."
+  },
+  {
+    "terme": "Douelle",
+    "def": "Planche de chêne composant le fût."
+  },
+  {
+    "terme": "Éclaircissage",
+    "def": "Suppression de grappes en été pour concentrer la récolte (vendanges vertes)."
+  },
+  {
+    "terme": "Effeuillage",
+    "def": "Suppression de feuilles autour des grappes pour l'ensoleillement et l'aération."
+  },
+  {
+    "terme": "Égrappage",
+    "def": "Séparation des baies de la rafle avant vinification."
+  },
+  {
+    "terme": "Élevage",
+    "def": "Période de maturation du vin entre fermentation et mise en bouteille — cuve, fût, foudre, amphore ; il affine tanins et arômes."
+  },
+  {
+    "terme": "Empyreumatique",
+    "def": "Famille d'arômes de feu : fumé, grillé, café, cacao, goudron."
+  },
+  {
+    "terme": "Enherbement",
+    "def": "Couvert végétal entre les rangs pour la vie des sols et la concurrence hydrique."
+  },
+  {
+    "terme": "Équilibre",
+    "def": "Harmonie entre acidité, alcool, tanins et sucres — le critère cardinal."
+  },
+  {
+    "terme": "Éraflage",
+    "def": "Synonyme d'égrappage."
+  },
+  {
+    "terme": "Extraction",
+    "def": "Diffusion des tanins et pigments pendant la macération (pigeage, remontage)."
+  },
+  {
+    "terme": "Fermentation alcoolique",
+    "def": "Transformation des sucres en alcool et CO₂ par les levures ; naissance du vin."
+  },
+  {
+    "terme": "Fermentation malolactique",
+    "def": "Transformation de l'acide malique (vert, pomme) en acide lactique (souple, beurré) par des bactéries — la « malo », quasi systématique sur les rouges."
+  },
+  {
+    "terme": "Filtration",
+    "def": "Clarification finale du vin avant mise en bouteille."
+  },
+  {
+    "terme": "Finale",
+    "def": "Dernière impression en bouche ; sa longueur signe la qualité."
+  },
+  {
+    "terme": "Floraison",
+    "def": "Fleur de vigne en juin ; elle détermine la date des vendanges (± 100 jours)."
+  },
+  {
+    "terme": "Foudre",
+    "def": "Grand fût de bois de 20 à 300 hl, marquage boisé discret."
+  },
+  {
+    "terme": "Fruité",
+    "def": "Dominante d'arômes de fruits frais, mûrs, confits ou secs selon l'évolution."
+  },
+  {
+    "terme": "Fût",
+    "def": "Tonneau de chêne pour l'élevage (barrique 225 l, pièce 228 l)."
+  },
+  {
+    "terme": "Garde (vin de)",
+    "def": "Vin construit pour se bonifier plusieurs années en cave."
+  },
+  {
+    "terme": "Gelée de printemps",
+    "def": "Gel des jeunes pousses en avril-mai, fléau des vignerons."
+  },
+  {
+    "terme": "Générique",
+    "def": "Appellation régionale de base (Bourgogne, Bordeaux) sans mention de village."
+  },
+  {
+    "terme": "Glycérol",
+    "def": "Composé onctueux issu de la fermentation, contribue au gras du vin."
+  },
+  {
+    "terme": "Gouleyant",
+    "def": "Vin souple et léger qui se boit facilement."
+  },
+  {
+    "terme": "Goutte (vin de)",
+    "def": "Vin qui s'écoule librement au décuvage, avant pressurage du marc."
+  },
+  {
+    "terme": "Gras",
+    "def": "Texture onctueuse, ronde et enveloppante en bouche."
+  },
+  {
+    "terme": "Gravelle",
+    "def": "Cristaux de tartre inoffensifs au fond des bouteilles."
+  },
+  {
+    "terme": "Greffage",
+    "def": "Union d'un cépage européen sur un porte-greffe américain résistant au phylloxéra."
+  },
+  {
+    "terme": "Grand cru",
+    "def": "Sommet des hiérarchies bourguignonne, champenoise et alsacienne."
+  },
+  {
+    "terme": "Herbacé",
+    "def": "Notes végétales (herbe coupée, poivron) souvent liées à une maturité incomplète."
+  },
+  {
+    "terme": "HVE",
+    "def": "Haute Valeur Environnementale : certification agro-environnementale des exploitations."
+  },
+  {
+    "terme": "Hybride",
+    "def": "Croisement entre vigne européenne et américaine ; base des nouveaux cépages résistants."
+  },
+  {
+    "terme": "INAO",
+    "def": "Institut national de l'origine et de la qualité, gardien des AOC."
+  },
+  {
+    "terme": "Jéroboam",
+    "def": "Grand flacon de 3 litres (5 l à Bordeaux)."
+  },
+  {
+    "terme": "Larmes",
+    "def": "Traînées sur les parois du verre, indice de richesse en alcool et glycérol."
+  },
+  {
+    "terme": "Levures",
+    "def": "Micro-organismes de la fermentation ; indigènes (du terroir) ou sélectionnées."
+  },
+  {
+    "terme": "Levures indigènes",
+    "def": "Levures naturellement présentes sur le raisin et au chai, revendiquées par les vignerons nature."
+  },
+  {
+    "terme": "Lies",
+    "def": "Dépôt de levures mortes après fermentation ; l'élevage « sur lies » nourrit le vin."
+  },
+  {
+    "terme": "Liquoreux",
+    "def": "Vin riche en sucres résiduels (Sauternes, Jurançon VT) issu de raisins sur-mûris ou botrytisés."
+  },
+  {
+    "terme": "Longueur",
+    "def": "Persistance aromatique après la déglutition, mesurée en caudalies."
+  },
+  {
+    "terme": "Macération",
+    "def": "Contact du jus avec peaux et pépins : couleur, tanins, arômes."
+  },
+  {
+    "terme": "Macération carbonique",
+    "def": "Vinification en grappes entières sous CO₂ (Beaujolais) : fruit éclatant, tanins doux."
+  },
+  {
+    "terme": "Madérisé",
+    "def": "Vin oxydé rappelant le madère ; défaut sur un vin sec non muté."
+  },
+  {
+    "terme": "Magnum",
+    "def": "Bouteille de 1,5 litre, format idéal de garde."
+  },
+  {
+    "terme": "Marc",
+    "def": "Résidu solide du pressurage ; distillé en eau-de-vie."
+  },
+  {
+    "terme": "Méthode traditionnelle",
+    "def": "Seconde fermentation en bouteille créant l'effervescence (Champagne, crémants)."
+  },
+  {
+    "terme": "Millésime",
+    "def": "Année de récolte des raisins."
+  },
+  {
+    "terme": "Minéral",
+    "def": "Descripteur d'arômes et de sensations évoquant la pierre : silex, craie, iode, pierre à fusil — souvent lié à l'acidité et au terroir."
+  },
+  {
+    "terme": "Mistelle",
+    "def": "Moût muté à l'alcool avant fermentation (Pineau des Charentes, Floc)."
+  },
+  {
+    "terme": "Moelleux",
+    "def": "Vin doux entre 12 et 45 g/l de sucres résiduels."
+  },
+  {
+    "terme": "Monopole",
+    "def": "Climat ou clos appartenant à un seul propriétaire (La Tâche, Clos de Tart)."
+  },
+  {
+    "terme": "Mutage",
+    "def": "Arrêt de la fermentation par ajout d'alcool, conservant les sucres (VDN : Banyuls, Maury)."
+  },
+  {
+    "terme": "Nature (vin)",
+    "def": "Vin sans intrant ni sulfites ajoutés (ou très peu), de raisins bio récoltés à la main."
+  },
+  {
+    "terme": "Négociant",
+    "def": "Acheteur de raisins, moûts ou vins qu'il élève et commercialise."
+  },
+  {
+    "terme": "Nerveux",
+    "def": "Vin dominé par une acidité vive et tonique."
+  },
+  {
+    "terme": "Nez",
+    "def": "Ensemble des arômes perçus à l'olfaction ; premier nez (verre immobile), deuxième nez (après agitation)."
+  },
+  {
+    "terme": "Nouaison",
+    "def": "Formation des baies après la floraison."
+  },
+  {
+    "terme": "Oxydatif (élevage)",
+    "def": "Élevage volontairement au contact de l'air (vin jaune, VDN) : noix, curry, rancio."
+  },
+  {
+    "terme": "Ouillage",
+    "def": "Remplissage régulier des fûts pour compenser l'évaporation et éviter l'oxydation."
+  },
+  {
+    "terme": "Part des anges",
+    "def": "Fraction du vin évaporée pendant l'élevage sous bois."
+  },
+  {
+    "terme": "Passerillage",
+    "def": "Sur-maturation des raisins par dessèchement au soleil ou sur claies."
+  },
+  {
+    "terme": "Perlant",
+    "def": "Vin tranquille présentant une très légère effervescence."
+  },
+  {
+    "terme": "Phénolique (maturité)",
+    "def": "Maturité des tanins et pigments, distincte de la maturité en sucre."
+  },
+  {
+    "terme": "Phylloxéra",
+    "def": "Puceron américain qui détruisit le vignoble européen (1863-1900) ; vaincu par le greffage."
+  },
+  {
+    "terme": "Pièce",
+    "def": "Fût bourguignon de 228 litres."
+  },
+  {
+    "terme": "Pierre à fusil",
+    "def": "Note minérale fumée de silex frotté (sauvignon de Pouilly, chablis)."
+  },
+  {
+    "terme": "Pigeage",
+    "def": "Enfoncement du chapeau de marc dans le jus pour extraire en douceur."
+  },
+  {
+    "terme": "Porte-greffe",
+    "def": "Racine américaine résistante au phylloxéra sur laquelle on greffe le cépage."
+  },
+  {
+    "terme": "Pourriture grise",
+    "def": "Botrytis néfaste par temps humide, ennemi de la vendange saine."
+  },
+  {
+    "terme": "Premier cru",
+    "def": "Second niveau des hiérarchies bourguignonne et champenoise ; mention de climat en Bourgogne."
+  },
+  {
+    "terme": "Pressurage",
+    "def": "Extraction du jus par pression des raisins ou du marc."
+  },
+  {
+    "terme": "Prise de mousse",
+    "def": "Seconde fermentation en bouteille qui crée les bulles."
+  },
+  {
+    "terme": "Rafle",
+    "def": "Partie ligneuse de la grappe ; sa présence apporte structure et fraîcheur (vinification en grappes entières)."
+  },
+  {
+    "terme": "Rancio",
+    "def": "Arôme oxydatif noble (noix, fruits secs) des VDN élevés longuement."
+  },
+  {
+    "terme": "Réduction",
+    "def": "État aromatique fermé (allumette, œuf) par manque d'oxygène ; s'ouvre au carafage."
+  },
+  {
+    "terme": "Remontage",
+    "def": "Pompage du jus par-dessus le chapeau de marc pour l'extraction."
+  },
+  {
+    "terme": "Remuage",
+    "def": "Rotation progressive des bouteilles pour amener le dépôt vers le goulot (effervescents)."
+  },
+  {
+    "terme": "Rendement",
+    "def": "Production autorisée par hectare (hl/ha) ; sa maîtrise conditionne la concentration."
+  },
+  {
+    "terme": "Rétro-olfaction",
+    "def": "Perception des arômes par voie interne en bouche."
+  },
+  {
+    "terme": "Robe",
+    "def": "Aspect visuel du vin : couleur, intensité, limpidité, reflets."
+  },
+  {
+    "terme": "Rognage",
+    "def": "Taille des rameaux en été pour maîtriser la vigueur."
+  },
+  {
+    "terme": "Rond",
+    "def": "Vin souple, sans aspérité tannique ni acidité saillante."
+  },
+  {
+    "terme": "Sec",
+    "def": "Vin sans sucre résiduel perceptible (moins de 4 g/l)."
+  },
+  {
+    "terme": "Second vin",
+    "def": "Cuvée issue des lots non retenus pour le grand vin d'un château."
+  },
+  {
+    "terme": "Sélection massale",
+    "def": "Replantation à partir des meilleurs ceps du domaine, contre le clonage unique."
+  },
+  {
+    "terme": "Solera",
+    "def": "Élevage par soutirages fractionnés entre fûts d'âges différents (VDN, Jura hors AOC)."
+  },
+  {
+    "terme": "Sommelier",
+    "def": "Professionnel du service et du conseil du vin en restauration."
+  },
+  {
+    "terme": "Soutirage",
+    "def": "Transvasement du vin pour le séparer de ses lies."
+  },
+  {
+    "terme": "Soyeux",
+    "def": "Texture tannique fine et caressante (grands pinots)."
+  },
+  {
+    "terme": "Structure",
+    "def": "Architecture du vin : acidité + tanins + alcool + matière."
+  },
+  {
+    "terme": "Sucres résiduels",
+    "def": "Sucres non fermentés restant dans le vin fini."
+  },
+  {
+    "terme": "Sulfites",
+    "def": "SO₂ protecteur contre l'oxydation et les bactéries ; dosé, il est mentionné dès 10 mg/l."
+  },
+  {
+    "terme": "Sur lattes",
+    "def": "Bouteilles de champagne en cours de prise de mousse, couchées en cave."
+  },
+  {
+    "terme": "Sur lie",
+    "def": "Élevage au contact des lies fines sans soutirage (Muscadet)."
+  },
+  {
+    "terme": "Tanins",
+    "def": "Composés phénoliques des peaux, pépins et rafles ; ils structurent les rouges, assèchent le palais jeunes, se fondent avec l'âge."
+  },
+  {
+    "terme": "Tastevin",
+    "def": "Coupelle d'argent traditionnelle de dégustation bourguignonne."
+  },
+  {
+    "terme": "TCA",
+    "def": "Trichloroanisole, molécule du goût de bouchon."
+  },
+  {
+    "terme": "Terroir",
+    "def": "Alliance unique d'un sol, d'un climat, d'une exposition et d'un savoir-faire humain — le concept fondateur des AOC françaises."
+  },
+  {
+    "terme": "Tirage",
+    "def": "Mise en bouteille avec liqueur de tirage pour la prise de mousse."
+  },
+  {
+    "terme": "Tranquille (vin)",
+    "def": "Vin non effervescent."
+  },
+  {
+    "terme": "Tries",
+    "def": "Passages successifs de vendange pour ne cueillir que les raisins botrytisés (liquoreux)."
+  },
+  {
+    "terme": "Tuffeau",
+    "def": "Craie du Val de Loire, sol et caves troglodytes de Vouvray et Saumur."
+  },
+  {
+    "terme": "Typicité",
+    "def": "Caractère fidèle au cépage, au terroir et à l'appellation."
+  },
+  {
+    "terme": "Vendanges tardives",
+    "def": "Récolte sur-mûrie donnant des vins moelleux (Alsace, Jurançon)."
+  },
+  {
+    "terme": "Vendange verte",
+    "def": "Éclaircissage estival des grappes excédentaires."
+  },
+  {
+    "terme": "Véraison",
+    "def": "Changement de couleur des baies en août, début de la maturation."
+  },
+  {
+    "terme": "Vigneron",
+    "def": "Celui qui cultive la vigne et fait le vin — de la taille à la mise."
+  },
+  {
+    "terme": "Vin de garde",
+    "def": "Vin dont la structure permet un long vieillissement bénéfique."
+  },
+  {
+    "terme": "Vin de goutte",
+    "def": "Vin écoulé sans pressurage, le plus fin."
+  },
+  {
+    "terme": "Vin de presse",
+    "def": "Vin issu du pressurage du marc, plus tannique."
+  },
+  {
+    "terme": "Vin de voile",
+    "def": "Vin élevé sous un voile de levures sans ouillage (vin jaune, Gaillac)."
+  },
+  {
+    "terme": "Vin doux naturel",
+    "def": "Vin muté à l'alcool en cours de fermentation (Banyuls, Maury, Rivesaltes, muscats)."
+  },
+  {
+    "terme": "Vin jaune",
+    "def": "Savagnin jurassien élevé 6 ans et 3 mois sous voile, en clavelin."
+  },
+  {
+    "terme": "Vin muté",
+    "def": "Vin dont la fermentation est arrêtée par ajout d'alcool."
+  },
+  {
+    "terme": "Vinification",
+    "def": "Ensemble des opérations transformant le raisin en vin."
+  },
+  {
+    "terme": "Vin orange",
+    "def": "Blanc vinifié comme un rouge, avec macération des peaux."
+  },
+  {
+    "terme": "Vivace",
+    "def": "Acidité fraîche et saillante, signe de jeunesse."
+  },
+  {
+    "terme": "Volatile (acidité)",
+    "def": "Acides volatils (acétique) ; à faible dose complexité, à forte dose défaut."
+  }
+]

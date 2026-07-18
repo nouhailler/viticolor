@@ -1,0 +1,50 @@
+[
+  {
+    "nom": "Pinot Noir",
+    "type": "rouge",
+    "tint": "#7d2c3d",
+    "desc": "Bourgogne, Champagne · fruits rouges, sous-bois, tanins soyeux"
+  },
+  {
+    "nom": "Chardonnay",
+    "type": "blanc",
+    "tint": "#a8812f",
+    "desc": "Bourgogne, Champagne · du minéral chablisien au beurré meursaultien"
+  },
+  {
+    "nom": "Syrah",
+    "type": "rouge",
+    "tint": "#5c2430",
+    "desc": "Rhône nord · poivre, violette, olive noire"
+  },
+  {
+    "nom": "Chenin",
+    "type": "blanc",
+    "tint": "#8a6a24",
+    "desc": "Loire · coing, miel ; sec, moelleux ou effervescent"
+  },
+  {
+    "nom": "Cabernet Franc",
+    "type": "rouge",
+    "tint": "#6e1f2e",
+    "desc": "Loire, Bordeaux · poivron mûr, framboise, fraîcheur"
+  },
+  {
+    "nom": "Savagnin",
+    "type": "blanc",
+    "tint": "#6b5a2a",
+    "desc": "Jura · noix, curry en oxydatif ; tension pure en ouillé"
+  },
+  {
+    "nom": "Grenache",
+    "type": "rouge",
+    "tint": "#7a3626",
+    "desc": "Rhône sud, Roussillon · kirsch, garrigue, chaleur"
+  },
+  {
+    "nom": "Riesling",
+    "type": "blanc",
+    "tint": "#476152",
+    "desc": "Alsace · agrumes, pétrole noble, grande garde"
+  }
+]

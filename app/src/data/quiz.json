@@ -1,0 +1,52 @@
+[
+  {
+    "q": "Combien la Bourgogne compte-t-elle de climats classés à l’UNESCO ?",
+    "opts": [
+      "847",
+      "1 247",
+      "2 047"
+    ],
+    "a": 1,
+    "ex": "1 247 climats délimités, inscrits au patrimoine mondial en 2015."
+  },
+  {
+    "q": "Quel cépage domine la rive droite de Bordeaux ?",
+    "opts": [
+      "Cabernet Sauvignon",
+      "Merlot",
+      "Malbec"
+    ],
+    "a": 1,
+    "ex": "Les sols argilo-calcaires de Saint-Émilion et Pomerol favorisent le merlot."
+  },
+  {
+    "q": "Le vin jaune est élevé sous voile pendant…",
+    "opts": [
+      "3 ans",
+      "6 ans et 3 mois",
+      "10 ans"
+    ],
+    "a": 1,
+    "ex": "Six ans et trois mois minimum en fût non ouillé, avant la clavelin de 62 cl."
+  },
+  {
+    "q": "Combien de cépages sont autorisés à Châteauneuf-du-Pape ?",
+    "opts": [
+      "8",
+      "13",
+      "18"
+    ],
+    "a": 1,
+    "ex": "Treize cépages, rouges et blancs confondus, dont le grenache en chef de file."
+  },
+  {
+    "q": "Quel cépage produit le Condrieu ?",
+    "opts": [
+      "Marsanne",
+      "Roussanne",
+      "Viognier"
+    ],
+    "a": 2,
+    "ex": "Le viognier, sur granits, y donne des blancs d’abricot et de violette."
+  }
+]

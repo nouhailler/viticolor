@@ -1,0 +1,22 @@
+[
+  {
+    "icone": "🍷",
+    "titre": "Bienvenue dans Viticolor",
+    "txt": "Le compagnon sommelier du vignoble français : 12 régions, cépages, millésimes et accords, toujours en poche."
+  },
+  {
+    "icone": "🗺",
+    "titre": "Explorez les régions",
+    "txt": "Carte de France interactive, fiches terroir, graphiques de millésimes et fiches techniques professionnelles."
+  },
+  {
+    "icone": "📷",
+    "titre": "Scannez, notez, collectionnez",
+    "txt": "Scanner d’étiquettes avec fiche complète, carnet de dégustation détaillé, cave valorisée en temps réel et objectifs de collection."
+  },
+  {
+    "icone": "💡",
+    "titre": "Le mode démo vous guide",
+    "txt": "Un bandeau doré vous souffle quoi essayer sur chaque écran. Désactivez-le à tout moment depuis le menu."
+  }
+]
