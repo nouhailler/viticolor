@@ -492,5 +492,43 @@
       "Sartène",
       "Porto-Vecchio"
     ]
+  },
+  "lorraine": {
+    "pos": [
+      70,
+      16
+    ],
+    "hist": "Vignoble jadis immense décimé par le phylloxéra et les deux guerres, sauvé par une poignée de vignerons autour de Toul et reconnu en AOC Côtes de Toul (1998) puis Moselle (2010).",
+    "climat": "Semi-continental septentrional : hivers froids, étés courts, maturités tardives qui privilégient fraîcheur et finesse.",
+    "terr": "Marnes et calcaires du Jurassique sur les côtes de Meuse et de Moselle, coteaux bien exposés face au fleuve.",
+    "spec": [
+      "Vin gris de Toul (gamay, pinot noir)",
+      "Auxerrois et müller-thurgau de Moselle",
+      "Crémant de Lorraine"
+    ],
+    "dom": [
+      {
+        "n": "Domaine Lelièvre",
+        "c": "HVE",
+        "v": "Lucey"
+      },
+      {
+        "n": "Château de Vaux",
+        "c": "Bio",
+        "v": "Vaux"
+      },
+      {
+        "n": "Domaine Régina",
+        "c": "HVE",
+        "v": "Bruley"
+      }
+    ],
+    "vil": [
+      "Bruley",
+      "Lucey",
+      "Blénod-lès-Toul",
+      "Vaux",
+      "Contz-les-Bains"
+    ]
   }
 }

@@ -15,13 +15,14 @@ const WINES = resolve(__dir, '../src/data/wines.json');
 
 const REGION_BY_NAME = {
   bordeaux: 'bordeaux', bourgogne: 'bourgogne', champagne: 'champagne',
-  'val de loire': 'loire', loire: 'loire',
+  'val de loire': 'loire', loire: 'loire', 'vallee de la loire': 'loire',
   'vallee du rhone': 'rhone', rhone: 'rhone',
   alsace: 'alsace', provence: 'provence',
   'languedoc-roussillon': 'languedoc', languedoc: 'languedoc', roussillon: 'languedoc',
   beaujolais: 'beaujolais', jura: 'jura',
   'savoie & bugey': 'savoie', savoie: 'savoie', bugey: 'savoie', 'sud-ouest': 'sudouest',
   corse: 'corse', 'ile de beaute': 'corse', "ile de beaute'": 'corse',
+  lorraine: 'lorraine', 'cotes de toul': 'lorraine', moselle: 'lorraine',
 };
 const COULMAP = { rouge: 'rouge', blanc: 'blanc', rose: 'rosé', rosé: 'rosé', effervescent: 'effervescent', liquoreux: 'liquoreux' };
 const TEMP_DEFAUT = { rouge: '16–18 °C', blanc: '8–10 °C', rosé: '8–10 °C', effervescent: '6–8 °C', liquoreux: '8–10 °C' };
@@ -32,7 +33,7 @@ const HORS_BEAUJOLAIS = new Set(
 
 // Déduction de couleur (cépage prioritaire, puis dénomination).
 const GRAPES_ROUGE = ['gamay', 'pinot noir', 'syrah', 'merlot', 'cabernet', 'malbec', 'tannat', 'mondeuse', 'gamaret', 'marselan', 'grenache', 'mourvedre', 'cinsault', 'poulsard', 'trousseau', 'negrette', 'fer servadou', 'nielluccio', 'sciaccarello', 'carcajolo', 'aleatico'];
-const GRAPES_BLANC = ['chardonnay', 'riesling', 'sauvignon', 'chenin', 'viognier', 'pinot gris', 'gewurztraminer', 'aligote', 'marsanne', 'roussanne', 'savagnin', 'melon', 'jacquere', 'altesse', 'manseng', 'clairette', 'rolle', 'vermentino', 'muscat', 'sylvaner', 'pinot blanc', 'mauzac', 'colombard', 'biancu gentile', 'malvoisie'];
+const GRAPES_BLANC = ['chardonnay', 'riesling', 'sauvignon', 'chenin', 'viognier', 'pinot gris', 'gewurztraminer', 'aligote', 'marsanne', 'roussanne', 'savagnin', 'melon', 'jacquere', 'altesse', 'manseng', 'clairette', 'rolle', 'vermentino', 'muscat', 'sylvaner', 'pinot blanc', 'mauzac', 'colombard', 'biancu gentile', 'malvoisie', 'auxerrois', 'muller'];
 const APP_BLANC = ['chardonnay', 'pouilly fuisse', 'saint veran', 'viognier', 'pinot gris'];
 const APP_ROUGE = ['marselan', 'gamaret', 'pinot'];
 
@@ -109,11 +110,12 @@ export function parseBatch(rawInput) {
     appellation = appellation.replace(/^AOP\s+/i, '').replace(/^AOC\s+/i, '');
     const cuvee = clean(f['cuvee']);
 
-    // Nettoie un éventuel parenthétique (« Provence (mais proche du Languedoc) »)
+    // Nettoie un éventuel parenthétique de région : sous-région (« Vallée de la
+    // Loire (Touraine) ») ou note éditoriale (« Provence (mais proche du Languedoc) »).
+    // C'est une normalisation de libellé, pas une donnée inventée → pas de comble[].
     const regionKey = norm(f['region'] || '').replace(/\s*\(.*\)\s*$/, '').trim();
     const regionId = REGION_BY_NAME[regionKey];
     if (!regionId) issues.push(`${ref} ${domaine} — région inconnue : « ${f['region']} »`);
-    else if (regionKey !== norm(f['region'] || '')) comble.push(`région « ${f['region']} » → ${regionId}`);
 
     const cepages = clean(f['cepages']);
     const couleurRaw = clean(f['couleur']);

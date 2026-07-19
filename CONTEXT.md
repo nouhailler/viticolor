@@ -25,7 +25,7 @@ Fichier : `app/src/data/wines.json` (typé `Wine`, exporté `WINES`). C'est un
 `app/src/screens/Bouteilles.tsx` (liste + recherche domaine/appellation/cépage +
 filtres couleur/région + fiche détail), accessible via le menu hamburger.
 
-**État au 19/07/2026 : 253 vins · 150 producteurs.**
+**État au 19/07/2026 : 334 vins · 179 producteurs.**
 
 | Région (regionId) | Vins |
 | --- | --- |
@@ -33,14 +33,16 @@ filtres couleur/région + fiche détail), accessible via le menu hamburger.
 | Alsace (`alsace`) | 34 |
 | Champagne (`champagne`) | 33 |
 | Corse (`corse`) | 32 |
+| Loire (`loire`) | 31 |
 | Jura (`jura`) | 31 |
 | Beaujolais (`beaujolais`) | 30 |
 | Savoie & Bugey (`savoie`) | 29 |
 | Languedoc-Roussillon (`languedoc`) | 26 |
-| Provence (`provence`) | 2 |
+| Lorraine (`lorraine`) | 26 |
+| Provence (`provence`) | 26 |
 | Vallée du Rhône (`rhone`) | 1 |
 
-Couleurs : 94 blancs · 89 rouges · 44 effervescents · 15 rosés · 11 liquoreux.
+Couleurs : 128 blancs · 113 rouges · 51 effervescents · 26 rosés · 16 liquoreux.
 
 Note : **Roussillon → `languedoc`** (région combinée). Le script d'ingestion nettoie
 un parenthétique de région (« Provence (mais proche du Languedoc) » → provence).
@@ -102,10 +104,11 @@ désambiguïse quand la cuvée est vide.
 
 ## 4. TODO / prochaines étapes
 
-- [ ] Charger les régions restantes : Bordeaux, Rhône, Loire, Sud-Ouest, + étoffer
-  Provence (+ ~7 champagnes manquants du dernier lot, paste tronqué).
-      Corse (32, `corse-1.txt`), Jura (31, `jura-1.txt`) et Languedoc-Roussillon
-      (31, `languedoc-1.txt`) faits le 19/07/2026.
+- [ ] Charger les régions restantes : Bordeaux, Rhône, Sud-Ouest
+  (+ ~7 champagnes manquants du dernier lot, paste tronqué).
+      Corse (32, `corse-1.txt`), Jura (31, `jura-1.txt`), Languedoc-Roussillon
+      (28, `languedoc-1.txt`), Lorraine (26, `lorraine-1.txt`, 14ᵉ région), Loire
+      (31, `loire-1.txt`) et Provence (24, `provence-1.txt`) faits le 19/07/2026.
 - [ ] Brancher le **scanner** (`app/src/lib/ocr.ts`, stub) sur `WINES` : renvoyer un
   vrai vin du catalogue.
 - [ ] Exposer `WINES` dans la **recherche globale** (`app/src/screens/Search.tsx`).

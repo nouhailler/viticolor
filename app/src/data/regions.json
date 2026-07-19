@@ -413,5 +413,35 @@
       }
     ],
     "desc": "Île-montagne battue par le maquis, la Corse cultive un vignoble d’altitude sur granit et schiste autour de cépages autochtones : le nielluccio charpenté de Patrimonio, le sciaccarello épicé d’Ajaccio, le vermentino salin en blanc et le muscat du Cap Corse en vin doux naturel."
+  },
+  {
+    "id": "lorraine",
+    "name": "Lorraine",
+    "tint": "#42627e",
+    "aoc": 3,
+    "ha": "180",
+    "hl": "0,01",
+    "tagline": "Le vin gris de Toul et les crémants du Grand Est",
+    "cepages": [
+      "Auxerrois",
+      "Pinot Noir",
+      "Gamay",
+      "Müller-Thurgau"
+    ],
+    "appellations": [
+      {
+        "n": "Côtes de Toul",
+        "t": "gris & rouge"
+      },
+      {
+        "n": "Moselle",
+        "t": "blanc & rouge"
+      },
+      {
+        "n": "Crémant de Lorraine",
+        "t": "effervescent"
+      }
+    ],
+    "desc": "Rescapé des grandes crises viticoles, le petit vignoble lorrain se partage entre les Côtes de Toul, patrie du célèbre vin gris de gamay et pinot noir, et la Moselle qui regarde vers l’Allemagne avec ses auxerrois et müller-thurgau. Le crémant de Lorraine complète une gamme fraîche et septentrionale."
   }
 ]
