@@ -1,5 +1,5 @@
 import { useStore, actions, isRootScreen, setState, type State } from '../store';
-import { DEMO_TIPS, GLOSSAIRE, WINES } from '../data';
+import { DEMO_TIPS, GLOSSAIRE, WINES, REGIONS } from '../data';
 import type { ScreenId } from '../types';
 
 // ─── Header fixe ───
@@ -124,7 +124,7 @@ const MENU: MenuDef[] = [
     key: 'regions',
     id: 'regions',
     label: 'Régions & carte',
-    hint: () => '12 régions',
+    hint: () => `${REGIONS.length} régions`,
     extra: { regionsView: 'carte', carteRegion: null, carteInfo: null },
   },
   {

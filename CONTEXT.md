@@ -17,6 +17,10 @@ au-delà de React. Données JSON embarquées, persistance `localStorage` (préfi
 - Écrans : `app/src/screens/` (20 écrans). Routeur dans `app/src/App.tsx`.
 - Données : `app/src/data/*.json` + `index.ts` typé. Types dans `app/src/types.ts`.
 - Tests : `npm test` (rendu SSR de tous les écrans via `app/scripts/smoke.tsx`).
+- Captures README : `npm run screenshots` (Playwright ; nécessite `npm run preview`
+  lancé au préalable) → `docs/screenshots/*.png`, référencées dans `README.md`.
+- Le nombre de régions affiché est **dynamique** (`REGIONS.length`) dans l'écran Régions
+  et le menu ; textes prose (onboarding, manifest PWA) passés à « 14 régions ».
 
 ## 2. Catalogue de vins (travail en cours)
 

@@ -19,7 +19,7 @@ export default defineConfig({
         name: 'Viticolor — Sommelier du vignoble français',
         short_name: 'Viticolor',
         description:
-          'Le compagnon sommelier du vignoble français : 12 régions, cépages, millésimes, scanner d’étiquettes, cave valorisée et carnet de dégustation.',
+          'Le compagnon sommelier du vignoble français : 14 régions, cépages, millésimes, scanner d’étiquettes, cave valorisée et carnet de dégustation.',
         lang: 'fr',
         dir: 'ltr',
         start_url: '/',

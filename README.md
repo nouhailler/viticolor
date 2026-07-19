@@ -34,18 +34,18 @@ dépend d'**aucun serveur** — toutes les données sont embarquées et l'état 
 
 <table>
   <tr>
-    <td align="center" width="33%"><img src="design_handoff_viticolor/screenshots/02-accueil-decouverte.png" alt="Accueil" /><br><sub><b>Accueil</b> · découverte du jour</sub></td>
-    <td align="center" width="33%"><img src="design_handoff_viticolor/screenshots/03-regions-carte.png" alt="Carte des régions" /><br><sub><b>Régions</b> · carte interactive</sub></td>
-    <td align="center" width="33%"><img src="design_handoff_viticolor/screenshots/04-cepages.png" alt="Cépages" /><br><sub><b>Cépages</b> · fiches détaillées</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/accueil.png" alt="Accueil" /><br><sub><b>Accueil</b> · découverte du jour</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/regions.png" alt="Carte des régions" /><br><sub><b>Régions</b> · carte interactive</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/cepages.png" alt="Cépages" /><br><sub><b>Cépages</b> · fiches détaillées</sub></td>
   </tr>
   <tr>
-    <td align="center" width="33%"><img src="design_handoff_viticolor/screenshots/06-scanner-etiquette.png" alt="Scanner d'étiquette" /><br><sub><b>Scanner</b> · reconnaissance d'étiquette</sub></td>
-    <td align="center" width="33%"><img src="design_handoff_viticolor/screenshots/07-ma-cave.png" alt="Ma cave" /><br><sub><b>Ma cave</b> · valorisation & apogée</sub></td>
-    <td align="center" width="33%"><img src="design_handoff_viticolor/screenshots/09-accords-mets-vins.png" alt="Accords mets-vins" /><br><sub><b>Accords</b> · mets & vins</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/scanner.png" alt="Scanner d'étiquette" /><br><sub><b>Scanner</b> · reconnaissance d'étiquette</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/cave.png" alt="Ma cave" /><br><sub><b>Ma cave</b> · valorisation & apogée</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/bouteilles.png" alt="Bouteilles" /><br><sub><b>Bouteilles</b> · le catalogue (391 vins)</sub></td>
   </tr>
 </table>
 
-<sub>Captures issues du prototype haute-fidélité de référence (<code>design_handoff_viticolor/</code>), fidèlement reproduit par l'app.</sub>
+<sub>Captures réelles de l'application (build de production), régénérables via <code>npm run screenshots</code>.</sub>
 
 ## 🧭 Fonctionnalités
 

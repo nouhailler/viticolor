@@ -18,7 +18,7 @@ export function Regions() {
   return (
     <div style={{ padding: 20 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 10 }}>
-        <ScreenHeading title="Les régions viticoles" subtitle="12 grandes régions · ♥ pour vos favorites" />
+        <ScreenHeading title="Les régions viticoles" subtitle={`${REGIONS.length} grandes régions · ♥ pour vos favorites`} />
         <div style={{ display: 'flex', gap: 6, flexShrink: 0, marginTop: 4 }}>
           {VIEW_CHIPS.map(([id, label]) => {
             const active = regionsView === id;
