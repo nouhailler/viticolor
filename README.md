@@ -17,7 +17,7 @@
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white" />
   <img alt="Vite" src="https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white" />
   <img alt="PWA" src="https://img.shields.io/badge/PWA-installable-5A0FC8?logo=pwa&logoColor=white" />
-  <img alt="Vins" src="https://img.shields.io/badge/catalogue-391%20vins-8e2f3f" />
+  <img alt="Vins" src="https://img.shields.io/badge/catalogue-422%20vins-8e2f3f" />
 </p>
 
 ---
@@ -41,7 +41,7 @@ dépend d'**aucun serveur** — toutes les données sont embarquées et l'état 
   <tr>
     <td align="center" width="33%"><img src="docs/screenshots/scanner.png" alt="Scanner d'étiquette" /><br><sub><b>Scanner</b> · reconnaissance d'étiquette</sub></td>
     <td align="center" width="33%"><img src="docs/screenshots/cave.png" alt="Ma cave" /><br><sub><b>Ma cave</b> · valorisation & apogée</sub></td>
-    <td align="center" width="33%"><img src="docs/screenshots/bouteilles.png" alt="Bouteilles" /><br><sub><b>Bouteilles</b> · le catalogue (391 vins)</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/bouteilles.png" alt="Bouteilles" /><br><sub><b>Bouteilles</b> · le catalogue (422 vins)</sub></td>
   </tr>
 </table>
 
@@ -60,26 +60,27 @@ dépend d'**aucun serveur** — toutes les données sont embarquées et l'état 
 
 ## 🍷 Le catalogue
 
-**391 vins · 202 producteurs · 12 régions renseignées sur 14**, enrichis via un pipeline
+**422 vins · 220 producteurs · 13 régions renseignées sur 14**, enrichis via un pipeline
 d'ingestion maison (`app/scripts/ingest-wines.mjs`).
 
 | Région | Vins | Région | Vins |
 | --- | :---: | --- | :---: |
 | 🏔️ Savoie & Bugey | 52 | 🐚 Corse | 32 |
-| ☀️ Vallée du Rhône | 35 | 🟡 Jura | 31 |
+| ☀️ Vallée du Rhône | 35 | 🌰 Sud-Ouest | 31 |
 | 🍂 Bourgogne | 35 | 🏰 Val de Loire | 31 |
-| 🥨 Alsace | 34 | 🍇 Beaujolais | 30 |
-| 🥂 Champagne | 33 | 🌿 Languedoc-Roussillon · Provence · Lorraine | 26 chacune |
+| 🥨 Alsace | 34 | 🟡 Jura | 31 |
+| 🥂 Champagne | 33 | 🍇 Beaujolais | 30 |
+| 🌿 Languedoc-Roussillon · Provence · Lorraine | 26 chacune | 🍷 Bordeaux | à venir |
 
 <p>
-  <img alt="Blancs" src="https://img.shields.io/badge/blancs-147-e8d9a0" />
-  <img alt="Rouges" src="https://img.shields.io/badge/rouges-141-8e2f3f" />
-  <img alt="Effervescents" src="https://img.shields.io/badge/effervescents-53-c9a227" />
-  <img alt="Rosés" src="https://img.shields.io/badge/ros%C3%A9s-32-e8a0a8" />
-  <img alt="Liquoreux" src="https://img.shields.io/badge/liquoreux-18-b8860b" />
+  <img alt="Rouges" src="https://img.shields.io/badge/rouges-155-8e2f3f" />
+  <img alt="Blancs" src="https://img.shields.io/badge/blancs-154-e8d9a0" />
+  <img alt="Effervescents" src="https://img.shields.io/badge/effervescents-54-c9a227" />
+  <img alt="Rosés" src="https://img.shields.io/badge/ros%C3%A9s-36-e8a0a8" />
+  <img alt="Liquoreux" src="https://img.shields.io/badge/liquoreux-23-b8860b" />
 </p>
 
-> 🚧 Régions restant à charger : **Bordeaux** et **Sud-Ouest**.
+> 🚧 Dernière région restant à charger : **Bordeaux**.
 
 ## 🚀 Démarrage rapide
 
@@ -123,7 +124,7 @@ React. Store maison (observable + `useSyncExternalStore`), persistance `localSto
 
 ## 🧭 Prochaines étapes
 
-- [ ] Charger les dernières régions : **Bordeaux**, **Sud-Ouest**.
+- [ ] Charger la dernière région : **Bordeaux**.
 - [ ] Brancher le **scanner** (OCR) sur le catalogue pour renvoyer un vrai vin.
 - [ ] Exposer le catalogue dans la **recherche globale**.
 

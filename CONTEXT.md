@@ -29,7 +29,7 @@ Fichier : `app/src/data/wines.json` (typé `Wine`, exporté `WINES`). C'est un
 `app/src/screens/Bouteilles.tsx` (liste + recherche domaine/appellation/cépage +
 filtres couleur/région + fiche détail), accessible via le menu hamburger.
 
-**État au 19/07/2026 : 391 vins · 202 producteurs.**
+**État au 19/07/2026 : 422 vins · 220 producteurs · 13 régions sur 14.**
 
 | Région (regionId) | Vins |
 | --- | --- |
@@ -39,16 +39,18 @@ filtres couleur/région + fiche détail), accessible via le menu hamburger.
 | Alsace (`alsace`) | 34 |
 | Champagne (`champagne`) | 33 |
 | Corse (`corse`) | 32 |
-| Loire (`loire`) | 31 |
+| Sud-Ouest (`sudouest`) | 31 |
+| Val de Loire (`loire`) | 31 |
 | Jura (`jura`) | 31 |
 | Beaujolais (`beaujolais`) | 30 |
 | Languedoc-Roussillon (`languedoc`) | 26 |
 | Provence (`provence`) | 26 |
 | Lorraine (`lorraine`) | 26 |
+| **Bordeaux (`bordeaux`)** | **0 — seule région restant à charger** |
 
-Couleurs : 147 blancs · 141 rouges · 53 effervescents · 32 rosés · 18 liquoreux.
-(Un « Crémant de Savoie » erroné attribué au Caveau de Buxy — coopérative de Bourgogne —
-a été retiré.)
+Couleurs : 155 rouges · 154 blancs · 54 effervescents · 36 rosés · 23 liquoreux.
+(Anomalies producteur↔appellation exclues du catalogue : Buxy en Savoie, Octavin en
+Roussillon/Rivesaltes/Cahors, Château de Pez en Minervois.)
 
 Note : **Roussillon → `languedoc`** (région combinée). Le script d'ingestion nettoie
 un parenthétique de région (« Provence (mais proche du Languedoc) » → provence).
@@ -110,12 +112,13 @@ désambiguïse quand la cuvée est vide.
 
 ## 4. TODO / prochaines étapes
 
-- [ ] Charger les régions restantes : Bordeaux, Sud-Ouest
+- [ ] Charger la **dernière** région : **Bordeaux**
   (+ ~7 champagnes manquants du dernier lot, paste tronqué).
       Corse (32, `corse-1.txt`), Jura (31, `jura-1.txt`), Languedoc-Roussillon
       (28, `languedoc-1.txt`), Lorraine (26, `lorraine-1.txt`, 14ᵉ région), Loire
       (31, `loire-1.txt`), Provence (24, `provence-1.txt`), Rhône (34,
-      `rhone-1.txt`) et Savoie #2 (24, `savoie-2.txt`) faits le 19/07/2026.
+      `rhone-1.txt`), Savoie #2 (23, `savoie-2.txt`) et Sud-Ouest (31,
+      `sudouest-1.txt`) faits le 19/07/2026.
 - [ ] Brancher le **scanner** (`app/src/lib/ocr.ts`, stub) sur `WINES` : renvoyer un
   vrai vin du catalogue.
 - [ ] Exposer `WINES` dans la **recherche globale** (`app/src/screens/Search.tsx`).
