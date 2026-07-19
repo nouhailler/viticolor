@@ -454,5 +454,43 @@
       "Gaillac",
       "Fronton"
     ]
+  },
+  "corse": {
+    "pos": [
+      82,
+      82
+    ],
+    "hist": "Vignoble insulaire millénaire, planté par les Grecs de Phocée puis façonné par Pise et Gênes, en pleine renaissance qualitative depuis les années 1960 autour de ses cépages autochtones.",
+    "climat": "Méditerranéen ensoleillé (près de 2 900 h de soleil) tempéré par l’altitude et les brises marines, avec de fortes amplitudes jour/nuit.",
+    "terr": "Granit à l’ouest et au sud (Ajaccio, Sartène), schistes du Cap Corse, calcaire et argiles à Patrimonio.",
+    "spec": [
+      "Nielluccio charpenté de Patrimonio",
+      "Sciaccarello épicé d’Ajaccio",
+      "Muscat du Cap Corse (vin doux naturel)"
+    ],
+    "dom": [
+      {
+        "n": "Domaine Antoine Arena",
+        "c": "Bio",
+        "v": "Patrimonio"
+      },
+      {
+        "n": "Comte Abbatucci",
+        "c": "Bio",
+        "v": "Casalabriva"
+      },
+      {
+        "n": "Domaine Gentile",
+        "c": "Bio",
+        "v": "Saint-Florent"
+      }
+    ],
+    "vil": [
+      "Patrimonio",
+      "Ajaccio",
+      "Calvi",
+      "Sartène",
+      "Porto-Vecchio"
+    ]
   }
 }

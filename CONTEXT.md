@@ -1,6 +1,6 @@
 # CONTEXT — reprise de travail Viticolor
 
-_Dernière mise à jour : 18 juillet 2026._
+_Dernière mise à jour : 19 juillet 2026._
 
 Ce fichier sert à **reprendre le projet** rapidement (conventions, décisions, état).
 
@@ -25,18 +25,25 @@ Fichier : `app/src/data/wines.json` (typé `Wine`, exporté `WINES`). C'est un
 `app/src/screens/Bouteilles.tsx` (liste + recherche domaine/appellation/cépage +
 filtres couleur/région + fiche détail), accessible via le menu hamburger.
 
-**État au 18/07/2026 : 162 vins · 119 producteurs.**
+**État au 19/07/2026 : 225 vins · 137 producteurs.**
 
 | Région (regionId) | Vins |
 | --- | --- |
 | Bourgogne (`bourgogne`) | 35 |
 | Alsace (`alsace`) | 34 |
 | Champagne (`champagne`) | 33 |
+| Corse (`corse`) | 32 |
+| Jura (`jura`) | 31 |
 | Beaujolais (`beaujolais`) | 30 |
 | Savoie & Bugey (`savoie`) | 29 |
 | Vallée du Rhône (`rhone`) | 1 |
 
-Couleurs : 62 blancs · 57 rouges · 40 effervescents · 3 rosés.
+Couleurs : 85 blancs · 78 rouges · 44 effervescents · 11 rosés · 7 liquoreux.
+
+**Ajout d'une région = 3 fichiers** (leçon du lot Corse) : `regions.json` (fiche
+région) **et** `atlas.json` (entrée avec `pos`/`vil`/`dom`… sinon la vue carte des
+Régions plante : `ATLAS[r.id].pos`) **et** le mapping `REGION_BY_NAME` du script
+d'ingestion. Corse ajoutée comme 13ᵉ région (id `corse`, tint `#3d7d6e`).
 
 ## 3. Pipeline d'ingestion
 
@@ -88,7 +95,9 @@ désambiguïse quand la cuvée est vide.
 ## 4. TODO / prochaines étapes
 
 - [ ] Charger les régions restantes : Bordeaux, Rhône, Loire, Provence, Languedoc,
-  Jura, Sud-Ouest (+ ~7 champagnes manquants du dernier lot, paste tronqué).
+  Sud-Ouest (+ ~7 champagnes manquants du dernier lot, paste tronqué).
+      Corse (32 vins, `data-batches/corse-1.txt`) et Jura (31 vins,
+      `data-batches/jura-1.txt`) faits le 19/07/2026.
 - [ ] Brancher le **scanner** (`app/src/lib/ocr.ts`, stub) sur `WINES` : renvoyer un
   vrai vin du catalogue.
 - [ ] Exposer `WINES` dans la **recherche globale** (`app/src/screens/Search.tsx`).

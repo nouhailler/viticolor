@@ -379,5 +379,39 @@
       }
     ],
     "desc": "Conservatoire de cépages autochtones, le Sud-Ouest aligne des identités fortes : malbec de Cahors, tannat de Madiran, petit et gros manseng du Jurançon, entre Atlantique et Pyrénées."
+  },
+  {
+    "id": "corse",
+    "name": "Corse",
+    "tint": "#3d7d6e",
+    "aoc": 9,
+    "ha": "5 700",
+    "hl": "0,3",
+    "tagline": "Nielluccio, Sciaccarello, Vermentino : l’île de beauté",
+    "cepages": [
+      "Nielluccio",
+      "Sciaccarello",
+      "Vermentino",
+      "Muscat Blanc à Petits Grains"
+    ],
+    "appellations": [
+      {
+        "n": "Patrimonio",
+        "t": "rouge & blanc"
+      },
+      {
+        "n": "Ajaccio",
+        "t": "rouge"
+      },
+      {
+        "n": "Muscat du Cap Corse",
+        "t": "liquoreux"
+      },
+      {
+        "n": "Vin de Corse",
+        "t": "tous styles"
+      }
+    ],
+    "desc": "Île-montagne battue par le maquis, la Corse cultive un vignoble d’altitude sur granit et schiste autour de cépages autochtones : le nielluccio charpenté de Patrimonio, le sciaccarello épicé d’Ajaccio, le vermentino salin en blanc et le muscat du Cap Corse en vin doux naturel."
   }
 ]
