@@ -4736,5 +4736,597 @@
       "fromages de chèvre"
     ],
     "comble": []
+  },
+  {
+    "id": "domaine-de-l-hortus-grande-cuvee-2019",
+    "domaine": "Domaine de l’Hortus",
+    "cuvee": "Grande Cuvée",
+    "appellation": "Pic Saint-Loup",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Syrah 50 %, Grenache 30 %, Mourvèdre 20 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 25,
+    "temperature": "16–18 °C",
+    "garde": "2025–2035",
+    "notes": "mûre, réglisse, épices, tanins souples",
+    "accords": [
+      "agneau grillé",
+      "gibier",
+      "fromages affinés (Pélardon, Roquefort)"
+    ],
+    "comble": []
+  },
+  {
+    "id": "mas-de-daumas-gassac-mas-de-daumas-gassac-2018",
+    "domaine": "Mas de Daumas Gassac",
+    "cuvee": "Mas de Daumas Gassac",
+    "appellation": "Vin de Pays de l’Hérault",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2018,
+    "cepages": "Cabernet Sauvignon 70 %, Merlot 15 %, Syrah 10 %, Petit Verdot 5 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 45,
+    "temperature": "16–18 °C",
+    "garde": "2025–2040",
+    "notes": "cassis, cèdre, épices, tanins fins et élégants",
+    "accords": [
+      "bœuf grillé",
+      "canard aux olives",
+      "fromages à pâte dure"
+    ],
+    "comble": []
+  },
+  {
+    "id": "chateau-de-lascaux-grand-vin-2020",
+    "domaine": "Château de Lascaux",
+    "cuvee": "Grand Vin",
+    "appellation": "Terrasses du Larzac",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2020,
+    "cepages": "Syrah 40 %, Grenache 30 %, Mourvèdre 20 %, Carignan 10 %",
+    "degre": "14,5 % vol.",
+    "prixMoyen": 30,
+    "temperature": "16–18 °C",
+    "garde": "2025–2035",
+    "notes": "groseille, poivre, épices, structure puissante",
+    "accords": [
+      "agneau",
+      "gibier",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-leon-barral-jadis-2018",
+    "domaine": "Domaine Leon Barral",
+    "cuvee": "Jadis",
+    "appellation": "Faugères",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2018,
+    "cepages": "Carignan 50 %, Syrah 30 %, Grenache 20 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 35,
+    "temperature": "16–18 °C",
+    "garde": "2025–2040",
+    "notes": "mûre, réglisse, thym, tanins rustiques",
+    "accords": [
+      "sanglier",
+      "agneau",
+      "fromages de brebis"
+    ],
+    "comble": []
+  },
+  {
+    "id": "chateau-puech-haut-prestige-2019",
+    "domaine": "Château Puech-Haut",
+    "cuvee": "Prestige",
+    "appellation": "Saint-Drézéry",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Syrah 60 %, Grenache 40 %",
+    "degre": "14,5 % vol.",
+    "prixMoyen": 28,
+    "temperature": "16–18 °C",
+    "garde": "2025–2035",
+    "notes": "cassis, poivre, épices, tanins soyeux",
+    "accords": [
+      "bœuf",
+      "agneau",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-de-la-provenquiere-les-mures-2020",
+    "domaine": "Domaine de la Provenquière",
+    "cuvee": "Les Mûres",
+    "appellation": "Corbières",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2020,
+    "cepages": "Carignan 50 %, Syrah 30 %, Grenache 20 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 18,
+    "temperature": "16–18 °C",
+    "garde": "2024–2030",
+    "notes": "mûre, réglisse, épices, tanins souples",
+    "accords": [
+      "charcuterie",
+      "grillades",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "chateau-de-lastours-grand-vin-2019",
+    "domaine": "Château de Lastours",
+    "cuvee": "Grand Vin",
+    "appellation": "Corbières",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Carignan 40 %, Syrah 30 %, Grenache 30 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 20,
+    "temperature": "16–18 °C",
+    "garde": "2024–2030",
+    "notes": "groseille, poivre, épices, tanins rustiques",
+    "accords": [
+      "agneau",
+      "gibier",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-tempier-bandol-rouge-2018",
+    "domaine": "Domaine Tempier",
+    "cuvee": "Bandol Rouge",
+    "appellation": "Bandol",
+    "regionId": "provence",
+    "couleur": "rouge",
+    "millesime": 2018,
+    "cepages": "Mourvèdre 50 %, Grenache 30 %, Cinsault 20 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 30,
+    "temperature": "16–18 °C",
+    "garde": "2025–2040",
+    "notes": "mûre, réglisse, épices, tanins puissants",
+    "accords": [
+      "gibier",
+      "agneau",
+      "fromages affinés"
+    ],
+    "comble": [
+      "région « Provence (mais proche du Languedoc) » → provence"
+    ]
+  },
+  {
+    "id": "domaine-de-cebene-felgar-2019",
+    "domaine": "Domaine de Cébène",
+    "cuvee": "Felgar",
+    "appellation": "Faugères",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Syrah 50 %, Grenache 30 %, Mourvèdre 20 %",
+    "degre": "14 % vol.",
+    "prixMoyen": 25,
+    "temperature": "16–18 °C",
+    "garde": "2025–2035",
+    "notes": "cassis, poivre, épices, tanins fins",
+    "accords": [
+      "bœuf",
+      "agneau",
+      "fromages à pâte dure"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-gauby-muntada-2018",
+    "domaine": "Domaine Gauby",
+    "cuvee": "Muntada",
+    "appellation": "Côtes du Roussillon Villages",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2018,
+    "cepages": "Grenache 50 %, Syrah 30 %, Carignan 20 %",
+    "degre": "14,5 % vol.",
+    "prixMoyen": 35,
+    "temperature": "16–18 °C",
+    "garde": "2025–2040",
+    "notes": "cassis, poivre, épices, tanins fins",
+    "accords": [
+      "bœuf",
+      "agneau",
+      "fromages à pâte dure"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-de-la-rectorie-cuvee-leon-parce-2019",
+    "domaine": "Domaine de la Rectorie",
+    "cuvee": "Cuvée Léon Parcé",
+    "appellation": "Collioure",
+    "regionId": "languedoc",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Grenache 50 %, Syrah 30 %, Mourvèdre 20 %",
+    "degre": "14,5 % vol.",
+    "prixMoyen": 40,
+    "temperature": "16–18 °C",
+    "garde": "2025–2040",
+    "notes": "mûre, réglisse, épices, tanins puissants",
+    "accords": [
+      "gibier",
+      "agneau",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-des-soulanes-les-filles-2018",
+    "domaine": "Domaine des Soulanes",
+    "cuvee": "Les Filles",
+    "appellation": "Banyuls",
+    "regionId": "languedoc",
+    "couleur": "liquoreux",
+    "millesime": 2018,
+    "cepages": "Grenache Noir 100 %",
+    "degre": "16 % vol.",
+    "prixMoyen": 30,
+    "temperature": "14–16 °C",
+    "garde": "2025–2045",
+    "notes": "fruits rouges confits, cacao, épices, douceur généreuse",
+    "accords": [
+      "dessert au chocolat",
+      "foie gras",
+      "fromages bleus"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-la-tour-vieille-banyuls-2017",
+    "domaine": "Domaine La Tour Vieille",
+    "cuvee": "Banyuls",
+    "appellation": "Banyuls",
+    "regionId": "languedoc",
+    "couleur": "liquoreux",
+    "millesime": 2017,
+    "cepages": "Grenache Noir 90 %, Carignan 10 %",
+    "degre": "16 % vol.",
+    "prixMoyen": 35,
+    "temperature": "14–16 °C",
+    "garde": "2025–2050",
+    "notes": "pruneau, cacao, épices, complexité aromatique",
+    "accords": [
+      "dessert au chocolat",
+      "foie gras",
+      "fromages bleus"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-de-l-hortus-blanc-2021",
+    "domaine": "Domaine de l’Hortus",
+    "cuvee": "Blanc",
+    "appellation": "Pic Saint-Loup",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Roussanne 50 %, Marsanne 30 %, Grenache Blanc 20 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 22,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "fleur blanche, agrumes, miel, rondeur",
+    "accords": [
+      "poisson grillé",
+      "coquillages",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "mas-de-daumas-gassac-blanc-2020",
+    "domaine": "Mas de Daumas Gassac",
+    "cuvee": "Blanc",
+    "appellation": "Vin de Pays de l’Hérault",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Chardonnay 50 %, Viognier 20 %, Roussanne 20 %, Marsanne 10 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 35,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "agrumes, fleur d’acacia, beurre, minéralité",
+    "accords": [
+      "homard",
+      "saint-jacques",
+      "volaille en sauce"
+    ],
+    "comble": []
+  },
+  {
+    "id": "chateau-de-lascaux-blanc-2021",
+    "domaine": "Château de Lascaux",
+    "cuvee": "Blanc",
+    "appellation": "Terrasses du Larzac",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Roussanne 60 %, Marsanne 40 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 20,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "fleur blanche, poire, miel, fraîcheur",
+    "accords": [
+      "poisson blanc",
+      "coquillages",
+      "salades"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-leon-barral-blanc-2020",
+    "domaine": "Domaine Leon Barral",
+    "cuvee": "Blanc",
+    "appellation": "Faugères",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Roussanne 50 %, Marsanne 30 %, Grenache Blanc 20 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 25,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "agrumes, fleur blanche, miel, rondeur",
+    "accords": [
+      "poisson grillé",
+      "coquillages",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "chateau-puech-haut-prestige-blanc-2021",
+    "domaine": "Château Puech-Haut",
+    "cuvee": "Prestige Blanc",
+    "appellation": "Saint-Drézéry",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Roussanne 50 %, Viognier 30 %, Grenache Blanc 20 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 22,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "fleur d’acacia, agrumes, beurre, minéralité",
+    "accords": [
+      "homard",
+      "saint-jacques",
+      "volaille en sauce"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-de-la-provenquiere-les-mures-blanc-2021",
+    "domaine": "Domaine de la Provenquière",
+    "cuvee": "Les Mûres Blanc",
+    "appellation": "Corbières",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Grenache Blanc 50 %, Roussanne 30 %, Marsanne 20 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 15,
+    "temperature": "10–12 °C",
+    "garde": "2024–2026",
+    "notes": "pomme, poire, fleur blanche, fraîcheur",
+    "accords": [
+      "poisson blanc",
+      "coquillages",
+      "salades"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-de-cebene-felgar-blanc-2020",
+    "domaine": "Domaine de Cébène",
+    "cuvee": "Felgar Blanc",
+    "appellation": "Faugères",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Roussanne 60 %, Marsanne 40 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 20,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "fleur blanche, agrumes, miel, rondeur",
+    "accords": [
+      "poisson grillé",
+      "coquillages",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "chateau-de-lastours-rose-2022",
+    "domaine": "Château de Lastours",
+    "cuvee": "Rosé",
+    "appellation": "Corbières",
+    "regionId": "languedoc",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Grenache 50 %, Syrah 30 %, Cinsault 20 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 12,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "fraise, framboise, fraîcheur, légèreté",
+    "accords": [
+      "apéritif",
+      "salades",
+      "charcuterie"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-tempier-bandol-rose-2022",
+    "domaine": "Domaine Tempier",
+    "cuvee": "Bandol Rosé",
+    "appellation": "Bandol",
+    "regionId": "provence",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Mourvèdre 40 %, Grenache 30 %, Cinsault 30 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 25,
+    "temperature": "8–10 °C",
+    "garde": "2024–2026",
+    "notes": "groseille, framboise, fraîcheur, minéralité",
+    "accords": [
+      "apéritif",
+      "grillades",
+      "fromages de chèvre"
+    ],
+    "comble": [
+      "région « Provence (mais proche du Languedoc) » → provence"
+    ]
+  },
+  {
+    "id": "domaine-de-l-hortus-rose-2022",
+    "domaine": "Domaine de l’Hortus",
+    "cuvee": "Rosé",
+    "appellation": "Pic Saint-Loup",
+    "regionId": "languedoc",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Syrah 40 %, Grenache 30 %, Cinsault 30 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 15,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "fraise, framboise, fraîcheur, élégance",
+    "accords": [
+      "apéritif",
+      "salades",
+      "charcuterie"
+    ],
+    "comble": []
+  },
+  {
+    "id": "mas-de-daumas-gassac-rose-2022",
+    "domaine": "Mas de Daumas Gassac",
+    "cuvee": "Rosé",
+    "appellation": "Vin de Pays de l’Hérault",
+    "regionId": "languedoc",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Syrah 50 %, Grenache 30 %, Cinsault 20 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 20,
+    "temperature": "8–10 °C",
+    "garde": "2024–2026",
+    "notes": "groseille, framboise, fraîcheur, minéralité",
+    "accords": [
+      "apéritif",
+      "grillades",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-gauby-les-calcinaires-blanc-2021",
+    "domaine": "Domaine Gauby",
+    "cuvee": "Les Calcinaires Blanc",
+    "appellation": "Côtes du Roussillon",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Grenache Blanc 50 %, Roussanne 30 %, Marsanne 20 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 25,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "fleur blanche, agrumes, miel, rondeur",
+    "accords": [
+      "poisson grillé",
+      "coquillages",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-de-la-rectorie-cuvee-leon-parce-blanc-2020",
+    "domaine": "Domaine de la Rectorie",
+    "cuvee": "Cuvée Léon Parcé Blanc",
+    "appellation": "Collioure",
+    "regionId": "languedoc",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Grenache Blanc 50 %, Roussanne 30 %, Marsanne 20 %",
+    "degre": "13,5 % vol.",
+    "prixMoyen": 30,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "agrumes, fleur d’acacia, miel, minéralité",
+    "accords": [
+      "homard",
+      "saint-jacques",
+      "volaille en sauce"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-des-soulanes-maury-2018",
+    "domaine": "Domaine des Soulanes",
+    "cuvee": "Maury",
+    "appellation": "Maury",
+    "regionId": "languedoc",
+    "couleur": "liquoreux",
+    "millesime": 2018,
+    "cepages": "Grenache Noir 100 %",
+    "degre": "16 % vol.",
+    "prixMoyen": 25,
+    "temperature": "14–16 °C",
+    "garde": "2025–2045",
+    "notes": "fruits noirs confits, cacao, épices, douceur généreuse",
+    "accords": [
+      "dessert au chocolat",
+      "foie gras",
+      "fromages bleus"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-la-tour-vieille-maury-2017",
+    "domaine": "Domaine La Tour Vieille",
+    "cuvee": "Maury",
+    "appellation": "Maury",
+    "regionId": "languedoc",
+    "couleur": "liquoreux",
+    "millesime": 2017,
+    "cepages": "Grenache Noir 90 %, Carignan 10 %",
+    "degre": "16 % vol.",
+    "prixMoyen": 30,
+    "temperature": "14–16 °C",
+    "garde": "2025–2050",
+    "notes": "pruneau, cacao, épices, complexité aromatique",
+    "accords": [
+      "dessert au chocolat",
+      "foie gras",
+      "fromages bleus"
+    ],
+    "comble": []
   }
 ]

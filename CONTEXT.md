@@ -25,7 +25,7 @@ Fichier : `app/src/data/wines.json` (typé `Wine`, exporté `WINES`). C'est un
 `app/src/screens/Bouteilles.tsx` (liste + recherche domaine/appellation/cépage +
 filtres couleur/région + fiche détail), accessible via le menu hamburger.
 
-**État au 19/07/2026 : 225 vins · 137 producteurs.**
+**État au 19/07/2026 : 253 vins · 150 producteurs.**
 
 | Région (regionId) | Vins |
 | --- | --- |
@@ -36,9 +36,17 @@ filtres couleur/région + fiche détail), accessible via le menu hamburger.
 | Jura (`jura`) | 31 |
 | Beaujolais (`beaujolais`) | 30 |
 | Savoie & Bugey (`savoie`) | 29 |
+| Languedoc-Roussillon (`languedoc`) | 26 |
+| Provence (`provence`) | 2 |
 | Vallée du Rhône (`rhone`) | 1 |
 
-Couleurs : 85 blancs · 78 rouges · 44 effervescents · 11 rosés · 7 liquoreux.
+Couleurs : 94 blancs · 89 rouges · 44 effervescents · 15 rosés · 11 liquoreux.
+
+Note : **Roussillon → `languedoc`** (région combinée). Le script d'ingestion nettoie
+un parenthétique de région (« Provence (mais proche du Languedoc) » → provence).
+3 fiches de la source retirées (producteur ≠ appellation, pas de substitution) :
+Domaine de l'Octavin (Côtes du Roussillon + Rivesaltes ; l'Octavin est un domaine du
+Jura) et Château de Pez en Minervois (c'est un Saint-Estèphe / Bordeaux).
 
 **Ajout d'une région = 3 fichiers** (leçon du lot Corse) : `regions.json` (fiche
 région) **et** `atlas.json` (entrée avec `pos`/`vil`/`dom`… sinon la vue carte des
@@ -94,10 +102,10 @@ désambiguïse quand la cuvée est vide.
 
 ## 4. TODO / prochaines étapes
 
-- [ ] Charger les régions restantes : Bordeaux, Rhône, Loire, Provence, Languedoc,
-  Sud-Ouest (+ ~7 champagnes manquants du dernier lot, paste tronqué).
-      Corse (32 vins, `data-batches/corse-1.txt`) et Jura (31 vins,
-      `data-batches/jura-1.txt`) faits le 19/07/2026.
+- [ ] Charger les régions restantes : Bordeaux, Rhône, Loire, Sud-Ouest, + étoffer
+  Provence (+ ~7 champagnes manquants du dernier lot, paste tronqué).
+      Corse (32, `corse-1.txt`), Jura (31, `jura-1.txt`) et Languedoc-Roussillon
+      (31, `languedoc-1.txt`) faits le 19/07/2026.
 - [ ] Brancher le **scanner** (`app/src/lib/ocr.ts`, stub) sur `WINES` : renvoyer un
   vrai vin du catalogue.
 - [ ] Exposer `WINES` dans la **recherche globale** (`app/src/screens/Search.tsx`).

@@ -109,8 +109,11 @@ export function parseBatch(rawInput) {
     appellation = appellation.replace(/^AOP\s+/i, '').replace(/^AOC\s+/i, '');
     const cuvee = clean(f['cuvee']);
 
-    const regionId = REGION_BY_NAME[norm(f['region'] || '')];
+    // Nettoie un éventuel parenthétique (« Provence (mais proche du Languedoc) »)
+    const regionKey = norm(f['region'] || '').replace(/\s*\(.*\)\s*$/, '').trim();
+    const regionId = REGION_BY_NAME[regionKey];
     if (!regionId) issues.push(`${ref} ${domaine} — région inconnue : « ${f['region']} »`);
+    else if (regionKey !== norm(f['region'] || '')) comble.push(`région « ${f['region']} » → ${regionId}`);
 
     const cepages = clean(f['cepages']);
     const couleurRaw = clean(f['couleur']);
