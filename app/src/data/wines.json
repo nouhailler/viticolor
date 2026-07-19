@@ -7747,5 +7747,490 @@
       "fromages bleus"
     ],
     "comble": []
+  },
+  {
+    "id": "domaine-dupasquier-apremont-2022",
+    "domaine": "Domaine Dupasquier",
+    "cuvee": "Apremont",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2022,
+    "cepages": "Jacquère 100 %",
+    "degre": "11,5 % vol.",
+    "prixMoyen": 12,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "pomme verte, citron, fleur blanche, fraîcheur",
+    "accords": [
+      "apéritif",
+      "fondue savoyarde",
+      "tartiflette"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-jean-perrier-fils-roussette-de-savoie-2021",
+    "domaine": "Domaine Jean Perrier & Fils",
+    "cuvee": "Roussette de Savoie",
+    "appellation": "Roussette de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Altesse 100 %",
+    "degre": "12,5 % vol.",
+    "prixMoyen": 18,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "abricot, fleur blanche, amande, minéralité",
+    "accords": [
+      "poisson grillé",
+      "coquillages",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-andre-et-michel-quenard-roussette-de-savoie-2020",
+    "domaine": "Domaine André et Michel Quenard",
+    "cuvee": "Roussette de Savoie",
+    "appellation": "Roussette de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Altesse 100 %",
+    "degre": "12,5 % vol.",
+    "prixMoyen": 20,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "poire, miel, fleur d’acacia, rondeur",
+    "accords": [
+      "homard",
+      "saint-jacques",
+      "fromages à pâte molle"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-goyard-chignin-2021",
+    "domaine": "Domaine Goyard",
+    "cuvee": "Chignin",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Jacquère 100 %",
+    "degre": "11,5 % vol.",
+    "prixMoyen": 13,
+    "temperature": "8–10 °C",
+    "garde": "2024–2026",
+    "notes": "pomme, citron, fraîcheur, légèreté",
+    "accords": [
+      "apéritif",
+      "salades",
+      "fromages frais"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-des-ardoisieres-argile-blanc-2020",
+    "domaine": "Domaine des Ardoisières",
+    "cuvee": "Argile Blanc",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Jacquère 50 %, Altesse 30 %, Roussanne 20 %",
+    "degre": "12,5 % vol.",
+    "prixMoyen": 22,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "fleur blanche, agrumes, minéralité, fraîcheur",
+    "accords": [
+      "coquillages",
+      "poisson grillé",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-jean-perrier-fils-chignin-bergeron-2021",
+    "domaine": "Domaine Jean Perrier & Fils",
+    "cuvee": "Chignin-Bergeron",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Roussanne 100 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 20,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "abricot, miel, fleur blanche, rondeur",
+    "accords": [
+      "volaille en sauce",
+      "poisson noble",
+      "fromages à pâte molle"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-dupasquier-abymes-2022",
+    "domaine": "Domaine Dupasquier",
+    "cuvee": "Abymes",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2022,
+    "cepages": "Jacquère 100 %",
+    "degre": "11,5 % vol.",
+    "prixMoyen": 12,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "pomme verte, citron, fraîcheur, légèreté",
+    "accords": [
+      "apéritif",
+      "salades",
+      "fromages frais"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-andre-et-michel-quenard-chignin-bergeron-2020",
+    "domaine": "Domaine André et Michel Quenard",
+    "cuvee": "Chignin-Bergeron",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Roussanne 100 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 22,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "abricot, miel, fleur blanche, rondeur",
+    "accords": [
+      "homard",
+      "saint-jacques",
+      "fromages à pâte molle"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-goyard-roussette-de-savoie-2021",
+    "domaine": "Domaine Goyard",
+    "cuvee": "Roussette de Savoie",
+    "appellation": "Roussette de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Altesse 100 %",
+    "degre": "12,5 % vol.",
+    "prixMoyen": 18,
+    "temperature": "10–12 °C",
+    "garde": "2024–2028",
+    "notes": "poire, amande, fleur blanche, minéralité",
+    "accords": [
+      "poisson grillé",
+      "coquillages",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-des-ardoisieres-schiste-blanc-2020",
+    "domaine": "Domaine des Ardoisières",
+    "cuvee": "Schiste Blanc",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Jacquère 60 %, Altesse 40 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 25,
+    "temperature": "10–12 °C",
+    "garde": "2024–2030",
+    "notes": "fleur blanche, agrumes, minéralité, fraîcheur",
+    "accords": [
+      "coquillages",
+      "poisson grillé",
+      "fromages de chèvre"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-dupasquier-mondeuse-2020",
+    "domaine": "Domaine Dupasquier",
+    "cuvee": "Mondeuse",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rouge",
+    "millesime": 2020,
+    "cepages": "Mondeuse 100 %",
+    "degre": "12,5 % vol.",
+    "prixMoyen": 15,
+    "temperature": "14–16 °C",
+    "garde": "2024–2030",
+    "notes": "groseille, poivre, épices, tanins rustiques",
+    "accords": [
+      "charcuterie",
+      "gibier",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-jean-perrier-fils-gamay-2021",
+    "domaine": "Domaine Jean Perrier & Fils",
+    "cuvee": "Gamay",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rouge",
+    "millesime": 2021,
+    "cepages": "Gamay 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 14,
+    "temperature": "12–14 °C",
+    "garde": "2024–2026",
+    "notes": "cerise, framboise, fraîcheur, légèreté",
+    "accords": [
+      "charcuterie",
+      "volaille",
+      "fromages frais"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-andre-et-michel-quenard-mondeuse-2019",
+    "domaine": "Domaine André et Michel Quenard",
+    "cuvee": "Mondeuse",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Mondeuse 100 %",
+    "degre": "13 % vol.",
+    "prixMoyen": 20,
+    "temperature": "14–16 °C",
+    "garde": "2025–2035",
+    "notes": "mûre, poivre, épices, tanins puissants",
+    "accords": [
+      "gibier",
+      "agneau",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-goyard-gamay-2020",
+    "domaine": "Domaine Goyard",
+    "cuvee": "Gamay",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rouge",
+    "millesime": 2020,
+    "cepages": "Gamay 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 13,
+    "temperature": "12–14 °C",
+    "garde": "2024–2026",
+    "notes": "cerise, framboise, fraîcheur, légèreté",
+    "accords": [
+      "charcuterie",
+      "volaille",
+      "fromages frais"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-des-ardoisieres-persan-2019",
+    "domaine": "Domaine des Ardoisières",
+    "cuvee": "Persan",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rouge",
+    "millesime": 2019,
+    "cepages": "Persan 100 %",
+    "degre": "12,5 % vol.",
+    "prixMoyen": 25,
+    "temperature": "14–16 °C",
+    "garde": "2025–2035",
+    "notes": "groseille, violette, épices, tanins fins",
+    "accords": [
+      "agneau",
+      "gibier",
+      "fromages affinés"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-dupasquier-rose-de-mondeuse-2022",
+    "domaine": "Domaine Dupasquier",
+    "cuvee": "Rosé de Mondeuse",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Mondeuse 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 13,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "fraise, framboise, fraîcheur, légèreté",
+    "accords": [
+      "apéritif",
+      "salades",
+      "charcuterie"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-jean-perrier-fils-rose-de-gamay-2022",
+    "domaine": "Domaine Jean Perrier & Fils",
+    "cuvee": "Rosé de Gamay",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Gamay 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 12,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "fraise, groseille, fraîcheur, légèreté",
+    "accords": [
+      "apéritif",
+      "salades",
+      "charcuterie"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-andre-et-michel-quenard-rose-d-altesse-2022",
+    "domaine": "Domaine André et Michel Quenard",
+    "cuvee": "Rosé d’Altesse",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Altesse 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 15,
+    "temperature": "8–10 °C",
+    "garde": "2024–2026",
+    "notes": "pêche, abricot, fraîcheur, élégance",
+    "accords": [
+      "apéritif",
+      "salades",
+      "fromages frais"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-goyard-rose-de-jacquere-2022",
+    "domaine": "Domaine Goyard",
+    "cuvee": "Rosé de Jacquère",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "rosé",
+    "millesime": 2022,
+    "cepages": "Jacquère 100 %",
+    "degre": "11,5 % vol.",
+    "prixMoyen": 12,
+    "temperature": "8–10 °C",
+    "garde": "2024–2025",
+    "notes": "pomme, fraise, fraîcheur, légèreté",
+    "accords": [
+      "apéritif",
+      "salades",
+      "charcuterie"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-jean-perrier-fils-cremant-de-savoie-rose-nv",
+    "domaine": "Domaine Jean Perrier & Fils",
+    "cuvee": "Crémant de Savoie Rosé",
+    "appellation": "Crémant de Savoie",
+    "regionId": "savoie",
+    "couleur": "effervescent",
+    "millesime": null,
+    "cepages": "Gamay 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 18,
+    "temperature": "6–8 °C",
+    "garde": "2024–2026",
+    "notes": "fraise, framboise, bulles vives, fraîcheur",
+    "accords": [
+      "apéritif",
+      "desserts aux fruits rouges",
+      "charcuterie"
+    ],
+    "comble": [
+      "couleur « effervescent (rosé) » → effervescent"
+    ]
+  },
+  {
+    "id": "domaine-dupasquier-cremant-de-savoie-blanc-de-blancs-nv",
+    "domaine": "Domaine Dupasquier",
+    "cuvee": "Crémant de Savoie Blanc de Blancs",
+    "appellation": "Crémant de Savoie",
+    "regionId": "savoie",
+    "couleur": "effervescent",
+    "millesime": null,
+    "cepages": "Jacquère 100 %",
+    "degre": "12 % vol.",
+    "prixMoyen": 16,
+    "temperature": "6–8 °C",
+    "garde": "2024–2026",
+    "notes": "pomme, citron, bulles fines, fraîcheur",
+    "accords": [
+      "apéritif",
+      "huîtres",
+      "sushi"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-andre-et-michel-quenard-vin-de-savoie-molette-2020",
+    "domaine": "Domaine André et Michel Quenard",
+    "cuvee": "Vin de Savoie Molette",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2020,
+    "cepages": "Molette 100 %",
+    "degre": "11,5 % vol.",
+    "prixMoyen": 18,
+    "temperature": "8–10 °C",
+    "garde": "2024–2026",
+    "notes": "pomme, poire, fleur blanche, légèreté",
+    "accords": [
+      "apéritif",
+      "desserts légers",
+      "fromages frais"
+    ],
+    "comble": []
+  },
+  {
+    "id": "domaine-des-ardoisieres-vin-de-savoie-molette-2021",
+    "domaine": "Domaine des Ardoisières",
+    "cuvee": "Vin de Savoie Molette",
+    "appellation": "Vin de Savoie",
+    "regionId": "savoie",
+    "couleur": "blanc",
+    "millesime": 2021,
+    "cepages": "Molette 100 %",
+    "degre": "11,5 % vol.",
+    "prixMoyen": 20,
+    "temperature": "8–10 °C",
+    "garde": "2024–2026",
+    "notes": "pomme, citron, fleur blanche, fraîcheur",
+    "accords": [
+      "apéritif",
+      "desserts légers",
+      "fromages frais"
+    ],
+    "comble": []
   }
 ]

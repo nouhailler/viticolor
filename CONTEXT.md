@@ -25,10 +25,11 @@ Fichier : `app/src/data/wines.json` (typé `Wine`, exporté `WINES`). C'est un
 `app/src/screens/Bouteilles.tsx` (liste + recherche domaine/appellation/cépage +
 filtres couleur/région + fiche détail), accessible via le menu hamburger.
 
-**État au 19/07/2026 : 368 vins · 200 producteurs.**
+**État au 19/07/2026 : 391 vins · 202 producteurs.**
 
 | Région (regionId) | Vins |
 | --- | --- |
+| Savoie & Bugey (`savoie`) | 52 |
 | Bourgogne (`bourgogne`) | 35 |
 | Vallée du Rhône (`rhone`) | 35 |
 | Alsace (`alsace`) | 34 |
@@ -37,12 +38,13 @@ filtres couleur/région + fiche détail), accessible via le menu hamburger.
 | Loire (`loire`) | 31 |
 | Jura (`jura`) | 31 |
 | Beaujolais (`beaujolais`) | 30 |
-| Savoie & Bugey (`savoie`) | 29 |
 | Languedoc-Roussillon (`languedoc`) | 26 |
 | Provence (`provence`) | 26 |
 | Lorraine (`lorraine`) | 26 |
 
-Couleurs : 136 rouges · 135 blancs · 51 effervescents · 28 rosés · 18 liquoreux.
+Couleurs : 147 blancs · 141 rouges · 53 effervescents · 32 rosés · 18 liquoreux.
+(Un « Crémant de Savoie » erroné attribué au Caveau de Buxy — coopérative de Bourgogne —
+a été retiré.)
 
 Note : **Roussillon → `languedoc`** (région combinée). Le script d'ingestion nettoie
 un parenthétique de région (« Provence (mais proche du Languedoc) » → provence).
@@ -108,8 +110,8 @@ désambiguïse quand la cuvée est vide.
   (+ ~7 champagnes manquants du dernier lot, paste tronqué).
       Corse (32, `corse-1.txt`), Jura (31, `jura-1.txt`), Languedoc-Roussillon
       (28, `languedoc-1.txt`), Lorraine (26, `lorraine-1.txt`, 14ᵉ région), Loire
-      (31, `loire-1.txt`), Provence (24, `provence-1.txt`) et Rhône (34,
-      `rhone-1.txt`) faits le 19/07/2026.
+      (31, `loire-1.txt`), Provence (24, `provence-1.txt`), Rhône (34,
+      `rhone-1.txt`) et Savoie #2 (24, `savoie-2.txt`) faits le 19/07/2026.
 - [ ] Brancher le **scanner** (`app/src/lib/ocr.ts`, stub) sur `WINES` : renvoyer un
   vrai vin du catalogue.
 - [ ] Exposer `WINES` dans la **recherche globale** (`app/src/screens/Search.tsx`).

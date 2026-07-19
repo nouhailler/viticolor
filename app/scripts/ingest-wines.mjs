@@ -32,8 +32,8 @@ const HORS_BEAUJOLAIS = new Set(
 );
 
 // Déduction de couleur (cépage prioritaire, puis dénomination).
-const GRAPES_ROUGE = ['gamay', 'pinot noir', 'syrah', 'merlot', 'cabernet', 'malbec', 'tannat', 'mondeuse', 'gamaret', 'marselan', 'grenache', 'mourvedre', 'cinsault', 'poulsard', 'trousseau', 'negrette', 'fer servadou', 'nielluccio', 'sciaccarello', 'carcajolo', 'aleatico'];
-const GRAPES_BLANC = ['chardonnay', 'riesling', 'sauvignon', 'chenin', 'viognier', 'pinot gris', 'gewurztraminer', 'aligote', 'marsanne', 'roussanne', 'savagnin', 'melon', 'jacquere', 'altesse', 'manseng', 'clairette', 'rolle', 'vermentino', 'muscat', 'sylvaner', 'pinot blanc', 'mauzac', 'colombard', 'biancu gentile', 'malvoisie', 'auxerrois', 'muller'];
+const GRAPES_ROUGE = ['gamay', 'pinot noir', 'syrah', 'merlot', 'cabernet', 'malbec', 'tannat', 'mondeuse', 'gamaret', 'marselan', 'grenache', 'mourvedre', 'cinsault', 'poulsard', 'trousseau', 'negrette', 'fer servadou', 'nielluccio', 'sciaccarello', 'carcajolo', 'aleatico', 'persan'];
+const GRAPES_BLANC = ['chardonnay', 'riesling', 'sauvignon', 'chenin', 'viognier', 'pinot gris', 'gewurztraminer', 'aligote', 'marsanne', 'roussanne', 'savagnin', 'melon', 'jacquere', 'altesse', 'manseng', 'clairette', 'rolle', 'vermentino', 'muscat', 'sylvaner', 'pinot blanc', 'mauzac', 'colombard', 'biancu gentile', 'malvoisie', 'auxerrois', 'muller', 'molette'];
 const APP_BLANC = ['chardonnay', 'pouilly fuisse', 'saint veran', 'viognier', 'pinot gris'];
 const APP_ROUGE = ['marselan', 'gamaret', 'pinot'];
 
