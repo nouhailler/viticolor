@@ -17,6 +17,9 @@ export interface Region {
   cepages: string[];
   appellations: Appellation[];
   desc: string;
+  /** Photo de bandeau (fichier dans public/regions/), + crédit « Auteur · Licence ». */
+  img?: string;
+  credit?: string;
 }
 
 export interface AtlasDomaine {

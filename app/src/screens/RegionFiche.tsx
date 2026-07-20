@@ -38,14 +38,38 @@ export function RegionFiche() {
 
   return (
     <div>
-      {/* Héros */}
-      <div style={{ padding: '26px 20px', color: '#f6f1e6', background: gradient }}>
-        <Eyebrow size={12}>Région viticole</Eyebrow>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 36, fontWeight: 600, marginTop: 4 }}>{region.name}</div>
-        <div style={{ marginTop: 14, display: 'flex', gap: 22, fontSize: 13 }}>
-          <Stat value={region.aoc} label="appellations" />
-          <Stat value={region.ha} label="hectares" />
-          <Stat value={region.hl} label="M hl / an" />
+      {/* Héros — photo du vignoble en fond (si dispo), sinon dégradé */}
+      <div style={{ position: 'relative', color: '#f6f1e6', background: gradient, overflow: 'hidden' }}>
+        {region.img && (
+          <>
+            <img
+              src={`/regions/${region.img}`}
+              alt={`Vignoble · ${region.name}`}
+              loading="lazy"
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: `linear-gradient(180deg, rgba(20,8,10,0.28) 0%, rgba(20,8,10,0.62) 55%, rgba(20,8,10,0.88) 100%)`,
+              }}
+            />
+          </>
+        )}
+        <div style={{ position: 'relative', padding: '26px 20px', paddingTop: region.img ? 120 : 26 }}>
+          <Eyebrow size={12}>Région viticole</Eyebrow>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: 36, fontWeight: 600, marginTop: 4 }}>{region.name}</div>
+          <div style={{ marginTop: 14, display: 'flex', gap: 22, fontSize: 13 }}>
+            <Stat value={region.aoc} label="appellations" />
+            <Stat value={region.ha} label="hectares" />
+            <Stat value={region.hl} label="M hl / an" />
+          </div>
+          {region.img && region.credit && (
+            <div style={{ marginTop: 12, fontSize: 10, letterSpacing: '0.3px', color: 'rgba(246,241,230,0.62)' }}>
+              📷 {region.credit} · Wikimedia Commons
+            </div>
+          )}
         </div>
       </div>
 

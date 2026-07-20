@@ -31,7 +31,9 @@
         "t": "rouge & blanc"
       }
     ],
-    "desc": "Premier vignoble AOC de France, Bordeaux s’articule autour de la Garonne et de la Dordogne. Rive gauche graveleuse dominée par le cabernet sauvignon, rive droite argilo-calcaire où règne le merlot : l’art de l’assemblage y atteint son apogée dans les crus classés de 1855."
+    "desc": "Premier vignoble AOC de France, Bordeaux s’articule autour de la Garonne et de la Dordogne. Rive gauche graveleuse dominée par le cabernet sauvignon, rive droite argilo-calcaire où règne le merlot : l’art de l’assemblage y atteint son apogée dans les crus classés de 1855.",
+    "img": "bordeaux.jpg",
+    "credit": "Pascal MOULIN · CC BY-SA 4.0"
   },
   {
     "id": "bourgogne",
@@ -65,7 +67,9 @@
         "t": "rouge"
       }
     ],
-    "desc": "De Chablis au Mâconnais, la Bourgogne décline pinot noir et chardonnay sur une mosaïque de 1 247 climats classés à l’UNESCO. La hiérarchie — régionale, village, premier cru, grand cru — exprime la lecture la plus fine du terroir au monde."
+    "desc": "De Chablis au Mâconnais, la Bourgogne décline pinot noir et chardonnay sur une mosaïque de 1 247 climats classés à l’UNESCO. La hiérarchie — régionale, village, premier cru, grand cru — exprime la lecture la plus fine du terroir au monde.",
+    "img": "bourgogne.jpg",
+    "credit": "Benjamin Smith · CC BY-SA 4.0"
   },
   {
     "id": "champagne",
@@ -94,7 +98,9 @@
         "t": "rosé"
       }
     ],
-    "desc": "Craie, fraîcheur septentrionale et assemblage de crus : la Champagne a fait de la seconde fermentation en bouteille un art. Blanc de blancs de la Côte des Blancs, pinots de la Montagne de Reims, meunier de la Vallée de la Marne."
+    "desc": "Craie, fraîcheur septentrionale et assemblage de crus : la Champagne a fait de la seconde fermentation en bouteille un art. Blanc de blancs de la Côte des Blancs, pinots de la Montagne de Reims, meunier de la Vallée de la Marne.",
+    "img": "champagne.jpg",
+    "credit": "Pline · CC BY-SA 3.0"
   },
   {
     "id": "loire",
@@ -128,7 +134,9 @@
         "t": "blanc sec"
       }
     ],
-    "desc": "Plus longue route des vins de France, la Loire offre une diversité inégalée : chenins secs, moelleux ou fines bulles, sauvignons de silex, cabernets francs de tuffeau. Des vins de fraîcheur, désormais recherchés des cartes du monde entier."
+    "desc": "Plus longue route des vins de France, la Loire offre une diversité inégalée : chenins secs, moelleux ou fines bulles, sauvignons de silex, cabernets francs de tuffeau. Des vins de fraîcheur, désormais recherchés des cartes du monde entier.",
+    "img": "loire.jpg",
+    "credit": "Pline · CC BY-SA 3.0"
   },
   {
     "id": "rhone",
@@ -162,7 +170,9 @@
         "t": "blanc"
       }
     ],
-    "desc": "Deux mondes : au nord, la syrah s’accroche aux coteaux granitiques de Côte-Rôtie et d’Hermitage ; au sud, grenache, syrah et mourvèdre composent des assemblages généreux sur galets roulés, dont Châteauneuf-du-Pape est le porte-étendard."
+    "desc": "Deux mondes : au nord, la syrah s’accroche aux coteaux granitiques de Côte-Rôtie et d’Hermitage ; au sud, grenache, syrah et mourvèdre composent des assemblages généreux sur galets roulés, dont Châteauneuf-du-Pape est le porte-étendard.",
+    "img": "rhone.jpg",
+    "credit": "Véronique PAGNIER · Public domain"
   },
   {
     "id": "alsace",
@@ -192,7 +202,9 @@
         "t": "moelleux"
       }
     ],
-    "desc": "Protégée par les Vosges, l’Alsace revendique le cépage sur l’étiquette. Rieslings ciselés, gewurztraminers opulents et pinots gris fumés s’expriment sur 13 types de sols, des granits aux marnes, le long des 51 grands crus."
+    "desc": "Protégée par les Vosges, l’Alsace revendique le cépage sur l’étiquette. Rieslings ciselés, gewurztraminers opulents et pinots gris fumés s’expriment sur 13 types de sols, des granits aux marnes, le long des 51 grands crus.",
+    "img": "alsace.jpg",
+    "credit": "Photo Claude TRUONG-NGOC · CC BY-SA 4.0"
   },
   {
     "id": "provence",
@@ -222,7 +234,9 @@
         "t": "blanc"
       }
     ],
-    "desc": "Premier vignoble rosé du monde, la Provence cache aussi des rouges de garde à Bandol, où le mourvèdre atteint une profondeur rare, et des blancs marins confidentiels à Cassis."
+    "desc": "Premier vignoble rosé du monde, la Provence cache aussi des rouges de garde à Bandol, où le mourvèdre atteint une profondeur rare, et des blancs marins confidentiels à Cassis.",
+    "img": "provence.jpg",
+    "credit": "Bastien Sens-Méyé · CC BY-SA 4.0"
   },
   {
     "id": "languedoc",
@@ -256,7 +270,9 @@
         "t": "blanc"
       }
     ],
-    "desc": "Immense et contrasté, le Languedoc-Roussillon est devenu le laboratoire du vin français : vieux carignans de schistes, terroirs d’altitude, vins doux naturels de Banyuls et de Maury."
+    "desc": "Immense et contrasté, le Languedoc-Roussillon est devenu le laboratoire du vin français : vieux carignans de schistes, terroirs d’altitude, vins doux naturels de Banyuls et de Maury.",
+    "img": "languedoc.jpg",
+    "credit": "Fagairolles 34 · CC BY-SA 4.0"
   },
   {
     "id": "beaujolais",
@@ -284,7 +300,9 @@
         "t": "rouge de garde"
       }
     ],
-    "desc": "Longtemps réduit au primeur, le Beaujolais s’impose de nouveau par ses dix crus granitiques où le gamay, souvent en macération semi-carbonique, donne des vins de fruit éclatant et de vraie garde."
+    "desc": "Longtemps réduit au primeur, le Beaujolais s’impose de nouveau par ses dix crus granitiques où le gamay, souvent en macération semi-carbonique, donne des vins de fruit éclatant et de vraie garde.",
+    "img": "beaujolais.jpg",
+    "credit": "Alainauzas · FAL"
   },
   {
     "id": "jura",
@@ -314,7 +332,9 @@
         "t": "blanc"
       }
     ],
-    "desc": "Minuscule et culte : le Jura élève le savagnin sous voile pendant six ans et trois mois pour son vin jaune, tandis que poulsard et trousseau signent des rouges pâles d’une buvabilité rare."
+    "desc": "Minuscule et culte : le Jura élève le savagnin sous voile pendant six ans et trois mois pour son vin jaune, tandis que poulsard et trousseau signent des rouges pâles d’une buvabilité rare.",
+    "img": "jura.jpg",
+    "credit": "Gzen92 · CC BY-SA 4.0"
   },
   {
     "id": "savoie",
@@ -344,7 +364,9 @@
         "t": "rouge"
       }
     ],
-    "desc": "Sur éboulis calcaires et coteaux alpins, la Savoie produit des blancs cristallins de jacquère et d’altesse, et des mondeuses poivrées qui rappellent la syrah septentrionale."
+    "desc": "Sur éboulis calcaires et coteaux alpins, la Savoie produit des blancs cristallins de jacquère et d’altesse, et des mondeuses poivrées qui rappellent la syrah septentrionale.",
+    "img": "savoie.jpg",
+    "credit": "Florian Pépellin · CC BY-SA 4.0"
   },
   {
     "id": "sudouest",
@@ -378,7 +400,9 @@
         "t": "tous styles"
       }
     ],
-    "desc": "Conservatoire de cépages autochtones, le Sud-Ouest aligne des identités fortes : malbec de Cahors, tannat de Madiran, petit et gros manseng du Jurançon, entre Atlantique et Pyrénées."
+    "desc": "Conservatoire de cépages autochtones, le Sud-Ouest aligne des identités fortes : malbec de Cahors, tannat de Madiran, petit et gros manseng du Jurançon, entre Atlantique et Pyrénées.",
+    "img": "sudouest.jpg",
+    "credit": "Marianne Casamance · CC BY-SA 4.0"
   },
   {
     "id": "corse",
@@ -412,7 +436,9 @@
         "t": "tous styles"
       }
     ],
-    "desc": "Île-montagne battue par le maquis, la Corse cultive un vignoble d’altitude sur granit et schiste autour de cépages autochtones : le nielluccio charpenté de Patrimonio, le sciaccarello épicé d’Ajaccio, le vermentino salin en blanc et le muscat du Cap Corse en vin doux naturel."
+    "desc": "Île-montagne battue par le maquis, la Corse cultive un vignoble d’altitude sur granit et schiste autour de cépages autochtones : le nielluccio charpenté de Patrimonio, le sciaccarello épicé d’Ajaccio, le vermentino salin en blanc et le muscat du Cap Corse en vin doux naturel.",
+    "img": "corse.jpg",
+    "credit": "Pierre Bona · CC BY-SA 3.0"
   },
   {
     "id": "lorraine",
@@ -442,6 +468,8 @@
         "t": "effervescent"
       }
     ],
-    "desc": "Rescapé des grandes crises viticoles, le petit vignoble lorrain se partage entre les Côtes de Toul, patrie du célèbre vin gris de gamay et pinot noir, et la Moselle qui regarde vers l’Allemagne avec ses auxerrois et müller-thurgau. Le crémant de Lorraine complète une gamme fraîche et septentrionale."
+    "desc": "Rescapé des grandes crises viticoles, le petit vignoble lorrain se partage entre les Côtes de Toul, patrie du célèbre vin gris de gamay et pinot noir, et la Moselle qui regarde vers l’Allemagne avec ses auxerrois et müller-thurgau. Le crémant de Lorraine complète une gamme fraîche et septentrionale.",
+    "img": "lorraine.jpg",
+    "credit": "Terraner87 · CC BY-SA 3.0"
   }
 ]

@@ -11,7 +11,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       workbox: {
         // Offline-first: precache the built app shell + all embedded data.
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2,json}'],
         navigateFallback: '/index.html',
         cleanupOutdatedCaches: true,
       },
