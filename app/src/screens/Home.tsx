@@ -71,33 +71,68 @@ export function Home() {
           <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{dateLongue()}</div>
         </div>
 
-        {/* Carte région */}
+        {/* Carte région — photo du vignoble en fond (si dispo), sinon dégradé */}
         <div
           onClick={() => actions.go('region', { regionId: featured.id })}
           style={{
             cursor: 'pointer',
+            position: 'relative',
             marginTop: 10,
             borderRadius: 'var(--r-card)',
             overflow: 'hidden',
             background: HERO_GRAD,
             color: '#f6f1e6',
-            padding: '22px 20px',
           }}
         >
-          <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold-light)', opacity: 0.9 }}>
-            La région
-          </div>
-          <div style={{ fontFamily: 'var(--font-display)', fontSize: 30, fontWeight: 600, marginTop: 2 }}>
-            {featured.name}
-          </div>
-          <div style={{ fontSize: 13, opacity: 0.85, marginTop: 4 }}>{featured.tagline}</div>
-          <div style={{ marginTop: 14, display: 'flex', gap: 18, fontSize: 12, letterSpacing: '.5px' }}>
-            <div>
-              <span style={{ color: 'var(--gold)' }}>{featured.aoc}</span> AOC
+          {featured.img && (
+            <>
+              <img
+                src={`/regions/${featured.img}`}
+                alt={`Vignoble · ${featured.name}`}
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background:
+                    'linear-gradient(180deg, rgba(20,8,10,0.30) 0%, rgba(20,8,10,0.66) 55%, rgba(20,8,10,0.90) 100%)',
+                }}
+              />
+            </>
+          )}
+          <div
+            style={{
+              position: 'relative',
+              padding: '22px 20px',
+              paddingTop: featured.img ? 92 : 22,
+              // Les photos de vignoble ont souvent un ciel clair en haut : sans
+              // ombre portée, le sur-titre y perd son contraste.
+              textShadow: featured.img ? '0 1px 4px rgba(0,0,0,0.7)' : undefined,
+            }}
+          >
+            <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold-light)', opacity: 0.9 }}>
+              La région
             </div>
-            <div>
-              <span style={{ color: 'var(--gold)' }}>{featured.ha}</span> ha
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: 30, fontWeight: 600, marginTop: 2 }}>
+              {featured.name}
             </div>
+            <div style={{ fontSize: 13, opacity: 0.85, marginTop: 4 }}>{featured.tagline}</div>
+            <div style={{ marginTop: 14, display: 'flex', gap: 18, fontSize: 12, letterSpacing: '.5px' }}>
+              <div>
+                <span style={{ color: 'var(--gold)' }}>{featured.aoc}</span> AOC
+              </div>
+              <div>
+                <span style={{ color: 'var(--gold)' }}>{featured.ha}</span> ha
+              </div>
+            </div>
+            {/* Les photos sont en CC BY-SA : l'attribution suit l'image partout
+                où elle est affichée, pas seulement sur la fiche région. */}
+            {featured.img && featured.credit && (
+              <div style={{ marginTop: 10, fontSize: 9.5, letterSpacing: '0.3px', color: 'rgba(246,241,230,0.55)' }}>
+                📷 {featured.credit}
+              </div>
+            )}
           </div>
         </div>
 
