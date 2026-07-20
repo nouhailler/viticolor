@@ -1,4 +1,4 @@
-import { useStore, actions, isRootScreen, setState, type State } from '../store';
+import { useStore, actions, isRootScreen, type State } from '../store';
 import { DEMO_TIPS, GLOSSAIRE, WINES, REGIONS } from '../data';
 import type { ScreenId } from '../types';
 
@@ -31,14 +31,20 @@ export function Header() {
         {back ? (
           <button
             onClick={actions.goBack}
+            aria-label="Revenir à l'écran précédent"
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 22,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
               color: 'var(--gold)',
               whiteSpace: 'nowrap',
+              padding: '4px 2px',
             }}
           >
-            ← retour
+            <svg width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M15 5l-7 7 7 7" />
+            </svg>
+            <span style={{ fontFamily: 'var(--font-display)', fontSize: 19 }}>Retour</span>
           </button>
         ) : (
           <div
@@ -290,13 +296,7 @@ export function BottomNav() {
         return (
           <button
             key={t.id}
-            onClick={() =>
-              setState((s) => ({
-                prevScreen: s.screen,
-                screen: t.id,
-                scanned: t.id === 'scanner' ? false : s.scanned,
-              }))
-            }
+            onClick={() => actions.go(t.id, t.id === 'scanner' ? { scanned: false } : {})}
             style={{
               flex: 1,
               minHeight: 48,

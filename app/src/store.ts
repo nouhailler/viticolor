@@ -40,6 +40,8 @@ export interface State {
   // Navigation
   screen: ScreenId;
   prevScreen: ScreenId;
+  /** Pile des positions quittées, pour un retour fidèle (voir NAV_KEYS). */
+  history: NavSnapshot[];
   regionId: string | null;
   menuOpen: boolean;
 
@@ -118,10 +120,37 @@ export interface State {
   collChecked: Record<string, boolean>;
 }
 
+/** Champs qui définissent « où l'on est » dans l'app : ils sont capturés dans
+ *  l'historique pour restituer non seulement l'écran mais aussi son contexte
+ *  (région ouverte, fiche vin, filtre, terme de glossaire…). On y exclut à
+ *  dessein les données persistées, les formulaires, le quiz et l'onboarding :
+ *  un retour ne doit jamais annuler une saisie ni faire régresser une partie. */
+const NAV_KEYS = [
+  'screen', 'regionId',
+  'regionsView', 'carteRegion', 'carteZoom', 'carteInfo', 'cepFilter',
+  'cepOpen', 'appOpen', 'millSel', 'millMetric', 'parcelSel', 'parcelOverlay',
+  'zoom', 'millHistSel', 'caveFilter', 'query', 'wineQuery', 'wineColor',
+  'wineRegionFilter', 'wineSel', 'scanned', 'scanAdded', 'collOpen', 'vendSel',
+  'actuCat', 'glossQuery', 'glossLettre', 'glossCat', 'glossSel', 'routeSel',
+  'coteSel', 'cotePeriode', 'histOpen', 'aromSel', 'accordOpen',
+] as const;
+type NavKey = (typeof NAV_KEYS)[number];
+export type NavSnapshot = Pick<State, NavKey>;
+
+function snapshot(s: State): NavSnapshot {
+  const snap = {} as Record<NavKey, unknown>;
+  for (const k of NAV_KEYS) snap[k] = s[k];
+  return snap as NavSnapshot;
+}
+
+/** Profondeur maximale de l'historique : au-delà, on oublie les plus anciens. */
+const HISTORY_MAX = 50;
+
 function initialState(): State {
   return {
     screen: 'home',
     prevScreen: 'home',
+    history: [],
     regionId: null,
     menuOpen: false,
 
@@ -236,13 +265,23 @@ export const isRootScreen = (s: ScreenId) => rootScreens.includes(s);
 
 export const actions = {
   go(screen: ScreenId, extra: Partial<State> = {}) {
-    setState((s) => ({ prevScreen: s.screen, screen, menuOpen: false, ...extra }));
+    setState((s) => ({
+      history: [...s.history, snapshot(s)].slice(-HISTORY_MAX),
+      prevScreen: s.screen,
+      screen,
+      menuOpen: false,
+      ...extra,
+    }));
     scrollTop();
   },
+  /** Dépile la dernière position et la restaure telle quelle (écran + contexte).
+   *  À défaut d'historique, on retombe sur l'accueil. */
   goBack() {
-    setState((s) => ({
-      screen: s.screen === 'carte' ? 'region' : isRootScreen(s.prevScreen) ? s.prevScreen : 'home',
-    }));
+    setState((s) => {
+      const prev = s.history[s.history.length - 1];
+      if (!prev) return { screen: 'home', menuOpen: false };
+      return { ...prev, history: s.history.slice(0, -1), menuOpen: false };
+    });
     scrollTop();
   },
   toggleMenu() {
