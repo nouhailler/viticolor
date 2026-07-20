@@ -17,7 +17,7 @@
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white" />
   <img alt="Vite" src="https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white" />
   <img alt="PWA" src="https://img.shields.io/badge/PWA-installable-5A0FC8?logo=pwa&logoColor=white" />
-  <img alt="Vins" src="https://img.shields.io/badge/catalogue-422%20vins-8e2f3f" />
+  <img alt="Vins" src="https://img.shields.io/badge/catalogue-449%20vins-8e2f3f" />
 </p>
 
 ---
@@ -41,7 +41,7 @@ dépend d'**aucun serveur** — toutes les données sont embarquées et l'état 
   <tr>
     <td align="center" width="33%"><img src="docs/screenshots/scanner.png" alt="Scanner d'étiquette" /><br><sub><b>Scanner</b> · reconnaissance d'étiquette</sub></td>
     <td align="center" width="33%"><img src="docs/screenshots/cave.png" alt="Ma cave" /><br><sub><b>Ma cave</b> · valorisation & apogée</sub></td>
-    <td align="center" width="33%"><img src="docs/screenshots/bouteilles.png" alt="Bouteilles" /><br><sub><b>Bouteilles</b> · le catalogue (422 vins)</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/bouteilles.png" alt="Bouteilles" /><br><sub><b>Bouteilles</b> · le catalogue (449 vins)</sub></td>
   </tr>
 </table>
 
@@ -60,7 +60,7 @@ dépend d'**aucun serveur** — toutes les données sont embarquées et l'état 
 
 ## 🍷 Le catalogue
 
-**422 vins · 220 producteurs · 13 régions renseignées sur 14**, enrichis via un pipeline
+**449 vins · 245 producteurs · les 14 régions renseignées**, enrichis via un pipeline
 d'ingestion maison (`app/scripts/ingest-wines.mjs`).
 
 | Région | Vins | Région | Vins |
@@ -70,17 +70,17 @@ d'ingestion maison (`app/scripts/ingest-wines.mjs`).
 | 🍂 Bourgogne | 35 | 🏰 Val de Loire | 31 |
 | 🥨 Alsace | 34 | 🟡 Jura | 31 |
 | 🥂 Champagne | 33 | 🍇 Beaujolais | 30 |
-| 🌿 Languedoc-Roussillon · Provence · Lorraine | 26 chacune | 🍷 Bordeaux | à venir |
+| 🍷 Bordeaux | 27 | 🌿 Languedoc · Provence · Lorraine | 26 chacune |
 
 <p>
-  <img alt="Rouges" src="https://img.shields.io/badge/rouges-155-8e2f3f" />
-  <img alt="Blancs" src="https://img.shields.io/badge/blancs-154-e8d9a0" />
+  <img alt="Rouges" src="https://img.shields.io/badge/rouges-175-8e2f3f" />
+  <img alt="Blancs" src="https://img.shields.io/badge/blancs-158-e8d9a0" />
   <img alt="Effervescents" src="https://img.shields.io/badge/effervescents-54-c9a227" />
   <img alt="Rosés" src="https://img.shields.io/badge/ros%C3%A9s-36-e8a0a8" />
-  <img alt="Liquoreux" src="https://img.shields.io/badge/liquoreux-23-b8860b" />
+  <img alt="Liquoreux" src="https://img.shields.io/badge/liquoreux-26-b8860b" />
 </p>
 
-> 🚧 Dernière région restant à charger : **Bordeaux**.
+> ✅ Les 14 régions viticoles sont désormais renseignées.
 
 ## 🚀 Démarrage rapide
 
@@ -124,7 +124,7 @@ React. Store maison (observable + `useSyncExternalStore`), persistance `localSto
 
 ## 🧭 Prochaines étapes
 
-- [ ] Charger la dernière région : **Bordeaux**.
+- [x] Charger la dernière région : **Bordeaux**.
 - [ ] Brancher le **scanner** (OCR) sur le catalogue pour renvoyer un vrai vin.
 - [ ] Exposer le catalogue dans la **recherche globale**.
 
