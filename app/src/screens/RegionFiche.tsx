@@ -3,6 +3,7 @@ import { REGIONS, ATLAS, MILLESIMES } from '../data';
 import { certColor } from '../lib/helpers';
 import { ficheTech } from '../lib/ficheTech';
 import { Eyebrow } from '../components/ui';
+import { SituationMap } from '../components/SituationMap';
 
 const MILL_CHIPS: [string, string][] = [
   ['note', 'Note'],
@@ -75,6 +76,9 @@ export function RegionFiche() {
 
       <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
         <div style={{ fontSize: 14, lineHeight: 1.65, color: 'var(--text-2)' }}>{region.desc}</div>
+
+        {/* Carte de situation : vrai fragment de carte, rivières et voisins */}
+        <SituationMap regionId={region.id} />
 
         {/* Encyclo */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
