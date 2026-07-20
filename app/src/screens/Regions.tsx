@@ -1,5 +1,6 @@
 import { useStore, setState, actions } from '../store';
 import { REGIONS, ATLAS, NEAR_ME, CEPAGES } from '../data';
+import { FRANCE_VIEWBOX, FRANCE_PATHS, REGION_POINTS } from '../data/france-map';
 import { certColor } from '../lib/helpers';
 import { ScreenHeading, DotGauge } from '../components/ui';
 
@@ -51,32 +52,122 @@ export function Regions() {
 }
 
 // ─── Carte de France ───
+
+const [, , VB_W, VB_H] = FRANCE_VIEWBOX.split(' ').map(Number);
+
+// Côté d'affichage du libellé, pour éviter que les pastilles voisines se
+// marchent dessus (Bourgogne/Jura) ou débordent du cadre (Corse).
+const LABEL_SIDE: Record<string, 'top' | 'bottom' | 'left' | 'right'> = {
+  bourgogne: 'left',
+  jura: 'right',
+  beaujolais: 'left',
+  savoie: 'right',
+  rhone: 'left',
+  provence: 'right',
+  alsace: 'right',
+  lorraine: 'right',
+  champagne: 'top',
+  corse: 'left',
+};
+
+const LABEL_POS: Record<string, React.CSSProperties> = {
+  top: { bottom: '100%', left: '50%', transform: 'translate(-50%,-6px)' },
+  bottom: { top: '100%', left: '50%', transform: 'translate(-50%,6px)' },
+  left: { right: '100%', top: '50%', transform: 'translate(-6px,-50%)' },
+  right: { left: '100%', top: '50%', transform: 'translate(6px,-50%)' },
+};
+
+// Beaune, le point GPS de démonstration. Ses coordonnées sont à quelques
+// kilomètres de celles retenues pour la Bourgogne : superposées telles quelles,
+// les deux pastilles se lisaient comme un défaut d'affichage. On décale donc le
+// repère vers le sud-est, au prix d'une vingtaine de kilomètres d'imprécision
+// sur une position de démonstration.
+const ME = { x: REGION_POINTS.bourgogne.x + 26, y: REGION_POINTS.bourgogne.y + 22 };
+
 function CarteFrance() {
   return (
     <>
       <div style={{ marginTop: 16, filter: 'drop-shadow(0 10px 26px rgba(0,0,0,0.45))' }}>
-        <div
-          style={{
-            position: 'relative',
-            height: 400,
-            clipPath: 'polygon(50% 0%, 96% 25%, 96% 75%, 50% 100%, 4% 75%, 4% 25%)',
-            background: 'radial-gradient(ellipse at 50% 40%, #55202b, #3a1219 75%)',
-          }}
-        >
+        <div style={{ position: 'relative', width: '100%', aspectRatio: `${VB_W} / ${VB_H}` }}>
+          <svg
+            viewBox={FRANCE_VIEWBOX}
+            width="100%"
+            height="100%"
+            style={{ display: 'block', position: 'absolute', inset: 0 }}
+            role="img"
+            aria-label="Carte des régions viticoles de France"
+          >
+            <defs>
+              <radialGradient id="fr-fill" cx="50%" cy="38%" r="78%">
+                <stop offset="0%" stopColor="#733040" />
+                <stop offset="100%" stopColor="#4a1822" />
+              </radialGradient>
+            </defs>
+            {FRANCE_PATHS.map((d, i) => (
+              <path
+                key={i}
+                d={d}
+                fill="url(#fr-fill)"
+                stroke="var(--gold-border)"
+                strokeWidth={2}
+                strokeLinejoin="round"
+              />
+            ))}
+          </svg>
+
           {REGIONS.map((r) => {
-            const [x, y] = ATLAS[r.id].pos;
+            const p = REGION_POINTS[r.id];
+            if (!p) return null;
+            const side = LABEL_SIDE[r.id] ?? 'bottom';
             return (
               <button
                 key={r.id}
                 onClick={() => setState({ carteRegion: r.id, carteZoom: 1, carteInfo: null })}
-                style={{ position: 'absolute', left: `${x}%`, top: `${y}%`, transform: 'translate(-50%,-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}
+                aria-label={`${r.name} — voir la carte régionale`}
+                style={{
+                  position: 'absolute',
+                  left: `${(p.x / VB_W) * 100}%`,
+                  top: `${(p.y / VB_H) * 100}%`,
+                  transform: 'translate(-50%,-50%)',
+                  width: 26,
+                  height: 26,
+                  display: 'grid',
+                  placeItems: 'center',
+                }}
               >
-                <span style={{ width: 14, height: 14, borderRadius: '50%', background: r.tint, border: '2px solid var(--gold-light)' }} />
-                <span style={{ fontSize: 9, color: 'var(--gold-light)', whiteSpace: 'nowrap', letterSpacing: '0.5px' }}>{r.name}</span>
+                <span style={{ width: 13, height: 13, borderRadius: '50%', background: r.tint, border: '2px solid var(--gold-light)', boxShadow: '0 1px 4px rgba(0,0,0,0.6)' }} />
+                <span
+                  style={{
+                    position: 'absolute',
+                    ...LABEL_POS[side],
+                    fontSize: 9,
+                    color: 'var(--gold-light)',
+                    whiteSpace: 'nowrap',
+                    letterSpacing: '0.4px',
+                    textShadow: '0 1px 3px rgba(0,0,0,0.85)',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  {r.name}
+                </span>
               </button>
             );
           })}
-          <div style={{ position: 'absolute', left: '61%', top: '49%', transform: 'translate(-50%,-50%)', width: 11, height: 11, borderRadius: '50%', background: 'var(--gold)', border: '2px solid var(--text)', animation: 'pulse 2s infinite' }} />
+
+          <div
+            style={{
+              position: 'absolute',
+              left: `${(ME.x / VB_W) * 100}%`,
+              top: `${(ME.y / VB_H) * 100}%`,
+              transform: 'translate(-50%,-50%)',
+              width: 11,
+              height: 11,
+              borderRadius: '50%',
+              background: 'var(--gold)',
+              border: '2px solid var(--text)',
+              animation: 'pulse 2s infinite',
+            }}
+          />
         </div>
       </div>
       <div style={{ marginTop: 10, display: 'flex', gap: 14, fontSize: 11, color: 'var(--text-3)', justifyContent: 'center' }}>
@@ -88,6 +179,10 @@ function CarteFrance() {
           <span style={{ width: 9, height: 9, borderRadius: '50%', background: 'var(--gold)' }} />
           vous
         </div>
+      </div>
+      <div style={{ marginTop: 6, fontSize: 10, color: 'var(--text-muted)', textAlign: 'center', lineHeight: 1.5 }}>
+        Chaque pastille marque le cœur de la région, pas son périmètre : un vignoble
+        s'étend bien au-delà de ce repère.
       </div>
 
       {/* Autour de moi */}
