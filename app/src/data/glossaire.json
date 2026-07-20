@@ -15,9 +15,24 @@
     "cat": "degustation"
   },
   {
+    "terme": "Agriculture biologique",
+    "def": "Viticulture sans engrais ni pesticides de synthèse, certifiée (label AB, Ecocert).",
+    "cat": "viticulture"
+  },
+  {
+    "terme": "Amertume",
+    "def": "Une des saveurs fondamentales ; discrète elle rafraîchit, marquée elle déséquilibre le vin.",
+    "cat": "degustation"
+  },
+  {
     "terme": "Ampélographie",
     "def": "Science de l'identification et de la description des cépages.",
     "cat": "viticulture"
+  },
+  {
+    "terme": "Amphore",
+    "def": "Contenant de terre cuite (ou grès) pour un élevage sans goût boisé, prisé des vins nature.",
+    "cat": "elevage"
   },
   {
     "terme": "Ample",
@@ -32,6 +47,11 @@
   {
     "terme": "AOC",
     "def": "Appellation d'Origine Contrôlée : terroir délimité, cépages, rendements et pratiques encadrés.",
+    "cat": "classification"
+  },
+  {
+    "terme": "AOP",
+    "def": "Appellation d'Origine Protégée, équivalent européen de l'AOC.",
     "cat": "classification"
   },
   {
@@ -80,6 +100,11 @@
     "cat": "degustation"
   },
   {
+    "terme": "Bag-in-box",
+    "def": "Outre souple sous vide dans un carton (« cubi ») qui préserve le vin plusieurs semaines après ouverture.",
+    "cat": "contenant"
+  },
+  {
     "terme": "Ban des vendanges",
     "def": "Date officielle d'ouverture de la récolte dans une appellation.",
     "cat": "viticulture"
@@ -115,9 +140,19 @@
     "cat": "type"
   },
   {
+    "terme": "Bois neuf",
+    "def": "Proportion de fûts neufs à l'élevage : plus elle est forte, plus l'empreinte boisée est marquée.",
+    "cat": "elevage"
+  },
+  {
     "terme": "Boisé",
     "def": "Notes de vanille, toast, fumé ou coco apportées par l'élevage sous bois ; réussi lorsqu'il se fond au fruit.",
     "cat": "degustation"
+  },
+  {
+    "terme": "Bordelaise",
+    "def": "Bouteille aux épaules marquées, née à Bordeaux, standard des vins de garde.",
+    "cat": "contenant"
   },
   {
     "terme": "Botrytis",
@@ -145,6 +180,11 @@
     "cat": "vinification"
   },
   {
+    "terme": "Bourguignonne",
+    "def": "Bouteille aux épaules tombantes des vins de Bourgogne et du Rhône.",
+    "cat": "contenant"
+  },
+  {
     "terme": "Brett",
     "def": "Brettanomyces : levure de contamination donnant cuir, écurie, sueur de cheval.",
     "cat": "defaut"
@@ -170,6 +210,11 @@
     "cat": "degustation"
   },
   {
+    "terme": "Caudalie",
+    "def": "Unité de mesure de la longueur en bouche : une caudalie équivaut à une seconde de persistance aromatique.",
+    "cat": "degustation"
+  },
+  {
     "terme": "Cep",
     "def": "Pied de vigne.",
     "cat": "viticulture"
@@ -185,6 +230,11 @@
     "cat": "elevage"
   },
   {
+    "terme": "Champagne",
+    "def": "Effervescent AOC de méthode traditionnelle, réservé au seul vignoble champenois.",
+    "cat": "type"
+  },
+  {
     "terme": "Chaptalisation",
     "def": "Ajout de sucre au moût pour augmenter le degré d'alcool (encadré par la loi).",
     "cat": "vinification"
@@ -198,6 +248,16 @@
     "terme": "Charpenté",
     "def": "Vin de forte constitution tannique, bâti pour la garde.",
     "cat": "degustation"
+  },
+  {
+    "terme": "Château",
+    "def": "Domaine viticole, surtout bordelais, désignant l'exploitation plus qu'un bâtiment.",
+    "cat": "classification"
+  },
+  {
+    "terme": "Classement de 1855",
+    "def": "Hiérarchie des grands crus du Médoc et de Sauternes établie pour l'Exposition universelle.",
+    "cat": "classification"
   },
   {
     "terme": "Clavelin",
@@ -235,6 +295,11 @@
     "cat": "degustation"
   },
   {
+    "terme": "Coopérative",
+    "def": "Cave regroupant des vignerons qui vinifient et commercialisent leur récolte en commun.",
+    "cat": "classification"
+  },
+  {
     "terme": "Corsé",
     "def": "Vin puissant, riche en alcool et en matière.",
     "cat": "degustation"
@@ -260,9 +325,19 @@
     "cat": "classification"
   },
   {
+    "terme": "Cru bourgeois",
+    "def": "Distinction du Médoc pour des châteaux de qualité situés hors du classement de 1855.",
+    "cat": "classification"
+  },
+  {
     "terme": "Cuvaison",
     "def": "Durée de macération du jus avec les parties solides du raisin.",
     "cat": "vinification"
+  },
+  {
+    "terme": "Cuve œuf",
+    "def": "Cuve ovoïde en béton créant une micro-circulation du vin, sans apport de bois.",
+    "cat": "elevage"
   },
   {
     "terme": "Cuvée",
@@ -300,6 +375,11 @@
     "cat": "elevage"
   },
   {
+    "terme": "Domaine",
+    "def": "Propriété viticole qui cultive ses vignes et vinifie sa propre récolte.",
+    "cat": "classification"
+  },
+  {
     "terme": "Dosage",
     "def": "Liqueur d'expédition ajoutée après dégorgement, déterminant le style (brut, sec, demi-sec).",
     "cat": "vinification"
@@ -313,6 +393,11 @@
     "terme": "Éclaircissage",
     "def": "Suppression de grappes en été pour concentrer la récolte (vendanges vertes).",
     "cat": "viticulture"
+  },
+  {
+    "terme": "Effervescent",
+    "def": "Vin à bulles issu d'une prise de mousse (champagne, crémant, pétillant).",
+    "cat": "type"
   },
   {
     "terme": "Effeuillage",
@@ -340,6 +425,11 @@
     "cat": "viticulture"
   },
   {
+    "terme": "Épices",
+    "def": "Famille d'arômes de poivre, réglisse, cannelle ou girofle ; signature de la syrah et des élevages boisés.",
+    "cat": "degustation"
+  },
+  {
     "terme": "Équilibre",
     "def": "Harmonie entre acidité, alcool, tanins et sucres — le critère cardinal.",
     "cat": "degustation"
@@ -348,6 +438,16 @@
     "terme": "Éraflage",
     "def": "Synonyme d'égrappage.",
     "cat": "vinification"
+  },
+  {
+    "terme": "Esca",
+    "def": "Maladie du bois incurable qui dessèche et finit par tuer le cep.",
+    "cat": "viticulture"
+  },
+  {
+    "terme": "Évent",
+    "def": "Vin éventé, aplati par une exposition prolongée à l'air après ouverture.",
+    "cat": "defaut"
   },
   {
     "terme": "Extraction",
@@ -380,9 +480,34 @@
     "cat": "viticulture"
   },
   {
+    "terme": "Floral",
+    "def": "Arômes de fleurs (acacia, violette, rose, tilleul), fréquents sur les blancs et les vins jeunes.",
+    "cat": "degustation"
+  },
+  {
+    "terme": "Flûte",
+    "def": "Bouteille haute et élancée des vins d'Alsace et de Moselle.",
+    "cat": "contenant"
+  },
+  {
+    "terme": "Fondu",
+    "def": "Vin dont les tanins, l'alcool et le boisé se sont harmonisés avec le temps.",
+    "cat": "degustation"
+  },
+  {
     "terme": "Foudre",
     "def": "Grand fût de bois de 20 à 300 hl, marquage boisé discret.",
     "cat": "contenant"
+  },
+  {
+    "terme": "Franc",
+    "def": "Vin net et sincère, sans défaut ni déviation, à l'expression directe.",
+    "cat": "degustation"
+  },
+  {
+    "terme": "Franc de pied",
+    "def": "Vigne non greffée, cultivée sur ses propres racines ; rare depuis le phylloxéra.",
+    "cat": "viticulture"
   },
   {
     "terme": "Fruité",
@@ -410,9 +535,19 @@
     "cat": "classification"
   },
   {
+    "terme": "Géosmine",
+    "def": "Molécule responsable des odeurs de terre humide, de betterave ou de moisi.",
+    "cat": "defaut"
+  },
+  {
     "terme": "Glycérol",
     "def": "Composé onctueux issu de la fermentation, contribue au gras du vin.",
     "cat": "vinification"
+  },
+  {
+    "terme": "Gobelet",
+    "def": "Taille en buisson libre, sans palissage, typique du Sud et des vieilles vignes.",
+    "cat": "viticulture"
   },
   {
     "terme": "Gouleyant",
@@ -420,9 +555,24 @@
     "cat": "degustation"
   },
   {
+    "terme": "Goût de lumière",
+    "def": "Déviation des effervescents exposés à la lumière : notes de chou et de laine mouillée.",
+    "cat": "defaut"
+  },
+  {
+    "terme": "Goût de souris",
+    "def": "Arrière-goût lactique de croûton fréquent sur les vins nature peu sulfités.",
+    "cat": "defaut"
+  },
+  {
     "terme": "Goutte (vin de)",
     "def": "Vin qui s'écoule librement au décuvage, avant pressurage du marc.",
     "cat": "vinification"
+  },
+  {
+    "terme": "Grand cru",
+    "def": "Sommet des hiérarchies bourguignonne, champenoise et alsacienne.",
+    "cat": "classification"
   },
   {
     "terme": "Gras",
@@ -440,9 +590,9 @@
     "cat": "viticulture"
   },
   {
-    "terme": "Grand cru",
-    "def": "Sommet des hiérarchies bourguignonne, champenoise et alsacienne.",
-    "cat": "classification"
+    "terme": "Guyot",
+    "def": "Taille répandue à une ou deux baguettes portant les futurs rameaux fructifères.",
+    "cat": "viticulture"
   },
   {
     "terme": "Herbacé",
@@ -460,6 +610,11 @@
     "cat": "viticulture"
   },
   {
+    "terme": "IGP",
+    "def": "Indication Géographique Protégée : cadre plus souple que l'AOP, à l'échelle d'une grande zone (Pays d'Oc…).",
+    "cat": "classification"
+  },
+  {
     "terme": "INAO",
     "def": "Institut national de l'origine et de la qualité, gardien des AOC.",
     "cat": "classification"
@@ -475,6 +630,11 @@
     "cat": "degustation"
   },
   {
+    "terme": "Levurage",
+    "def": "Ajout de levures sélectionnées pour déclencher et sécuriser la fermentation.",
+    "cat": "vinification"
+  },
+  {
     "terme": "Levures",
     "def": "Micro-organismes de la fermentation ; indigènes (du terroir) ou sélectionnées.",
     "cat": "vinification"
@@ -488,6 +648,11 @@
     "terme": "Lies",
     "def": "Dépôt de levures mortes après fermentation ; l'élevage « sur lies » nourrit le vin.",
     "cat": "elevage"
+  },
+  {
+    "terme": "Lieu-dit",
+    "def": "Parcelle nommée au cadastre, parfois mentionnée sur l'étiquette pour situer l'origine.",
+    "cat": "classification"
   },
   {
     "terme": "Liquoreux",
@@ -510,6 +675,11 @@
     "cat": "vinification"
   },
   {
+    "terme": "Macvin",
+    "def": "Mistelle jurassienne : moût de raisin muté au marc du Jura.",
+    "cat": "type"
+  },
+  {
     "terme": "Madérisé",
     "def": "Vin oxydé rappelant le madère ; défaut sur un vin sec non muté.",
     "cat": "defaut"
@@ -525,9 +695,34 @@
     "cat": "vinification"
   },
   {
+    "terme": "Merrain",
+    "def": "Bois de chêne fendu et séché dont on tire les douelles du fût.",
+    "cat": "elevage"
+  },
+  {
+    "terme": "Méthode ancestrale",
+    "def": "Plus ancienne voie d'effervescence : une seule fermentation achevée en bouteille (Gaillac, Clairette de Die).",
+    "cat": "type"
+  },
+  {
     "terme": "Méthode traditionnelle",
     "def": "Seconde fermentation en bouteille créant l'effervescence (Champagne, crémants).",
     "cat": "vinification"
+  },
+  {
+    "terme": "Micro-oxygénation",
+    "def": "Apport maîtrisé de minuscules bulles d'oxygène en cuve pour assouplir les tanins.",
+    "cat": "elevage"
+  },
+  {
+    "terme": "Mildiou",
+    "def": "Maladie cryptogamique surgissant par temps humide, combattue par la bouillie bordelaise.",
+    "cat": "viticulture"
+  },
+  {
+    "terme": "Millerandage",
+    "def": "Baies de tailles inégales après une floraison contrariée : petits grains sans pépins, plus concentrés.",
+    "cat": "viticulture"
   },
   {
     "terme": "Millésime",
@@ -555,9 +750,24 @@
     "cat": "classification"
   },
   {
+    "terme": "Moût",
+    "def": "Jus de raisin avant et pendant la fermentation, avant qu'il ne devienne vin.",
+    "cat": "vinification"
+  },
+  {
+    "terme": "Muselet",
+    "def": "Cage métallique maintenant le bouchon des effervescents sous pression.",
+    "cat": "contenant"
+  },
+  {
     "terme": "Mutage",
     "def": "Arrêt de la fermentation par ajout d'alcool, conservant les sucres (VDN : Banyuls, Maury).",
     "cat": "vinification"
+  },
+  {
+    "terme": "Nabuchodonosor",
+    "def": "Format géant de 15 litres, soit vingt bouteilles.",
+    "cat": "contenant"
   },
   {
     "terme": "Nature (vin)",
@@ -585,14 +795,29 @@
     "cat": "viticulture"
   },
   {
-    "terme": "Oxydatif (élevage)",
-    "def": "Élevage volontairement au contact de l'air (vin jaune, VDN) : noix, curry, rancio.",
-    "cat": "elevage"
+    "terme": "Oïdium",
+    "def": "Champignon poudreux blanc attaquant feuilles et grappes, traité au soufre.",
+    "cat": "viticulture"
   },
   {
     "terme": "Ouillage",
     "def": "Remplissage régulier des fûts pour compenser l'évaporation et éviter l'oxydation.",
     "cat": "elevage"
+  },
+  {
+    "terme": "Oxydatif (élevage)",
+    "def": "Élevage volontairement au contact de l'air (vin jaune, VDN) : noix, curry, rancio.",
+    "cat": "elevage"
+  },
+  {
+    "terme": "Oxydation",
+    "def": "Altération par excès d'air : robe qui brunit, arômes de pomme blette (hors vins volontairement oxydatifs).",
+    "cat": "defaut"
+  },
+  {
+    "terme": "Palissage",
+    "def": "Conduite de la vigne sur des fils de fer pour aérer le feuillage et faciliter le travail.",
+    "cat": "viticulture"
   },
   {
     "terme": "Part des anges",
@@ -608,6 +833,11 @@
     "terme": "Perlant",
     "def": "Vin tranquille présentant une très légère effervescence.",
     "cat": "degustation"
+  },
+  {
+    "terme": "Pétillant naturel",
+    "def": "« Pét-nat » : effervescent de méthode ancestrale, mis en bouteille avant la fin de la première fermentation.",
+    "cat": "type"
   },
   {
     "terme": "Phénolique (maturité)",
@@ -652,6 +882,11 @@
   {
     "terme": "Pressurage",
     "def": "Extraction du jus par pression des raisins ou du marc.",
+    "cat": "vinification"
+  },
+  {
+    "terme": "Pressurage direct",
+    "def": "Pressée immédiate des raisins noirs pour obtenir un rosé pâle, sans macération.",
     "cat": "vinification"
   },
   {
@@ -710,6 +945,31 @@
     "cat": "degustation"
   },
   {
+    "terme": "Rosé",
+    "def": "Vin rose obtenu par pressurage direct ou courte macération de raisins noirs.",
+    "cat": "type"
+  },
+  {
+    "terme": "Saignée",
+    "def": "Prélèvement d'une part du jus d'une cuve de rouge pour élaborer un rosé ou concentrer le reste.",
+    "cat": "vinification"
+  },
+  {
+    "terme": "Salinité",
+    "def": "Sensation saline en fin de bouche, évoquant l'iode ou la roche ; signe de fraîcheur et de terroir.",
+    "cat": "degustation"
+  },
+  {
+    "terme": "Sapide",
+    "def": "Vin savoureux et digeste qui appelle la gorgée suivante.",
+    "cat": "degustation"
+  },
+  {
+    "terme": "Sarment",
+    "def": "Rameau de vigne devenu ligneux, taillé chaque hiver.",
+    "cat": "viticulture"
+  },
+  {
     "terme": "Sec",
     "def": "Vin sans sucre résiduel perceptible (moins de 4 g/l).",
     "cat": "type"
@@ -755,6 +1015,11 @@
     "cat": "vinification"
   },
   {
+    "terme": "Sulfitage",
+    "def": "Ajout de SO₂ pour protéger le moût ou le vin de l'oxydation et des bactéries.",
+    "cat": "vinification"
+  },
+  {
     "terme": "Sulfites",
     "def": "SO₂ protecteur contre l'oxydation et les bactéries ; dosé, il est mentionné dès 10 mg/l.",
     "cat": "vinification"
@@ -770,8 +1035,18 @@
     "cat": "elevage"
   },
   {
+    "terme": "Taille",
+    "def": "Coupe hivernale des sarments qui règle la vigueur du cep et la récolte à venir (Guyot, cordon, gobelet).",
+    "cat": "viticulture"
+  },
+  {
     "terme": "Tanins",
     "def": "Composés phénoliques des peaux, pépins et rafles ; ils structurent les rouges, assèchent le palais jeunes, se fondent avec l'âge.",
+    "cat": "degustation"
+  },
+  {
+    "terme": "Tannique",
+    "def": "Vin riche en tanins, à la structure ferme, généralement bâti pour la garde.",
     "cat": "degustation"
   },
   {
@@ -790,9 +1065,19 @@
     "cat": "viticulture"
   },
   {
+    "terme": "Thermovinification",
+    "def": "Chauffage de la vendange pour extraire couleur et arômes rapidement.",
+    "cat": "vinification"
+  },
+  {
     "terme": "Tirage",
     "def": "Mise en bouteille avec liqueur de tirage pour la prise de mousse.",
     "cat": "vinification"
+  },
+  {
+    "terme": "Tonnellerie",
+    "def": "Atelier de fabrication des fûts ; la chauffe des douelles façonne les arômes cédés au vin.",
+    "cat": "elevage"
   },
   {
     "terme": "Tranquille (vin)",
@@ -810,14 +1095,24 @@
     "cat": "viticulture"
   },
   {
+    "terme": "Tuilé",
+    "def": "Reflet orangé d'un vin rouge évolué, indice de son âge.",
+    "cat": "degustation"
+  },
+  {
     "terme": "Typicité",
     "def": "Caractère fidèle au cépage, au terroir et à l'appellation.",
     "cat": "degustation"
   },
   {
-    "terme": "Vendanges tardives",
-    "def": "Récolte sur-mûrie donnant des vins moelleux (Alsace, Jurançon).",
-    "cat": "type"
+    "terme": "Végétal",
+    "def": "Arômes de plantes (herbe, buis, poivron, feuille) ; charmeurs ou signe d'un raisin peu mûr.",
+    "cat": "degustation"
+  },
+  {
+    "terme": "Vendange",
+    "def": "Récolte du raisin, manuelle (tri, grappes entières) ou mécanique.",
+    "cat": "viticulture"
   },
   {
     "terme": "Vendange verte",
@@ -825,13 +1120,33 @@
     "cat": "viticulture"
   },
   {
+    "terme": "Vendanges tardives",
+    "def": "Récolte sur-mûrie donnant des vins moelleux (Alsace, Jurançon).",
+    "cat": "type"
+  },
+  {
     "terme": "Véraison",
     "def": "Changement de couleur des baies en août, début de la maturation.",
     "cat": "viticulture"
   },
   {
+    "terme": "Vieilles vignes",
+    "def": "Ceps âgés au rendement faible mais concentré ; mention non réglementée.",
+    "cat": "viticulture"
+  },
+  {
+    "terme": "Vif",
+    "def": "Vin à l'acidité fraîche et tonique, tout en éclat et en jeunesse.",
+    "cat": "degustation"
+  },
+  {
     "terme": "Vigneron",
     "def": "Celui qui cultive la vigne et fait le vin — de la taille à la mise.",
+    "cat": "classification"
+  },
+  {
+    "terme": "Vin de France",
+    "def": "Catégorie sans indication d'origine, libre sur les cépages et les assemblages.",
     "cat": "classification"
   },
   {
@@ -843,6 +1158,11 @@
     "terme": "Vin de goutte",
     "def": "Vin écoulé sans pressurage, le plus fin.",
     "cat": "vinification"
+  },
+  {
+    "terme": "Vin de paille",
+    "def": "Liquoreux de raisins séchés sur claies ou paille durant des semaines (Jura, Hermitage).",
+    "cat": "type"
   },
   {
     "terme": "Vin de presse",
@@ -860,6 +1180,11 @@
     "cat": "type"
   },
   {
+    "terme": "Vin gris",
+    "def": "Rosé très pâle de pressurage direct, tradition de Lorraine et du Sud-Ouest.",
+    "cat": "type"
+  },
+  {
     "terme": "Vin jaune",
     "def": "Savagnin jurassien élevé 6 ans et 3 mois sous voile, en clavelin.",
     "cat": "type"
@@ -870,14 +1195,14 @@
     "cat": "type"
   },
   {
-    "terme": "Vinification",
-    "def": "Ensemble des opérations transformant le raisin en vin.",
-    "cat": "vinification"
-  },
-  {
     "terme": "Vin orange",
     "def": "Blanc vinifié comme un rouge, avec macération des peaux.",
     "cat": "type"
+  },
+  {
+    "terme": "Vinification",
+    "def": "Ensemble des opérations transformant le raisin en vin.",
+    "cat": "vinification"
   },
   {
     "terme": "Vivace",
