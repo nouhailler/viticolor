@@ -4,6 +4,7 @@ import type {
   RegionsView,
   DegustationNote,
   DegustationCrit,
+  GlossaireFamille,
 } from './types';
 import seedNotes from './data/seedNotes.json';
 
@@ -79,6 +80,8 @@ export interface State {
   actuCat: string;
   glossQuery: string;
   glossLettre: string | null;
+  glossCat: GlossaireFamille | null;
+  glossSel: string | null;
   routeSel: number;
   coteSel: number;
   cotePeriode: 5 | 10;
@@ -153,6 +156,8 @@ function initialState(): State {
     actuCat: 'tout',
     glossQuery: '',
     glossLettre: null,
+    glossCat: null,
+    glossSel: null,
     routeSel: 0,
     coteSel: 0,
     cotePeriode: 10,

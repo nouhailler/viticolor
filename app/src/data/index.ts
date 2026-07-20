@@ -23,6 +23,7 @@ import type {
   DecouverteBouteille,
   DecouverteDomaine,
   GlossaireTerme,
+  GlossaireMedia,
   ScanDemo,
   Wine,
 } from '../types';
@@ -51,6 +52,7 @@ import decouverteBouteilles from './decouverteBouteilles.json';
 import decouverteDomaines from './decouverteDomaines.json';
 import decouverteAnecdotes from './decouverteAnecdotes.json';
 import glossaire from './glossaire.json';
+import glossaireMedia from './glossaire-media.json';
 import scanDemo from './scanDemo.json';
 import wines from './wines.json';
 
@@ -78,5 +80,6 @@ export const DECOUVERTE_BOUTEILLES = decouverteBouteilles as DecouverteBouteille
 export const DECOUVERTE_DOMAINES = decouverteDomaines as DecouverteDomaine[];
 export const DECOUVERTE_ANECDOTES = decouverteAnecdotes as string[];
 export const GLOSSAIRE = glossaire as GlossaireTerme[];
+export const GLOSSAIRE_MEDIA = glossaireMedia as Record<string, GlossaireMedia>;
 export const SCAN_DEMO = scanDemo as ScanDemo;
 export const WINES = wines as unknown as Wine[];

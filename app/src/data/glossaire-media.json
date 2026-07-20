@@ -1,0 +1,114 @@
+{
+  "Barrique": {
+    "img": "barrique.jpg",
+    "credit": "Olivier Lemoine (https://Photo-Terroir.fr) · CC BY-SA 4.0"
+  },
+  "Botrytis": {
+    "img": "botrytis.jpg",
+    "credit": "Edwin · CC BY-SA 2.0"
+  },
+  "Cep": {
+    "img": "cep.jpg",
+    "credit": "Yann Gar · CC BY-SA 2.0"
+  },
+  "Chai": {
+    "img": "chai.jpg",
+    "credit": "Elbasuch 75 · CC BY-SA 4.0"
+  },
+  "Clavelin": {
+    "img": "clavelin.jpg",
+    "credit": "Arnaud 25 · CC BY-SA 4.0"
+  },
+  "Dégorgement": {
+    "img": "degorgement.jpg",
+    "credit": "G.Garitan · CC BY-SA 4.0"
+  },
+  "Dépôt": {
+    "img": "depot.jpg",
+    "credit": "Ed Brambley · CC BY-SA 2.0"
+  },
+  "Enherbement": {
+    "img": "enherbement.jpg",
+    "credit": "Auteur inconnu · CC BY-SA 4.0"
+  },
+  "Floraison": {
+    "img": "floraison.jpg",
+    "credit": "Eva Mathieu · CC0"
+  },
+  "Foudre": {
+    "img": "foudre.jpg",
+    "credit": "Unknown authorUnknown author · Public domain"
+  },
+  "Fût": {
+    "img": "fut.jpg",
+    "credit": "Angelomagic · CC BY-SA 4.0"
+  },
+  "Gelée de printemps": {
+    "img": "gelee-de-printemps.jpg",
+    "credit": "Sylvain Machefert · CC BY-SA 4.0"
+  },
+  "Gravelle": {
+    "img": "gravelle.jpg",
+    "credit": "Olivier Lemoine (Photographe viticole : https://Photo-Terroir.fr) · CC BY-SA 4.0"
+  },
+  "Greffage": {
+    "img": "greffage.jpg",
+    "credit": "Unknown early 1900s · Public domain"
+  },
+  "Lies": {
+    "img": "lies.jpg",
+    "credit": "Agne27 at English Wikipedia · CC BY-SA 3.0"
+  },
+  "Marc": {
+    "img": "marc.jpg",
+    "credit": "Cjp24 · CC BY-SA 4.0"
+  },
+  "Phylloxéra": {
+    "img": "phylloxera.jpg",
+    "credit": "Unknown authorUnknown author · Public domain"
+  },
+  "Pigeage": {
+    "img": "pigeage.jpg",
+    "credit": "Auteur inconnu · CC BY 2.0"
+  },
+  "Pressurage": {
+    "img": "pressurage.jpg",
+    "credit": "Agence Rol. Agence photographique (commanditaire) · Public domain"
+  },
+  "Remuage": {
+    "img": "remuage.jpg",
+    "credit": "Powerhouse Museum Collection · No restrictions"
+  },
+  "Robe": {
+    "img": "robe.jpg",
+    "credit": "Ludovic Péron · CC BY-SA 3.0"
+  },
+  "Solera": {
+    "img": "solera.jpg",
+    "credit": "Auteur inconnu · CC BY-SA 3.0"
+  },
+  "Soutirage": {
+    "img": "soutirage.jpg",
+    "credit": "Agne27 · CC BY-SA 3.0"
+  },
+  "Sur lattes": {
+    "img": "sur-lattes.jpg",
+    "credit": "koakoo (koakoo.free.Fr) · Public domain"
+  },
+  "Tastevin": {
+    "img": "tastevin.jpg",
+    "credit": "Copyleft · CC BY-SA 4.0"
+  },
+  "Véraison": {
+    "img": "veraison.jpg",
+    "credit": "Olivier Lemoine (https://Photo-Terroir.fr) · CC BY-SA 4.0"
+  },
+  "Vin jaune": {
+    "img": "vin-jaune.jpg",
+    "credit": "Julien Damelet · CC BY-SA 4.0"
+  },
+  "Vin orange": {
+    "img": "vin-orange.jpg",
+    "credit": "Sistoiv · CC BY-SA 4.0"
+  }
+}

@@ -204,9 +204,27 @@ export interface DecouverteDomaine {
   txt: string;
 }
 
+export type GlossaireFamille =
+  | 'degustation'
+  | 'viticulture'
+  | 'vinification'
+  | 'elevage'
+  | 'contenant'
+  | 'defaut'
+  | 'classification'
+  | 'type';
+
 export interface GlossaireTerme {
   terme: string;
   def: string;
+  /** Famille du terme, posée par scripts/tag-glossaire.mjs. */
+  cat: GlossaireFamille;
+}
+
+/** Illustration d'un terme (fichier dans public/glossaire/) + crédit. */
+export interface GlossaireMedia {
+  img: string;
+  credit: string;
 }
 
 export interface ScanFicheRow {
