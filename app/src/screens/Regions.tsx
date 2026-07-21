@@ -253,10 +253,14 @@ function CarteRegion({ regionId }: { regionId: string }) {
   const s2 = regionId.split('').reduce((n, c) => n + c.charCodeAt(0), 0);
   const cz = carteZoom;
 
+  // Positions décoratives (pas de vraies coordonnées village/domaine dans nos
+  // données) resserrées vers le cœur de la région pour rester sur les terres et
+  // non dans la mer, sur le fond cartographique.
   const villageMarkers = cA.vil.map((v, i) => ({
-    x: 12 + ((i * 53 + s2 * 7) % 72),
-    y: 14 + ((i * 41 + s2 * 11) % 66),
-    bg: '#8e5a64',
+    x: 50 + ((12 + ((i * 53 + s2 * 7) % 72)) - 48) * 0.58,
+    y: 46 + ((14 + ((i * 41 + s2 * 11) % 66)) - 47) * 0.5,
+    bg: '#a2404f',
+    border: '#fbf6ec',
     radius: '50%',
     rot: '0deg',
     label: v,
@@ -264,9 +268,10 @@ function CarteRegion({ regionId }: { regionId: string }) {
     info: `${v} — village viticole · ${region.name}`,
   }));
   const domaineMarkers = cA.dom.map((d, i) => ({
-    x: 10 + ((i * 67 + s2 * 13) % 76),
-    y: 12 + ((i * 59 + s2 * 5) % 70),
-    bg: 'var(--gold)',
+    x: 50 + ((10 + ((i * 67 + s2 * 13) % 76)) - 48) * 0.6,
+    y: 46 + ((12 + ((i * 59 + s2 * 5) % 70)) - 47) * 0.5,
+    bg: '#c9a227',
+    border: '#6b4e12',
     radius: '1px',
     rot: '45deg',
     label: d.n,
@@ -291,8 +296,8 @@ function CarteRegion({ regionId }: { regionId: string }) {
       </div>
       <div style={{ marginTop: 4, fontSize: 11, color: 'var(--text-muted)' }}>Zoomez pour révéler villages puis domaines</div>
 
-      <div className="vc-scroll" style={{ marginTop: 10, overflow: 'auto', border: '1px solid var(--surface-border)', borderRadius: 'var(--r-card)', background: '#1c070b', maxHeight: 330 }}>
-        <div style={{ position: 'relative', width: Math.round(352 * cz), height: Math.round(300 * cz), background: '#1c070b' }}>
+      <div className="vc-scroll" style={{ marginTop: 10, overflow: 'auto', border: '1px solid var(--gold-border)', borderRadius: 'var(--r-card)', background: '#c4d8de', maxHeight: 330 }}>
+        <div style={{ position: 'relative', width: Math.round(352 * cz), height: Math.round(300 * cz), background: '#c4d8de' }}>
           <RegionMapBackdrop regionId={regionId} />
           {markers.map((m, i) => (
             <button
@@ -300,23 +305,27 @@ function CarteRegion({ regionId }: { regionId: string }) {
               onClick={() => setState({ carteInfo: m.info })}
               style={{ position: 'absolute', left: `${m.x}%`, top: `${m.y}%`, transform: 'translate(-50%,-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}
             >
-              <span style={{ width: 9, height: 9, background: m.bg, border: '1px solid var(--text)', borderRadius: m.radius, transform: `rotate(${m.rot})` }} />
-              {m.showLabel && <span style={{ fontSize: 9, color: 'var(--gold-light)', whiteSpace: 'nowrap' }}>{m.label}</span>}
+              <span style={{ width: 10, height: 10, background: m.bg, border: `1.5px solid ${m.border}`, borderRadius: m.radius, transform: `rotate(${m.rot})`, boxShadow: '0 1px 2px rgba(0,0,0,0.4)' }} />
+              {m.showLabel && <span style={{ fontSize: 9, fontWeight: 600, color: '#3f2a2d', whiteSpace: 'nowrap', background: 'rgba(251,246,236,0.82)', padding: '0 3px', borderRadius: 2 }}>{m.label}</span>}
             </button>
           ))}
           {hasUser && (
-            <div style={{ position: 'absolute', left: '55%', top: '42%', transform: 'translate(-50%,-50%)', width: 11, height: 11, borderRadius: '50%', background: 'var(--gold)', border: '2px solid var(--text)', animation: 'pulse 2s infinite' }} />
+            <div style={{ position: 'absolute', left: '55%', top: '42%', transform: 'translate(-50%,-50%)', width: 12, height: 12, borderRadius: '50%', background: '#c9a227', border: '2px solid #fff', boxShadow: '0 1px 3px rgba(0,0,0,0.5)', animation: 'pulse 2s infinite' }} />
           )}
         </div>
       </div>
-      <div style={{ marginTop: 8, display: 'flex', gap: 14, fontSize: 11, color: 'var(--text-3)' }}>
+      <div style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap', gap: '4px 14px', fontSize: 11, color: 'var(--text-3)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#8e5a64', border: '1px solid var(--text)' }} />
+          <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#a2404f', border: '1.5px solid #fbf6ec' }} />
           village
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ width: 8, height: 8, background: 'var(--gold)', transform: 'rotate(45deg)', border: '1px solid var(--text)' }} />
+          <span style={{ width: 8, height: 8, background: '#c9a227', transform: 'rotate(45deg)', border: '1px solid #6b4e12' }} />
           domaine certifié Bio / HVE
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+          <span style={{ width: 12, height: 2, borderRadius: 2, background: '#4f8bad' }} />
+          fleuve
         </div>
       </div>
       {carteInfo && (
@@ -335,9 +344,9 @@ function CarteRegion({ regionId }: { regionId: string }) {
 }
 
 // ─── Fond de carte régional ───
-// Plutôt qu'un aplat rouge, on cadre la vraie silhouette de la France sur la
-// zone de la région (terres en relief chaud, mer sombre, fleuves), pour donner
-// un support géographique aux pastilles villages/domaines.
+// Vrai fond cartographique (style atlas papier, cohérent avec la fiche région) :
+// mer bleutée, terres claires, trait de côte, fleuves et régions voisines
+// nommées, cadré sur la zone de la région et zoomable avec elle.
 const clampVB = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
 
 // Fenêtre de recadrage, dans les unités du viewBox. Le rapport 352/300 reproduit
@@ -357,7 +366,13 @@ function RegionMapBackdrop({ regionId }: { regionId: string }) {
   const homeIds = REGION_RIVERS[regionId] ?? [];
   const homeRivers = FRANCE_RIVERS.filter((r) => homeIds.includes(r.id));
   const otherRivers = FRANCE_RIVERS.filter((r) => !homeIds.includes(r.id));
-  const gid = `reg-land-${regionId}`;
+
+  // Régions voisines visibles dans la fenêtre : elles situent la région.
+  const neighbours = REGIONS.filter((r) => {
+    if (r.id === regionId) return false;
+    const q = REGION_POINTS[r.id];
+    return q && q.x >= x0 && q.x <= x0 + MAP_WIN_W && q.y >= y0 && q.y <= y0 + MAP_WIN_H;
+  });
 
   return (
     <svg
@@ -366,33 +381,45 @@ function RegionMapBackdrop({ regionId }: { regionId: string }) {
       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }}
       aria-hidden="true"
     >
-      <defs>
-        <radialGradient id={gid} cx="45%" cy="40%" r="85%">
-          <stop offset="0%" stopColor="#7a3040" />
-          <stop offset="60%" stopColor="#5a2030" />
-          <stop offset="100%" stopColor="#3d1019" />
-        </radialGradient>
-      </defs>
+      {/* Mer */}
+      <rect x={x0} y={y0} width={MAP_WIN_W} height={MAP_WIN_H} fill="#c4d8de" />
 
-      {/* Mer / fond hors-terres */}
-      <rect x={x0} y={y0} width={MAP_WIN_W} height={MAP_WIN_H} fill="#1c070b" />
-
-      {/* Terres en relief chaud */}
+      {/* Terres */}
       {FRANCE_PATHS.map((d, i) => (
-        <path key={i} d={d} fill={`url(#${gid})`} stroke="rgba(212,175,110,0.4)" strokeWidth={1.1} strokeLinejoin="round" />
+        <path key={i} d={d} fill="#e9e0cd" stroke="#b7a681" strokeWidth={1.2} strokeLinejoin="round" />
       ))}
 
-      {/* Fleuves de contexte, très discrets */}
+      {/* Fleuves de contexte */}
       {otherRivers.map((r) => (
-        <path key={r.id} d={r.d} fill="none" stroke="rgba(150,185,205,0.14)" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" />
+        <path key={r.id} d={r.d} fill="none" stroke="#9fc0d0" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" />
       ))}
       {/* Fleuve(s) de la région, en évidence */}
       {homeRivers.map((r) => (
-        <path key={r.id} d={r.d} fill="none" stroke="rgba(120,170,200,0.5)" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" />
+        <path key={r.id} d={r.d} fill="none" stroke="#4f8bad" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" />
       ))}
 
-      {/* Halo au cœur de la région */}
-      <circle cx={p.x} cy={p.y} r={30} fill="rgba(201,162,39,0.10)" />
+      {/* Régions voisines */}
+      {neighbours.map((r) => {
+        const q = REGION_POINTS[r.id]!;
+        return (
+          <g key={r.id}>
+            <circle cx={q.x} cy={q.y} r={2.8} fill="#8a5a2b" opacity={0.7} />
+            <text x={q.x} y={q.y - 5} textAnchor="middle" fontSize={9} fill="#6b5330" style={{ fontWeight: 600 }}>
+              {r.name}
+            </text>
+          </g>
+        );
+      })}
+
+      {/* Repère de la région (halo doux) */}
+      <circle cx={p.x} cy={p.y} r={16} fill="none" stroke="#b8860b" strokeWidth={1.6} opacity={0.45} />
+
+      {/* Rose des vents */}
+      <g transform={`translate(${x0 + MAP_WIN_W - 20}, ${y0 + 18})`} opacity={0.85}>
+        <circle r={9} fill="rgba(255,255,255,0.7)" stroke="#b7a681" strokeWidth={1} />
+        <path d="M0 -6.5L2 0L0 6.5L-2 0Z" fill="#8a5a2b" />
+        <text x={0} y={-10.5} textAnchor="middle" fontSize={8} fill="#6b5330" style={{ fontWeight: 700 }}>N</text>
+      </g>
     </svg>
   );
 }
