@@ -1,37 +1,290 @@
 [
   {
+    "cat": "apero",
+    "plat": "Gougères bourguignonnes",
+    "vin": "Crémant de Bourgogne",
+    "pourquoi": "La bulle fine et l’acidité du crémant nettoient le gras du fromage chaud et relancent l’appétit."
+  },
+  {
+    "cat": "apero",
+    "plat": "Tapenade & olives",
+    "vin": "Bandol rosé",
+    "pourquoi": "Le mourvèdre rosé, ample et épicé, tient tête à l’amertume de l’olive et aux herbes de garrigue."
+  },
+  {
+    "cat": "apero",
+    "plat": "Charcuterie corse (lonzu, coppa)",
+    "vin": "Patrimonio rosé",
+    "pourquoi": "Le niellucciu offre fraîcheur et croquant de fruit qui découpent le gras fumé de la charcuterie."
+  },
+  {
+    "cat": "apero",
+    "plat": "Jambon de Bayonne",
+    "vin": "Irouléguy rosé",
+    "pourquoi": "Un rosé basque nerveux et fruité, à l’image du terroir : il souligne le sel et le persillé du jambon."
+  },
+  {
+    "cat": "apero",
+    "plat": "Rillettes du Mans",
+    "vin": "Vouvray sec",
+    "pourquoi": "Le chenin sec et tendu tranche la richesse confite du porc sans jamais l’alourdir."
+  },
+  {
+    "cat": "apero",
+    "plat": "Anchoïade & légumes croquants",
+    "vin": "Picpoul de Pinet",
+    "pourquoi": "Vif et salin, ce blanc du Languedoc répond à l’anchois iodé comme la mer voisine."
+  },
+  {
+    "cat": "entree",
+    "plat": "Salade de chèvre chaud",
+    "vin": "Sancerre blanc",
+    "pourquoi": "Le sauvignon, herbacé et acidulé, est le miroir du chèvre : c’est l’accord de terroir de la Loire."
+  },
+  {
+    "cat": "entree",
+    "plat": "Foie gras poêlé",
+    "vin": "Jurançon moelleux",
+    "pourquoi": "Le petit manseng, doux mais acidulé, enrobe le foie gras sans l’écœurer et prolonge sa longueur."
+  },
+  {
+    "cat": "entree",
+    "plat": "Escargots de Bourgogne",
+    "vin": "Bourgogne Aligoté",
+    "pourquoi": "Sa vivacité citronnée équilibre le beurre persillé à l’ail et rafraîchit la bouche."
+  },
+  {
+    "cat": "entree",
+    "plat": "Œufs en meurette",
+    "vin": "Hautes-Côtes-de-Nuits rouge",
+    "pourquoi": "La sauce au vin rouge appelle un pinot noir de même origine : l’accord se boucle sur lui-même."
+  },
+  {
+    "cat": "entree",
+    "plat": "Quiche lorraine",
+    "vin": "Pinot blanc d’Alsace",
+    "pourquoi": "Rond et discret, il accompagne la crème et les lardons sans dominer l’œuf."
+  },
+  {
+    "cat": "entree",
+    "plat": "Terrine de campagne",
+    "vin": "Beaujolais-Villages",
+    "pourquoi": "Le gamay léger et gouleyant, servi frais, coupe le gras rustique de la terrine."
+  },
+  {
+    "cat": "entree",
+    "plat": "Saumon fumé",
+    "vin": "Champagne blanc de blancs",
+    "pourquoi": "La tension crayeuse du chardonnay et la bulle nettoient le gras fumé et salé du poisson."
+  },
+  {
+    "cat": "entree",
+    "plat": "Asperges vertes, sauce mousseline",
+    "vin": "Sylvaner d’Alsace",
+    "pourquoi": "Sur ce légume réputé difficile, un blanc sec peu aromatique et frais évite l’amertume métallique."
+  },
+  {
+    "cat": "mer",
     "plat": "Sole meunière",
     "vin": "Meursault ou Chassagne-Montrachet",
     "pourquoi": "Le gras du beurre noisette appelle un chardonnay ample et boisé ; l’acidité bourguignonne tranche la richesse du plat."
   },
   {
-    "plat": "Côte de bœuf maturée",
-    "vin": "Pauillac ou Côte-Rôtie",
-    "pourquoi": "Tanins structurés et notes fumées répondent au gras persillé et à la croûte grillée de la viande."
-  },
-  {
+    "cat": "mer",
     "plat": "Huîtres fines de claire",
     "vin": "Muscadet Sèvre-et-Maine sur lie",
     "pourquoi": "Salinité contre iode : le melon de Bourgogne élevé sur lie prolonge le goût de la mer sans l’écraser."
   },
   {
-    "plat": "Époisses affiné",
-    "vin": "Gewurztraminer Vendanges Tardives",
-    "pourquoi": "Face à la puissance du fromage lavé, seule l’exubérance aromatique et la douceur d’un moelleux tiennent l’équilibre."
+    "cat": "mer",
+    "plat": "Plateau de fruits de mer",
+    "vin": "Chablis",
+    "pourquoi": "Le chardonnay minéral et iodé de Chablis épouse crevettes, bulots et huîtres d’un même trait salin."
   },
   {
+    "cat": "mer",
+    "plat": "Noix de Saint-Jacques snackées",
+    "vin": "Chablis 1er cru",
+    "pourquoi": "La chair sucrée et le beurre noisette trouvent tension et éclat dans un chablis d’un cran au-dessus."
+  },
+  {
+    "cat": "mer",
+    "plat": "Homard grillé",
+    "vin": "Meursault",
+    "pourquoi": "La richesse iodée du homard exige un grand blanc gras et long : le meursault lui répond puissance pour puissance."
+  },
+  {
+    "cat": "mer",
+    "plat": "Bouillabaisse",
+    "vin": "Cassis blanc",
+    "pourquoi": "Ce blanc de Provence, floral et salin, tient tête au safran et à la rouille sans se faire écraser."
+  },
+  {
+    "cat": "mer",
+    "plat": "Moules marinières",
+    "vin": "Muscadet ou Gros Plant",
+    "pourquoi": "Un blanc nantais vif et léger, presque salé, joue la carte de proximité avec le jus de moule."
+  },
+  {
+    "cat": "mer",
+    "plat": "Sushi & poisson cru",
+    "vin": "Riesling d’Alsace sec",
+    "pourquoi": "Droit et minéral, le riesling accompagne la délicatesse du poisson cru et supporte le wasabi."
+  },
+  {
+    "cat": "mer",
+    "plat": "Truite aux amandes",
+    "vin": "Roussette de Savoie",
+    "pourquoi": "L’altesse, fine et légèrement noisetée, prolonge les amandes et la chair douce de la truite."
+  },
+  {
+    "cat": "viande",
+    "plat": "Côte de bœuf maturée",
+    "vin": "Pauillac ou Côte-Rôtie",
+    "pourquoi": "Tanins structurés et notes fumées répondent au gras persillé et à la croûte grillée de la viande."
+  },
+  {
+    "cat": "viande",
     "plat": "Poulet de Bresse à la crème",
     "vin": "Vin jaune du Jura",
     "pourquoi": "L’accord régional absolu : noix et curry du savagnin oxydatif fusionnent avec la crème et les morilles."
   },
   {
+    "cat": "viande",
     "plat": "Gigot d’agneau de sept heures",
     "vin": "Châteauneuf-du-Pape",
     "pourquoi": "Grenache solaire, garrigue et épices douces épousent le confit de l’agneau et le thym."
   },
   {
+    "cat": "viande",
+    "plat": "Magret de canard",
+    "vin": "Madiran ou Cahors",
+    "pourquoi": "Le tannat et le malbec, denses et virils, tiennent le gras du canard et sa cuisson rosée."
+  },
+  {
+    "cat": "viande",
+    "plat": "Bœuf bourguignon",
+    "vin": "Gevrey-Chambertin",
+    "pourquoi": "Un pinot noir de garde, charpenté, prolonge la sauce au vin rouge mijotée dont il est le cousin."
+  },
+  {
+    "cat": "viande",
+    "plat": "Confit de canard",
+    "vin": "Cahors",
+    "pourquoi": "Le malbec du Sud-Ouest, tannique et fruité, découpe le gras confit avec autorité."
+  },
+  {
+    "cat": "viande",
+    "plat": "Coq au vin",
+    "vin": "Chinon rouge",
+    "pourquoi": "Le cabernet franc de Loire, souple et légèrement poivré, fait écho à la volaille braisée au vin."
+  },
+  {
+    "cat": "viande",
+    "plat": "Daube provençale",
+    "vin": "Gigondas",
+    "pourquoi": "Grenache et syrah du Rhône sud, épicés et chaleureux, répondent au bœuf mijoté aux olives et à l’orange."
+  },
+  {
+    "cat": "viande",
+    "plat": "Choucroute garnie",
+    "vin": "Riesling d’Alsace",
+    "pourquoi": "L’acidité tranchante du riesling nettoie le gras des viandes et fait chanter le chou fermenté."
+  },
+  {
+    "cat": "viande",
+    "plat": "Cassoulet",
+    "vin": "Corbières ou Madiran",
+    "pourquoi": "Un rouge du Sud, charpenté et solaire, soutient la richesse des haricots, du confit et de la saucisse."
+  },
+  {
+    "cat": "viande",
+    "plat": "Civet de gibier (chevreuil, sanglier)",
+    "vin": "Hermitage ou Vosne-Romanée",
+    "pourquoi": "Le gibier corsé demande un grand rouge complexe, aux notes de sous-bois et d’épices, à la hauteur de la sauce."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Époisses affiné",
+    "vin": "Gewurztraminer Vendanges Tardives",
+    "pourquoi": "Face à la puissance du fromage lavé, seule l’exubérance aromatique et la douceur d’un moelleux tiennent l’équilibre."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Comté 24 mois",
+    "vin": "Côtes du Jura (savagnin)",
+    "pourquoi": "Les notes de noix et de fruits secs du savagnin prolongent la cristallisation et le fruité du comté."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Roquefort",
+    "vin": "Sauternes ou Banyuls",
+    "pourquoi": "Le sucré du liquoreux ou du vin doux naturel équilibre le sel et le piquant du bleu : contraste classique."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Crottin de Chavignol",
+    "vin": "Sancerre ou Pouilly-Fumé",
+    "pourquoi": "Sur son terroir, le sauvignon vif et minéral est le partenaire naturel du chèvre de Loire."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Munster",
+    "vin": "Gewurztraminer d’Alsace",
+    "pourquoi": "L’exubérance de rose et de litchi du gewurztraminer dompte l’odeur puissante du munster ; un accord de voisinage."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Beaufort d’alpage",
+    "vin": "Roussette de Savoie",
+    "pourquoi": "Le blanc savoyard, floral et frais, allège la richesse du fromage de montagne fruité."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Reblochon",
+    "vin": "Vin de Savoie (Apremont)",
+    "pourquoi": "La jacquère légère et perlante rafraîchit le crémeux du reblochon, comme après une raclette."
+  },
+  {
+    "cat": "dessert",
     "plat": "Tarte Tatin",
     "vin": "Jurançon moelleux",
     "pourquoi": "Petit manseng confit, ananas rôti et acidité vive : la pomme caramélisée trouve son miroir."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Fondant au chocolat",
+    "vin": "Maury ou Banyuls",
+    "pourquoi": "Le grenache en vin doux naturel, cacaoté et puissant, est l’un des rares vins à tenir le chocolat noir."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Crème brûlée",
+    "vin": "Sauternes",
+    "pourquoi": "Le sémillon botrytisé, miel et vanille, épouse la crème et le caramel craquant sans lourdeur."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Tarte aux abricots",
+    "vin": "Muscat de Beaumes-de-Venise",
+    "pourquoi": "Le muscat, floral et fruité, fait écho à l’abricot rôti et prolonge sa douceur solaire."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Tarte au citron meringuée",
+    "vin": "Coteaux du Layon",
+    "pourquoi": "Le chenin liquoreux garde une acidité vive qui répond au citron et enrobe la meringue."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Salade de fruits rouges",
+    "vin": "Clairette de Die",
+    "pourquoi": "La bulle légère et demi-sèche, muscatée, rafraîchit les fruits rouges sans les masquer."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Millefeuille vanille",
+    "vin": "Champagne demi-sec",
+    "pourquoi": "Un champagne dosé, gourmand, accompagne la crème pâtissière et le feuilletage beurré."
   }
 ]

@@ -1,5 +1,5 @@
 import { useStore, actions, isRootScreen, type State } from '../store';
-import { DEMO_TIPS, GLOSSAIRE, WINES, REGIONS } from '../data';
+import { DEMO_TIPS, GLOSSAIRE, WINES, REGIONS, ACCORDS } from '../data';
 import type { ScreenId } from '../types';
 
 // ─── Header fixe ───
@@ -170,7 +170,7 @@ const MENU_SECTIONS: MenuSection[] = [
     items: [
       { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '', extra: { scanned: false } },
       { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: () => `${WINES.length} vins`, extra: { wineSel: null } },
-      { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => '' },
+      { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => `${ACCORDS.length} accords` },
     ],
   },
   {

@@ -90,6 +90,7 @@ export interface State {
   histOpen: number | null;
   aromSel: number;
   accordOpen: number;
+  accordCat: string;
 
   // Quiz
   quizIndex: number;
@@ -132,7 +133,7 @@ const NAV_KEYS = [
   'zoom', 'millHistSel', 'caveFilter', 'query', 'wineQuery', 'wineColor',
   'wineRegionFilter', 'wineSel', 'scanned', 'scanAdded', 'collOpen', 'vendSel',
   'actuCat', 'glossQuery', 'glossLettre', 'glossCat', 'glossSel', 'routeSel',
-  'coteSel', 'cotePeriode', 'histOpen', 'aromSel', 'accordOpen',
+  'coteSel', 'cotePeriode', 'histOpen', 'aromSel', 'accordOpen', 'accordCat',
 ] as const;
 type NavKey = (typeof NAV_KEYS)[number];
 export type NavSnapshot = Pick<State, NavKey>;
@@ -192,7 +193,8 @@ function initialState(): State {
     cotePeriode: 10,
     histOpen: null,
     aromSel: 0,
-    accordOpen: 0,
+    accordOpen: -1,
+    accordCat: 'tous',
 
     quizIndex: 0,
     quizPicked: null,

@@ -63,6 +63,8 @@ export interface CaveBottle {
 }
 
 export interface Accord {
+  /** Catégorie de plat : apero | entree | mer | viande | fromage | dessert */
+  cat: string;
   plat: string;
   vin: string;
   pourquoi: string;
