@@ -211,7 +211,7 @@ function initialState(): State {
     obDone: load('onboard', false),
     obStep: 0,
     demoOn: load('demo', true),
-    demoDismissed: {},
+    demoDismissed: load('demoDismissed', {} as Record<string, boolean>),
 
     favs: load<string[]>('favs', ['bourgogne']),
     qtys: load<Record<string, number>>('qtys', {}),
@@ -345,11 +345,18 @@ export const actions = {
     setState((s) => {
       const demoOn = !s.demoOn;
       save('demo', demoOn);
+      // Réactiver le mode démo réaffiche tous les tips ; on remet donc la liste
+      // des tips fermés à zéro (et on la persiste).
+      save('demoDismissed', {});
       return { demoOn, demoDismissed: {} };
     });
   },
   dismissDemo(screen: string) {
-    setState((s) => ({ demoDismissed: { ...s.demoDismissed, [screen]: true } }));
+    setState((s) => {
+      const demoDismissed = { ...s.demoDismissed, [screen]: true };
+      save('demoDismissed', demoDismissed);
+      return { demoDismissed };
+    });
   },
 };
 
