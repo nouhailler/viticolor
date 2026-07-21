@@ -7,7 +7,7 @@ const [, , VB_W, VB_H] = FRANCE_VIEWBOX.split(' ').map(Number);
 /** Rivières emblématiques de chaque région : elles sont tracées en évidence et
  *  citées en légende. Les régions littorales (Languedoc, Provence, Corse) n'en
  *  ont pas dans notre jeu : c'est le trait de côte qui les situe. */
-const REGION_RIVERS: Record<string, string[]> = {
+export const REGION_RIVERS: Record<string, string[]> = {
   alsace: ['rhin'],
   beaujolais: ['saone'],
   bordeaux: ['garonne', 'dordogne'],

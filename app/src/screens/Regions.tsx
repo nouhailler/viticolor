@@ -1,8 +1,10 @@
 import { useStore, setState, actions } from '../store';
 import { REGIONS, ATLAS, NEAR_ME, CEPAGES } from '../data';
 import { FRANCE_VIEWBOX, FRANCE_PATHS, REGION_POINTS } from '../data/france-map';
+import { FRANCE_RIVERS } from '../data/france-rivers';
 import { certColor } from '../lib/helpers';
 import { ScreenHeading, DotGauge } from '../components/ui';
+import { REGION_RIVERS } from '../components/SituationMap';
 
 const VIEW_CHIPS: [string, string][] = [
   ['carte', 'Carte'],
@@ -261,8 +263,9 @@ function CarteRegion({ regionId }: { regionId: string }) {
       </div>
       <div style={{ marginTop: 4, fontSize: 11, color: 'var(--text-muted)' }}>Zoomez pour révéler villages puis domaines</div>
 
-      <div className="vc-scroll" style={{ marginTop: 10, overflow: 'auto', border: '1px solid var(--surface-border)', borderRadius: 'var(--r-card)', background: '#2b0e13', maxHeight: 330 }}>
-        <div style={{ position: 'relative', width: Math.round(352 * cz), height: Math.round(300 * cz), background: 'radial-gradient(ellipse at 40% 40%, #3f151d, #2b0e13 80%)' }}>
+      <div className="vc-scroll" style={{ marginTop: 10, overflow: 'auto', border: '1px solid var(--surface-border)', borderRadius: 'var(--r-card)', background: '#1c070b', maxHeight: 330 }}>
+        <div style={{ position: 'relative', width: Math.round(352 * cz), height: Math.round(300 * cz), background: '#1c070b' }}>
+          <RegionMapBackdrop regionId={regionId} />
           {markers.map((m, i) => (
             <button
               key={i}
@@ -300,6 +303,69 @@ function CarteRegion({ regionId }: { regionId: string }) {
         Fiche complète {region.name} →
       </button>
     </>
+  );
+}
+
+// ─── Fond de carte régional ───
+// Plutôt qu'un aplat rouge, on cadre la vraie silhouette de la France sur la
+// zone de la région (terres en relief chaud, mer sombre, fleuves), pour donner
+// un support géographique aux pastilles villages/domaines.
+const clampVB = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+
+// Fenêtre de recadrage, dans les unités du viewBox. Le rapport 352/300 reproduit
+// celui de la zone zoomable, pour que les pastilles (positionnées en %) se
+// posent exactement sur la géographie affichée.
+const MAP_WIN_W = 236;
+const MAP_WIN_H = 201;
+
+function RegionMapBackdrop({ regionId }: { regionId: string }) {
+  const p = REGION_POINTS[regionId];
+  if (!p) return null;
+
+  const x0 = clampVB(p.x - MAP_WIN_W / 2, 0, VB_W - MAP_WIN_W);
+  const y0 = clampVB(p.y - MAP_WIN_H / 2, 0, VB_H - MAP_WIN_H);
+  const crop = `${x0} ${y0} ${MAP_WIN_W} ${MAP_WIN_H}`;
+
+  const homeIds = REGION_RIVERS[regionId] ?? [];
+  const homeRivers = FRANCE_RIVERS.filter((r) => homeIds.includes(r.id));
+  const otherRivers = FRANCE_RIVERS.filter((r) => !homeIds.includes(r.id));
+  const gid = `reg-land-${regionId}`;
+
+  return (
+    <svg
+      viewBox={crop}
+      preserveAspectRatio="none"
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }}
+      aria-hidden="true"
+    >
+      <defs>
+        <radialGradient id={gid} cx="45%" cy="40%" r="85%">
+          <stop offset="0%" stopColor="#7a3040" />
+          <stop offset="60%" stopColor="#5a2030" />
+          <stop offset="100%" stopColor="#3d1019" />
+        </radialGradient>
+      </defs>
+
+      {/* Mer / fond hors-terres */}
+      <rect x={x0} y={y0} width={MAP_WIN_W} height={MAP_WIN_H} fill="#1c070b" />
+
+      {/* Terres en relief chaud */}
+      {FRANCE_PATHS.map((d, i) => (
+        <path key={i} d={d} fill={`url(#${gid})`} stroke="rgba(212,175,110,0.4)" strokeWidth={1.1} strokeLinejoin="round" />
+      ))}
+
+      {/* Fleuves de contexte, très discrets */}
+      {otherRivers.map((r) => (
+        <path key={r.id} d={r.d} fill="none" stroke="rgba(150,185,205,0.14)" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" />
+      ))}
+      {/* Fleuve(s) de la région, en évidence */}
+      {homeRivers.map((r) => (
+        <path key={r.id} d={r.d} fill="none" stroke="rgba(120,170,200,0.5)" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" />
+      ))}
+
+      {/* Halo au cœur de la région */}
+      <circle cx={p.x} cy={p.y} r={30} fill="rgba(201,162,39,0.10)" />
+    </svg>
   );
 }
 
