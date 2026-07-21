@@ -36,6 +36,30 @@
     "pourquoi": "Vif et salin, ce blanc du Languedoc répond à l’anchois iodé comme la mer voisine."
   },
   {
+    "cat": "apero",
+    "plat": "Guacamole & tortillas",
+    "vin": "Côtes de Gascogne blanc",
+    "pourquoi": "Le colombard-sauvignon, vif et exotique, épouse l’avocat et la coriandre sur une pointe citronnée."
+  },
+  {
+    "cat": "apero",
+    "plat": "Houmous & pain pita",
+    "vin": "Côtes de Provence rosé",
+    "pourquoi": "Un rosé sec et frais porte le sésame et le pois chiche sans les alourdir."
+  },
+  {
+    "cat": "apero",
+    "plat": "Blinis, saumon fumé & tarama",
+    "vin": "Champagne brut",
+    "pourquoi": "La bulle et la fraîcheur découpent le gras iodé : l’apéritif festif par excellence."
+  },
+  {
+    "cat": "apero",
+    "plat": "Verrines & amuse-bouches",
+    "vin": "Crémant d’Alsace",
+    "pourquoi": "Une bulle fine et polyvalente qui s’adapte à une mosaïque de petites bouchées salées."
+  },
+  {
     "cat": "entree",
     "plat": "Salade de chèvre chaud",
     "vin": "Sancerre blanc",
@@ -82,6 +106,18 @@
     "plat": "Asperges vertes, sauce mousseline",
     "vin": "Sylvaner d’Alsace",
     "pourquoi": "Sur ce légume réputé difficile, un blanc sec peu aromatique et frais évite l’amertume métallique."
+  },
+  {
+    "cat": "entree",
+    "plat": "Velouté de potiron",
+    "vin": "Jurançon sec",
+    "pourquoi": "La rondeur douce de la courge appelle un blanc sec, gras et légèrement épicé, qui la prolonge."
+  },
+  {
+    "cat": "entree",
+    "plat": "Tartare de bœuf",
+    "vin": "Morgon",
+    "pourquoi": "Un cru du Beaujolais léger et fruité, servi frais, souligne la viande crue assaisonnée."
   },
   {
     "cat": "mer",
@@ -136,6 +172,12 @@
     "plat": "Truite aux amandes",
     "vin": "Roussette de Savoie",
     "pourquoi": "L’altesse, fine et légèrement noisetée, prolonge les amandes et la chair douce de la truite."
+  },
+  {
+    "cat": "mer",
+    "plat": "Dos de cabillaud, beurre blanc",
+    "vin": "Savennières",
+    "pourquoi": "Le chenin sec et minéral de la Loire porte le beurre blanc sans se laisser dominer par sa richesse."
   },
   {
     "cat": "viande",
@@ -204,6 +246,186 @@
     "pourquoi": "Le gibier corsé demande un grand rouge complexe, aux notes de sous-bois et d’épices, à la hauteur de la sauce."
   },
   {
+    "cat": "vege",
+    "plat": "Risotto aux cèpes",
+    "vin": "Saint-Véran",
+    "pourquoi": "Le gras crémeux du risotto et le parfum des cèpes appellent un chardonnay rond et légèrement boisé."
+  },
+  {
+    "cat": "vege",
+    "plat": "Ratatouille",
+    "vin": "Côtes de Provence rosé",
+    "pourquoi": "Les légumes du soleil mijotés retrouvent leur terroir dans un rosé de Provence frais et sec."
+  },
+  {
+    "cat": "vege",
+    "plat": "Gratin dauphinois",
+    "vin": "Vin de Savoie Apremont",
+    "pourquoi": "La jacquère vive et perlante tranche la crème et la pomme de terre fondante."
+  },
+  {
+    "cat": "vege",
+    "plat": "Lasagnes végétariennes",
+    "vin": "Côtes du Rhône Villages",
+    "pourquoi": "Un rouge souple et épicé accompagne la tomate confite et la béchamel gratinée."
+  },
+  {
+    "cat": "vege",
+    "plat": "Curry de légumes au lait de coco",
+    "vin": "Gewurztraminer d’Alsace",
+    "pourquoi": "L’aromatique et la douceur du gewurztraminer domptent les épices et le lait de coco."
+  },
+  {
+    "cat": "vege",
+    "plat": "Tarte fine aux légumes",
+    "vin": "Mâcon-Villages",
+    "pourquoi": "Un chardonnay frais et fruité, sans excès de bois, pour la pâte croustillante et les légumes rôtis."
+  },
+  {
+    "cat": "vege",
+    "plat": "Buddha bowl & quinoa",
+    "vin": "Touraine Sauvignon",
+    "pourquoi": "Un blanc vif et herbacé, tonique comme le bol de légumes croquants et de graines."
+  },
+  {
+    "cat": "vege",
+    "plat": "Poêlée de champignons",
+    "vin": "Pinot noir d’Alsace",
+    "pourquoi": "Le pinot noir terreux et léger fait écho au sous-bois des champignons sautés à l’ail."
+  },
+  {
+    "cat": "vege",
+    "plat": "Aubergines à la parmesane",
+    "vin": "Côtes du Rhône rouge",
+    "pourquoi": "Tomate, aubergine fondante et parmesan appellent un rouge méridional épicé et généreux."
+  },
+  {
+    "cat": "vege",
+    "plat": "Falafels & sauce yaourt-menthe",
+    "vin": "Rosé de Provence",
+    "pourquoi": "Frais et sec, il porte les pois chiches épicés et la menthe sans les couvrir."
+  },
+  {
+    "cat": "monde",
+    "plat": "Couscous royal",
+    "vin": "Corbières rouge",
+    "pourquoi": "Un rouge épicé du Languedoc accompagne la semoule, les merguez et les légumes mijotés."
+  },
+  {
+    "cat": "monde",
+    "plat": "Tajine d’agneau aux abricots",
+    "vin": "Vacqueyras",
+    "pourquoi": "Épices douces et fruits confits trouvent un grenache chaleureux et solaire du Rhône sud."
+  },
+  {
+    "cat": "monde",
+    "plat": "Poulet tikka masala",
+    "vin": "Gewurztraminer d’Alsace",
+    "pourquoi": "Sa douceur aromatique éteint le piment et exalte les épices du curry indien."
+  },
+  {
+    "cat": "monde",
+    "plat": "Pad thaï",
+    "vin": "Riesling d’Alsace demi-sec",
+    "pourquoi": "Un soupçon de sucre résiduel équilibre l’acidité du citron vert et le piquant thaï."
+  },
+  {
+    "cat": "monde",
+    "plat": "Paella",
+    "vin": "Bandol rosé",
+    "pourquoi": "Un rosé de mourvèdre ample, à la hauteur du safran, du chorizo et des fruits de mer."
+  },
+  {
+    "cat": "monde",
+    "plat": "Canard laqué pékinois",
+    "vin": "Mercurey rouge",
+    "pourquoi": "Le pinot noir soyeux et fruité épouse la peau laquée, entre sucré et salé."
+  },
+  {
+    "cat": "monde",
+    "plat": "Chili con carne",
+    "vin": "Cahors",
+    "pourquoi": "Un malbec tannique et fruité tient le bœuf épicé, les haricots et le cumin."
+  },
+  {
+    "cat": "monde",
+    "plat": "Ceviche de poisson",
+    "vin": "Picpoul de Pinet",
+    "pourquoi": "Un blanc salin et vif prolonge le poisson mariné au citron vert et à la coriandre."
+  },
+  {
+    "cat": "monde",
+    "plat": "Mezze libanais",
+    "vin": "Rosé de Provence",
+    "pourquoi": "Frais et sec, il traverse la mosaïque d’houmous, taboulé et grillades sans se lasser."
+  },
+  {
+    "cat": "monde",
+    "plat": "Raviolis vapeur (dim sum)",
+    "vin": "Crémant d’Alsace",
+    "pourquoi": "Une bulle fine et délicate respecte la finesse des bouchées vapeur au porc ou aux crevettes."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Pizza Margherita",
+    "vin": "Côtes du Rhône rouge",
+    "pourquoi": "Tomate, basilic et mozzarella appellent un rouge souple et fruité, épicé juste ce qu’il faut."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Pizza quatre fromages",
+    "vin": "Côtes du Rhône blanc",
+    "pourquoi": "Un blanc gras et frais allège la richesse des fromages fondus et relance la bouche."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Pizza reine (jambon-champignons)",
+    "vin": "Beaujolais",
+    "pourquoi": "Un gamay léger et fruité, servi frais, est le compagnon décontracté idéal de la pizza."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Burger bœuf-cheddar",
+    "vin": "Cahors",
+    "pourquoi": "Un rouge charnu et épicé tient le steak, le cheddar fondu et la sauce."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Cheeseburger au bacon",
+    "vin": "Fronsac",
+    "pourquoi": "Un bordeaux rond de merlot répond au gras du bacon et du fromage avec du velours."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Hot-dog",
+    "vin": "Gamay de Touraine",
+    "pourquoi": "Léger, fruité et sans façon, il accompagne la saucisse et la moutarde avec entrain."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Kebab / döner",
+    "vin": "Tavel rosé",
+    "pourquoi": "Un rosé corsé et épicé porte l’agneau grillé et la sauce blanche sans faiblir."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Tacos / fajitas",
+    "vin": "Côtes du Rhône Villages",
+    "pourquoi": "Un rouge fruité et épicé accompagne le bœuf, le maïs et le piment doux."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Croque-monsieur",
+    "vin": "Mâcon-Villages",
+    "pourquoi": "Un chardonnay frais tranche le jambon, le fromage et la béchamel gratinée."
+  },
+  {
+    "cat": "rapide",
+    "plat": "Fish & chips",
+    "vin": "Muscadet",
+    "pourquoi": "Un blanc vif et minéral découpe la friture et rafraîchit le poisson pané."
+  },
+  {
     "cat": "fromage",
     "plat": "Époisses affiné",
     "vin": "Gewurztraminer Vendanges Tardives",
@@ -246,6 +468,24 @@
     "pourquoi": "La jacquère légère et perlante rafraîchit le crémeux du reblochon, comme après une raclette."
   },
   {
+    "cat": "fromage",
+    "plat": "Brie de Meaux",
+    "vin": "Champagne brut",
+    "pourquoi": "La bulle et la fraîcheur nettoient le crémeux de la croûte fleurie ; un mariage festif et sûr."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Fourme d’Ambert",
+    "vin": "Rivesaltes ambré",
+    "pourquoi": "Le vin doux naturel ambré, aux notes de fruits secs et d’orange confite, apaise ce bleu doux."
+  },
+  {
+    "cat": "fromage",
+    "plat": "Saint-Nectaire",
+    "vin": "Côtes d’Auvergne rouge",
+    "pourquoi": "Un rouge léger et fruité du Massif central, terroir contre terroir, sur cette pâte pressée aux arômes de cave."
+  },
+  {
     "cat": "dessert",
     "plat": "Tarte Tatin",
     "vin": "Jurançon moelleux",
@@ -286,5 +526,23 @@
     "plat": "Millefeuille vanille",
     "vin": "Champagne demi-sec",
     "pourquoi": "Un champagne dosé, gourmand, accompagne la crème pâtissière et le feuilletage beurré."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Café gourmand",
+    "vin": "Rivesaltes ambré",
+    "pourquoi": "Un vin doux naturel aux notes de café et de fruits secs accompagne mignardises et expresso."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Gâteau basque à la cerise",
+    "vin": "Banyuls",
+    "pourquoi": "Le grenache doux, sur la cerise noire et l’amande, épouse la crème et la confiture du gâteau."
+  },
+  {
+    "cat": "dessert",
+    "plat": "Assortiment de macarons",
+    "vin": "Crémant rosé demi-sec",
+    "pourquoi": "Une bulle rosée délicatement sucrée épouse la coque d’amande et les ganaches fruitées."
   }
 ]

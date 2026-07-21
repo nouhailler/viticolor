@@ -9,6 +9,9 @@ const ACC_CATS: [string, string][] = [
   ['entree', 'Entrée'],
   ['mer', 'Poisson & mer'],
   ['viande', 'Viande'],
+  ['vege', 'Végétarien'],
+  ['monde', 'Cuisine du monde'],
+  ['rapide', 'Pizza & burger'],
   ['fromage', 'Fromage'],
   ['dessert', 'Dessert'],
 ];
@@ -19,6 +22,9 @@ const CAT_LABEL: Record<string, string> = {
   entree: 'Entrée',
   mer: 'Poisson & fruits de mer',
   viande: 'Viande',
+  vege: 'Végétarien',
+  monde: 'Cuisine du monde',
+  rapide: 'Pizza & burger',
   fromage: 'Fromage',
   dessert: 'Dessert',
 };
