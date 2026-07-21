@@ -115,7 +115,7 @@ export function DemoBanner() {
   );
 }
 
-// ─── Menu hamburger (18 entrées + toggle démo) ───
+// ─── Menu hamburger (entrées classées par thème + toggle démo) ───
 interface MenuDef {
   key: string;
   id: ScreenId;
@@ -124,43 +124,65 @@ interface MenuDef {
   extra?: Partial<State>;
 }
 
-const MENU: MenuDef[] = [
-  { key: 'home', id: 'home', label: 'Accueil', hint: () => '' },
+interface MenuSection {
+  /** Titre de section (absent pour le groupe d'accès rapide en tête). */
+  title?: string;
+  items: MenuDef[];
+}
+
+// Entrées regroupées par intention d'usage plutôt qu'en liste plate, pour
+// s'y retrouver : ce qui est à moi, l'exploration du vignoble, la recherche
+// d'un vin concret, puis la culture générale.
+const MENU_SECTIONS: MenuSection[] = [
   {
-    key: 'regions',
-    id: 'regions',
-    label: 'Régions & carte',
-    hint: () => `${REGIONS.length} régions`,
-    extra: { regionsView: 'carte', carteRegion: null, carteInfo: null },
+    items: [
+      { key: 'home', id: 'home', label: 'Accueil', hint: () => '' },
+      { key: 'search', id: 'search', label: 'Recherche', hint: () => '' },
+    ],
   },
   {
-    key: 'regions:cepages',
-    id: 'regions',
-    label: 'Cépages',
-    hint: () => '13 fiches',
-    extra: { regionsView: 'cepages' },
+    title: 'Ma cave',
+    items: [
+      { key: 'cave', id: 'cave', label: 'Ma cave', hint: () => '' },
+      { key: 'degustation', id: 'degustation', label: 'Carnet de dégustation', hint: (s) => `${s.notes.length} notes` },
+      { key: 'collection', id: 'collection', label: 'Collection', hint: () => 'objectifs' },
+      { key: 'cotes', id: 'cotes', label: 'Cote des vins', hint: () => 'estimations' },
+    ],
   },
-  { key: 'millesimes', id: 'millesimes', label: 'Historique des millésimes', hint: () => '2015–2023' },
-  { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '', extra: { scanned: false } },
-  { key: 'cave', id: 'cave', label: 'Ma cave', hint: () => '' },
-  { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: () => `${WINES.length} vins`, extra: { wineSel: null } },
   {
-    key: 'degustation',
-    id: 'degustation',
-    label: 'Carnet de dégustation',
-    hint: (s) => `${s.notes.length} notes`,
+    title: 'Explorer le vignoble',
+    items: [
+      {
+        key: 'regions',
+        id: 'regions',
+        label: 'Régions & carte',
+        hint: () => `${REGIONS.length} régions`,
+        extra: { regionsView: 'carte', carteRegion: null, carteInfo: null },
+      },
+      { key: 'regions:cepages', id: 'regions', label: 'Cépages', hint: () => '13 fiches', extra: { regionsView: 'cepages' } },
+      { key: 'millesimes', id: 'millesimes', label: 'Historique des millésimes', hint: () => '2015–2023' },
+      { key: 'vendanges', id: 'vendanges', label: 'Vendanges', hint: () => 'suivi 2026' },
+      { key: 'routes', id: 'routes', label: 'Route des vins', hint: () => '4 itinéraires' },
+    ],
   },
-  { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => '' },
-  { key: 'actus', id: 'actus', label: 'Actualités', hint: () => 'fil du vignoble' },
-  { key: 'glossaire', id: 'glossaire', label: 'Glossaire', hint: () => `${GLOSSAIRE.length} termes` },
-  { key: 'aromes', id: 'aromes', label: 'Lexique des arômes', hint: () => '9 familles' },
-  { key: 'routes', id: 'routes', label: 'Route des vins', hint: () => '4 itinéraires' },
-  { key: 'cotes', id: 'cotes', label: 'Cote des vins', hint: () => 'estimations' },
-  { key: 'histoire', id: 'histoire', label: 'Histoire & culture', hint: () => '7 articles' },
-  { key: 'vendanges', id: 'vendanges', label: 'Vendanges', hint: () => 'suivi 2026' },
-  { key: 'collection', id: 'collection', label: 'Collection', hint: () => 'objectifs' },
-  { key: 'savoir', id: 'savoir', label: 'Savoir & quiz', hint: () => '' },
-  { key: 'search', id: 'search', label: 'Recherche', hint: () => '' },
+  {
+    title: 'Trouver un vin',
+    items: [
+      { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '', extra: { scanned: false } },
+      { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: () => `${WINES.length} vins`, extra: { wineSel: null } },
+      { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => '' },
+    ],
+  },
+  {
+    title: 'Culture & savoir',
+    items: [
+      { key: 'histoire', id: 'histoire', label: 'Histoire & culture', hint: () => '7 articles' },
+      { key: 'glossaire', id: 'glossaire', label: 'Glossaire', hint: () => `${GLOSSAIRE.length} termes` },
+      { key: 'aromes', id: 'aromes', label: 'Lexique des arômes', hint: () => '9 familles' },
+      { key: 'savoir', id: 'savoir', label: 'Savoir & quiz', hint: () => '' },
+      { key: 'actus', id: 'actus', label: 'Actualités', hint: () => 'fil du vignoble' },
+    ],
+  },
 ];
 
 function isMenuActive(def: MenuDef, s: State): boolean {
@@ -195,46 +217,68 @@ export function MenuDrawer() {
           </div>
           <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>Sommelier de poche</div>
         </div>
-        <div style={{ padding: '10px 0', display: 'flex', flexDirection: 'column' }}>
-          {MENU.map((def) => {
-            const active = isMenuActive(def, state);
-            return (
-              <button
-                key={def.key}
-                onClick={() => actions.go(def.id, def.extra ?? {})}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 12,
-                  padding: '13px 22px',
-                  minHeight: 48,
-                  background: active ? 'var(--surface)' : 'transparent',
-                  textAlign: 'left',
-                }}
-              >
-                <span
+        <div style={{ padding: '6px 0', display: 'flex', flexDirection: 'column' }}>
+          {MENU_SECTIONS.map((section, si) => (
+            <div key={section.title ?? `s${si}`}>
+              {section.title && (
+                <div
                   style={{
-                    width: 5,
-                    height: 5,
-                    borderRadius: '50%',
-                    background: active ? 'var(--gold)' : 'transparent',
-                    flexShrink: 0,
-                  }}
-                />
-                <span
-                  style={{
-                    flex: 1,
-                    fontSize: 15,
-                    color: active ? 'var(--gold-light)' : 'var(--text-3)',
-                    fontWeight: active ? 700 : 400,
+                    padding: si === 0 ? '10px 22px 6px' : '16px 22px 6px',
+                    marginTop: si > 0 ? 4 : 0,
+                    borderTop: si > 1 ? '1px solid var(--surface-border)' : 'none',
+                    fontFamily: 'var(--font-display)',
+                    fontSize: 11,
+                    letterSpacing: '2px',
+                    textTransform: 'uppercase',
+                    color: 'var(--gold)',
+                    fontWeight: 700,
                   }}
                 >
-                  {def.label}
-                </span>
-                <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>{def.hint(state)}</span>
-              </button>
-            );
-          })}
+                  {section.title}
+                </div>
+              )}
+              {section.items.map((def) => {
+                const active = isMenuActive(def, state);
+                return (
+                  <button
+                    key={def.key}
+                    onClick={() => actions.go(def.id, def.extra ?? {})}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 12,
+                      padding: '11px 22px',
+                      minHeight: 44,
+                      width: '100%',
+                      background: active ? 'var(--surface)' : 'transparent',
+                      textAlign: 'left',
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 5,
+                        height: 5,
+                        borderRadius: '50%',
+                        background: active ? 'var(--gold)' : 'transparent',
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        flex: 1,
+                        fontSize: 15,
+                        color: active ? 'var(--gold-light)' : 'var(--text-3)',
+                        fontWeight: active ? 700 : 400,
+                      }}
+                    >
+                      {def.label}
+                    </span>
+                    <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>{def.hint(state)}</span>
+                  </button>
+                );
+              })}
+            </div>
+          ))}
           <button
             onClick={actions.toggleDemo}
             style={{
