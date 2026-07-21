@@ -90,7 +90,7 @@ function CarteFrance() {
   return (
     <>
       <div style={{ marginTop: 16, filter: 'drop-shadow(0 10px 26px rgba(0,0,0,0.45))' }}>
-        <div style={{ position: 'relative', width: '100%', aspectRatio: `${VB_W} / ${VB_H}` }}>
+        <div style={{ position: 'relative', width: '100%', aspectRatio: `${VB_W} / ${VB_H}`, borderRadius: 'var(--r-card)', overflow: 'hidden', border: '1px solid var(--gold-border)' }}>
           <svg
             viewBox={FRANCE_VIEWBOX}
             width="100%"
@@ -101,19 +101,43 @@ function CarteFrance() {
           >
             <defs>
               <radialGradient id="fr-fill" cx="50%" cy="38%" r="78%">
-                <stop offset="0%" stopColor="#733040" />
-                <stop offset="100%" stopColor="#4a1822" />
+                <stop offset="0%" stopColor="#6f2c3b" />
+                <stop offset="100%" stopColor="#45151f" />
               </radialGradient>
+              {/* Halos de terroir : dégradé doux dans la teinte de chaque région. */}
+              <filter id="fr-soft" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="15" />
+              </filter>
+              <clipPath id="fr-clip">
+                {FRANCE_PATHS.map((d, i) => (
+                  <path key={i} d={d} />
+                ))}
+              </clipPath>
             </defs>
+
+            {/* Mer / fond */}
+            <rect x={0} y={0} width={VB_W} height={VB_H} fill="#180a10" />
+
+            {/* Terres en relief */}
             {FRANCE_PATHS.map((d, i) => (
-              <path
-                key={i}
-                d={d}
-                fill="url(#fr-fill)"
-                stroke="var(--gold-border)"
-                strokeWidth={2}
-                strokeLinejoin="round"
-              />
+              <path key={i} d={d} fill="url(#fr-fill)" stroke="var(--gold-border)" strokeWidth={2} strokeLinejoin="round" />
+            ))}
+
+            {/* À l'intérieur des terres : zones de terroir colorées + fleuves */}
+            <g clipPath="url(#fr-clip)">
+              {REGIONS.map((r) => {
+                const p = REGION_POINTS[r.id];
+                if (!p) return null;
+                return <circle key={r.id} cx={p.x} cy={p.y} r={52} fill={r.tint} opacity={0.42} filter="url(#fr-soft)" />;
+              })}
+              {FRANCE_RIVERS.map((rv) => (
+                <path key={rv.id} d={rv.d} fill="none" stroke="rgba(150,190,215,0.34)" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" />
+              ))}
+            </g>
+
+            {/* Trait de côte redessiné par-dessus les halos, pour un contour net */}
+            {FRANCE_PATHS.map((d, i) => (
+              <path key={`c${i}`} d={d} fill="none" stroke="var(--gold-border)" strokeWidth={2} strokeLinejoin="round" />
             ))}
           </svg>
 
@@ -180,6 +204,10 @@ function CarteFrance() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
           <span style={{ width: 9, height: 9, borderRadius: '50%', background: 'var(--gold)' }} />
           vous
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+          <span style={{ width: 12, height: 2, borderRadius: 2, background: 'rgba(150,190,215,0.7)' }} />
+          fleuve
         </div>
       </div>
       <div style={{ marginTop: 6, fontSize: 10, color: 'var(--text-muted)', textAlign: 'center', lineHeight: 1.5 }}>
