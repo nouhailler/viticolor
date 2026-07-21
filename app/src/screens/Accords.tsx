@@ -6,12 +6,14 @@ import { ScreenHeading, Card } from '../components/ui';
 const ACC_CATS: [string, string][] = [
   ['tous', 'Tous'],
   ['apero', 'Apéritif'],
+  ['tapas', 'Tapas & bar à vin'],
   ['entree', 'Entrée'],
   ['mer', 'Poisson & mer'],
   ['viande', 'Viande'],
   ['vege', 'Végétarien'],
   ['monde', 'Cuisine du monde'],
   ['rapide', 'Pizza & burger'],
+  ['brunch', 'Brunch & œufs'],
   ['fromage', 'Fromage'],
   ['dessert', 'Dessert'],
 ];
@@ -19,12 +21,14 @@ const ACC_CATS: [string, string][] = [
 // Libellés complets affichés en étiquette sur chaque carte.
 const CAT_LABEL: Record<string, string> = {
   apero: 'Apéritif',
+  tapas: 'Tapas & bar à vin',
   entree: 'Entrée',
   mer: 'Poisson & fruits de mer',
   viande: 'Viande',
   vege: 'Végétarien',
   monde: 'Cuisine du monde',
   rapide: 'Pizza & burger',
+  brunch: 'Brunch & œufs',
   fromage: 'Fromage',
   dessert: 'Dessert',
 };

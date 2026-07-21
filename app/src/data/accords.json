@@ -60,6 +60,66 @@
     "pourquoi": "Une bulle fine et polyvalente qui s’adapte à une mosaïque de petites bouchées salées."
   },
   {
+    "cat": "tapas",
+    "plat": "Chorizo poêlé au vin",
+    "vin": "Côtes du Rhône rouge",
+    "pourquoi": "Le gras épicé du chorizo appelle un rouge fruité et poivré, servi légèrement frais."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Gambas à l’ail",
+    "vin": "Picpoul de Pinet",
+    "pourquoi": "Un blanc iodé et vif prolonge la crevette grillée et l’ail sans les couvrir."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Patatas bravas",
+    "vin": "Côtes de Provence rosé",
+    "pourquoi": "Un rosé sec et frais calme la sauce pimentée et l’aïoli des pommes de terre."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Tortilla española",
+    "vin": "Mâcon-Villages",
+    "pourquoi": "Un chardonnay rond et frais épouse l’œuf et la pomme de terre fondante."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Croquetas de jamón",
+    "vin": "Crémant d’Alsace",
+    "pourquoi": "La bulle nette découpe la panure fritte et la béchamel au jambon."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Planche de charcuterie & fromages",
+    "vin": "Beaujolais-Villages",
+    "pourquoi": "Un rouge léger et fruité, passe-partout, pour picorer au bar à vin."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Anchois marinés (boquerones)",
+    "vin": "Muscadet",
+    "pourquoi": "Vif et salin, le melon de Bourgogne répond au vinaigre et à l’anchois iodé."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Poivrons Padrón frits",
+    "vin": "Côtes de Gascogne blanc",
+    "pourquoi": "Un blanc vif et exotique rafraîchit les petits poivrons grillés et salés."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Pan con tomate",
+    "vin": "Côtes du Rhône rosé",
+    "pourquoi": "Simple et frais, il accompagne le pain grillé, la tomate et l’huile d’olive."
+  },
+  {
+    "cat": "tapas",
+    "plat": "Pintxos basques",
+    "vin": "Irouléguy rouge",
+    "pourquoi": "Un rouge basque nerveux et poivré, terroir contre terroir, sur ces bouchées du Sud-Ouest."
+  },
+  {
     "cat": "entree",
     "plat": "Salade de chèvre chaud",
     "vin": "Sancerre blanc",
@@ -424,6 +484,66 @@
     "plat": "Fish & chips",
     "vin": "Muscadet",
     "pourquoi": "Un blanc vif et minéral découpe la friture et rafraîchit le poisson pané."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Œufs Bénédicte",
+    "vin": "Champagne brut",
+    "pourquoi": "La bulle et l’acidité tranchent le jaune coulant et la sauce hollandaise beurrée."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Œufs brouillés & saumon fumé",
+    "vin": "Chablis",
+    "pourquoi": "Un blanc tendu et iodé porte le saumon fumé et la douceur des œufs crémeux."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Omelette aux fines herbes",
+    "vin": "Bourgogne Aligoté",
+    "pourquoi": "Un blanc vif et léger, sans bois, respecte la délicatesse de l’œuf et des herbes."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Frittata aux légumes",
+    "vin": "Touraine Sauvignon",
+    "pourquoi": "Herbacé et tonique, il souligne les légumes et allège l’œuf gratiné."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Avocado toast & œuf poché",
+    "vin": "Côtes de Gascogne blanc",
+    "pourquoi": "Vif et exotique, il épouse l’avocat crémeux et l’œuf sur une pointe citronnée."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Shakshuka",
+    "vin": "Côtes du Rhône rosé",
+    "pourquoi": "Un rosé frais et épicé calme la tomate relevée et porte les œufs pochés dedans."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Pancakes & sirop d’érable",
+    "vin": "Crémant rosé demi-sec",
+    "pourquoi": "Une bulle légèrement sucrée accompagne le moelleux et la douceur du sirop."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Croissant & viennoiseries",
+    "vin": "Champagne demi-sec",
+    "pourquoi": "Le dosage gourmand du champagne épouse le beurre feuilleté des viennoiseries."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Pain perdu",
+    "vin": "Coteaux du Layon",
+    "pourquoi": "Un chenin liquoreux et miellé prolonge le pain doré à la vanille et au caramel."
+  },
+  {
+    "cat": "brunch",
+    "plat": "Granola, yaourt & fruits",
+    "vin": "Clairette de Die",
+    "pourquoi": "Une bulle muscatée et fraîche accompagne les fruits et le croquant du granola."
   },
   {
     "cat": "fromage",
