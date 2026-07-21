@@ -100,11 +100,7 @@ function CarteFrance() {
             aria-label="Carte des régions viticoles de France"
           >
             <defs>
-              <radialGradient id="fr-fill" cx="50%" cy="38%" r="78%">
-                <stop offset="0%" stopColor="#6f2c3b" />
-                <stop offset="100%" stopColor="#45151f" />
-              </radialGradient>
-              {/* Halos de terroir : dégradé doux dans la teinte de chaque région. */}
+              {/* Halos de terroir : tache douce dans la teinte de chaque région. */}
               <filter id="fr-soft" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="15" />
               </filter>
@@ -115,29 +111,29 @@ function CarteFrance() {
               </clipPath>
             </defs>
 
-            {/* Mer / fond */}
-            <rect x={0} y={0} width={VB_W} height={VB_H} fill="#180a10" />
+            {/* Mer */}
+            <rect x={0} y={0} width={VB_W} height={VB_H} fill="#c4d8de" />
 
-            {/* Terres en relief */}
+            {/* Terres */}
             {FRANCE_PATHS.map((d, i) => (
-              <path key={i} d={d} fill="url(#fr-fill)" stroke="var(--gold-border)" strokeWidth={2} strokeLinejoin="round" />
+              <path key={i} d={d} fill="#e9e0cd" stroke="#b7a681" strokeWidth={1.6} strokeLinejoin="round" />
             ))}
 
-            {/* À l'intérieur des terres : zones de terroir colorées + fleuves */}
+            {/* Découpés sur les terres : zones de terroir colorées + fleuves */}
             <g clipPath="url(#fr-clip)">
               {REGIONS.map((r) => {
                 const p = REGION_POINTS[r.id];
                 if (!p) return null;
-                return <circle key={r.id} cx={p.x} cy={p.y} r={52} fill={r.tint} opacity={0.42} filter="url(#fr-soft)" />;
+                return <circle key={r.id} cx={p.x} cy={p.y} r={50} fill={r.tint} opacity={0.4} filter="url(#fr-soft)" />;
               })}
               {FRANCE_RIVERS.map((rv) => (
-                <path key={rv.id} d={rv.d} fill="none" stroke="rgba(150,190,215,0.34)" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" />
+                <path key={rv.id} d={rv.d} fill="none" stroke="#8fb5cb" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" />
               ))}
             </g>
 
-            {/* Trait de côte redessiné par-dessus les halos, pour un contour net */}
+            {/* Trait de côte redessiné net par-dessus les halos */}
             {FRANCE_PATHS.map((d, i) => (
-              <path key={`c${i}`} d={d} fill="none" stroke="var(--gold-border)" strokeWidth={2} strokeLinejoin="round" />
+              <path key={`c${i}`} d={d} fill="none" stroke="#a8916a" strokeWidth={1.6} strokeLinejoin="round" />
             ))}
           </svg>
 
@@ -161,16 +157,19 @@ function CarteFrance() {
                   placeItems: 'center',
                 }}
               >
-                <span style={{ width: 13, height: 13, borderRadius: '50%', background: r.tint, border: '2px solid var(--gold-light)', boxShadow: '0 1px 4px rgba(0,0,0,0.6)' }} />
+                <span style={{ width: 13, height: 13, borderRadius: '50%', background: r.tint, border: '2px solid #fff', boxShadow: '0 1px 3px rgba(0,0,0,0.45)' }} />
                 <span
                   style={{
                     position: 'absolute',
                     ...LABEL_POS[side],
                     fontSize: 9,
-                    color: 'var(--gold-light)',
+                    fontWeight: 600,
+                    color: '#3f2a2d',
                     whiteSpace: 'nowrap',
-                    letterSpacing: '0.4px',
-                    textShadow: '0 1px 3px rgba(0,0,0,0.85)',
+                    letterSpacing: '0.2px',
+                    background: 'rgba(251,246,236,0.82)',
+                    padding: '0 3px',
+                    borderRadius: 2,
                     pointerEvents: 'none',
                   }}
                 >
@@ -186,11 +185,12 @@ function CarteFrance() {
               left: `${(ME.x / VB_W) * 100}%`,
               top: `${(ME.y / VB_H) * 100}%`,
               transform: 'translate(-50%,-50%)',
-              width: 11,
-              height: 11,
+              width: 12,
+              height: 12,
               borderRadius: '50%',
-              background: 'var(--gold)',
-              border: '2px solid var(--text)',
+              background: '#c9a227',
+              border: '2px solid #fff',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.5)',
               animation: 'pulse 2s infinite',
             }}
           />
@@ -198,15 +198,15 @@ function CarteFrance() {
       </div>
       <div style={{ marginTop: 10, display: 'flex', gap: 14, fontSize: 11, color: 'var(--text-3)', justifyContent: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#7d2c3d', border: '1px solid var(--gold-light)' }} />
+          <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#8e3b4a', border: '2px solid #fff' }} />
           région — touchez pour zoomer
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: 'var(--gold)' }} />
+          <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#c9a227', border: '2px solid #fff' }} />
           vous
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ width: 12, height: 2, borderRadius: 2, background: 'rgba(150,190,215,0.7)' }} />
+          <span style={{ width: 12, height: 2, borderRadius: 2, background: '#8fb5cb' }} />
           fleuve
         </div>
       </div>
