@@ -1,11 +1,54 @@
+import { useState } from 'react';
 import { useStore, setState, actions } from '../store';
-import { REGIONS, ATLAS, NEAR_ME, CEPAGES } from '../data';
+import { REGIONS, ATLAS, CEPAGES } from '../data';
 import { FRANCE_VIEWBOX, FRANCE_PATHS, REGION_POINTS } from '../data/france-map';
 import { FRANCE_RIVERS } from '../data/france-rivers';
 import { certColor } from '../lib/helpers';
 import { ScreenHeading, DotGauge } from '../components/ui';
 import { CepageGlyph } from '../components/CepageGlyph';
 import { REGION_RIVERS } from '../components/SituationMap';
+
+// ─── Géolocalisation réelle ───
+// Coordonnées GPS des lieux de référence de chaque région (les mêmes qui ont
+// servi à projeter REGION_POINTS) : distances exactes par haversine.
+const REGION_GEO: Record<string, { lat: number; lon: number }> = {
+  alsace: { lat: 48.08, lon: 7.36 },
+  beaujolais: { lat: 45.99, lon: 4.72 },
+  bordeaux: { lat: 44.84, lon: -0.58 },
+  bourgogne: { lat: 47.03, lon: 4.84 },
+  champagne: { lat: 49.04, lon: 3.96 },
+  corse: { lat: 42.7, lon: 9.36 },
+  jura: { lat: 46.9, lon: 5.77 },
+  languedoc: { lat: 43.26, lon: 3.11 },
+  loire: { lat: 47.4, lon: 0.72 },
+  lorraine: { lat: 48.68, lon: 5.89 },
+  provence: { lat: 43.41, lon: 6.06 },
+  rhone: { lat: 45.0, lon: 4.85 },
+  savoie: { lat: 45.5, lon: 5.98 },
+  sudouest: { lat: 44.18, lon: 1.67 },
+};
+
+// Transformation GPS → coordonnées carte, calée par moindres carrés sur les
+// 14 repères ci-dessus (écart ≤ ~45 km, cohérent avec une carte stylisée).
+const gpsToMap = (lat: number, lon: number) => ({
+  x: 70.409 * lon + 324.002,
+  y: -103.688 * lat + 5289.769,
+});
+
+const rad = (d: number) => (d * Math.PI) / 180;
+function kmBetween(aLat: number, aLon: number, bLat: number, bLon: number): number {
+  const dLat = rad(bLat - aLat);
+  const dLon = rad(bLon - aLon);
+  const h =
+    Math.sin(dLat / 2) ** 2 + Math.cos(rad(aLat)) * Math.cos(rad(bLat)) * Math.sin(dLon / 2) ** 2;
+  return Math.round(2 * 6371 * Math.asin(Math.sqrt(h)));
+}
+
+type GeoState =
+  | { status: 'idle' }
+  | { status: 'busy' }
+  | { status: 'ok'; lat: number; lon: number }
+  | { status: 'err'; msg: string };
 
 const VIEW_CHIPS: [string, string][] = [
   ['carte', 'Carte'],
@@ -80,14 +123,41 @@ const LABEL_POS: Record<string, React.CSSProperties> = {
   right: { left: '100%', top: '50%', transform: 'translate(6px,-50%)' },
 };
 
-// Beaune, le point GPS de démonstration. Ses coordonnées sont à quelques
-// kilomètres de celles retenues pour la Bourgogne : superposées telles quelles,
-// les deux pastilles se lisaient comme un défaut d'affichage. On décale donc le
-// repère vers le sud-est, au prix d'une vingtaine de kilomètres d'imprécision
-// sur une position de démonstration.
-const ME = { x: REGION_POINTS.bourgogne.x + 26, y: REGION_POINTS.bourgogne.y + 22 };
-
 function CarteFrance() {
+  const [geo, setGeo] = useState<GeoState>({ status: 'idle' });
+
+  const locate = () => {
+    if (!navigator.geolocation) {
+      setGeo({ status: 'err', msg: "La géolocalisation n'est pas disponible sur cet appareil." });
+      return;
+    }
+    setGeo({ status: 'busy' });
+    navigator.geolocation.getCurrentPosition(
+      (pos) => setGeo({ status: 'ok', lat: pos.coords.latitude, lon: pos.coords.longitude }),
+      (e) =>
+        setGeo({
+          status: 'err',
+          msg:
+            e.code === e.PERMISSION_DENIED
+              ? 'Autorisation refusée — activez la localisation pour ce site puis réessayez.'
+              : 'Position introuvable pour le moment — réessayez.',
+        }),
+      { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 },
+    );
+  };
+
+  // Point « vous » sur la carte, seulement si la position tombe dans le cadre.
+  const me = geo.status === 'ok' ? gpsToMap(geo.lat, geo.lon) : null;
+  const meVisible = me && me.x > 8 && me.x < VB_W - 8 && me.y > 8 && me.y < VB_H - 8;
+
+  // Régions triées par distance réelle.
+  const nearest =
+    geo.status === 'ok'
+      ? REGIONS.map((r) => ({ r, km: kmBetween(geo.lat, geo.lon, REGION_GEO[r.id].lat, REGION_GEO[r.id].lon) })).sort(
+          (a, b) => a.km - b.km,
+        )
+      : [];
+
   return (
     <>
       <div style={{ marginTop: 16, filter: 'drop-shadow(0 10px 26px rgba(0,0,0,0.45))' }}>
@@ -180,21 +250,23 @@ function CarteFrance() {
             );
           })}
 
-          <div
-            style={{
-              position: 'absolute',
-              left: `${(ME.x / VB_W) * 100}%`,
-              top: `${(ME.y / VB_H) * 100}%`,
-              transform: 'translate(-50%,-50%)',
-              width: 12,
-              height: 12,
-              borderRadius: '50%',
-              background: '#c9a227',
-              border: '2px solid #fff',
-              boxShadow: '0 1px 3px rgba(0,0,0,0.5)',
-              animation: 'pulse 2s infinite',
-            }}
-          />
+          {meVisible && me && (
+            <div
+              style={{
+                position: 'absolute',
+                left: `${(me.x / VB_W) * 100}%`,
+                top: `${(me.y / VB_H) * 100}%`,
+                transform: 'translate(-50%,-50%)',
+                width: 12,
+                height: 12,
+                borderRadius: '50%',
+                background: '#c9a227',
+                border: '2px solid #fff',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.5)',
+                animation: 'pulse 2s infinite',
+              }}
+            />
+          )}
         </div>
       </div>
       <div style={{ marginTop: 10, display: 'flex', gap: 14, fontSize: 11, color: 'var(--text-3)', justifyContent: 'center' }}>
@@ -202,10 +274,12 @@ function CarteFrance() {
           <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#8e3b4a', border: '2px solid #fff' }} />
           région — touchez pour zoomer
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#c9a227', border: '2px solid #fff' }} />
-          vous
-        </div>
+        {meVisible && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#c9a227', border: '2px solid #fff' }} />
+            vous
+          </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
           <span style={{ width: 12, height: 2, borderRadius: 2, background: '#8fb5cb' }} />
           fleuve
@@ -216,31 +290,88 @@ function CarteFrance() {
         s'étend bien au-delà de ce repère.
       </div>
 
-      {/* Autour de moi */}
+      {/* Autour de moi — géolocalisation réelle, traitée sur l'appareil */}
       <div style={{ marginTop: 16, background: 'var(--surface)', border: '1px solid var(--gold-border)', borderRadius: 'var(--r-card)', padding: '14px 16px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 10 }}>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: 12, letterSpacing: '2.5px', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 700 }}>
             Autour de moi
           </div>
-          <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>GPS · Beaune, Côte-d'Or</div>
+          {geo.status === 'ok' && (
+            <button onClick={locate} style={{ fontSize: 11, color: 'var(--gold)', textDecoration: 'underline' }}>
+              actualiser
+            </button>
+          )}
         </div>
-        <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 9 }}>
-          {NEAR_ME.map((nm) => {
-            const cc = certColor(nm.c);
-            return (
-              <div key={nm.n} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.5px', borderRadius: 'var(--r-pill)', padding: '2px 8px', flexShrink: 0, color: cc, border: `1px solid ${cc}` }}>
-                  {nm.c}
+
+        {geo.status === 'idle' && (
+          <div style={{ marginTop: 10 }}>
+            <div style={{ fontSize: 12.5, color: 'var(--text-3)', lineHeight: 1.55 }}>
+              Localisez-vous pour voir les vignobles les plus proches et votre position sur la carte.
+            </div>
+            <button
+              onClick={locate}
+              style={{ marginTop: 10, width: '100%', textAlign: 'center', background: 'var(--gold)', color: 'var(--on-gold)', padding: 10, borderRadius: 'var(--r-card)', fontSize: 13.5, fontWeight: 700 }}
+            >
+              📍 Me localiser
+            </button>
+            <div style={{ marginTop: 7, fontSize: 10.5, color: 'var(--text-muted)' }}>
+              Position traitée sur votre appareil, jamais envoyée ni enregistrée.
+            </div>
+          </div>
+        )}
+
+        {geo.status === 'busy' && (
+          <div style={{ marginTop: 10, fontSize: 12.5, color: 'var(--text-3)' }}>Localisation…</div>
+        )}
+
+        {geo.status === 'err' && (
+          <div style={{ marginTop: 10 }}>
+            <div style={{ fontSize: 12.5, color: '#e08a8a', lineHeight: 1.55 }}>{geo.msg}</div>
+            <button onClick={locate} style={{ marginTop: 8, fontSize: 12, color: 'var(--gold)', border: '1px solid var(--gold)', borderRadius: 'var(--r-pill)', padding: '5px 14px' }}>
+              Réessayer
+            </button>
+          </div>
+        )}
+
+        {geo.status === 'ok' && (
+          <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 9 }}>
+            {nearest.slice(0, 3).map(({ r, km }) => (
+              <button
+                key={r.id}
+                onClick={() => actions.go('region', { regionId: r.id })}
+                style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%', textAlign: 'left' }}
+              >
+                <span style={{ width: 11, height: 11, borderRadius: '50%', background: r.tint, border: '2px solid #fff', flexShrink: 0 }} />
+                <span style={{ flex: 1, minWidth: 0, fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>{r.name}</span>
+                <span style={{ fontSize: 12, color: 'var(--gold)', flexShrink: 0 }}>≈ {km} km</span>
+              </button>
+            ))}
+            {nearest[0] && ATLAS[nearest[0].r.id]?.dom?.length > 0 && (
+              <>
+                <div style={{ marginTop: 4, fontSize: 10.5, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+                  Domaines réputés · {nearest[0].r.name}
                 </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>{nm.n}</div>
-                  <div style={{ fontSize: 11, color: 'var(--text-3)' }}>{nm.v}</div>
-                </div>
-                <div style={{ fontSize: 12, color: 'var(--gold)', flexShrink: 0 }}>{nm.km} km</div>
-              </div>
-            );
-          })}
-        </div>
+                {ATLAS[nearest[0].r.id].dom.map((nm) => {
+                  const cc = certColor(nm.c);
+                  return (
+                    <div key={nm.n} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.5px', borderRadius: 'var(--r-pill)', padding: '2px 8px', flexShrink: 0, color: cc, border: `1px solid ${cc}` }}>
+                        {nm.c}
+                      </div>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>{nm.n}</div>
+                        <div style={{ fontSize: 11, color: 'var(--text-3)' }}>{nm.v}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </>
+            )}
+            <div style={{ fontSize: 10.5, color: 'var(--text-muted)', lineHeight: 1.5 }}>
+              Distances à vol d'oiseau jusqu'au cœur de chaque vignoble.
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

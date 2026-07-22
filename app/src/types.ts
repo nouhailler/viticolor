@@ -106,13 +106,6 @@ export interface CepageFiche {
   reg: string[];
 }
 
-export interface NearMeDomaine {
-  n: string;
-  c: string;
-  v: string;
-  km: number;
-}
-
 export interface Millesime {
   y: number;
   note: number;

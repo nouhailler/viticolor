@@ -8,7 +8,6 @@ import type {
   QuizQuestion,
   CepageLexique,
   CepageFiche,
-  NearMeDomaine,
   Millesime,
   AromeFamille,
   HistArticle,
@@ -32,7 +31,6 @@ import accords from './accords.json';
 import quiz from './quiz.json';
 import cepagesLexique from './cepagesLexique.json';
 import cepages from './cepages.json';
-import nearMe from './nearMe.json';
 import millesimes from './millesimes.json';
 import aromes from './aromes.json';
 import histoire from './histoire.json';
@@ -56,7 +54,6 @@ export const ACCORDS = accords as Accord[];
 export const QUIZ = quiz as QuizQuestion[];
 export const CEPAGES_LEXIQUE = cepagesLexique as CepageLexique[];
 export const CEPAGES = cepages as CepageFiche[];
-export const NEAR_ME = nearMe as NearMeDomaine[];
 export const MILLESIMES = millesimes as Millesime[];
 export const AROMES = aromes as AromeFamille[];
 export const HISTOIRE = histoire as HistArticle[];
