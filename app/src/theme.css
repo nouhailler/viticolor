@@ -54,6 +54,10 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  /* La page ne défile jamais : seul .vc-content défile. Sans cela, quand la
+     barre d'adresse mobile est visible, la coquille dépasse la zone visible et
+     le bandeau / menu du bas demandent un second geste de défilement. */
+  overflow: hidden;
   background: var(--app-bg);
 }
 
@@ -150,8 +154,10 @@ button {
 
 /* ─── Coquille application plein écran ─── */
 .vc-app {
-  height: 100%;
-  min-height: 100dvh;
+  /* Hauteur = zone réellement visible (dvh suit la barre d'adresse mobile) ;
+     100vh en repli pour les navigateurs sans dvh. */
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   background: var(--app-bg);
