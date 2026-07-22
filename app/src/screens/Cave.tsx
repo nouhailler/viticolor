@@ -4,7 +4,26 @@ import { WINES } from '../data';
 import { computeCave, caveBottles, wineToCaveItem } from '../lib/cave';
 import { normalize } from '../lib/helpers';
 import { Eyebrow } from '../components/ui';
-import type { CaveItem } from '../types';
+import { BottleGlyph } from '../components/BottleGlyph';
+import type { CaveItem, Couleur } from '../types';
+
+// Pour les bouteilles sans lien catalogue (démo), on devine la région depuis
+// le libellé pour donner la bonne silhouette à la vignette.
+const REGION_HINTS: [RegExp, string][] = [
+  [/bourgogne|meursault|chambolle|gevrey/i, 'bourgogne'],
+  [/alsace|riesling/i, 'alsace'],
+  [/rh[oô]ne|cornas|hermitage|c[oô]te-r[oô]tie/i, 'rhone'],
+  [/saumur|loire|vouvray|chinon/i, 'loire'],
+  [/champagne|ambonnay/i, 'champagne'],
+  [/sauternes|julien|pauillac|margaux|pomerol|bordeaux|est[eè]phe/i, 'bordeaux'],
+];
+
+function glyphProps(b: CaveItem, wineById: Map<string, { couleur: Couleur; regionId: string }>) {
+  const w = b.wineId ? wineById.get(b.wineId) : undefined;
+  if (w) return { couleur: w.couleur, regionId: w.regionId };
+  const hint = REGION_HINTS.find(([re]) => re.test(`${b.name} ${b.meta}`));
+  return { couleur: b.color as Couleur, regionId: hint?.[1] };
+}
 
 type Filter = 'tous' | 'rouge' | 'blanc' | 'rosé' | 'effervescent';
 const FILTERS: [Filter, string][] = [
@@ -25,11 +44,13 @@ export function Cave() {
   const [adding, setAdding] = useState(false);
   const [pickQuery, setPickQuery] = useState('');
 
+  const wineById = new Map([...userWines, ...WINES].map((w) => [w.id, { couleur: w.couleur, regionId: w.regionId }]));
+
   // Fiche d'une bouteille ouverte
   if (caveSel) {
     const bottle = caveItems.find((b) => b.id === caveSel);
     // key : réinitialise le champ prix quand on change de bouteille.
-    if (bottle) return <FicheCave key={bottle.id} bottle={bottle} />;
+    if (bottle) return <FicheCave key={bottle.id} bottle={bottle} glyph={glyphProps(bottle, wineById)} />;
   }
 
   // Choix d'un vin du catalogue à ajouter
@@ -162,7 +183,7 @@ export function Cave() {
               cursor: 'pointer',
             }}
           >
-            <div style={{ width: 8, height: 44, borderRadius: 2, flexShrink: 0, background: b.tint }} />
+            <BottleGlyph {...glyphProps(b, wineById)} height={52} />
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600 }}>{b.name}</div>
               <div style={{ fontSize: 12, color: 'var(--text-3)' }}>{b.meta} · apogée {b.apogee}</div>
@@ -196,7 +217,11 @@ export function Cave() {
 }
 
 // ─── Fiche bouteille de cave ───
-function FicheCave({ bottle: b }: { bottle: CaveItem }) {
+interface GlyphInfo {
+  couleur: Couleur;
+  regionId?: string;
+}
+function FicheCave({ bottle: b, glyph }: { bottle: CaveItem; glyph: GlyphInfo }) {
   const [prix, setPrix] = useState(String(b.prix));
 
   const commitPrix = () => {
@@ -224,8 +249,8 @@ function FicheCave({ bottle: b }: { bottle: CaveItem }) {
       </button>
 
       <div style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
-        <div style={{ display: 'flex', gap: 14 }}>
-          <div style={{ width: 8, borderRadius: 2, flexShrink: 0, background: b.tint }} />
+        <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+          <BottleGlyph couleur={glyph.couleur} regionId={glyph.regionId} height={96} detail />
           <div style={{ minWidth: 0 }}>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 600, color: 'var(--gold)', lineHeight: 1.15 }}>
               {b.name}
@@ -395,6 +420,7 @@ function AddPicker({ query, setQuery, inCave, userWines, onClose }: AddPickerPro
                 padding: '11px 14px',
               }}
             >
+              <BottleGlyph couleur={w.couleur} regionId={w.regionId} height={40} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600 }}>
                   {w.domaine}

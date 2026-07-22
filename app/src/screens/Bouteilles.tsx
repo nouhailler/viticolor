@@ -2,17 +2,10 @@ import { useStore, setState } from '../store';
 import { WINES, REGIONS } from '../data';
 import { normalize } from '../lib/helpers';
 import { ScreenHeading, Chip } from '../components/ui';
+import { BottleGlyph } from '../components/BottleGlyph';
 import type { Couleur, Wine } from '../types';
 
 const REGION_NAME: Record<string, string> = Object.fromEntries(REGIONS.map((r) => [r.id, r.name]));
-
-const COULEUR_TINT: Record<string, string> = {
-  rouge: '#6e1f2e',
-  blanc: '#c9a44d',
-  rosé: '#d98a8a',
-  effervescent: '#d8bc74',
-  liquoreux: '#b08d3e',
-};
 
 const COULEUR_LABEL: { id: 'tous' | Couleur; label: string }[] = [
   { id: 'tous', label: 'Toutes' },
@@ -130,7 +123,7 @@ export function Bouteilles() {
               textAlign: 'left',
             }}
           >
-            <div style={{ width: 6, borderRadius: 2, flexShrink: 0, background: COULEUR_TINT[w.couleur] ?? 'var(--gold-border)' }} />
+            <BottleGlyph couleur={w.couleur} regionId={w.regionId} height={54} />
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 10 }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, lineHeight: 1.15 }}>
@@ -179,26 +172,31 @@ function Fiche({ wine }: { wine: Wine }) {
       </button>
 
       <div style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
-        <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold-light)' }}>
-          {wine.appellation}
-        </div>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 26, fontWeight: 600, color: 'var(--gold)', marginTop: 3, lineHeight: 1.12 }}>
-          {wine.domaine}
-        </div>
-        {wine.cuvee && (
-          <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontStyle: 'italic', color: 'var(--gold-light)' }}>
-            {wine.cuvee}
+        <div style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+          <BottleGlyph couleur={wine.couleur} regionId={wine.regionId} millesime={wine.millesime} height={130} detail />
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold-light)' }}>
+              {wine.appellation}
+            </div>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: 26, fontWeight: 600, color: 'var(--gold)', marginTop: 3, lineHeight: 1.12 }}>
+              {wine.domaine}
+            </div>
+            {wine.cuvee && (
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontStyle: 'italic', color: 'var(--gold-light)' }}>
+                {wine.cuvee}
+              </div>
+            )}
+            <div style={{ fontSize: 13, color: 'var(--text-3)', marginTop: 4 }}>
+              {wine.millesime ? (
+                <>
+                  Millésime <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>{wine.millesime}</span>
+                </>
+              ) : (
+                'Sans millésime'
+              )}{' '}
+              · {wine.couleur}
+            </div>
           </div>
-        )}
-        <div style={{ fontSize: 13, color: 'var(--text-3)', marginTop: 4 }}>
-          {wine.millesime ? (
-            <>
-              Millésime <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>{wine.millesime}</span>
-            </>
-          ) : (
-            'Sans millésime'
-          )}{' '}
-          · {wine.couleur}
         </div>
 
         <div style={{ marginTop: 16, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>

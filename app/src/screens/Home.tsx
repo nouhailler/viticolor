@@ -208,13 +208,18 @@ export function Home() {
             <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
               La bouteille
             </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 19, fontWeight: 600, color: 'var(--gold)', marginTop: 3, lineHeight: 1.15 }}>
-              {bouteille.domaine}
-              {bouteille.cuvee ? ` · ${bouteille.cuvee}` : ''}
-            </div>
-            <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>
-              {bouteille.appellation}
-              {bouteille.millesime ? ` · ${bouteille.millesime}` : ''} · {bouteille.couleur}
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginTop: 3 }}>
+              <BottleGlyph couleur={bouteille.couleur} regionId={bouteille.regionId} height={46} />
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 19, fontWeight: 600, color: 'var(--gold)', lineHeight: 1.15 }}>
+                  {bouteille.domaine}
+                  {bouteille.cuvee ? ` · ${bouteille.cuvee}` : ''}
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>
+                  {bouteille.appellation}
+                  {bouteille.millesime ? ` · ${bouteille.millesime}` : ''} · {bouteille.couleur}
+                </div>
+              </div>
             </div>
           </Card>
         </div>
