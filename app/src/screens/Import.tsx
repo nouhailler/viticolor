@@ -137,7 +137,7 @@ function makeId(w: Omit<Wine, 'id'>, taken: Set<string>): string {
   return id;
 }
 
-// Clé de contenu pour repérer un vin déjà présent (doublon probable).
+// Clé de contenu pour repérer un vin déjà présent (doublon ignoré à l'import).
 const contentKey = (w: Pick<Wine, 'domaine' | 'cuvee' | 'appellation' | 'millesime'>): string =>
   normalize(`${w.domaine}|${w.cuvee ?? ''}|${w.appellation}|${w.millesime ?? 'nm'}`);
 
@@ -196,14 +196,18 @@ export function Import() {
         return;
       }
       const key = contentKey(res.wine);
-      if (known.has(key)) dupeCount++;
+      if (known.has(key)) {
+        // Doublon (même domaine / cuvée / appellation / millésime) : ignoré automatiquement.
+        dupeCount++;
+        return;
+      }
       known.add(key);
       wines.push({ ...res.wine, id: makeId(res.wine, taken) });
     });
 
     setErrors(errs);
-    if (wines.length > 0) {
-      actions.importWines(wines);
+    if (wines.length > 0) actions.importWines(wines);
+    if (wines.length > 0 || dupeCount > 0) {
       setAdded(wines.length);
       setDupes(dupeCount);
       setText('');
@@ -241,7 +245,8 @@ export function Import() {
       <div style={{ fontSize: 11.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>
         <strong>Champs requis :</strong> domaine, appellation, region, couleur. Les autres sont facultatifs.{' '}
         <strong>couleur</strong> : {COULEURS.join(' / ')}. <strong>region</strong> : nom ou identifiant{' '}
-        ({REGIONS.map((r) => r.name).join(', ')}). <strong>millesime</strong> : année ou « non millésimé ».
+        ({REGIONS.map((r) => r.name).join(', ')}). <strong>millesime</strong> : année ou « non millésimé ». Les
+        doublons (même domaine, cuvée, appellation et millésime) sont ignorés automatiquement.
       </div>
 
       {/* Zone de collage */}
@@ -284,15 +289,17 @@ export function Import() {
       {/* Retours */}
       {added != null && (
         <div style={{ background: 'var(--surface)', border: '1px solid var(--gold-border)', borderLeft: '3px solid var(--gold)', borderRadius: 'var(--r-card)', padding: '11px 14px', fontSize: 13, color: 'var(--text)' }}>
-          ✓ {added} vin{added > 1 ? 's' : ''} importé{added > 1 ? 's' : ''}.{' '}
+          {added > 0 ? `✓ ${added} vin${added > 1 ? 's' : ''} importé${added > 1 ? 's' : ''}. ` : 'Aucun vin importé. '}
           {dupes > 0 && (
             <span style={{ color: 'var(--text-muted)' }}>
-              ({dupes} semblai{dupes > 1 ? 'ent' : 't'} déjà au catalogue — conservé{dupes > 1 ? 's' : ''}.){' '}
+              ({dupes} doublon{dupes > 1 ? 's' : ''} déjà au catalogue — ignoré{dupes > 1 ? 's' : ''}.){' '}
             </span>
           )}
-          <button onClick={() => setState({ screen: 'bouteilles', wineSel: null })} style={{ color: 'var(--gold)', textDecoration: 'underline' }}>
-            Voir dans Bouteilles →
-          </button>
+          {added > 0 && (
+            <button onClick={() => setState({ screen: 'bouteilles', wineSel: null })} style={{ color: 'var(--gold)', textDecoration: 'underline' }}>
+              Voir dans Bouteilles →
+            </button>
+          )}
         </div>
       )}
       {errors.length > 0 && (

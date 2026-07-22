@@ -24,6 +24,7 @@ import { Histoire } from './screens/Histoire';
 import { Aromes } from './screens/Aromes';
 import { Bouteilles } from './screens/Bouteilles';
 import { Import } from './screens/Import';
+import { Parametres } from './screens/Parametres';
 
 const SCREENS: Record<ScreenId, () => React.JSX.Element> = {
   home: Home,
@@ -47,6 +48,7 @@ const SCREENS: Record<ScreenId, () => React.JSX.Element> = {
   aromes: Aromes,
   bouteilles: Bouteilles,
   import: Import,
+  parametres: Parametres,
 };
 
 // Le scanner gère lui-même sa mise en page plein écran (caméra).

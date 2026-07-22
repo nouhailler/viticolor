@@ -170,7 +170,6 @@ const MENU_SECTIONS: MenuSection[] = [
     items: [
       { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '', extra: { scanned: false } },
       { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: (s) => `${WINES.length + s.userWines.length} vins`, extra: { wineSel: null } },
-      { key: 'import', id: 'import', label: 'Importer un vin', hint: (s) => (s.userWines.length ? `${s.userWines.length} importés` : 'JSON') },
       { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => `${ACCORDS.length} accords` },
     ],
   },
@@ -281,7 +280,7 @@ export function MenuDrawer() {
             </div>
           ))}
           <button
-            onClick={actions.toggleDemo}
+            onClick={() => actions.go('parametres')}
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -298,12 +297,22 @@ export function MenuDrawer() {
                 width: 5,
                 height: 5,
                 borderRadius: '50%',
-                background: state.demoOn ? 'var(--gold)' : 'var(--surface-border)',
+                background: state.screen === 'parametres' ? 'var(--gold)' : 'transparent',
                 flexShrink: 0,
               }}
             />
-            <span style={{ flex: 1, fontSize: 14, color: 'var(--text-3)' }}>
-              Mode démo · {state.demoOn ? 'activé' : 'désactivé'}
+            <span
+              style={{
+                flex: 1,
+                fontSize: 14,
+                color: state.screen === 'parametres' ? 'var(--gold-light)' : 'var(--text-3)',
+                fontWeight: state.screen === 'parametres' ? 700 : 400,
+              }}
+            >
+              Paramètres
+            </span>
+            <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
+              import · export · démo
             </span>
           </button>
         </div>

@@ -312,6 +312,7 @@ export type ScreenId =
   | 'histoire'
   | 'aromes'
   | 'bouteilles'
-  | 'import';
+  | 'import'
+  | 'parametres';
 
 export type RegionsView = 'carte' | 'liste' | 'cepages' | 'millesimes';
