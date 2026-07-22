@@ -10,6 +10,7 @@ import {
 import { duJour, dateLongue, normalize } from '../lib/helpers';
 import { computeCave } from '../lib/cave';
 import { Eyebrow, Card } from '../components/ui';
+import { BottleGlyph } from '../components/BottleGlyph';
 import type { Wine } from '../types';
 
 const HERO_GRAD = 'linear-gradient(135deg, var(--hero-a), var(--hero-b) 60%, var(--hero-c))';
