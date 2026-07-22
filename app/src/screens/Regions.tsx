@@ -4,6 +4,7 @@ import { FRANCE_VIEWBOX, FRANCE_PATHS, REGION_POINTS } from '../data/france-map'
 import { FRANCE_RIVERS } from '../data/france-rivers';
 import { certColor } from '../lib/helpers';
 import { ScreenHeading, DotGauge } from '../components/ui';
+import { CepageGlyph } from '../components/CepageGlyph';
 import { REGION_RIVERS } from '../components/SituationMap';
 
 const VIEW_CHIPS: [string, string][] = [
@@ -496,7 +497,7 @@ function CepagesView() {
                 onClick={() => setState((s) => ({ cepOpen: s.cepOpen === i ? -1 : i }))}
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', width: '100%', textAlign: 'left' }}
               >
-                <span style={{ width: 13, height: 13, borderRadius: '50%', background: c.tint, border: '1px solid var(--text)', flexShrink: 0 }} />
+                <CepageGlyph nom={c.nom} tint={c.tint} couleur={c.couleur} height={44} />
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: 19, fontWeight: 600 }}>{c.nom}</div>
                   <div style={{ fontSize: 11, color: 'var(--text-3)' }}>{sub}</div>

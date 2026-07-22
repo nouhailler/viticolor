@@ -11,6 +11,7 @@ import { duJour, dateLongue, normalize } from '../lib/helpers';
 import { computeCave } from '../lib/cave';
 import { Eyebrow, Card } from '../components/ui';
 import { BottleGlyph } from '../components/BottleGlyph';
+import { CepageGlyph } from '../components/CepageGlyph';
 import type { Wine } from '../types';
 
 const HERO_GRAD = 'linear-gradient(135deg, var(--hero-a), var(--hero-b) 60%, var(--hero-c))';
@@ -194,11 +195,16 @@ export function Home() {
             <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
               Le cépage
             </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 21, fontWeight: 600, color: 'var(--gold)', marginTop: 3 }}>
-              {cepage.nom}
-            </div>
-            <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>
-              {cepage.couleur} · {cepage.origine}
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginTop: 3 }}>
+              <CepageGlyph nom={cepage.nom} tint={cepage.tint} couleur={cepage.couleur} height={42} />
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 21, fontWeight: 600, color: 'var(--gold)', lineHeight: 1.1 }}>
+                  {cepage.nom}
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>
+                  {cepage.couleur} · {cepage.origine}
+                </div>
+              </div>
             </div>
           </Card>
           <Card

@@ -1,6 +1,7 @@
 import { useStore, setState } from '../store';
 import { QUIZ, CEPAGES_LEXIQUE } from '../data';
 import { Eyebrow } from '../components/ui';
+import { CepageGlyph } from '../components/CepageGlyph';
 
 export function Savoir() {
   const { quizIndex, quizPicked, quizScore, quizDone } = useStore((s) => ({
@@ -94,12 +95,15 @@ export function Savoir() {
         <Eyebrow>Lexique des cépages</Eyebrow>
         <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column' }}>
           {CEPAGES_LEXIQUE.map((c) => (
-            <div key={c.nom} style={{ padding: '10px 0', borderBottom: '1px solid var(--surface-border)' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
-                <div style={{ fontWeight: 700 }}>{c.nom}</div>
-                <div style={{ color: c.tint, fontSize: 12, fontStyle: 'italic' }}>{c.type}</div>
+            <div key={c.nom} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid var(--surface-border)' }}>
+              <CepageGlyph nom={c.nom} tint={c.tint} couleur={c.type} height={38} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
+                  <div style={{ fontWeight: 700 }}>{c.nom}</div>
+                  <div style={{ color: c.tint, fontSize: 12, fontStyle: 'italic' }}>{c.type}</div>
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>{c.desc}</div>
               </div>
-              <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>{c.desc}</div>
             </div>
           ))}
         </div>
