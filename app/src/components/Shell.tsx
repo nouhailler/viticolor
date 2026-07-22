@@ -170,7 +170,7 @@ const MENU_SECTIONS: MenuSection[] = [
   {
     title: 'Trouver un vin',
     items: [
-      { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '', extra: { scanned: false } },
+      { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '' },
       { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: (s) => `${WINES.length + s.userWines.length} vins`, extra: { wineSel: null } },
       { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => `${ACCORDS.length} accords` },
     ],
@@ -352,7 +352,7 @@ export function BottomNav() {
         return (
           <button
             key={t.id}
-            onClick={() => actions.go(t.id, t.id === 'scanner' ? { scanned: false } : {})}
+            onClick={() => actions.go(t.id)}
             style={{
               flex: 1,
               minHeight: 48,

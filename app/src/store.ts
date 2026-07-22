@@ -87,10 +87,6 @@ export interface State {
   wineSel: string | null; // id du vin ouvert en fiche
   userWines: Wine[]; // vins importés par l'utilisateur (persistés)
 
-  // Scanner
-  scanned: boolean;
-  scanAdded: boolean;
-
   // Écrans divers
   collOpen: string | null;
   vendSel: number;
@@ -145,7 +141,7 @@ const NAV_KEYS = [
   'regionsView', 'carteRegion', 'carteZoom', 'carteInfo', 'cepFilter',
   'cepOpen', 'appOpen', 'millSel', 'millMetric', 'parcelSel', 'parcelOverlay',
   'zoom', 'millHistSel', 'caveFilter', 'caveSel', 'query', 'wineQuery', 'wineColor',
-  'wineRegionFilter', 'wineSel', 'scanned', 'scanAdded', 'collOpen', 'vendSel',
+  'wineRegionFilter', 'wineSel', 'collOpen', 'vendSel',
   'actuCat', 'glossQuery', 'glossLettre', 'glossCat', 'glossSel', 'routeSel',
   'coteSel', 'cotePeriode', 'histOpen', 'aromSel', 'accordOpen', 'accordCat',
 ] as const;
@@ -194,9 +190,6 @@ function initialState(): State {
     wineRegionFilter: 'toutes',
     wineSel: null,
     userWines: load('userWines', [] as Wine[]),
-
-    scanned: false,
-    scanAdded: false,
 
     collOpen: null,
     vendSel: 0,

@@ -1,21 +1,16 @@
-import { SCAN_DEMO } from '../data';
-import type { ScanDemo } from '../types';
-
 /**
- * ─── Point d'extension : reconnaissance d'étiquette (OCR) ───
+ * ─── Reconnaissance d'étiquette (OCR réel) ───
  *
- * Dans cette version, la reconnaissance est un *stub* : elle renvoie la fiche
- * de démonstration (Domaine Jamet, Côte-Rôtie 2020) après un court délai
- * simulant le traitement.
- *
- * Pour brancher une vraie reconnaissance d'étiquette, remplacez le corps de
- * `recognizeLabel` par un appel à votre moteur OCR / service de reconnaissance
- * (ex. Tesseract.js en local, ou une API vision côté serveur). La fonction
- * reçoit une image capturée (dataURL de la trame vidéo) et doit résoudre un
- * objet `ScanDemo`.
+ * Tesseract.js tourne entièrement dans le navigateur. Le module (et le modèle
+ * de langue français) est chargé à la demande au premier scan — connexion
+ * requise cette première fois, puis mis en cache par le navigateur.
  */
-export async function recognizeLabel(_frameDataUrl?: string): Promise<ScanDemo> {
-  // TODO(extension) : appeler ici le moteur OCR réel avec `_frameDataUrl`.
-  await new Promise((r) => setTimeout(r, 450));
-  return SCAN_DEMO;
+export async function ocrLabel(dataUrl: string, onProgress?: (pct: number) => void): Promise<string> {
+  const Tesseract = (await import('tesseract.js')).default;
+  const res = await Tesseract.recognize(dataUrl, 'fra', {
+    logger: (m: { status: string; progress: number }) => {
+      if (m.status === 'recognizing text') onProgress?.(Math.round(m.progress * 100));
+    },
+  });
+  return res.data.text ?? '';
 }

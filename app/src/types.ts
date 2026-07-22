@@ -231,23 +231,6 @@ export interface GlossaireMedia {
   credit: string;
 }
 
-export interface ScanFicheRow {
-  label: string;
-  value: string;
-}
-
-export interface ScanDemo {
-  wine: {
-    domaine: string;
-    appellation: string;
-    millesime: number;
-    couleur: string;
-    note: string;
-  };
-  fiche: ScanFicheRow[];
-  accords: string[];
-}
-
 // ─── État persisté (carnet de dégustation) ───
 export interface DegustationCrit {
   robe: number;
