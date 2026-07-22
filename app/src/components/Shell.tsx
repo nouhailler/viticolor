@@ -47,7 +47,9 @@ export function Header() {
             <span style={{ fontFamily: 'var(--font-display)', fontSize: 19 }}>Retour</span>
           </button>
         ) : (
-          <div
+          <button
+            onClick={() => { if (screen !== 'home') actions.go('home'); }}
+            aria-label="Revenir à l'accueil"
             style={{
               fontFamily: 'var(--font-display)',
               fontSize: 26,
@@ -57,7 +59,7 @@ export function Header() {
             }}
           >
             Viticolor
-          </div>
+          </button>
         )}
       </div>
       <button

@@ -1,5 +1,5 @@
 import { useStore, setState, actions } from '../store';
-import { REGIONS, CAVE, CEPAGES_LEXIQUE } from '../data';
+import { REGIONS, CEPAGES_LEXIQUE } from '../data';
 import { TextField } from '../components/ui';
 
 interface Result {
@@ -10,7 +10,7 @@ interface Result {
 }
 
 export function Search() {
-  const query = useStore((s) => s.query);
+  const { query, caveItems } = useStore((s) => ({ query: s.query, caveItems: s.caveItems }));
   const q = query.toLowerCase();
   let results: Result[] = [];
 
@@ -23,9 +23,9 @@ export function Search() {
           results.push({ titre: a.n, sous: `${r.name} · ${a.t}`, type: 'AOC', go: () => actions.go('region', { regionId: r.id }) });
       });
     });
-    CAVE.forEach((b) => {
+    caveItems.forEach((b) => {
       if (b.name.toLowerCase().includes(q))
-        results.push({ titre: b.name, sous: `${b.meta} · en cave`, type: 'cave', go: () => actions.go('cave') });
+        results.push({ titre: b.name, sous: `${b.meta} · en cave`, type: 'cave', go: () => actions.go('cave', { caveSel: b.id }) });
     });
     CEPAGES_LEXIQUE.forEach((c) => {
       if (c.nom.toLowerCase().includes(q))

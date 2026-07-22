@@ -3,24 +3,74 @@ import {
   REGIONS,
   CEPAGES,
   ACCORDS,
+  WINES,
   DECOUVERTE_BOUTEILLES,
   DECOUVERTE_DOMAINES,
   DECOUVERTE_ANECDOTES,
 } from '../data';
-import { duJour, dateLongue } from '../lib/helpers';
+import { duJour, dateLongue, normalize } from '../lib/helpers';
 import { computeCave } from '../lib/cave';
 import { Eyebrow, Card } from '../components/ui';
+import type { Wine } from '../types';
 
 const HERO_GRAD = 'linear-gradient(135deg, var(--hero-a), var(--hero-b) 60%, var(--hero-c))';
 
+// ─── Rapprochement Découverte du jour → catalogue ───
+// Les libellés de découverte sont éditoriaux (« Clos Rougeard “Les Poyeux” ») :
+// on les rapproche du catalogue par recouvrement de mots significatifs, pour
+// ouvrir la bonne fiche quand elle existe, ou une recherche pré-remplie sinon.
+const clean = (s: string) => normalize(s).replace(/[^a-z0-9]+/g, ' ').trim();
+const STOP = new Set(['domaine', 'chateau', 'clos', 'les', 'la', 'le', 'de', 'du', 'des']);
+const tokensOf = (s: string) => clean(s).split(' ').filter((t) => t.length > 2 && !STOP.has(t));
+const score = (tokens: string[], hay: string) =>
+  tokens.filter((t) => hay.includes(t)).length / Math.max(1, tokens.length);
+
+/** Ouvre la fiche du vin le plus proche du libellé, sinon la liste du domaine
+ *  correspondant, sinon Bouteilles avec la recherche pré-remplie. */
+function openInBouteilles(all: Wine[], libelle: string) {
+  const toks = tokensOf(libelle);
+  let best: Wine | null = null;
+  let bestScore = 0;
+  for (const w of all) {
+    const s = score(toks, clean(`${w.domaine} ${w.cuvee ?? ''} ${w.appellation}`));
+    if (s > bestScore) { best = w; bestScore = s; }
+  }
+  const reset = { wineSel: null, wineColor: 'tous', wineRegionFilter: 'toutes' } as const;
+  if (best && bestScore >= 0.75) {
+    // Libellé qui ne désigne que le domaine (pas une cuvée précise) alors que
+    // celui-ci a plusieurs vins : on montre la liste plutôt qu'une fiche arbitraire.
+    const sameDomaine = all.filter((w) => clean(w.domaine) === clean(best!.domaine));
+    if (sameDomaine.length > 1 && score(toks, clean(best.domaine)) >= 0.75) {
+      actions.go('bouteilles', { ...reset, wineQuery: best.domaine });
+    } else {
+      actions.go('bouteilles', { ...reset, wineSel: best.id });
+    }
+    return;
+  }
+  // À défaut de fiche exacte : tous les vins du domaine reconnu par un mot distinctif.
+  const dom = all.find((w) => {
+    const c = clean(w.domaine);
+    return toks.some((t) => t.length >= 5 && c.includes(t));
+  });
+  actions.go('bouteilles', {
+    ...reset,
+    wineQuery: dom ? dom.domaine : libelle.split(/[«,(]/)[0].trim(),
+  });
+}
+
 export function Home() {
-  const { notes, qtys } = useStore((s) => ({ notes: s.notes, qtys: s.qtys }));
+  const { notes, caveItems, userWines } = useStore((s) => ({
+    notes: s.notes,
+    caveItems: s.caveItems,
+    userWines: s.userWines,
+  }));
+  const ALL = [...userWines, ...WINES];
   const featured = duJour(REGIONS);
   const cepage = duJour(CEPAGES);
   const bouteille = duJour(DECOUVERTE_BOUTEILLES);
   const domaine = duJour(DECOUVERTE_DOMAINES);
   const anecdote = duJour(DECOUVERTE_ANECDOTES);
-  const { alerts } = computeCave(qtys);
+  const { alerts } = computeCave(caveItems);
   const lastNote = notes[0];
 
   return (
@@ -149,7 +199,7 @@ export function Home() {
               {cepage.couleur} · {cepage.origine}
             </div>
           </Card>
-          <Card>
+          <Card onClick={() => openInBouteilles(ALL, bouteille.nom)}>
             <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
               La bouteille
             </div>
@@ -161,7 +211,7 @@ export function Home() {
         </div>
 
         {/* Domaine */}
-        <Card style={{ marginTop: 12 }}>
+        <Card onClick={() => openInBouteilles(ALL, domaine.nom)} style={{ marginTop: 12 }}>
           <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
             Le domaine
           </div>
@@ -213,7 +263,11 @@ export function Home() {
 
       {/* Alerte pic de maturité */}
       {alerts.length > 0 && (
-        <Card gold onClick={() => actions.go('cave')} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px' }}>
+        <Card
+          gold
+          onClick={() => actions.go('cave', { caveSel: alerts.length === 1 ? alerts[0].id : null })}
+          style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px' }}
+        >
           <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--gold)', flexShrink: 0 }} />
           <div style={{ flex: 1 }}>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--gold)' }}>
@@ -235,7 +289,7 @@ export function Home() {
       <div>
         <Eyebrow>Dernière dégustation</Eyebrow>
         {lastNote && (
-          <Card style={{ marginTop: 10, padding: '14px 16px' }}>
+          <Card onClick={() => actions.go('degustation')} style={{ marginTop: 10, padding: '14px 16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 19, fontWeight: 600 }}>{lastNote.vin}</div>
               <div style={{ fontSize: 13, color: 'var(--gold)', fontWeight: 700 }}>{lastNote.score}/100</div>

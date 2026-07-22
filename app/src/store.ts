@@ -6,8 +6,10 @@ import type {
   DegustationCrit,
   GlossaireFamille,
   Wine,
+  CaveItem,
 } from './types';
 import seedNotes from './data/seedNotes.json';
+import { CAVE } from './data';
 
 const PREFIX = 'viticolor_';
 
@@ -26,6 +28,15 @@ function save<T>(key: string, value: T): void {
   } catch {
     /* quota / mode privé — on ignore */
   }
+}
+
+/** Contenu initial de la cave : ce qui a été persisté, sinon les bouteilles de
+ *  démo (cave.json) en reprenant les quantités de l'ancien stockage `qtys`. */
+function initialCave(): CaveItem[] {
+  const saved = load<CaveItem[] | null>('caveItems', null);
+  if (saved) return saved;
+  const qtys = load<Record<string, number>>('qtys', {});
+  return CAVE.map(({ def, ...b }) => ({ ...b, qty: qtys[b.id] ?? def }));
 }
 
 const EMPTY_CRIT: DegustationCrit = {
@@ -64,7 +75,9 @@ export interface State {
   millHistSel: number;
 
   // Cave & recherche
-  caveFilter: 'tous' | 'rouge' | 'blanc' | 'effervescent';
+  caveFilter: 'tous' | 'rouge' | 'blanc' | 'rosé' | 'effervescent';
+  caveSel: string | null; // id de la bouteille ouverte en fiche
+  caveItems: CaveItem[]; // contenu de la cave (persisté)
   query: string;
 
   // Catalogue Bouteilles
@@ -118,7 +131,6 @@ export interface State {
 
   // Données persistées
   favs: string[];
-  qtys: Record<string, number>;
   notes: DegustationNote[];
   collChecked: Record<string, boolean>;
 }
@@ -132,7 +144,7 @@ const NAV_KEYS = [
   'screen', 'regionId',
   'regionsView', 'carteRegion', 'carteZoom', 'carteInfo', 'cepFilter',
   'cepOpen', 'appOpen', 'millSel', 'millMetric', 'parcelSel', 'parcelOverlay',
-  'zoom', 'millHistSel', 'caveFilter', 'query', 'wineQuery', 'wineColor',
+  'zoom', 'millHistSel', 'caveFilter', 'caveSel', 'query', 'wineQuery', 'wineColor',
   'wineRegionFilter', 'wineSel', 'scanned', 'scanAdded', 'collOpen', 'vendSel',
   'actuCat', 'glossQuery', 'glossLettre', 'glossCat', 'glossSel', 'routeSel',
   'coteSel', 'cotePeriode', 'histOpen', 'aromSel', 'accordOpen', 'accordCat',
@@ -173,6 +185,8 @@ function initialState(): State {
     millHistSel: 7,
 
     caveFilter: 'tous',
+    caveSel: null,
+    caveItems: initialCave(),
     query: '',
 
     wineQuery: '',
@@ -219,7 +233,6 @@ function initialState(): State {
     demoDismissed: load('demoDismissed', {} as Record<string, boolean>),
 
     favs: load<string[]>('favs', ['bourgogne']),
-    qtys: load<Record<string, number>>('qtys', {}),
     notes: load<DegustationNote[]>('notes', seedNotes as DegustationNote[]),
     collChecked: load<Record<string, boolean>>('coll', {}),
   };
@@ -301,11 +314,39 @@ export const actions = {
     });
   },
 
-  setQty(id: string, current: number, delta: number) {
+  // ─── Cave (contenu persisté) ───
+  caveQty(id: string, delta: number) {
     setState((s) => {
-      const qtys = { ...s.qtys, [id]: Math.max(0, current + delta) };
-      save('qtys', qtys);
-      return { qtys };
+      const caveItems = s.caveItems.map((b) =>
+        b.id === id ? { ...b, qty: Math.max(0, b.qty + delta) } : b,
+      );
+      save('caveItems', caveItems);
+      return { caveItems };
+    });
+  },
+  caveSetPrice(id: string, prix: number) {
+    setState((s) => {
+      const caveItems = s.caveItems.map((b) => (b.id === id ? { ...b, prix } : b));
+      save('caveItems', caveItems);
+      return { caveItems };
+    });
+  },
+  /** Ajoute une bouteille ; si elle est déjà en cave (même vin), incrémente la quantité. */
+  caveAdd(item: CaveItem) {
+    setState((s) => {
+      const existing = s.caveItems.find((b) => b.id === item.id);
+      const caveItems = existing
+        ? s.caveItems.map((b) => (b.id === item.id ? { ...b, qty: b.qty + 1 } : b))
+        : [item, ...s.caveItems];
+      save('caveItems', caveItems);
+      return { caveItems, caveSel: item.id };
+    });
+  },
+  caveRemove(id: string) {
+    setState((s) => {
+      const caveItems = s.caveItems.filter((b) => b.id !== id);
+      save('caveItems', caveItems);
+      return { caveItems, caveSel: null };
     });
   },
 

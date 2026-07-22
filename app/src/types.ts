@@ -62,6 +62,13 @@ export interface CaveBottle {
   def: number; // quantité par défaut
 }
 
+/** Bouteille vivante de « Ma cave » (persistée) : quantité et prix modifiables,
+ *  lien facultatif vers une fiche du catalogue quand elle en provient. */
+export interface CaveItem extends Omit<CaveBottle, 'def'> {
+  qty: number;
+  wineId?: string;
+}
+
 export interface Accord {
   /** Catégorie de plat : apero | entree | mer | viande | fromage | dessert */
   cat: string;
