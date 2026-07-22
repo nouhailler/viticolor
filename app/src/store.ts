@@ -5,6 +5,7 @@ import type {
   DegustationNote,
   DegustationCrit,
   GlossaireFamille,
+  Wine,
 } from './types';
 import seedNotes from './data/seedNotes.json';
 
@@ -71,6 +72,7 @@ export interface State {
   wineColor: 'tous' | 'rouge' | 'blanc' | 'rosé' | 'effervescent' | 'liquoreux';
   wineRegionFilter: string; // 'toutes' | id de région
   wineSel: string | null; // id du vin ouvert en fiche
+  userWines: Wine[]; // vins importés par l'utilisateur (persistés)
 
   // Scanner
   scanned: boolean;
@@ -177,6 +179,7 @@ function initialState(): State {
     wineColor: 'tous',
     wineRegionFilter: 'toutes',
     wineSel: null,
+    userWines: load('userWines', [] as Wine[]),
 
     scanned: false,
     scanAdded: false,
@@ -341,6 +344,26 @@ export const actions = {
   nextOnboarding(last: boolean) {
     if (last) actions.finishOnboarding();
     else setState((s) => ({ obStep: s.obStep + 1 }));
+  },
+
+  /** Ajoute des vins importés en tête de catalogue (persisté). */
+  importWines(wines: Wine[]) {
+    setState((s) => {
+      const userWines = [...wines, ...s.userWines];
+      save('userWines', userWines);
+      return { userWines };
+    });
+  },
+  removeUserWine(id: string) {
+    setState((s) => {
+      const userWines = s.userWines.filter((w) => w.id !== id);
+      save('userWines', userWines);
+      return { userWines };
+    });
+  },
+  clearUserWines() {
+    save('userWines', []);
+    setState({ userWines: [] });
   },
 
   toggleDemo() {

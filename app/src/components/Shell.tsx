@@ -169,7 +169,8 @@ const MENU_SECTIONS: MenuSection[] = [
     title: 'Trouver un vin',
     items: [
       { key: 'scanner', id: 'scanner', label: 'Scanner une étiquette', hint: () => '', extra: { scanned: false } },
-      { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: () => `${WINES.length} vins`, extra: { wineSel: null } },
+      { key: 'bouteilles', id: 'bouteilles', label: 'Bouteilles', hint: (s) => `${WINES.length + s.userWines.length} vins`, extra: { wineSel: null } },
+      { key: 'import', id: 'import', label: 'Importer un vin', hint: (s) => (s.userWines.length ? `${s.userWines.length} importés` : 'JSON') },
       { key: 'accords', id: 'accords', label: 'Accords mets & vins', hint: () => `${ACCORDS.length} accords` },
     ],
   },

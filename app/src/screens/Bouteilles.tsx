@@ -24,27 +24,31 @@ const COULEUR_LABEL: { id: 'tous' | Couleur; label: string }[] = [
 ];
 
 export function Bouteilles() {
-  const { wineQuery, wineColor, wineRegionFilter, wineSel } = useStore((s) => ({
+  const { wineQuery, wineColor, wineRegionFilter, wineSel, userWines } = useStore((s) => ({
     wineQuery: s.wineQuery,
     wineColor: s.wineColor,
     wineRegionFilter: s.wineRegionFilter,
     wineSel: s.wineSel,
+    userWines: s.userWines,
   }));
 
+  // Catalogue complet : vins importés en tête, puis le catalogue embarqué.
+  const ALL = [...userWines, ...WINES];
+
   if (wineSel) {
-    const wine = WINES.find((w) => w.id === wineSel);
+    const wine = ALL.find((w) => w.id === wineSel);
     if (wine) return <Fiche wine={wine} />;
   }
 
   // Couleurs et régions réellement présentes
-  const presentColors = new Set(WINES.map((w) => w.couleur));
+  const presentColors = new Set(ALL.map((w) => w.couleur));
   const colorChips = COULEUR_LABEL.filter((c) => c.id === 'tous' || presentColors.has(c.id));
   const regionCounts = new Map<string, number>();
-  WINES.forEach((w) => regionCounts.set(w.regionId, (regionCounts.get(w.regionId) ?? 0) + 1));
+  ALL.forEach((w) => regionCounts.set(w.regionId, (regionCounts.get(w.regionId) ?? 0) + 1));
   const presentRegions = REGIONS.filter((r) => regionCounts.has(r.id));
 
   const nq = normalize(wineQuery.trim());
-  const list = WINES.filter((w) => {
+  const list = ALL.filter((w) => {
     if (wineColor !== 'tous' && w.couleur !== wineColor) return false;
     if (wineRegionFilter !== 'toutes' && w.regionId !== wineRegionFilter) return false;
     if (nq) {
@@ -58,7 +62,7 @@ export function Bouteilles() {
     <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 14 }}>
       <ScreenHeading
         title="Bouteilles"
-        subtitle={`${WINES.length} vins · ${presentRegions.length} régions · recherche par domaine, appellation ou cépage`}
+        subtitle={`${ALL.length} vins · ${presentRegions.length} régions · recherche par domaine, appellation ou cépage`}
       />
 
       <input
