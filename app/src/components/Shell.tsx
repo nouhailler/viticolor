@@ -1,5 +1,5 @@
 import { useStore, actions, isRootScreen, type State } from '../store';
-import { DEMO_TIPS, GLOSSAIRE, WINES, REGIONS, ACCORDS } from '../data';
+import { DEMO_TIPS, GLOSSAIRE, WINES, REGIONS, ACCORDS, MILLESIMES } from '../data';
 import type { ScreenId } from '../types';
 
 // ─── Header fixe ───
@@ -162,7 +162,7 @@ const MENU_SECTIONS: MenuSection[] = [
         extra: { regionsView: 'carte', carteRegion: null, carteInfo: null },
       },
       { key: 'regions:cepages', id: 'regions', label: 'Cépages', hint: () => '13 fiches', extra: { regionsView: 'cepages' } },
-      { key: 'millesimes', id: 'millesimes', label: 'Historique des millésimes', hint: () => '2015–2023' },
+      { key: 'millesimes', id: 'millesimes', label: 'Historique des millésimes', hint: () => `${MILLESIMES[0].y}–${MILLESIMES[MILLESIMES.length - 1].y}` },
       { key: 'vendanges', id: 'vendanges', label: 'Vendanges', hint: () => `campagne ${new Date().getFullYear()}` },
       { key: 'routes', id: 'routes', label: 'Route des vins', hint: () => '4 itinéraires' },
     ],

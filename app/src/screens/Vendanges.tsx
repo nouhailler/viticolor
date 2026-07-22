@@ -1,6 +1,6 @@
 import { useStore, setState } from '../store';
-import { VENDANGES } from '../data';
 import { ScreenHeading } from '../components/ui';
+import type { VendangeRegion } from '../types';
 
 const MOIS = ['jan', 'fév', 'mars', 'avr', 'mai', 'juin', 'juil', 'août', 'sept', 'oct', 'nov', 'déc'];
 // Campagne de l'année en cours : le curseur suit la vraie date (jours écoulés
@@ -15,8 +15,8 @@ function fmt(j: number): string {
   return `${dt.getDate()} ${MOIS[dt.getMonth()]}.`;
 }
 
-function compute() {
-  return VENDANGES.map((r) => {
+function compute(list: VendangeRegion[]) {
+  return list.map((r) => {
     const encours = TODAY >= r.d && TODAY <= r.f;
     const fini = TODAY > r.f;
     const statut = fini ? 'Terminées' : encours ? 'En cours' : 'À venir';
@@ -36,17 +36,31 @@ function compute() {
 }
 
 export function Vendanges() {
-  const vendSel = useStore((s) => s.vendSel);
-  const regions = compute();
-  const detail = regions[vendSel];
+  const { vendSel, vendanges } = useStore((s) => ({ vendSel: s.vendSel, vendanges: s.vendanges }));
+  // Prévisions rédigées pour une campagne donnée (embarquées ou importées via
+  // Paramètres) : tant qu'elles ne couvrent pas l'année en cours, on l'affiche.
+  const AJOUR = vendanges.campagne === CAMPAGNE;
+  const regions = compute(vendanges.regions);
+  const detail = regions[Math.min(vendSel, regions.length - 1)];
   const aVenir = regions.filter((v) => v.statut === 'À venir').length;
 
   return (
     <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
       <ScreenHeading
         title={`Vendanges ${CAMPAGNE}`}
-        subtitle={`Prévisions de campagne · ${aVenir} régions à venir · touchez une région`}
+        subtitle={
+          AJOUR
+            ? `Prévisions de campagne · ${aVenir} régions à venir · touchez une région`
+            : `Fenêtres habituelles de récolte · touchez une région`
+        }
       />
+      {!AJOUR && (
+        <div style={{ background: 'var(--surface)', border: '1px solid var(--gold-border)', borderLeft: '3px solid var(--gold)', borderRadius: 'var(--r-card)', padding: '10px 14px', fontSize: 12, color: 'var(--text-2)', lineHeight: 1.55 }}>
+          Les prévisions détaillées (météo, commentaires) datent de la campagne {vendanges.campagne} — celles
+          de {CAMPAGNE} seront actualisées à l'approche des vendanges. Les fenêtres affichées sont les
+          périodes habituelles de chaque région.
+        </div>
+      )}
       <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 2px', fontSize: 10.5, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
         <div>Août</div>
         <div>Septembre</div>

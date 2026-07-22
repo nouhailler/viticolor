@@ -7,8 +7,9 @@ import type {
   GlossaireFamille,
   Wine,
   CaveItem,
+  VendangesData,
 } from './types';
-import { CAVE } from './data';
+import { CAVE, MILLESIMES, VENDANGES } from './data';
 
 // Notes de démo de l'ancien prototype : si un carnet persisté les contient
 // encore (elles étaient sauvegardées avec les vraies notes), on les purge.
@@ -132,6 +133,7 @@ export interface State {
   demoDismissed: Record<string, boolean>;
 
   // Données persistées
+  vendanges: VendangesData; // prévisions courantes (embarquées ou importées)
   favs: string[];
   notes: DegustationNote[];
   collChecked: Record<string, boolean>;
@@ -178,13 +180,13 @@ function initialState(): State {
     cepFilter: 'tous',
     cepOpen: 0,
     appOpen: -1,
-    millSel: 7,
+    millSel: MILLESIMES.length - 1,
     millMetric: 'note',
     parcelSel: 0,
     parcelOverlay: 'sol',
     zoom: 1,
 
-    millHistSel: 7,
+    millHistSel: MILLESIMES.length - 1,
 
     caveFilter: 'tous',
     caveSel: null,
@@ -230,6 +232,7 @@ function initialState(): State {
     demoOn: load('demo', true),
     demoDismissed: load('demoDismissed', {} as Record<string, boolean>),
 
+    vendanges: load<VendangesData | null>('vendanges', null) ?? VENDANGES,
     favs: load<string[]>('favs', ['bourgogne']),
     notes: load<DegustationNote[]>('notes', []).filter((n) => !SEED_NOTE_SIGS.has(`${n.vin}|${n.date}`)),
     collChecked: load<Record<string, boolean>>('coll', {}),
@@ -403,6 +406,16 @@ export const actions = {
   clearUserWines() {
     save('userWines', []);
     setState({ userWines: [] });
+  },
+
+  /** Remplace les prévisions de vendanges par un fichier importé (persisté). */
+  importVendanges(data: VendangesData) {
+    save('vendanges', data);
+    setState({ vendanges: data });
+  },
+  resetVendanges() {
+    save('vendanges', null);
+    setState({ vendanges: VENDANGES });
   },
 
   toggleDemo() {

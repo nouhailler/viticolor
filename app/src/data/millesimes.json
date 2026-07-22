@@ -73,10 +73,18 @@
   },
   {
     "y": 2024,
-    "note": 87,
-    "soleil": 1280,
-    "pluie": 480,
-    "garde": 12,
-    "txt": "Pluies incessantes, forte pression mildiou ; volumes réduits."
+    "note": 86,
+    "soleil": 1260,
+    "pluie": 430,
+    "garde": 10,
+    "txt": "Gel, grêle, mildiou et pluies ; volumes historiquement bas (37,5 Mhl), septembre salvateur — qualité hétérogène mais prometteuse."
+  },
+  {
+    "y": 2025,
+    "note": 92,
+    "soleil": 1470,
+    "pluie": 280,
+    "garde": 15,
+    "txt": "Précocité record (vendanges dès le 19 août), été chaud et sec ; millésime homogène et harmonieux — premières évaluations."
   }
 ]

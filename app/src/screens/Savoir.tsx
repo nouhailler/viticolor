@@ -1,7 +1,16 @@
-import { useStore, setState } from '../store';
-import { QUIZ, CEPAGES_LEXIQUE } from '../data';
-import { Eyebrow } from '../components/ui';
+import { useState } from 'react';
+import { useStore, setState, actions } from '../store';
+import { QUIZ, CEPAGES, CEPAGES_LEXIQUE } from '../data';
+import { normalize } from '../lib/helpers';
+import { Eyebrow, Chip, TextField } from '../components/ui';
 import { CepageGlyph } from '../components/CepageGlyph';
+
+// Cépages du lexique disposant d'une fiche détaillée (Régions → Cépages) :
+// index dans CEPAGES pour ouvrir la bonne fiche d'un tap.
+const FICHE_INDEX = new Map(CEPAGES.map((c, i) => [normalize(c.nom), i]));
+// « Malbec (Côt) » ou « Vermentino (Rolle) » : le nom hors parenthèse suffit.
+const ficheFor = (nom: string): number | undefined =>
+  FICHE_INDEX.get(normalize(nom)) ?? FICHE_INDEX.get(normalize(nom.replace(/\s*\(.*\)/, '')));
 
 export function Savoir() {
   const { quizIndex, quizPicked, quizScore, quizDone } = useStore((s) => ({
@@ -90,23 +99,97 @@ export function Savoir() {
         </div>
       )}
 
-      {/* Lexique des cépages */}
-      <div>
+      <LexiqueCepages />
+    </div>
+  );
+}
+
+// ─── Lexique des cépages (recherche + filtre + lien vers les fiches) ───
+function LexiqueCepages() {
+  const [query, setQuery] = useState('');
+  const [filter, setFilter] = useState<'tous' | 'rouge' | 'blanc'>('tous');
+
+  const nq = normalize(query.trim());
+  const list = CEPAGES_LEXIQUE.filter((c) => {
+    if (filter !== 'tous' && c.type !== filter) return false;
+    if (nq && !normalize(`${c.nom} ${c.desc}`).includes(nq)) return false;
+    return true;
+  });
+
+  return (
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <Eyebrow>Lexique des cépages</Eyebrow>
-        <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column' }}>
-          {CEPAGES_LEXIQUE.map((c) => (
-            <div key={c.nom} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid var(--surface-border)' }}>
+        <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>
+          {list.length} / {CEPAGES_LEXIQUE.length}
+        </div>
+      </div>
+
+      <TextField
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Cépage, région, arôme… (mondeuse, jura, litchi)"
+        style={{ marginTop: 10, width: '100%', fontSize: 13.5, padding: '10px 14px', border: '1px solid var(--surface-border)', background: 'var(--surface)' }}
+      />
+
+      <div style={{ marginTop: 8, display: 'flex', gap: 6 }}>
+        {(
+          [
+            ['tous', 'Tous'],
+            ['rouge', 'Rouges'],
+            ['blanc', 'Blancs'],
+          ] as const
+        ).map(([id, label]) => (
+          <Chip key={id} label={label} active={filter === id} onClick={() => setFilter(id)} />
+        ))}
+      </div>
+
+      <div style={{ marginTop: 4, display: 'flex', flexDirection: 'column' }}>
+        {list.map((c) => {
+          const fiche = ficheFor(c.nom);
+          const row = (
+            <>
               <CepageGlyph nom={c.nom} tint={c.tint} couleur={c.type} height={38} />
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, fontSize: 14 }}>
                   <div style={{ fontWeight: 700 }}>{c.nom}</div>
-                  <div style={{ color: c.tint, fontSize: 12, fontStyle: 'italic' }}>{c.type}</div>
+                  <div style={{ color: c.tint, fontSize: 12, fontStyle: 'italic', flexShrink: 0 }}>{c.type}</div>
                 </div>
                 <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>{c.desc}</div>
               </div>
+              {fiche != null && (
+                <span style={{ fontSize: 11, color: 'var(--gold)', flexShrink: 0, whiteSpace: 'nowrap' }}>fiche ›</span>
+              )}
+            </>
+          );
+          const rowStyle: React.CSSProperties = {
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+            padding: '10px 0',
+            borderBottom: '1px solid var(--surface-border)',
+            width: '100%',
+            textAlign: 'left',
+          };
+          return fiche != null ? (
+            <button
+              key={c.nom}
+              onClick={() => actions.go('regions', { regionsView: 'cepages', cepFilter: 'tous', cepOpen: fiche })}
+              style={rowStyle}
+            >
+              {row}
+            </button>
+          ) : (
+            <div key={c.nom} style={rowStyle}>
+              {row}
             </div>
-          ))}
-        </div>
+          );
+        })}
+        {list.length === 0 && (
+          <div style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: 13, padding: '18px 0' }}>
+            Aucun cépage ne correspond.
+          </div>
+        )}
       </div>
     </div>
   );

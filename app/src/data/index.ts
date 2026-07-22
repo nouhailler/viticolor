@@ -13,7 +13,7 @@ import type {
   HistArticle,
   CoteVin,
   Route,
-  VendangeRegion,
+  VendangesData,
   CollectionObjectif,
   OnboardingSlide,
   DemoTips,
@@ -59,7 +59,7 @@ export const AROMES = aromes as AromeFamille[];
 export const HISTOIRE = histoire as HistArticle[];
 export const COTES_VINS = cotesVins as CoteVin[];
 export const ROUTES = routes as Route[];
-export const VENDANGES = vendanges as VendangeRegion[];
+export const VENDANGES = vendanges as VendangesData;
 export const COLLECTION = collection as CollectionObjectif[];
 export const ONBOARDING = onboarding as OnboardingSlide[];
 export const DEMO_TIPS = demoTips as DemoTips;

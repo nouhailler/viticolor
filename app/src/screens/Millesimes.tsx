@@ -27,7 +27,10 @@ export function Millesimes() {
 
   return (
     <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
-      <ScreenHeading title="Historique des millésimes" subtitle="2015 – 2023 · touchez une année pour le détail" />
+      <ScreenHeading
+        title="Historique des millésimes"
+        subtitle={`${MILLESIMES[0].y} – ${MILLESIMES[MILLESIMES.length - 1].y} · touchez une année pour le détail`}
+      />
 
       {CHARTS.map((ch) => {
         const vals = MILLESIMES.map(ch.get);

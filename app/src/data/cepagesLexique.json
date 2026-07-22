@@ -1,39 +1,51 @@
 [
   {
-    "nom": "Pinot Noir",
-    "type": "rouge",
-    "tint": "#7d2c3d",
-    "desc": "Bourgogne, Champagne · fruits rouges, sous-bois, tanins soyeux"
-  },
-  {
-    "nom": "Chardonnay",
-    "type": "blanc",
-    "tint": "#a8812f",
-    "desc": "Bourgogne, Champagne · du minéral chablisien au beurré meursaultien"
-  },
-  {
-    "nom": "Syrah",
-    "type": "rouge",
-    "tint": "#5c2430",
-    "desc": "Rhône nord · poivre, violette, olive noire"
-  },
-  {
-    "nom": "Chenin",
-    "type": "blanc",
-    "tint": "#8a6a24",
-    "desc": "Loire · coing, miel ; sec, moelleux ou effervescent"
-  },
-  {
     "nom": "Cabernet Franc",
     "type": "rouge",
-    "tint": "#6e1f2e",
-    "desc": "Loire, Bordeaux · poivron mûr, framboise, fraîcheur"
+    "tint": "#8e2f3f",
+    "desc": "Loire (Chinon, Bourgueil), Bordeaux · poivron mûr, framboise, fraîcheur"
   },
   {
-    "nom": "Savagnin",
-    "type": "blanc",
-    "tint": "#6b5a2a",
-    "desc": "Jura · noix, curry en oxydatif ; tension pure en ouillé"
+    "nom": "Cabernet Sauvignon",
+    "type": "rouge",
+    "tint": "#4a1520",
+    "desc": "Bordeaux rive gauche · cassis, cèdre, structure de grande garde"
+  },
+  {
+    "nom": "Carignan",
+    "type": "rouge",
+    "tint": "#6e2a24",
+    "desc": "Languedoc, Roussillon · vieilles vignes profondes, garrigue, graphite"
+  },
+  {
+    "nom": "César",
+    "type": "rouge",
+    "tint": "#70283a",
+    "desc": "Bourgogne (Irancy) · charpente rustique en appoint du pinot noir"
+  },
+  {
+    "nom": "Cinsault",
+    "type": "rouge",
+    "tint": "#b06a5a",
+    "desc": "Provence, Languedoc · rosés délicats, fruité léger"
+  },
+  {
+    "nom": "Duras",
+    "type": "rouge",
+    "tint": "#7a2f3a",
+    "desc": "Gaillac · poivre et souplesse, identité gaillacoise"
+  },
+  {
+    "nom": "Fer Servadou",
+    "type": "rouge",
+    "tint": "#6b2430",
+    "desc": "Marcillac, Gaillac · fruits rouges poivrés, accent rustique"
+  },
+  {
+    "nom": "Gamay",
+    "type": "rouge",
+    "tint": "#8e2f4a",
+    "desc": "Beaujolais, Loire · fruits rouges croqués, gouleyant"
   },
   {
     "nom": "Grenache",
@@ -42,9 +54,291 @@
     "desc": "Rhône sud, Roussillon · kirsch, garrigue, chaleur"
   },
   {
+    "nom": "Grolleau",
+    "type": "rouge",
+    "tint": "#a85a6a",
+    "desc": "Loire · rosés d’Anjou légers et acidulés"
+  },
+  {
+    "nom": "Malbec (Côt)",
+    "type": "rouge",
+    "tint": "#3d1a26",
+    "desc": "Cahors, Loire · robe noire, prune, tanins denses"
+  },
+  {
+    "nom": "Merlot",
+    "type": "rouge",
+    "tint": "#6e1f2e",
+    "desc": "Bordeaux rive droite · prune, velours, générosité"
+  },
+  {
+    "nom": "Mondeuse",
+    "type": "rouge",
+    "tint": "#5a2438",
+    "desc": "Savoie · fruits noirs, poivre, fraîcheur alpine"
+  },
+  {
+    "nom": "Mourvèdre",
+    "type": "rouge",
+    "tint": "#4f1f2c",
+    "desc": "Bandol, Rhône sud · mûre, cuir, épices — grande garde"
+  },
+  {
+    "nom": "Négrette",
+    "type": "rouge",
+    "tint": "#7d2c4d",
+    "desc": "Fronton · violette, poivre, souplesse"
+  },
+  {
+    "nom": "Niellucciu",
+    "type": "rouge",
+    "tint": "#6e2432",
+    "desc": "Corse (Patrimonio) · cousin du sangiovese, cerise et maquis"
+  },
+  {
+    "nom": "Petit Verdot",
+    "type": "rouge",
+    "tint": "#42152a",
+    "desc": "Bordeaux (assemblage) · couleur, épices et fraîcheur en touche finale"
+  },
+  {
+    "nom": "Pineau d’Aunis",
+    "type": "rouge",
+    "tint": "#96455a",
+    "desc": "Loire · poivre blanc, rouges et rosés fringants"
+  },
+  {
+    "nom": "Pinot Meunier",
+    "type": "rouge",
+    "tint": "#8a3a4a",
+    "desc": "Champagne · rondeur fruitée des assemblages"
+  },
+  {
+    "nom": "Pinot Noir",
+    "type": "rouge",
+    "tint": "#7d2c3d",
+    "desc": "Bourgogne, Champagne · fruits rouges, sous-bois, tanins soyeux"
+  },
+  {
+    "nom": "Poulsard",
+    "type": "rouge",
+    "tint": "#a86470",
+    "desc": "Jura · robe claire, griotte, délicatesse fumée"
+  },
+  {
+    "nom": "Sciaccarellu",
+    "type": "rouge",
+    "tint": "#9a4a52",
+    "desc": "Corse (Ajaccio) · poivré, aérien, robe claire"
+  },
+  {
+    "nom": "Syrah",
+    "type": "rouge",
+    "tint": "#5c2430",
+    "desc": "Rhône nord · poivre, violette, olive noire"
+  },
+  {
+    "nom": "Tannat",
+    "type": "rouge",
+    "tint": "#38141f",
+    "desc": "Madiran · tanins puissants, longévité remarquable"
+  },
+  {
+    "nom": "Tibouren",
+    "type": "rouge",
+    "tint": "#b57562",
+    "desc": "Provence · rosés fins et complexes du littoral"
+  },
+  {
+    "nom": "Trousseau",
+    "type": "rouge",
+    "tint": "#7d3542",
+    "desc": "Jura · fruits rouges profonds des sols graveleux"
+  },
+  {
+    "nom": "Aligoté",
+    "type": "blanc",
+    "tint": "#a9a04a",
+    "desc": "Bourgogne (Bouzeron) · vivacité citronnée"
+  },
+  {
+    "nom": "Altesse",
+    "type": "blanc",
+    "tint": "#b08d3e",
+    "desc": "Savoie (Roussette) · miel, amande, belle garde"
+  },
+  {
+    "nom": "Auxerrois",
+    "type": "blanc",
+    "tint": "#b89a52",
+    "desc": "Alsace, Moselle · rondeur discrète des assemblages"
+  },
+  {
+    "nom": "Chardonnay",
+    "type": "blanc",
+    "tint": "#c9a44d",
+    "desc": "Bourgogne, Champagne · du minéral chablisien au beurré meursaultien"
+  },
+  {
+    "nom": "Chasselas",
+    "type": "blanc",
+    "tint": "#c2b264",
+    "desc": "Savoie (Crépy), Alsace · tendre, discret, désaltérant"
+  },
+  {
+    "nom": "Chenin",
+    "type": "blanc",
+    "tint": "#a8812f",
+    "desc": "Loire · coing, miel ; sec, moelleux ou effervescent"
+  },
+  {
+    "nom": "Clairette",
+    "type": "blanc",
+    "tint": "#b5a655",
+    "desc": "Rhône sud, Die · fraîcheur florale, bulles tendres"
+  },
+  {
+    "nom": "Colombard",
+    "type": "blanc",
+    "tint": "#a3aa4f",
+    "desc": "Gascogne · agrumes exubérants, blancs légers"
+  },
+  {
+    "nom": "Folle Blanche",
+    "type": "blanc",
+    "tint": "#9aa860",
+    "desc": "Gros Plant nantais, Armagnac · nervosité saline"
+  },
+  {
+    "nom": "Gewurztraminer",
+    "type": "blanc",
+    "tint": "#c08b4a",
+    "desc": "Alsace · rose, litchi, épices opulentes"
+  },
+  {
+    "nom": "Gros Manseng",
+    "type": "blanc",
+    "tint": "#ab8c3a",
+    "desc": "Jurançon sec, Pacherenc · agrumes confits, tension"
+  },
+  {
+    "nom": "Jacquère",
+    "type": "blanc",
+    "tint": "#a8b06a",
+    "desc": "Savoie (Apremont) · légèreté alpine, pierre et fleurs blanches"
+  },
+  {
+    "nom": "Marsanne",
+    "type": "blanc",
+    "tint": "#b39348",
+    "desc": "Hermitage, Saint-Joseph · amande, aubépine, gras"
+  },
+  {
+    "nom": "Mauzac",
+    "type": "blanc",
+    "tint": "#b0a052",
+    "desc": "Gaillac, Limoux · pomme au four, bulles ancestrales"
+  },
+  {
+    "nom": "Melon de Bourgogne",
+    "type": "blanc",
+    "tint": "#8a9a5b",
+    "desc": "Muscadet · iode, tension, élevage sur lie"
+  },
+  {
+    "nom": "Muscadelle",
+    "type": "blanc",
+    "tint": "#c0a95e",
+    "desc": "Bordeaux, Bergerac · touche florale et musquée d’assemblage"
+  },
+  {
+    "nom": "Muscat petits grains",
+    "type": "blanc",
+    "tint": "#c9b055",
+    "desc": "Alsace, Rivesaltes, Die · le raisin croqué au verre"
+  },
+  {
+    "nom": "Petit Manseng",
+    "type": "blanc",
+    "tint": "#c99a2f",
+    "desc": "Jurançon · passerillage, ananas rôti, liquoreux ciselés"
+  },
+  {
+    "nom": "Pinot Blanc",
+    "type": "blanc",
+    "tint": "#b5ab6e",
+    "desc": "Alsace · souplesse fraîche, pomme et fleurs"
+  },
+  {
+    "nom": "Pinot Gris",
+    "type": "blanc",
+    "tint": "#ad8a56",
+    "desc": "Alsace · fumé, mirabelle, ampleur"
+  },
+  {
+    "nom": "Piquepoul",
+    "type": "blanc",
+    "tint": "#9db554",
+    "desc": "Picpoul de Pinet · citron vif, iode — l’huître en tête"
+  },
+  {
     "nom": "Riesling",
     "type": "blanc",
-    "tint": "#476152",
+    "tint": "#8a6a24",
     "desc": "Alsace · agrumes, pétrole noble, grande garde"
+  },
+  {
+    "nom": "Romorantin",
+    "type": "blanc",
+    "tint": "#a89448",
+    "desc": "Cour-Cheverny · rareté ligérienne, miel et craie"
+  },
+  {
+    "nom": "Roussanne",
+    "type": "blanc",
+    "tint": "#bd9c40",
+    "desc": "Rhône nord, Savoie (Chignin-Bergeron) · miel, poire, élégance"
+  },
+  {
+    "nom": "Sauvignon",
+    "type": "blanc",
+    "tint": "#8a9a5b",
+    "desc": "Loire (Sancerre), Bordeaux · buis, agrumes, pierre à fusil"
+  },
+  {
+    "nom": "Savagnin",
+    "type": "blanc",
+    "tint": "#6b5a2a",
+    "desc": "Jura · noix, curry en oxydatif ; tension pure en ouillé"
+  },
+  {
+    "nom": "Sémillon",
+    "type": "blanc",
+    "tint": "#c9a232",
+    "desc": "Sauternes, Graves · cire, miel ; roi des liquoreux botrytisés"
+  },
+  {
+    "nom": "Sylvaner",
+    "type": "blanc",
+    "tint": "#9aa552",
+    "desc": "Alsace · discret, herbacé, brillant à Mittelbergheim"
+  },
+  {
+    "nom": "Ugni Blanc",
+    "type": "blanc",
+    "tint": "#adad66",
+    "desc": "Cognac, Armagnac · acidité neutre, socle des eaux-de-vie"
+  },
+  {
+    "nom": "Vermentino (Rolle)",
+    "type": "blanc",
+    "tint": "#a2ab58",
+    "desc": "Corse, Provence · agrumes, fenouil, salinité"
+  },
+  {
+    "nom": "Viognier",
+    "type": "blanc",
+    "tint": "#c08b4a",
+    "desc": "Condrieu · abricot, fleurs blanches, ampleur"
   }
 ]

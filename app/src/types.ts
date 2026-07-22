@@ -172,6 +172,14 @@ export interface VendangeRegion {
   txt: string;
 }
 
+/** Prévisions de vendanges : millésime de rédaction + fenêtres par région.
+ *  Actualisé à la main chaque été (pas de source automatique) ; l'écran
+ *  signale quand la campagne affichée est plus récente que les données. */
+export interface VendangesData {
+  campagne: number;
+  regions: VendangeRegion[];
+}
+
 export interface CollectionObjectif {
   id: string;
   titre: string;

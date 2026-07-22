@@ -1,8 +1,57 @@
 import { useState } from 'react';
 import { useStore, actions } from '../store';
-import { WINES, REGIONS } from '../data';
+import { WINES, REGIONS, VENDANGES } from '../data';
 import { ScreenHeading } from '../components/ui';
-import type { Wine } from '../types';
+import type { Wine, VendangeRegion, VendangesData } from '../types';
+
+// ─── Actualisation des vendanges par fichier JSON ───
+// Le gabarit reprend les régions embarquées, campagne calée sur l'année en
+// cours : à faire remplir (météo, commentaires, fenêtres) puis à déposer ici.
+const GABARIT_VENDANGES = JSON.stringify(
+  {
+    campagne: new Date().getFullYear(),
+    regions: VENDANGES.regions.map(({ nom, d, f, ic, mc, txt }) => ({ nom, d, f, ic, mc, txt })),
+  },
+  null,
+  2,
+);
+
+type VendangesParse = { ok: true; data: VendangesData } | { ok: false; err: string };
+
+function parseVendanges(raw: unknown): VendangesParse {
+  if (typeof raw !== 'object' || raw == null || Array.isArray(raw))
+    return { ok: false, err: 'Le fichier doit contenir un objet JSON ({ campagne, regions }).' };
+  const o = raw as Record<string, unknown>;
+  const campagne = Number(o.campagne);
+  if (!Number.isInteger(campagne) || campagne < 2020 || campagne > 2100)
+    return { ok: false, err: '« campagne » doit être une année (ex. 2027).' };
+  if (!Array.isArray(o.regions) || o.regions.length === 0 || o.regions.length > 24)
+    return { ok: false, err: '« regions » doit être un tableau de régions (une entrée par région).' };
+  const regions: VendangeRegion[] = [];
+  for (let i = 0; i < o.regions.length; i++) {
+    const r = o.regions[i] as Record<string, unknown>;
+    const where = `région n°${i + 1}`;
+    if (typeof r !== 'object' || r == null || typeof r.nom !== 'string' || !r.nom.trim())
+      return { ok: false, err: `${where} : « nom » manquant.` };
+    const d = Number(r.d);
+    const f = Number(r.f);
+    if (!Number.isFinite(d) || !Number.isFinite(f) || d < -31 || f > 122 || f <= d)
+      return { ok: false, err: `${where} (${r.nom}) : « d » et « f » sont des jours comptés depuis le 1ᵉʳ août, avec d < f.` };
+    for (const k of ['ic', 'mc', 'txt'] as const) {
+      if (typeof r[k] !== 'string' || !(r[k] as string).trim())
+        return { ok: false, err: `${where} (${r.nom}) : champ « ${k} » manquant.` };
+    }
+    regions.push({
+      nom: r.nom.trim(),
+      d,
+      f,
+      ic: (r.ic as string).trim(),
+      mc: (r.mc as string).trim(),
+      txt: (r.txt as string).trim(),
+    });
+  }
+  return { ok: true, data: { campagne, regions } };
+}
 
 // nom de région lisible pour l'export (l'import accepte nom ou id).
 const REGION_NAME = new Map(REGIONS.map((r) => [r.id, r.name]));
@@ -110,12 +159,20 @@ const btnDanger: React.CSSProperties = {
 };
 
 export function Parametres() {
-  const { userWines, demoOn, notes } = useStore((s) => ({
+  const { userWines, demoOn, notes, vendanges } = useStore((s) => ({
     userWines: s.userWines,
     demoOn: s.demoOn,
     notes: s.notes,
+    vendanges: s.vendanges,
   }));
   const [done, setDone] = useState<string | null>(null);
+  const [showGabarit, setShowGabarit] = useState(false);
+  const [gabaritCopied, setGabaritCopied] = useState(false);
+  const [vendErr, setVendErr] = useState<string | null>(null);
+  const [dragOver, setDragOver] = useState(false);
+
+  // Les données de vendanges viennent-elles d'un import (vs embarquées) ?
+  const vendImported = vendanges !== VENDANGES;
 
   const total = WINES.length + userWines.length;
   const today = new Date().toISOString().slice(0, 10);
@@ -133,6 +190,36 @@ export function Parametres() {
   const exportNotes = () => {
     downloadJson(notes, `viticolor-notes-${today}.json`);
     flash(`Carnet exporté (${notes.length} note${notes.length > 1 ? 's' : ''}).`);
+  };
+
+  const copyGabarit = () => {
+    navigator.clipboard?.writeText(GABARIT_VENDANGES).then(
+      () => {
+        setGabaritCopied(true);
+        setTimeout(() => setGabaritCopied(false), 1500);
+      },
+      () => setGabaritCopied(false),
+    );
+  };
+
+  const importVendangesFile = (file: File) => {
+    setVendErr(null);
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const res = parseVendanges(JSON.parse(String(reader.result)));
+        if (!res.ok) {
+          setVendErr(res.err);
+          return;
+        }
+        actions.importVendanges(res.data);
+        flash(`Prévisions de la campagne ${res.data.campagne} importées (${res.data.regions.length} régions).`);
+      } catch (e) {
+        setVendErr(`JSON invalide : ${(e as Error).message}`);
+      }
+    };
+    reader.onerror = () => setVendErr('Lecture du fichier impossible.');
+    reader.readAsText(file);
   };
 
   const clearImported = () => {
@@ -191,6 +278,98 @@ export function Parametres() {
             </button>
           }
         />
+      </Section>
+
+      <Section title="Vendanges">
+        <Row
+          first
+          label="Prévisions actuelles"
+          hint={vendImported ? 'fichier importé sur cet appareil' : "données embarquées dans l'application"}
+          action={
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+              <span style={{ fontSize: 15, fontWeight: 700, color: 'var(--gold)' }}>{vendanges.campagne}</span>
+              {vendImported && (
+                <button
+                  onClick={() => { actions.resetVendanges(); flash('Prévisions embarquées restaurées.'); }}
+                  style={{ fontSize: 11.5, color: 'var(--text-muted)', textDecoration: 'underline' }}
+                >
+                  restaurer
+                </button>
+              )}
+            </div>
+          }
+        />
+        <Row
+          label="Gabarit du fichier de campagne"
+          hint="À faire remplir (par votre projet Claude, par exemple) puis à déposer ci-dessous"
+          action={
+            <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
+              <button onClick={() => setShowGabarit((v) => !v)} style={btnGold}>
+                {showGabarit ? 'Masquer' : 'Voir'}
+              </button>
+              <button onClick={copyGabarit} style={btnGold}>
+                {gabaritCopied ? '✓ Copié' : 'Copier'}
+              </button>
+            </div>
+          }
+        />
+        {showGabarit && (
+          <div style={{ borderTop: '1px solid var(--surface-border)' }}>
+            <div style={{ padding: '10px 14px 0', fontSize: 11.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>
+              <strong>campagne</strong> : année des prévisions. Par région : <strong>d</strong> et{' '}
+              <strong>f</strong> = début et fin de récolte en jours depuis le 1ᵉʳ août (0 = 1ᵉʳ août, 31 = 1ᵉʳ
+              septembre) ; <strong>ic</strong> = émoji météo ; <strong>mc</strong> = météo en 2-3 mots ;{' '}
+              <strong>txt</strong> = commentaire de campagne (1-2 phrases).
+            </div>
+            <pre className="vc-scroll" style={{ margin: 0, padding: '10px 14px 14px', overflowX: 'auto', fontSize: 11, lineHeight: 1.5, color: 'var(--text-2)', fontFamily: 'ui-monospace, Menlo, Consolas, monospace', maxHeight: 260, overflowY: 'auto' }}>
+              {GABARIT_VENDANGES}
+            </pre>
+          </div>
+        )}
+        {/* Zone de dépôt */}
+        <div style={{ borderTop: '1px solid var(--surface-border)', padding: '12px 14px' }}>
+          <label
+            onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+            onDragLeave={() => setDragOver(false)}
+            onDrop={(e) => {
+              e.preventDefault();
+              setDragOver(false);
+              const f = e.dataTransfer.files?.[0];
+              if (f) importVendangesFile(f);
+            }}
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              padding: '18px 14px',
+              border: `1.5px dashed ${dragOver ? 'var(--gold)' : 'var(--gold-border)'}`,
+              borderRadius: 'var(--r-card)',
+              background: dragOver ? 'var(--surface-hollow)' : 'transparent',
+              color: 'var(--text-3)',
+              fontSize: 12.5,
+              lineHeight: 1.6,
+              cursor: 'pointer',
+            }}
+          >
+            <span style={{ fontSize: 18 }}>📄</span>
+            <br />
+            Déposez le fichier JSON de campagne ici,
+            <br />
+            ou <span style={{ color: 'var(--gold)', textDecoration: 'underline' }}>touchez pour le choisir</span>
+            <input
+              type="file"
+              accept=".json,application/json"
+              style={{ display: 'none' }}
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) importVendangesFile(f);
+                e.target.value = '';
+              }}
+            />
+          </label>
+          {vendErr && (
+            <div style={{ marginTop: 8, fontSize: 12, color: '#e08a8a', lineHeight: 1.5 }}>{vendErr}</div>
+          )}
+        </div>
       </Section>
 
       <Section title="Affichage">

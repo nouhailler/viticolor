@@ -1,98 +1,101 @@
-[
-  {
-    "nom": "Champagne",
-    "d": 24,
-    "f": 45,
-    "ic": "☀",
-    "mc": "Sec et chaud",
-    "txt": "Maturités précoces portées par un été sec ; acidités préservées par les nuits fraîches. Tirage prometteur."
-  },
-  {
-    "nom": "Provence",
-    "d": 18,
-    "f": 42,
-    "ic": "☀",
-    "mc": "Canicule modérée",
-    "txt": "Départ précoce pour les rosés de nuit ; vendanges nocturnes généralisées pour garder la fraîcheur."
-  },
-  {
-    "nom": "Languedoc-Roussillon",
-    "d": 20,
-    "f": 55,
-    "ic": "☀",
-    "mc": "Chaud, mistral",
-    "txt": "Blancs dès la mi-août, carignan et mourvèdre jusqu’en octobre ; état sanitaire parfait."
-  },
-  {
-    "nom": "Bordeaux",
-    "d": 32,
-    "f": 62,
-    "ic": "⛅",
-    "mc": "Variable, orages fin sept.",
-    "txt": "Blancs secs début septembre, merlots à partir du 20, cabernets sous surveillance des orages d’équinoxe."
-  },
-  {
-    "nom": "Vallée du Rhône",
-    "d": 26,
-    "f": 58,
-    "ic": "☀",
-    "mc": "Sec, nuits fraîches",
-    "txt": "Syrahs du nord fin septembre après les grenaches du sud ; belle amplitude thermique, aromatique intense."
-  },
-  {
-    "nom": "Bourgogne",
-    "d": 33,
-    "f": 52,
-    "ic": "⛅",
-    "mc": "Frais, quelques pluies",
-    "txt": "Chardonnays de Côte de Beaune début septembre, pinots dans la foulée ; tri attentif après les pluies du 15."
-  },
-  {
-    "nom": "Beaujolais",
-    "d": 30,
-    "f": 48,
-    "ic": "⛅",
-    "mc": "Doux, humide",
-    "txt": "Gamay vendangé entier ; fenêtre resserrée entre maturité et pression de pourriture."
-  },
-  {
-    "nom": "Val de Loire",
-    "d": 38,
-    "f": 70,
-    "ic": "🌧",
-    "mc": "Océanique instable",
-    "txt": "Melons et sauvignons mi-septembre ; chenins moelleux par tries jusqu’à fin octobre si le botrytis noble s’installe."
-  },
-  {
-    "nom": "Alsace",
-    "d": 36,
-    "f": 74,
-    "ic": "☀",
-    "mc": "Sec, foehn favorable",
-    "txt": "Crémants dès début septembre, rieslings fin septembre, vendanges tardives jusqu’en novembre."
-  },
-  {
-    "nom": "Jura",
-    "d": 37,
-    "f": 63,
-    "ic": "⛅",
-    "mc": "Frais et contrasté",
-    "txt": "Savagnin ramassé tard pour le voile ; ploussard précoce, chardonnays entre les deux."
-  },
-  {
-    "nom": "Savoie & Bugey",
-    "d": 40,
-    "f": 66,
-    "ic": "⛅",
-    "mc": "Montagnard, sec",
-    "txt": "Jacquère mi-septembre, mondeuse début octobre ; altitude et bise gardent les acidités."
-  },
-  {
-    "nom": "Sud-Ouest",
-    "d": 28,
-    "f": 78,
-    "ic": "☀",
-    "mc": "Été indien probable",
-    "txt": "Malbecs de Cahors fin septembre, tannats de Madiran en octobre, petit manseng passerillé jusqu’en novembre."
-  }
-]
+{
+  "campagne": 2026,
+  "regions": [
+    {
+      "nom": "Champagne",
+      "d": 24,
+      "f": 45,
+      "ic": "☀",
+      "mc": "Sec et chaud",
+      "txt": "Maturités précoces portées par un été sec ; acidités préservées par les nuits fraîches. Tirage prometteur."
+    },
+    {
+      "nom": "Provence",
+      "d": 18,
+      "f": 42,
+      "ic": "☀",
+      "mc": "Canicule modérée",
+      "txt": "Départ précoce pour les rosés de nuit ; vendanges nocturnes généralisées pour garder la fraîcheur."
+    },
+    {
+      "nom": "Languedoc-Roussillon",
+      "d": 20,
+      "f": 55,
+      "ic": "☀",
+      "mc": "Chaud, mistral",
+      "txt": "Blancs dès la mi-août, carignan et mourvèdre jusqu’en octobre ; état sanitaire parfait."
+    },
+    {
+      "nom": "Bordeaux",
+      "d": 32,
+      "f": 62,
+      "ic": "⛅",
+      "mc": "Variable, orages fin sept.",
+      "txt": "Blancs secs début septembre, merlots à partir du 20, cabernets sous surveillance des orages d’équinoxe."
+    },
+    {
+      "nom": "Vallée du Rhône",
+      "d": 26,
+      "f": 58,
+      "ic": "☀",
+      "mc": "Sec, nuits fraîches",
+      "txt": "Syrahs du nord fin septembre après les grenaches du sud ; belle amplitude thermique, aromatique intense."
+    },
+    {
+      "nom": "Bourgogne",
+      "d": 33,
+      "f": 52,
+      "ic": "⛅",
+      "mc": "Frais, quelques pluies",
+      "txt": "Chardonnays de Côte de Beaune début septembre, pinots dans la foulée ; tri attentif après les pluies du 15."
+    },
+    {
+      "nom": "Beaujolais",
+      "d": 30,
+      "f": 48,
+      "ic": "⛅",
+      "mc": "Doux, humide",
+      "txt": "Gamay vendangé entier ; fenêtre resserrée entre maturité et pression de pourriture."
+    },
+    {
+      "nom": "Val de Loire",
+      "d": 38,
+      "f": 70,
+      "ic": "🌧",
+      "mc": "Océanique instable",
+      "txt": "Melons et sauvignons mi-septembre ; chenins moelleux par tries jusqu’à fin octobre si le botrytis noble s’installe."
+    },
+    {
+      "nom": "Alsace",
+      "d": 36,
+      "f": 74,
+      "ic": "☀",
+      "mc": "Sec, foehn favorable",
+      "txt": "Crémants dès début septembre, rieslings fin septembre, vendanges tardives jusqu’en novembre."
+    },
+    {
+      "nom": "Jura",
+      "d": 37,
+      "f": 63,
+      "ic": "⛅",
+      "mc": "Frais et contrasté",
+      "txt": "Savagnin ramassé tard pour le voile ; ploussard précoce, chardonnays entre les deux."
+    },
+    {
+      "nom": "Savoie & Bugey",
+      "d": 40,
+      "f": 66,
+      "ic": "⛅",
+      "mc": "Montagnard, sec",
+      "txt": "Jacquère mi-septembre, mondeuse début octobre ; altitude et bise gardent les acidités."
+    },
+    {
+      "nom": "Sud-Ouest",
+      "d": 28,
+      "f": 78,
+      "ic": "☀",
+      "mc": "Été indien probable",
+      "txt": "Malbecs de Cahors fin septembre, tannats de Madiran en octobre, petit manseng passerillé jusqu’en novembre."
+    }
+  ]
+}
