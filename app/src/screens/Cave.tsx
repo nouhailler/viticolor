@@ -234,7 +234,7 @@ function FicheCave({ bottle: b, glyph }: { bottle: CaveItem; glyph: GlyphInfo })
     if (window.confirm(`Retirer « ${b.name} » de la cave ?`)) actions.caveRemove(b.id);
   };
 
-  const YEAR = 2026;
+  const YEAR = new Date().getFullYear();
   const hasWindow = b.from > 0 && b.to > b.from;
   // Position de l'année courante sur la fenêtre de garde (bornée 0–100 %).
   const pos = hasWindow ? Math.min(100, Math.max(0, ((YEAR - b.from) / (b.to - b.from)) * 100)) : 0;

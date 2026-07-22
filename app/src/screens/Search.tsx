@@ -1,5 +1,6 @@
 import { useStore, setState, actions } from '../store';
-import { REGIONS, CEPAGES_LEXIQUE } from '../data';
+import { REGIONS, CEPAGES_LEXIQUE, WINES } from '../data';
+import { normalize } from '../lib/helpers';
 import { TextField } from '../components/ui';
 
 interface Result {
@@ -10,25 +11,39 @@ interface Result {
 }
 
 export function Search() {
-  const { query, caveItems } = useStore((s) => ({ query: s.query, caveItems: s.caveItems }));
-  const q = query.toLowerCase();
+  const { query, caveItems, userWines } = useStore((s) => ({
+    query: s.query,
+    caveItems: s.caveItems,
+    userWines: s.userWines,
+  }));
+  const q = normalize(query.trim());
   let results: Result[] = [];
 
   if (q.length > 1) {
     REGIONS.forEach((r) => {
-      if ((r.name + ' ' + r.cepages.join(' ')).toLowerCase().includes(q))
+      if (normalize(r.name + ' ' + r.cepages.join(' ')).includes(q))
         results.push({ titre: r.name, sous: r.tagline, type: 'région', go: () => actions.go('region', { regionId: r.id }) });
       r.appellations.forEach((a) => {
-        if (a.n.toLowerCase().includes(q))
+        if (normalize(a.n).includes(q))
           results.push({ titre: a.n, sous: `${r.name} · ${a.t}`, type: 'AOC', go: () => actions.go('region', { regionId: r.id }) });
       });
     });
     caveItems.forEach((b) => {
-      if (b.name.toLowerCase().includes(q))
+      if (normalize(b.name).includes(q))
         results.push({ titre: b.name, sous: `${b.meta} · en cave`, type: 'cave', go: () => actions.go('cave', { caveSel: b.id }) });
     });
+    // Catalogue complet (vins importés en tête)
+    [...userWines, ...WINES].forEach((w) => {
+      if (normalize(`${w.domaine} ${w.cuvee ?? ''} ${w.appellation}`).includes(q))
+        results.push({
+          titre: `${w.domaine}${w.cuvee ? ` · ${w.cuvee}` : ''}`,
+          sous: `${w.appellation}${w.millesime ? ` · ${w.millesime}` : ''} · ${w.couleur}`,
+          type: 'bouteille',
+          go: () => actions.go('bouteilles', { wineSel: w.id }),
+        });
+    });
     CEPAGES_LEXIQUE.forEach((c) => {
-      if (c.nom.toLowerCase().includes(q))
+      if (normalize(c.nom).includes(q))
         results.push({ titre: c.nom, sous: c.desc, type: 'cépage', go: () => actions.go('savoir') });
     });
     results = results.slice(0, 10);

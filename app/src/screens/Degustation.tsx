@@ -182,6 +182,11 @@ export function Degustation() {
             </div>
           );
         })}
+        {s.notes.length === 0 && (
+          <div style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: 13, padding: '18px 0', lineHeight: 1.6 }}>
+            Votre carnet est vide — enregistrez votre première dégustation ci-dessus.
+          </div>
+        )}
       </div>
     </div>
   );

@@ -3,11 +3,15 @@ import { VENDANGES } from '../data';
 import { ScreenHeading } from '../components/ui';
 
 const MOIS = ['jan', 'fév', 'mars', 'avr', 'mai', 'juin', 'juil', 'août', 'sept', 'oct', 'nov', 'déc'];
-const TODAY = -15; // 17 juillet 2026 = J-15 avant le 1er août
+// Campagne de l'année en cours : le curseur suit la vraie date (jours écoulés
+// depuis le 1er août — négatif avant l'ouverture, la campagne est « à venir »).
+const NOW = new Date();
+const CAMPAGNE = NOW.getFullYear();
+const TODAY = Math.floor((NOW.getTime() - new Date(CAMPAGNE, 7, 1).getTime()) / 86400000);
 const SPAN = 92; // 1 août → 31 octobre
 
 function fmt(j: number): string {
-  const dt = new Date(2026, 7, 1 + j);
+  const dt = new Date(CAMPAGNE, 7, 1 + j);
   return `${dt.getDate()} ${MOIS[dt.getMonth()]}.`;
 }
 
@@ -40,7 +44,7 @@ export function Vendanges() {
   return (
     <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
       <ScreenHeading
-        title="Vendanges 2026"
+        title={`Vendanges ${CAMPAGNE}`}
         subtitle={`Prévisions de campagne · ${aVenir} régions à venir · touchez une région`}
       />
       <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 2px', fontSize: 10.5, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>

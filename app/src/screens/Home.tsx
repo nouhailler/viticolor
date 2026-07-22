@@ -309,6 +309,13 @@ export function Home() {
       {/* Dernière dégustation */}
       <div>
         <Eyebrow>Dernière dégustation</Eyebrow>
+        {!lastNote && (
+          <Card onClick={() => actions.go('degustation')} style={{ marginTop: 10, padding: '14px 16px' }}>
+            <div style={{ fontSize: 13, color: 'var(--text-3)', lineHeight: 1.55 }}>
+              Aucune note pour l'instant — ouvrez le carnet pour enregistrer votre première dégustation.
+            </div>
+          </Card>
+        )}
         {lastNote && (
           <Card onClick={() => actions.go('degustation')} style={{ marginTop: 10, padding: '14px 16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>

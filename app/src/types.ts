@@ -147,6 +147,8 @@ export interface HistArticle {
 }
 
 export interface CoteVin {
+  /** Vin du catalogue dont la cote est dérivée (dernier point = prixMoyen). */
+  wineId: string;
   nom: string;
   meta: string;
   serie: number[];
@@ -167,15 +169,6 @@ export interface Route {
   jours: string;
   etapes: RouteEtape[];
 }
-
-export interface Actu {
-  c: string; // clé de catégorie
-  date: string;
-  titre: string;
-  txt: string;
-}
-
-export type ActuCats = Record<string, [string, string]>; // clé → [label, couleur]
 
 export interface VendangeRegion {
   nom: string;
@@ -290,7 +283,6 @@ export type ScreenId =
   | 'millesimes'
   | 'collection'
   | 'vendanges'
-  | 'actus'
   | 'glossaire'
   | 'routes'
   | 'cotes'

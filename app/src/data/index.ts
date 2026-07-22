@@ -14,8 +14,6 @@ import type {
   HistArticle,
   CoteVin,
   Route,
-  Actu,
-  ActuCats,
   VendangeRegion,
   CollectionObjectif,
   OnboardingSlide,
@@ -40,8 +38,6 @@ import aromes from './aromes.json';
 import histoire from './histoire.json';
 import cotesVins from './cotesVins.json';
 import routes from './routes.json';
-import actus from './actus.json';
-import actuCats from './actuCats.json';
 import vendanges from './vendanges.json';
 import collection from './collection.json';
 import onboarding from './onboarding.json';
@@ -66,8 +62,6 @@ export const AROMES = aromes as AromeFamille[];
 export const HISTOIRE = histoire as HistArticle[];
 export const COTES_VINS = cotesVins as CoteVin[];
 export const ROUTES = routes as Route[];
-export const ACTUS = actus as Actu[];
-export const ACTU_CATS = actuCats as unknown as ActuCats;
 export const VENDANGES = vendanges as VendangeRegion[];
 export const COLLECTION = collection as CollectionObjectif[];
 export const ONBOARDING = onboarding as OnboardingSlide[];

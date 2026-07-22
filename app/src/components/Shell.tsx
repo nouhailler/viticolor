@@ -163,7 +163,7 @@ const MENU_SECTIONS: MenuSection[] = [
       },
       { key: 'regions:cepages', id: 'regions', label: 'Cépages', hint: () => '13 fiches', extra: { regionsView: 'cepages' } },
       { key: 'millesimes', id: 'millesimes', label: 'Historique des millésimes', hint: () => '2015–2023' },
-      { key: 'vendanges', id: 'vendanges', label: 'Vendanges', hint: () => 'suivi 2026' },
+      { key: 'vendanges', id: 'vendanges', label: 'Vendanges', hint: () => `campagne ${new Date().getFullYear()}` },
       { key: 'routes', id: 'routes', label: 'Route des vins', hint: () => '4 itinéraires' },
     ],
   },
@@ -182,7 +182,6 @@ const MENU_SECTIONS: MenuSection[] = [
       { key: 'glossaire', id: 'glossaire', label: 'Glossaire', hint: () => `${GLOSSAIRE.length} termes` },
       { key: 'aromes', id: 'aromes', label: 'Lexique des arômes', hint: () => '9 familles' },
       { key: 'savoir', id: 'savoir', label: 'Savoir & quiz', hint: () => '' },
-      { key: 'actus', id: 'actus', label: 'Actualités', hint: () => 'fil du vignoble' },
     ],
   },
 ];

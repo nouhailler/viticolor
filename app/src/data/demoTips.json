@@ -3,18 +3,17 @@
   "bouteilles": "Le catalogue de vins : filtrez par couleur ou région, ou cherchez par domaine, appellation ou cépage. Touchez une bouteille pour sa fiche complète.",
   "regions": "Basculez entre Carte, Régions, Cépages et Millésimes avec les onglets. Sur la carte, touchez une région puis zoomez.",
   "region": "Faites défiler : histoire, climat, terroir, millésimes et fiche technique pro de la région.",
-  "scanner": "Touchez le cadre pour simuler un scan : la fiche complète de la bouteille apparaît (cépages, degré, prix, accords…).",
+  "scanner": "Visez l'étiquette et lancez le scan : la lecture se fait sur votre appareil, puis la bouteille est rapprochée du catalogue.",
   "cave": "Touchez une bouteille pour sa valorisation ; les badges dorés signalent les vins à leur apogée.",
   "degustation": "Notez robe, nez, bouche, longueur, équilibre et plaisir sur 5 pastilles, plus note /100 et étoiles.",
-  "accords": "Choisissez un plat pour voir les vins recommandés, ou l’inverse.",
-  "savoir": "Testez-vous : 3 niveaux de quiz sommelier avec score final.",
-  "actus": "Filtrez le fil par catégorie : millésimes, salons, récompenses, concours, réglementation.",
-  "vendanges": "Frise août–octobre : chaque barre montre la fenêtre de récolte. Touchez une région pour le détail météo.",
+  "accords": "Filtrez par catégorie de plats, puis touchez un plat pour la recommandation et son pourquoi.",
+  "savoir": "Testez-vous : quiz sommelier avec score final et explication à chaque question.",
+  "vendanges": "Frise août–octobre : chaque barre montre la fenêtre de récolte prévue. Touchez une région pour le détail.",
   "collection": "Dépliez un objectif et cochez chaque vin dégusté ; la progression est sauvegardée.",
   "aromes": "Choisissez une famille de puces colorées pour apprendre ses arômes et où les trouver.",
   "glossaire": "Cherchez un terme ou filtrez par lettre — la recherche ignore les accents.",
   "routes": "Quatre itinéraires œnotouristiques étape par étape, avec haltes recommandées.",
   "cotes": "Touchez un vin pour sa cote ; basculez le graphique entre 5 et 10 ans.",
   "histoire": "Sept articles à déplier, de la Gaule romaine aux confréries — chacun finit par une anecdote.",
-  "search": "Tapez un vin, une appellation ou un cépage ; les favoris se cochent d’une étoile."
+  "search": "Tapez un vin, une appellation, un cépage ou une région — la recherche couvre aussi le catalogue et votre cave, accents ignorés."
 }

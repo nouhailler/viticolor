@@ -1,7 +1,7 @@
 import { fr } from './helpers';
 import type { CaveItem, Wine } from '../types';
 
-const YEAR = 2026;
+const YEAR = new Date().getFullYear();
 
 const inWindow = (from: number, to: number) => from > 0 && from <= YEAR && to >= YEAR;
 

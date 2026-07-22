@@ -16,7 +16,6 @@ import { Search } from './screens/Search';
 import { Millesimes } from './screens/Millesimes';
 import { Collection } from './screens/Collection';
 import { Vendanges } from './screens/Vendanges';
-import { Actus } from './screens/Actus';
 import { Glossaire } from './screens/Glossaire';
 import { Routes } from './screens/Routes';
 import { Cotes } from './screens/Cotes';
@@ -40,7 +39,6 @@ const SCREENS: Record<ScreenId, () => React.JSX.Element> = {
   millesimes: Millesimes,
   collection: Collection,
   vendanges: Vendanges,
-  actus: Actus,
   glossaire: Glossaire,
   routes: Routes,
   cotes: Cotes,

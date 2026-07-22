@@ -8,8 +8,15 @@ import type {
   Wine,
   CaveItem,
 } from './types';
-import seedNotes from './data/seedNotes.json';
 import { CAVE } from './data';
+
+// Notes de démo de l'ancien prototype : si un carnet persisté les contient
+// encore (elles étaient sauvegardées avec les vraies notes), on les purge.
+const SEED_NOTE_SIGS = new Set([
+  'Meursault « Les Charmes » 2020|12 juillet 2026',
+  'Cornas « Reynard » 2019|28 juin 2026',
+  'Vouvray demi-sec 2018|9 juin 2026',
+]);
 
 const PREFIX = 'viticolor_';
 
@@ -90,7 +97,6 @@ export interface State {
   // Écrans divers
   collOpen: string | null;
   vendSel: number;
-  actuCat: string;
   glossQuery: string;
   glossLettre: string | null;
   glossCat: GlossaireFamille | null;
@@ -142,7 +148,7 @@ const NAV_KEYS = [
   'cepOpen', 'appOpen', 'millSel', 'millMetric', 'parcelSel', 'parcelOverlay',
   'zoom', 'millHistSel', 'caveFilter', 'caveSel', 'query', 'wineQuery', 'wineColor',
   'wineRegionFilter', 'wineSel', 'collOpen', 'vendSel',
-  'actuCat', 'glossQuery', 'glossLettre', 'glossCat', 'glossSel', 'routeSel',
+  'glossQuery', 'glossLettre', 'glossCat', 'glossSel', 'routeSel',
   'coteSel', 'cotePeriode', 'histOpen', 'aromSel', 'accordOpen', 'accordCat',
 ] as const;
 type NavKey = (typeof NAV_KEYS)[number];
@@ -193,7 +199,6 @@ function initialState(): State {
 
     collOpen: null,
     vendSel: 0,
-    actuCat: 'tout',
     glossQuery: '',
     glossLettre: null,
     glossCat: null,
@@ -226,7 +231,7 @@ function initialState(): State {
     demoDismissed: load('demoDismissed', {} as Record<string, boolean>),
 
     favs: load<string[]>('favs', ['bourgogne']),
-    notes: load<DegustationNote[]>('notes', seedNotes as DegustationNote[]),
+    notes: load<DegustationNote[]>('notes', []).filter((n) => !SEED_NOTE_SIGS.has(`${n.vin}|${n.date}`)),
     collChecked: load<Record<string, boolean>>('coll', {}),
   };
 }

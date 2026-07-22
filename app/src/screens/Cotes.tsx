@@ -1,6 +1,8 @@
-import { useStore, setState } from '../store';
+import { useStore, setState, actions } from '../store';
 import { COTES_VINS } from '../data';
 import { ScreenHeading } from '../components/ui';
+
+const THIS_YEAR = new Date().getFullYear();
 
 const evoPct = (s: number[], n: number): number => {
   const a = s[s.length - 1 - n];
@@ -116,17 +118,23 @@ export function Cotes() {
         <div style={{ marginTop: 5, display: 'flex', gap: 5 }}>
           {serie.map((_, i) => (
             <div key={i} style={{ flex: 1, textAlign: 'center', fontSize: 9, color: 'var(--text-muted)' }}>
-              '{String(2026 - (nb - 1) + i).slice(2)}
+              '{String(THIS_YEAR - (nb - 1) + i).slice(2)}
             </div>
           ))}
         </div>
         <div style={{ marginTop: 10, display: 'flex', justifyContent: 'space-between', fontSize: 11.5, color: 'var(--text-3)' }}>
-          <div>{serie[0]} € en {2026 - nb + 1}</div>
+          <div>{serie[0]} € en {THIS_YEAR - nb + 1}</div>
           <div>{serie[serie.length - 1]} € aujourd'hui</div>
         </div>
+        <button
+          onClick={() => actions.go('bouteilles', { wineSel: v.wineId })}
+          style={{ marginTop: 14, width: '100%', textAlign: 'center', border: '1px solid var(--gold)', color: 'var(--gold)', padding: 10, borderRadius: 'var(--r-card)', fontSize: 13 }}
+        >
+          Fiche de la bouteille →
+        </button>
       </div>
       <div style={{ fontSize: 11.5, color: 'var(--text-muted)', lineHeight: 1.6, fontStyle: 'italic' }}>
-        Cotes indicatives compilées des ventes aux enchères et prix cavistes.
+        Historique indicatif reconstitué — le prix actuel est celui du catalogue (ventes aux enchères &amp; cavistes).
       </div>
     </div>
   );
