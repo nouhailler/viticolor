@@ -20,7 +20,6 @@ import type {
   CollectionObjectif,
   OnboardingSlide,
   DemoTips,
-  DecouverteBouteille,
   DecouverteDomaine,
   GlossaireTerme,
   GlossaireMedia,
@@ -48,7 +47,6 @@ import vendanges from './vendanges.json';
 import collection from './collection.json';
 import onboarding from './onboarding.json';
 import demoTips from './demoTips.json';
-import decouverteBouteilles from './decouverteBouteilles.json';
 import decouverteDomaines from './decouverteDomaines.json';
 import decouverteAnecdotes from './decouverteAnecdotes.json';
 import glossaire from './glossaire.json';
@@ -76,7 +74,6 @@ export const VENDANGES = vendanges as VendangeRegion[];
 export const COLLECTION = collection as CollectionObjectif[];
 export const ONBOARDING = onboarding as OnboardingSlide[];
 export const DEMO_TIPS = demoTips as DemoTips;
-export const DECOUVERTE_BOUTEILLES = decouverteBouteilles as DecouverteBouteille[];
 export const DECOUVERTE_DOMAINES = decouverteDomaines as DecouverteDomaine[];
 export const DECOUVERTE_ANECDOTES = decouverteAnecdotes as string[];
 export const GLOSSAIRE = glossaire as GlossaireTerme[];

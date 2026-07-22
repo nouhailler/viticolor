@@ -202,11 +202,6 @@ export interface OnboardingSlide {
 
 export type DemoTips = Record<string, string>;
 
-export interface DecouverteBouteille {
-  nom: string;
-  meta: string;
-}
-
 export interface DecouverteDomaine {
   nom: string;
   lieu: string;

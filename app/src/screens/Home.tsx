@@ -4,7 +4,6 @@ import {
   CEPAGES,
   ACCORDS,
   WINES,
-  DECOUVERTE_BOUTEILLES,
   DECOUVERTE_DOMAINES,
   DECOUVERTE_ANECDOTES,
 } from '../data';
@@ -67,7 +66,9 @@ export function Home() {
   const ALL = [...userWines, ...WINES];
   const featured = duJour(REGIONS);
   const cepage = duJour(CEPAGES);
-  const bouteille = duJour(DECOUVERTE_BOUTEILLES);
+  // La bouteille du jour est tirée du vrai catalogue (et non d'une liste
+  // éditoriale figée) : le clic ouvre toujours une fiche qui existe.
+  const bouteille = duJour(ALL);
   const domaine = duJour(DECOUVERTE_DOMAINES);
   const anecdote = duJour(DECOUVERTE_ANECDOTES);
   const { alerts } = computeCave(caveItems);
@@ -199,14 +200,22 @@ export function Home() {
               {cepage.couleur} · {cepage.origine}
             </div>
           </Card>
-          <Card onClick={() => openInBouteilles(ALL, bouteille.nom)}>
+          <Card
+            onClick={() =>
+              actions.go('bouteilles', { wineSel: bouteille.id, wineColor: 'tous', wineRegionFilter: 'toutes' })
+            }
+          >
             <div style={{ fontSize: 10.5, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
               La bouteille
             </div>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 19, fontWeight: 600, color: 'var(--gold)', marginTop: 3, lineHeight: 1.15 }}>
-              {bouteille.nom}
+              {bouteille.domaine}
+              {bouteille.cuvee ? ` · ${bouteille.cuvee}` : ''}
             </div>
-            <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>{bouteille.meta}</div>
+            <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>
+              {bouteille.appellation}
+              {bouteille.millesime ? ` · ${bouteille.millesime}` : ''} · {bouteille.couleur}
+            </div>
           </Card>
         </div>
 
