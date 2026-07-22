@@ -112,8 +112,8 @@ export function Collection() {
         );
       })}
       <div style={{ fontSize: 11.5, color: 'var(--text-muted)', lineHeight: 1.6, fontStyle: 'italic' }}>
-        Listes représentatives dans ce prototype — les référentiels complets (635 premiers crus, 363 AOC) seront
-        chargés dans la version PWA.
+        Sélections représentatives de chaque objectif — les référentiels complets (635 premiers crus, 363 AOC)
+        seront ajoutés au fil des mises à jour.
       </div>
     </div>
   );

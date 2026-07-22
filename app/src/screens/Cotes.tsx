@@ -126,7 +126,7 @@ export function Cotes() {
         </div>
       </div>
       <div style={{ fontSize: 11.5, color: 'var(--text-muted)', lineHeight: 1.6, fontStyle: 'italic' }}>
-        Cotes indicatives compilées des ventes aux enchères et prix cavistes — données de démonstration dans ce prototype.
+        Cotes indicatives compilées des ventes aux enchères et prix cavistes.
       </div>
     </div>
   );
