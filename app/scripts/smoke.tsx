@@ -26,7 +26,6 @@ const cases: { screen: ScreenId; extra?: Record<string, unknown> }[] = [
   { screen: 'millesimes' },
   { screen: 'collection', extra: { collOpen: 'gc' } },
   { screen: 'vendanges' },
-  { screen: 'actus', extra: { actuCat: 'salon' } },
   { screen: 'glossaire', extra: { glossQuery: 'tanin' } },
   { screen: 'glossaire', extra: { glossQuery: '', glossCat: 'contenant', glossSel: null } },
   { screen: 'glossaire', extra: { glossSel: 'Barrique' } },

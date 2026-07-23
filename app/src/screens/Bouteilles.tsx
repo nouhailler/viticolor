@@ -7,6 +7,10 @@ import type { Couleur, Wine } from '../types';
 
 const REGION_NAME: Record<string, string> = Object.fromEntries(REGIONS.map((r) => [r.id, r.name]));
 
+/** Prix au format FR : « 12,50 € » pour les décimaux, « 250 € » pour les entiers. */
+const formatPrix = (n: number) =>
+  `${n.toLocaleString('fr-FR', { minimumFractionDigits: Number.isInteger(n) ? 0 : 2 })} €`;
+
 const COULEUR_LABEL: { id: 'tous' | Couleur; label: string }[] = [
   { id: 'tous', label: 'Toutes' },
   { id: 'rouge', label: 'Rouges' },
@@ -131,7 +135,7 @@ export function Bouteilles() {
                   {w.cuvee ? <span style={{ color: 'var(--gold-light)' }}> · {w.cuvee}</span> : null}
                 </div>
                 {w.prixMoyen != null && (
-                  <div style={{ fontSize: 13, color: 'var(--gold)', fontWeight: 700, flexShrink: 0 }}>{w.prixMoyen} €</div>
+                  <div style={{ fontSize: 13, color: 'var(--gold)', fontWeight: 700, flexShrink: 0 }}>{formatPrix(w.prixMoyen)}</div>
                 )}
               </div>
               <div style={{ fontSize: 12, color: 'var(--text-3)', marginTop: 2 }}>
@@ -157,7 +161,7 @@ function Fiche({ wine }: { wine: Wine }) {
   const rows: [string, string | null][] = [
     ['Cépages', wine.cepages],
     ['Degré', wine.degre],
-    ['Prix moyen', wine.prixMoyen != null ? `${wine.prixMoyen} €` : null],
+    ['Prix moyen', wine.prixMoyen != null ? formatPrix(wine.prixMoyen) : null],
     ['Température', wine.temperature],
     ['Potentiel de garde', wine.garde],
     ['Région', REGION_NAME[wine.regionId] ?? wine.regionId],

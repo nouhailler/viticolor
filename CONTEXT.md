@@ -1,6 +1,6 @@
 # CONTEXT — reprise de travail Viticolor
 
-_Dernière mise à jour : 19 juillet 2026._
+_Dernière mise à jour : 23 juillet 2026._
 
 Ce fichier sert à **reprendre le projet** rapidement (conventions, décisions, état).
 
@@ -22,14 +22,15 @@ au-delà de React. Données JSON embarquées, persistance `localStorage` (préfi
 - Le nombre de régions affiché est **dynamique** (`REGIONS.length`) dans l'écran Régions
   et le menu ; textes prose (onboarding, manifest PWA) passés à « 14 régions ».
 
-## 2. Catalogue de vins (travail en cours)
+## 2. Catalogue de vins (complet — 14/14 régions)
 
 Fichier : `app/src/data/wines.json` (typé `Wine`, exporté `WINES`). C'est un
 **référentiel** distinct de la cave perso (`cave.json`). Écran dédié :
 `app/src/screens/Bouteilles.tsx` (liste + recherche domaine/appellation/cépage +
 filtres couleur/région + fiche détail), accessible via le menu hamburger.
 
-**État au 19/07/2026 : 422 vins · 220 producteurs · 13 régions sur 14.**
+**État au 23/07/2026 : 449 vins · 245 producteurs · 14 régions sur 14.**
+Les prix de 24 grands crus ont été recotés (commit `f35f614`).
 
 | Région (regionId) | Vins |
 | --- | --- |
@@ -43,12 +44,12 @@ filtres couleur/région + fiche détail), accessible via le menu hamburger.
 | Val de Loire (`loire`) | 31 |
 | Jura (`jura`) | 31 |
 | Beaujolais (`beaujolais`) | 30 |
+| Bordeaux (`bordeaux`) | 27 |
 | Languedoc-Roussillon (`languedoc`) | 26 |
 | Provence (`provence`) | 26 |
 | Lorraine (`lorraine`) | 26 |
-| **Bordeaux (`bordeaux`)** | **0 — seule région restant à charger** |
 
-Couleurs : 155 rouges · 154 blancs · 54 effervescents · 36 rosés · 23 liquoreux.
+Couleurs : 175 rouges · 158 blancs · 54 effervescents · 36 rosés · 26 liquoreux.
 (Anomalies producteur↔appellation exclues du catalogue : Buxy en Savoie, Octavin en
 Roussillon/Rivesaltes/Cahors, Château de Pez en Minervois.)
 
@@ -112,17 +113,19 @@ désambiguïse quand la cuvée est vide.
 
 ## 4. TODO / prochaines étapes
 
-- [ ] Charger la **dernière** région : **Bordeaux**
-  (+ ~7 champagnes manquants du dernier lot, paste tronqué).
-      Corse (32, `corse-1.txt`), Jura (31, `jura-1.txt`), Languedoc-Roussillon
-      (28, `languedoc-1.txt`), Lorraine (26, `lorraine-1.txt`, 14ᵉ région), Loire
-      (31, `loire-1.txt`), Provence (24, `provence-1.txt`), Rhône (34,
-      `rhone-1.txt`), Savoie #2 (23, `savoie-2.txt`) et Sud-Ouest (31,
-      `sudouest-1.txt`) faits le 19/07/2026.
-- [ ] Brancher le **scanner** (`app/src/lib/ocr.ts`, stub) sur `WINES` : renvoyer un
-  vrai vin du catalogue.
-- [ ] Exposer `WINES` dans la **recherche globale** (`app/src/screens/Search.tsx`).
-- [ ] (option) formatage FR des prix décimaux dans la fiche Bouteilles.
+- [ ] **~7 champagnes manquants** du dernier lot (paste tronqué) : attendre que
+  l'utilisateur recolle le lot (Champagne toujours à 33).
+- [x] Bordeaux chargé (27, `bordeaux-1.txt`, commit `77aa455`) — **14/14 régions**.
+      Tous les autres lots (Corse, Jura, Languedoc, Lorraine, Loire, Provence,
+      Rhône, Savoie #2, Sud-Ouest) faits le 19/07/2026.
+- [x] Scanner branché sur `WINES` : OCR Tesseract réel + rapprochement catalogue
+      (commit `75cc5b3`).
+- [x] `WINES` exposé dans la recherche globale (`Search.tsx`).
+- [x] Formatage FR des prix (`formatPrix`, `toLocaleString('fr-FR')`) dans Bouteilles.
+
+Fait aussi depuis le 19/07 : « Autour de moi » en vraie géolocalisation, données
+vivantes (fin des données figées), lexique 57 cépages, millésimes 2024-2025,
+vendanges importables, vignettes SVG (bouteilles + cépages).
 
 ## 5. Vérifier avant de committer
 
