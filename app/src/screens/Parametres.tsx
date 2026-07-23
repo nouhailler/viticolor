@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useStore, actions } from '../store';
 import { WINES, REGIONS, VENDANGES } from '../data';
 import { ScreenHeading } from '../components/ui';
+import { startDemo } from '../demo/engine';
+import { DEMO_SCENARIOS } from '../demo/scenarios';
 import type { Wine, VendangeRegion, VendangesData } from '../types';
 
 // ─── Actualisation des vendanges par fichier JSON ───
@@ -370,6 +372,22 @@ export function Parametres() {
             <div style={{ marginTop: 8, fontSize: 12, color: '#e08a8a', lineHeight: 1.5 }}>{vendErr}</div>
           )}
         </div>
+      </Section>
+
+      <Section title="Visite guidée">
+        {DEMO_SCENARIOS.map((sc, i) => (
+          <Row
+            key={sc.id}
+            first={i === 0}
+            label={sc.title}
+            hint={sc.description}
+            action={
+              <button onClick={() => startDemo(sc)} style={btnGold}>
+                Lancer ▶
+              </button>
+            }
+          />
+        ))}
       </Section>
 
       <Section title="Affichage">

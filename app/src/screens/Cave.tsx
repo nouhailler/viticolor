@@ -79,7 +79,7 @@ export function Cave() {
       </div>
 
       {/* Valorisation */}
-      <div style={{ marginTop: 14, background: 'var(--surface)', border: '1px solid var(--gold-border)', borderRadius: 'var(--r-card)', padding: 16 }}>
+      <div data-demo-id="cave-valorisation" style={{ marginTop: 14, background: 'var(--surface)', border: '1px solid var(--gold-border)', borderRadius: 'var(--r-card)', padding: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <Eyebrow size={12}>Valorisation</Eyebrow>
           <div style={{ fontSize: 12, color: trendPct >= 0 ? 'var(--positive-soft)' : 'var(--negative-soft)' }}>{caveTrend}</div>
@@ -148,6 +148,7 @@ export function Cave() {
           );
         })}
         <button
+          data-demo-id="cave-ajouter"
           onClick={() => { setPickQuery(''); setAdding(true); }}
           style={{
             marginLeft: 'auto',
@@ -248,7 +249,7 @@ function FicheCave({ bottle: b, glyph }: { bottle: CaveItem; glyph: GlyphInfo })
         ← Ma cave
       </button>
 
-      <div style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
+      <div data-demo-id="cave-fiche" style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
         <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
           <BottleGlyph couleur={glyph.couleur} regionId={glyph.regionId} height={96} detail />
           <div style={{ minWidth: 0 }}>
@@ -388,6 +389,7 @@ function AddPicker({ query, setQuery, inCave, userWines, onClose }: AddPickerPro
       <div style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 600 }}>Ajouter un vin à la cave</div>
 
       <input
+        data-demo-id="cave-picker-recherche"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={`Rechercher parmi ${ALL.length} vins…`}
@@ -405,11 +407,12 @@ function AddPicker({ query, setQuery, inCave, userWines, onClose }: AddPickerPro
       />
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {list.map((w) => {
+        {list.map((w, i) => {
           const already = inCave.has(w.id);
           return (
             <div
               key={w.id}
+              data-demo-id={`cave-picker-item-${i}`}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -433,6 +436,7 @@ function AddPicker({ query, setQuery, inCave, userWines, onClose }: AddPickerPro
                 </div>
               </div>
               <button
+                data-demo-id={`cave-picker-add-${i}`}
                 onClick={() => actions.caveAdd(wineToCaveItem(w))}
                 style={{
                   flexShrink: 0,

@@ -111,6 +111,22 @@ désambiguïse quand la cuvée est vide.
   `scripts/ingest-wines.mjs` (ingestion). Les lots bruts vont dans `app/data-batches/`
   (non commités, `*.txt` gitignorés).
 
+## 3 bis. Mode démo scénarisée (`app/src/demo/`)
+
+Rejoue des parcours utilisateur à l'écran (curseur virtuel, surbrillance,
+narration, barre de contrôle play/pause/étape/vitesse/quitter).
+
+- `demo/types.ts` : types d'étape (`navigate`, `click`, `type`, `wait`,
+  `highlight`, `narrate`) + format `DemoScenario` (déclaratif pur, seed d'état).
+- `demo/engine.ts` : moteur + overlay DOM (aucune dépendance). Ciblage
+  **uniquement** par `data-demo-id` ; `prefers-reduced-motion` respecté.
+- `demo/scenarios/` : un fichier par scénario, registre dans `index.ts`.
+- Activation : `?demo=<id>` (paramètre consommé) ou Paramètres → « Visite
+  guidée ». Sortie : Échap ou ✕.
+- **Isolation** : `freezePersistence()` (store.ts) gèle toute écriture
+  `viticolor_*` pendant la démo ; snapshot d'état restauré à la sortie.
+- Scénario existant : `ajouter-bouteille` (accueil → cave → picker → fiche).
+
 ## 4. TODO / prochaines étapes
 
 - [ ] **~7 champagnes manquants** du dernier lot (paste tronqué) : attendre que

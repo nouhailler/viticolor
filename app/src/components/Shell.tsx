@@ -351,6 +351,7 @@ export function BottomNav() {
         return (
           <button
             key={t.id}
+            data-demo-id={`nav-${t.id}`}
             onClick={() => actions.go(t.id)}
             style={{
               flex: 1,

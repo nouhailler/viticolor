@@ -21,6 +21,14 @@ const SEED_NOTE_SIGS = new Set([
 
 const PREFIX = 'viticolor_';
 
+/** Gel de la persistance pendant une démo scénarisée (src/demo/) : les actions
+ *  manipulent le store normalement mais aucune écriture `viticolor_*` n'a lieu.
+ *  Le moteur de démo restaure l'état pré-démo puis dégèle à la sortie. */
+let persistFrozen = false;
+export function freezePersistence(frozen: boolean): void {
+  persistFrozen = frozen;
+}
+
 // ─── Wrapper localStorage préfixé ───
 function load<T>(key: string, fallback: T): T {
   try {
@@ -31,6 +39,7 @@ function load<T>(key: string, fallback: T): T {
   }
 }
 function save<T>(key: string, value: T): void {
+  if (persistFrozen) return;
   try {
     localStorage.setItem(PREFIX + key, JSON.stringify(value));
   } catch {
