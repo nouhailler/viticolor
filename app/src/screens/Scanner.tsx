@@ -16,17 +16,26 @@ interface ScanResult {
 }
 
 export function Scanner() {
-  const userWines = useStore((s) => s.userWines);
+  const { userWines, scanDemoText } = useStore((s) => ({
+    userWines: s.userWines,
+    scanDemoText: s.scanDemoText,
+  }));
   const [result, setResult] = useState<ScanResult | null>(null);
 
   if (result) {
     return <ScanResultView result={result} onRetry={() => setResult(null)} />;
   }
-  return <ScanViewfinder all={[...userWines, ...WINES]} onResult={setResult} />;
+  return <ScanViewfinder all={[...userWines, ...WINES]} demoText={scanDemoText} onResult={setResult} />;
 }
 
 // ─── Viseur caméra ───
-function ScanViewfinder({ all, onResult }: { all: Wine[]; onResult: (r: ScanResult) => void }) {
+interface ViewfinderProps {
+  all: Wine[];
+  /** Démo scénarisée : texte lu « comme si » l'OCR l'avait produit (pas de caméra). */
+  demoText: string | null;
+  onResult: (r: ScanResult) => void;
+}
+function ScanViewfinder({ all, demoText, onResult }: ViewfinderProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [camReady, setCamReady] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -34,6 +43,7 @@ function ScanViewfinder({ all, onResult }: { all: Wine[]; onResult: (r: ScanResu
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (demoText != null) return; // démo : pas d'accès caméra (ni d'invite de permission)
     let stream: MediaStream | null = null;
     let cancelled = false;
     (async () => {
@@ -59,7 +69,7 @@ function ScanViewfinder({ all, onResult }: { all: Wine[]; onResult: (r: ScanResu
       cancelled = true;
       stream?.getTracks().forEach((t) => t.stop());
     };
-  }, []);
+  }, [demoText]);
 
   const capture = (): string | undefined => {
     const v = videoRef.current;
@@ -78,6 +88,15 @@ function ScanViewfinder({ all, onResult }: { all: Wine[]; onResult: (r: ScanResu
   const doScan = async () => {
     if (busy) return;
     setError(null);
+    // Démo scénarisée : le texte injecté remplace capture + OCR, le reste du
+    // parcours (rapprochement catalogue, écran de résultat) est le vrai code.
+    if (demoText != null) {
+      setBusy(true);
+      await new Promise((r) => setTimeout(r, 700)); // laisse voir « Analyse… »
+      onResult({ text: demoText, matches: matchLabel(all, demoText) });
+      setBusy(false);
+      return;
+    }
     const frame = capture();
     if (!frame) {
       setError("Caméra indisponible — autorisez l'accès à la caméra puis réessayez.");
@@ -166,6 +185,7 @@ function ScanViewfinder({ all, onResult }: { all: Wine[]; onResult: (r: ScanResu
       )}
       <div style={{ padding: '16px 20px 24px', display: 'flex', justifyContent: 'center' }}>
         <button
+          data-demo-id="scan-bouton"
           onClick={doScan}
           disabled={busy}
           style={{
@@ -219,7 +239,7 @@ function ScanResultView({ result, onRetry }: { result: ScanResult; onRetry: () =
         <Eyebrow>{top.score >= 0.75 ? 'Bouteille reconnue' : 'Correspondance probable'}</Eyebrow>
       </div>
 
-      <div style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
+      <div data-demo-id="scan-resultat" style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
         <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
           <BottleGlyph couleur={w.couleur} regionId={w.regionId} millesime={w.millesime} height={120} detail />
           <div style={{ flex: 1, minWidth: 0 }}>
@@ -267,6 +287,7 @@ function ScanResultView({ result, onRetry }: { result: ScanResult; onRetry: () =
 
         <div style={{ marginTop: 18, display: 'flex', gap: 10 }}>
           <button
+            data-demo-id="scan-ajouter"
             onClick={addToCave}
             disabled={added === w.id}
             style={{ flex: 1, textAlign: 'center', background: 'var(--gold)', color: 'var(--on-gold)', padding: 11, borderRadius: 'var(--r-card)', fontSize: 14, fontWeight: 700, opacity: added === w.id ? 0.75 : 1 }}
@@ -274,6 +295,7 @@ function ScanResultView({ result, onRetry }: { result: ScanResult; onRetry: () =
             {added === w.id ? '✓ Ajouté à la cave' : 'Ajouter à ma cave'}
           </button>
           <button
+            data-demo-id="scan-fiche-complete"
             onClick={() => actions.go('bouteilles', { wineSel: w.id })}
             style={{ flex: 1, textAlign: 'center', border: '1px solid var(--gold)', color: 'var(--gold)', padding: 11, borderRadius: 'var(--r-card)', fontSize: 14, background: 'var(--surface)' }}
           >

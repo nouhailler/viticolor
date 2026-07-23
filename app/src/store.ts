@@ -140,6 +140,9 @@ export interface State {
   obStep: number;
   demoOn: boolean;
   demoDismissed: Record<string, boolean>;
+  /** Démo scénarisée (src/demo/) : texte d'étiquette injecté à la place de la
+   *  caméra + OCR par le Scanner. Toujours null hors démo. */
+  scanDemoText: string | null;
 
   // Données persistées
   vendanges: VendangesData; // prévisions courantes (embarquées ou importées)
@@ -240,6 +243,7 @@ function initialState(): State {
     obStep: 0,
     demoOn: load('demo', true),
     demoDismissed: load('demoDismissed', {} as Record<string, boolean>),
+    scanDemoText: null,
 
     vendanges: load<VendangesData | null>('vendanges', null) ?? VENDANGES,
     favs: load<string[]>('favs', ['bourgogne']),

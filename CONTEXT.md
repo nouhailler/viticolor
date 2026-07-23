@@ -125,7 +125,11 @@ narration, barre de contrôle play/pause/étape/vitesse/quitter).
   guidée ». Sortie : Échap ou ✕.
 - **Isolation** : `freezePersistence()` (store.ts) gèle toute écriture
   `viticolor_*` pendant la démo ; snapshot d'état restauré à la sortie.
-- Scénario existant : `ajouter-bouteille` (accueil → cave → picker → fiche).
+- Scénarios existants : `ajouter-bouteille` (accueil → cave → picker → fiche)
+  et `scanner-etiquette` (viseur → reconnaissance → ajout → fiche catalogue ;
+  seed `scanDemoText` dans le store = texte OCR injecté, caméra jamais
+  sollicitée, rapprochement `matchLabel` réel). Seed de cave partagé :
+  `scenarios/cave-demo.ts`.
 
 ## 4. TODO / prochaines étapes
 

@@ -175,7 +175,7 @@ function Fiche({ wine }: { wine: Wine }) {
         ← Toutes les bouteilles
       </button>
 
-      <div style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
+      <div data-demo-id="bouteille-fiche" style={{ background: 'var(--surface-hollow)', borderRadius: 'var(--r-panel)', padding: 20 }}>
         <div style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
           <BottleGlyph couleur={wine.couleur} regionId={wine.regionId} millesime={wine.millesime} height={130} detail />
           <div style={{ minWidth: 0 }}>
